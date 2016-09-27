@@ -35,6 +35,9 @@ bld/
 *.VisualState.xml
 TestResult.xml
 
+# Cake Build
+tools/
+
 # Build Results of an ATL Project
 [Dd]ebugPS/
 [Rr]eleasePS/
