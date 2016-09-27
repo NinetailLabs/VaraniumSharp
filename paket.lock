@@ -3,3 +3,4 @@ NUGET
   remote: http://api.nuget.org/v3/index.json
     FluentAssertions (4.14)
     NUnit (3.4.1)
+    SemVer.Git.MSBuild (1.1) - content: once

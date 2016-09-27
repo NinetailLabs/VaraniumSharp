@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <BaseRevision>1.0.0.0</BaseRevision>
+    <BaseVersion>1.0.0.0</BaseVersion>
+    <BreakingChangeFormat>^perf(\(.*\))*: </BreakingChangeFormat>
+    <FeatureFormat>^feat(\(.*\))*: </FeatureFormat>
+    <PatchFormat>^fix(\(.*\))*: </PatchFormat>
+    <RepositoryPath>$([System.IO.Path]::GetFullPath('$(SolutionDir)'))</RepositoryPath>
+    <SemVerStampActive>True</SemVerStampActive>
+  </PropertyGroup>
+</Project>
