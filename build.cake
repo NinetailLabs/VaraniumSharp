@@ -59,7 +59,10 @@ Task("UnitTest")
 			{
 				process.WaitForExit();
 				Information("Exit Code {0}", process.GetExitCode());
-				testSucceeded = false;
+				if(process.GetExitCode() != 0)
+				{
+					testSucceeded = false;
+				}
 			};
 		
 		EndBlock("Unit Testing");
