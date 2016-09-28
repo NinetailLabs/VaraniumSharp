@@ -35,7 +35,14 @@ Task("DiscoverBuildDetails")
 		Information("Running on AppVeyor: " + runningOnAppVeyor);
 	});
 
+Task("OutputVariables")
+	.Does(() =>
+	{
+		Information("BuildType: " + buildType);
+	});
+
 Task ("Build")
+.IsDependentOn("OutputVariables")
 .IsDependentOn("DiscoverBuildDetails")
 .IsDependentOn("PaketRestore")
 	.Does (() => {
