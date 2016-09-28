@@ -7,6 +7,7 @@ var tools = "./tools";
 var sln = "./VaraniumSharp.sln";
 var releaseFolder = "./VaraniumSharp/bin/Release";
 var releaseDll = "/VaraniumSharp.dll";
+var unitTestPaths = "./VaraniumSharp.Tests/bin/Release/VaraniumSharp.Tests.dll";
 var nuspecFile = "./VaraniumSharp/VaraniumSharp.nuspec";
 
 var target = Argument ("target", "Build");
@@ -16,7 +17,13 @@ var buildCounter = Argument<int>("buildCounter", 0);
 var version = "0.0.0";
 var ciVersion = "0.0.0-CI00000";
 var runningOnTeamCity = false;
+var runningOnAppVeyor = false;
 var testSucceeded = true;
+
+//Paket folders
+var paketBootstrapper = "./.paket/paket.bootstrapper.exe";
+var paketExecutable = "./.paket/paket.exe";
+var paketBootstrapperUrl = "https://github.com/fsprojects/Paket/releases/download/3.1.9/paket.bootstrapper.exe";
 
 // Find out if we are running on a Build Server
 Task("DiscoverBuildDetails")
@@ -24,19 +31,21 @@ Task("DiscoverBuildDetails")
 	{
 		runningOnTeamCity = TeamCity.IsRunningOnTeamCity;
 		Information("Running on TeamCity: " + runningOnTeamCity);
+		runningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
+		Information("Running on AppVeyor: " + runningOnAppVeyor);
 	});
 
 Task ("Build")
 .IsDependentOn("DiscoverBuildDetails")
+.IsDependentOn("PaketRestore")
 	.Does (() => {
-		NuGetRestore (sln);
 		DotNetBuild (sln, c => c.Configuration = "Release");
 		var file = MakeAbsolute(Directory(releaseFolder)) + releaseDll;
 		version = GetVersionNumber(file);
 		ciVersion = GetVersionNumberWithContinuesIntegrationNumberAppended(file, buildCounter);
 		Information("Version: " + version);
 		Information("CI Version: " + ciVersion);
-		PushVersionToTeamcity(ciVersion);
+		PushVersion(ciVersion);
 	});
 
 //Execute Unit tests
@@ -46,7 +55,7 @@ Task("UnitTest")
 	{
 		StartBlock("Unit Testing");
 		
-		using(var process = StartAndReturnProcess(tools + "/NUnit.ConsoleRunner/tools/nunit3-console.exe", new ProcessSettings { Arguments = "\"./VaraniumSharp.Tests/bin/Release/VaraniumSharp.Tests.dll\" --teamcity --workers=1"}))
+		using(var process = StartAndReturnProcess(tools + "/NUnit.ConsoleRunner/tools/nunit3-console.exe", new ProcessSettings { Arguments = "\"" + unitTestPaths + "\" --teamcity --workers=1"}))
 			{
 				process.WaitForExit();
 				Information("Exit Code {0}", process.GetExitCode());
@@ -69,6 +78,20 @@ Task ("Nuget")
 		});	
 	});
 
+//Restore Paket
+Task("PaketRestore")
+	.Does(() => {
+		StartBlock("Restoring Paket");
+		var paketBootstrapperFullPath = MakeAbsolute(File(paketBootstrapper));
+		if(!FileExists(paketBootstrapperFullPath))
+		{
+			DownloadFile(paketBootstrapperUrl, paketBootstrapperFullPath);
+		}
+		StartProcess(paketBootstrapper);
+		StartProcess(paketExecutable, new ProcessSettings{ Arguments = "restore" });
+		EndBlock("Restoring Paket");
+	});
+
 Task ("Push")
 	.WithCriteria(buildType == "master"  && testSucceeded == true)
 	.IsDependentOn ("Nuget")
@@ -78,7 +101,7 @@ Task ("Push")
 			.OrderBy (f => new System.IO.FileInfo (f.FullPath).LastWriteTimeUtc)
 			.LastOrDefault();
 
-		var apiKey = TransformTextFile ("c:/nuget/nugetapikey").ToString();
+		var apiKey = EnvironmentVariable("NugetKey");
 
 		NuGetPush (newestNupkg, new NuGetPushSettings { 
 			Verbosity = NuGetVerbosity.Detailed,
@@ -126,10 +149,23 @@ public void EndBuildBlock(string blockName)
 	}
 }
 
-public void PushVersionToTeamcity(string version)
+public void PushVersion(string version)
 {
 	if(runningOnTeamCity)
 	{
 		TeamCity.SetBuildNumber(version);
+	}
+	if(runningOnAppVeyor)
+	{
+		AppVeyor.UpdateBuildVersion(version);
+	}
+}
+
+public void PushTestResults(string filePath)
+{
+	var file = MakeAbsolute(File(filePath));
+	if(runningOnAppVeyor)
+	{
+		AppVeyor.UploadTestResults(file, AppVeyorTestResultsType.NUnit3);
 	}
 }
