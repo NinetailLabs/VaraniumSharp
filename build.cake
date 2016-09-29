@@ -40,6 +40,7 @@ Task("OutputVariables")
 	.Does(() =>
 	{
 		Information("BuildType: " + buildType);
+		Information("BuildCounter: " + buildCounter);
 	});
 
 Task ("Build")
