@@ -114,7 +114,8 @@ Task ("Push")
 		var apiKey = EnvironmentVariable("NugetKey");
 
 		NuGetPush (newestNupkg, new NuGetPushSettings { 
-			Source = "nuget.org",
+			Verbosity = NuGetVerbosity.Detailed,
+			Source = "https://www.nuget.org/api/v2/package/",
 			ApiKey = apiKey
 		});
 	});
