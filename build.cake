@@ -2,6 +2,7 @@
 #addin Cake.VersionReader
 #addin Cake.FileHelpers
 #tool "nuget:?package=NUnit.ConsoleRunner"
+#tool "nuget:?package=JetBrains.dotCover.CommandLineTools"
 
 var tools = "./tools";
 var sln = "./VaraniumSharp.sln";
@@ -9,6 +10,8 @@ var releaseFolder = "./VaraniumSharp/bin/Release";
 var releaseDll = "/VaraniumSharp.dll";
 var unitTestPaths = "./VaraniumSharp.Tests/bin/Release/VaraniumSharp.Tests.dll";
 var nuspecFile = "./VaraniumSharp/VaraniumSharp.nuspec";
+var testResultFile = "./TestResult.xml";
+var testErrorFile = "./errors.xml";
 
 var target = Argument ("target", "Build");
 var buildType = Argument<string>("buildType", "develop");
@@ -25,6 +28,16 @@ var paketBootstrapper = "./.paket/paket.bootstrapper.exe";
 var paketExecutable = "./.paket/paket.exe";
 var paketBootstrapperUrl = "https://github.com/fsprojects/Paket/releases/download/3.1.9/paket.bootstrapper.exe";
 
+//SonarQube
+var sonarUrl = "https://github.com/SonarSource-VisualStudio/sonar-scanner-msbuild/releases/download/2.1/MSBuild.SonarQube.Runner-2.1.zip";
+var sonarZipPath = tools + "/SonarQube.zip";
+var sonarQubeServerUrl = "https://sq.ninetaillabs.xyz/";
+var sonarQubeProject = "VaraniumSharp";
+var sonarQubeKey = "";
+
+//DotCover
+var coverPath = "./dotcover.html";
+
 // Find out if we are running on a Build Server
 Task("DiscoverBuildDetails")
 	.Does(() =>
@@ -39,12 +52,15 @@ Task("OutputVariables")
 	.Does(() =>
 	{
 		Information("BuildType: " + buildType);
+		Information("BuildCounter: " + buildCounter);
 	});
 
 Task ("Build")
 .IsDependentOn("OutputVariables")
 .IsDependentOn("DiscoverBuildDetails")
+.IsDependentOn("ToolSetup")
 .IsDependentOn("PaketRestore")
+.IsDependentOn("SonarQubeStartup")
 	.Does (() => {
 		DotNetBuild (sln, c => c.Configuration = "Release");
 		var file = MakeAbsolute(Directory(releaseFolder)) + releaseDll;
@@ -61,24 +77,41 @@ Task("UnitTest")
 	.Does(() =>
 	{
 		StartBlock("Unit Testing");
-		
-		using(var process = StartAndReturnProcess(tools + "/NUnit.ConsoleRunner/tools/nunit3-console.exe", new ProcessSettings { Arguments = "\"" + unitTestPaths + "\" --teamcity --workers=1"}))
+
+		var testAssemblies = GetFiles(unitTestPaths);
+		DotCoverAnalyse(tool => {
+				tool.NUnit3(testAssemblies, new NUnit3Settings {
+    				ErrorOutputFile = testErrorFile
+    			});
+			},
+			new FilePath(coverPath),
+			new DotCoverAnalyseSettings()
 			{
-				process.WaitForExit();
-				Information("Exit Code {0}", process.GetExitCode());
-				if(process.GetExitCode() != 0)
-				{
-					testSucceeded = false;
-				}
-			};
+				ReportType = DotCoverReportType.HTML
+			}
+				.WithFilter("+:VaraniumSharp")
+    			.WithFilter("-:VaraniumSharp.Tests")
+		);
+
+		if(FileExists(testErrorFile) && FileReadLines(testErrorFile).Count() > 0)
+		{
+			Information("Unit tests failed");
+			testSucceeded = false;
+		}
 		
 		EndBlock("Unit Testing");
 	});
 	
 Task ("Nuget")
-	.WithCriteria(buildType == "master" && testSucceeded == true)
-	.IsDependentOn ("UnitTest")
+	.WithCriteria(buildType == "master")
+	.IsDependentOn ("SonarQubeShutdown")
 	.Does (() => {
+		if(!testSucceeded)
+		{
+			Error("Unit tests failed - Cannot push to Nuget");
+			throw new Exception("Unit tests failed");
+		}
+
 		CreateDirectory ("./nupkg/");
 		ReplaceRegexInFiles(nuspecFile, "0.0.0", version);
 		
@@ -103,7 +136,7 @@ Task("PaketRestore")
 	});
 
 Task ("Push")
-	.WithCriteria(buildType == "master"  && testSucceeded == true)
+	.WithCriteria(buildType == "master")
 	.IsDependentOn ("Nuget")
 	.Does (() => {
 		// Get the newest (by last write time) to publish
@@ -115,13 +148,49 @@ Task ("Push")
 
 		NuGetPush (newestNupkg, new NuGetPushSettings { 
 			Verbosity = NuGetVerbosity.Detailed,
-			Source = "nuget.org",
+			Source = "https://www.nuget.org/api/v2/package/",
 			ApiKey = apiKey
 		});
 	});
 
+Task("ToolSetup")
+	.Does(() =>{
+		StartBlock("Tool Setup");
+		if(!FileExists(sonarZipPath))
+		{
+			Information("Downloading SonarQube");
+			DownloadFile(sonarUrl, sonarZipPath);
+		}
+		if(!FileExists(tools + "/MSBuild.SonarQube.Runner.exe"))
+		{
+			Information("Extraction SonarQube");
+			Unzip(tools + "/SonarQube.zip", tools + "/");
+		}
+		
+		EndBlock("Tool Setup");
+	});
+
+Task("SonarQubeStartup")
+	.Does(() =>{
+		StartBlock("SonarQube Startup");
+
+		sonarQubeKey = EnvironmentVariable("SonarQubeKey");
+		var testResult = MakeAbsolute(File(testResultFile));
+		var coveragePath = MakeAbsolute(File(coverPath));
+		var arguments = "begin /k:\"" + sonarQubeKey + "\" /n:\"" + sonarQubeProject + "\" /d:sonar.host.url=" + sonarQubeServerUrl + " /d:sonar.cs.dotcover.reportsPaths=\"" + coveragePath + "\" /v:\"" + buildCounter + "\"";
+		StartProcess(tools + "/MSBuild.SonarQube.Runner.exe", new ProcessSettings{ Arguments = arguments });
+	});
+
+Task("SonarQubeShutdown")
+	.IsDependentOn("UnitTest")
+	.Does(() => {
+		StartBlock("SonarQube Shutdown");
+		StartProcess(tools + "/MSBuild.SonarQube.Runner.exe", new ProcessSettings{ Arguments = "end" });
+		EndBlock("SonarQube Shutdown");
+	});
+
 Task("Default")
-	.IsDependentOn("UnitTest");
+	.IsDependentOn("SonarQubeShutdown");
 Task("Release")
     .IsDependentOn("Push");
 
@@ -167,6 +236,7 @@ public void PushVersion(string version)
 	}
 	if(runningOnAppVeyor)
 	{
+		Information("Pushing version to AppVeyor: " + version);
 		AppVeyor.UpdateBuildVersion(version);
 	}
 }

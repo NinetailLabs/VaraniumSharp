@@ -34,9 +34,17 @@ bld/
 # NUNIT
 *.VisualState.xml
 TestResult.xml
+errors.xml
+
+# DotCover
+dotcover.html
+dotcover/
 
 # Cake Build
 tools/
+
+# Sonarqube
+.sonarqube/
 
 # Build Results of an ATL Project
 [Dd]ebugPS/
