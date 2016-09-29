@@ -55,7 +55,8 @@ Param(
     [switch]$SkipToolPackageRestore,
     [Parameter(Position=0,Mandatory=$false,ValueFromRemainingArguments=$true)]
     [string[]]$ScriptArgs,
-    [string]$BuildType
+    [string]$BuildType,
+    [int]$BuildCounter
 )
 
 [Reflection.Assembly]::LoadWithPartialName("System.Security") | Out-Null
