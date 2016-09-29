@@ -113,9 +113,6 @@ Task ("Push")
 
 		var apiKey = EnvironmentVariable("NugetKey");
 
-		//TODO Remove before using real key!!
-		Information("Nuget API key " + apiKey);
-
 		NuGetPush (newestNupkg, new NuGetPushSettings { 
 			Verbosity = NuGetVerbosity.Detailed,
 			Source = "nuget.org",
