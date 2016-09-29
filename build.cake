@@ -9,6 +9,7 @@ var releaseFolder = "./VaraniumSharp/bin/Release";
 var releaseDll = "/VaraniumSharp.dll";
 var unitTestPaths = "./VaraniumSharp.Tests/bin/Release/VaraniumSharp.Tests.dll";
 var nuspecFile = "./VaraniumSharp/VaraniumSharp.nuspec";
+var testResultFile = "./TestResult.xml";
 
 var target = Argument ("target", "Build");
 var buildType = Argument<string>("buildType", "develop");
@@ -65,6 +66,8 @@ Task("UnitTest")
 		using(var process = StartAndReturnProcess(tools + "/NUnit.ConsoleRunner/tools/nunit3-console.exe", new ProcessSettings { Arguments = "\"" + unitTestPaths + "\" --teamcity --workers=1"}))
 			{
 				process.WaitForExit();
+				PushTestResults(testResultFile);
+
 				Information("Exit Code {0}", process.GetExitCode());
 				if(process.GetExitCode() != 0)
 				{
@@ -76,9 +79,15 @@ Task("UnitTest")
 	});
 	
 Task ("Nuget")
-	.WithCriteria(buildType == "master" && testSucceeded == true)
+	.WithCriteria(buildType == "master")
 	.IsDependentOn ("UnitTest")
 	.Does (() => {
+		if(!testSucceeded)
+		{
+			Error("Unit tests failed - Cannot push to Nuget");
+			throw new Exception("Unit tests failed");
+		}
+
 		CreateDirectory ("./nupkg/");
 		ReplaceRegexInFiles(nuspecFile, "0.0.0", version);
 		
@@ -167,7 +176,7 @@ public void PushVersion(string version)
 	}
 	if(runningOnAppVeyor)
 	{
-		Information("Pushing version to AppVeyor");
+		Information("Pushing version to AppVeyor: " + version);
 		AppVeyor.UpdateBuildVersion(version);
 	}
 }

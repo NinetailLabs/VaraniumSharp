@@ -33,6 +33,7 @@ Skips restoring of packages.
 .PARAMETER ScriptArgs
 Remaining arguments are added here.
 .PARAMETER BuildType
+.PARAMETER BuildCounter
 
 .LINK
 http://cakebuild.net
@@ -187,5 +188,5 @@ if (!(Test-Path $CAKE_EXE)) {
 
 # Start Cake
 Write-Host "Running build script..."
-Invoke-Expression "& `"$CAKE_EXE`" `"$Script`" -target=`"$Target`" -configuration=`"$Configuration`" -verbosity=`"$Verbosity`" -buildType=`"$buildType`" $UseMono $UseDryRun $UseExperimental $ScriptArgs"
+Invoke-Expression "& `"$CAKE_EXE`" `"$Script`" -target=`"$Target`" -configuration=`"$Configuration`" -verbosity=`"$Verbosity`" -buildType=`"$buildType` -buildCounter=`"$BuildCounter` $UseMono $UseDryRun $UseExperimental $ScriptArgs"
 exit $LASTEXITCODE
