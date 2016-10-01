@@ -47,12 +47,16 @@
     <Content Include="SemVer.MSBuild.props">
       <SubType>Designer</SubType>
     </Content>
+    <Compile Include="Attributes\AutomaticContainerRegistrationAttribute.cs" />
+    <Compile Include="DependencyInjection\AutomaticContainerRegistration.cs" />
+    <Compile Include="Enumerations\ServiceReuse.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="paket.references" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
