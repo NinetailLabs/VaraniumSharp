@@ -30,7 +30,10 @@ namespace VaraniumSharp.Extensions
             {
                 return default(T);
             }
-            var typedValue = (T)Convert.ChangeType(value, typeof(T));
+            var typedValue = typeof(T).IsEnum 
+                ? (T)Enum.Parse(typeof(T), value) 
+                : (T)Convert.ChangeType(value, typeof(T));
+
             return typedValue;
         }
 
