@@ -62,5 +62,26 @@ namespace VaraniumSharp.Tests.Extensions
             // assert
             action.ShouldThrow<KeyNotFoundException>();
         }
+
+        /// <summary>
+        /// #Issue-9 - Cannot retrieve Enum from configuration
+        /// </summary>
+        [Test]
+        public void RetrieveEnumerationValueFromConfiguration()
+        {
+            // arrange
+            const string key = "EnumValue";
+
+            // act
+            var result = key.GetConfigurationValue<TestEnum>();
+
+            // assert
+            result.Should().Be(TestEnum.EnumResult);
+        }
+
+        private enum TestEnum
+        {
+            EnumResult
+        }
     }
 }
