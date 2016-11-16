@@ -99,6 +99,8 @@ Task("UnitTest")
     			.WithFilter("-:VaraniumSharp.Tests")
 		);
 
+		PushTestResults(testResultFile);
+
 		if(FileExists(testErrorFile) && FileReadLines(testErrorFile).Count() > 0)
 		{
 			Information("Unit tests failed");
