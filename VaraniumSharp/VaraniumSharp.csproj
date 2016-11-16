@@ -50,6 +50,7 @@
     </Content>
     <Compile Include="Attributes\AutomaticConcretionContainerRegistrationAttribute.cs" />
     <Compile Include="Attributes\AutomaticContainerRegistrationAttribute.cs" />
+    <Compile Include="Attributes\AutomaticContainerRegistrationAttributeBase.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistration.cs" />
     <Compile Include="Enumerations\ServiceReuse.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />

@@ -47,7 +47,7 @@ namespace VaraniumSharp.Tests.Attributes
         private class IheritorDummy : BaseClassDummy
         { }
 
-        [AutomaticConcretionContainerRegistration(Reuse = ServiceReuse.Singleton)]
+        [AutomaticConcretionContainerRegistration(ServiceReuse.Singleton)]
         private interface IInterfaceDummy
         {}
     }

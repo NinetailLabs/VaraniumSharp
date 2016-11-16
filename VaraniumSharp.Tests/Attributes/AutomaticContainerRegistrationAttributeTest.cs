@@ -45,7 +45,7 @@ namespace VaraniumSharp.Tests.Attributes
         private interface IInterface1
         { }
 
-        [AutomaticContainerRegistration(typeof(IInterface1), Reuse = ServiceReuse.Singleton)]
+        [AutomaticContainerRegistration(typeof(IInterface1), ServiceReuse.Singleton)]
         private class SingletonTestDummy : IInterface1
         { }
 

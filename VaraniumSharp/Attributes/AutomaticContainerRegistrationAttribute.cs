@@ -7,7 +7,7 @@ namespace VaraniumSharp.Attributes
     /// Used to set values to assist in automatically registering it with a DI container
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
-    public class AutomaticContainerRegistrationAttribute : Attribute
+    public class AutomaticContainerRegistrationAttribute : AutomaticContainerRegistrationAttributeBase
     {
         #region Constructor
 
@@ -15,26 +15,22 @@ namespace VaraniumSharp.Attributes
         /// Constructor
         /// </summary>
         /// <param name="serviceType">The type that the service should be registered as</param>
-        public AutomaticContainerRegistrationAttribute(Type serviceType)
+        /// <param name="reuse">Indicate service reuse type</param>
+        public AutomaticContainerRegistrationAttribute(Type serviceType, ServiceReuse reuse = ServiceReuse.Default)
+            : base(reuse)
         {
             ServiceType = serviceType;
-            Reuse = ServiceReuse.Default;
         }
 
-        #endregion Constructor
+        #endregion
 
         #region Properties
-
-        /// <summary>
-        /// How the service should be setup for reuse
-        /// </summary>
-        public ServiceReuse Reuse { get; set; }
 
         /// <summary>
         /// The type that the service is registered as
         /// </summary>
         public Type ServiceType { get; }
 
-        #endregion Properties
+        #endregion
     }
 }
