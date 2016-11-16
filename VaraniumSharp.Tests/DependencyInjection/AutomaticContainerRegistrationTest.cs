@@ -42,6 +42,86 @@ namespace VaraniumSharp.Tests.DependencyInjection
             sut.DiscoveredTypes.Should().Contain(typeof(AutomaticRegistrationDummy));
         }
 
+        [Test]
+        public void GaterAndAutoRegisterConcretionClasses()
+        {
+            // arrange
+            const bool autoRegister = true;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.RegisterConcretionClassesCalled.Should().BeTrue();
+        }
+
+        [Test]
+        public void RetrieveAllClassesImplementingABaseClass()
+        {
+            // arrange
+            const bool autoRegister = false;
+            const int knowConcretionClasses = 2;
+            const int knownConcretionBases = 2;
+
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.ConcretionClassesRegistered.Should().BeGreaterOrEqualTo(knowConcretionClasses);
+            sut.ConcretionBaseClasses.Should().BeGreaterOrEqualTo(knownConcretionBases);
+            sut.RegisterConcretionClassesCalled.Should().BeFalse();
+            sut.DiscoveredConcretionClasses.Should().ContainKey(typeof(BaseClassDummy));
+            sut.DiscoveredConcretionClasses.Should().ContainKey(typeof(IInterfaceDummy));
+            sut.DiscoveredConcretionClasses[typeof(BaseClassDummy)].Should().Contain(typeof(ConcretionClassDummy));
+            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should()
+                .Contain(typeof(InterfaceImplementationDummy));
+        }
+
+        [Test]
+        public void ConcretionRegistrationIgnoresInterfacesThatImplementInterfaces()
+        {
+            // arrange
+            const bool autoRegister = false;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should().NotContain(typeof(IDeepInterfaceDummy));
+        }
+
+        [Test]
+        public void ConcretionRegistrationAvoidsAbstractChildClasses()
+        {
+            // arrange
+            const bool autoRegister = false;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.DiscoveredConcretionClasses[typeof(BaseClassDummy)].Should().NotContain(typeof(InheritingAbstractDummy));
+        }
+
+        [Test]
+        public void ConcretionRegistrationPicksUpClassesThatInheritFromInterfacesInheritingBaseInterface()
+        {
+            // arrange
+            const bool autoRegister = false;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should().Contain(typeof(DoubleInterfaceImplementationDummy));
+        }
+
         #endregion Public Methods
 
         #region Types
@@ -53,17 +133,26 @@ namespace VaraniumSharp.Tests.DependencyInjection
             public AutomaticRegistrationMock()
             {
                 RegisterClassesCalled = false;
+                RegisterConcretionClassesCalled = false;
             }
 
             #endregion Constructor
 
             #region Properties
 
-            public List<Type> DiscoveredTypes => ClassesToRegister;
+            public IEnumerable<Type> DiscoveredTypes => ClassesToRegister;
+
+            public Dictionary<Type, List<Type>> DiscoveredConcretionClasses => ConcretionClassesToRegister;
 
             public bool RegisterClassesCalled { get; private set; }
 
+            public bool RegisterConcretionClassesCalled { get; private set; }
+
             public int RegisteredClasses => ClassesToRegister.Count;
+
+            public int ConcretionClassesRegistered => ConcretionClassesToRegister.Values.Count;
+
+            public int ConcretionBaseClasses => ConcretionClassesToRegister.Count;
 
             #endregion Properties
 
@@ -74,12 +163,40 @@ namespace VaraniumSharp.Tests.DependencyInjection
                 RegisterClassesCalled = true;
             }
 
+            protected override void RegisterConcretionClasses()
+            {
+                RegisterConcretionClassesCalled = true;
+            }
+
             #endregion Private Methods
         }
 
         [AutomaticContainerRegistration(typeof(AutomaticRegistrationDummy))]
         private class AutomaticRegistrationDummy
         {}
+
+        [AutomaticConcretionContainerRegistration]
+        private abstract class BaseClassDummy
+        { }
+
+        private class ConcretionClassDummy : BaseClassDummy
+        { }
+
+        [AutomaticConcretionContainerRegistration]
+        private interface IInterfaceDummy
+        { }
+
+        private interface IDeepInterfaceDummy : IInterfaceDummy
+        { }
+
+        private abstract class InheritingAbstractDummy : BaseClassDummy
+        { }
+
+        private class DoubleInterfaceImplementationDummy : IDeepInterfaceDummy
+        { }
+
+        private class InterfaceImplementationDummy : IInterfaceDummy
+        { }
 
         #endregion Types
     }
