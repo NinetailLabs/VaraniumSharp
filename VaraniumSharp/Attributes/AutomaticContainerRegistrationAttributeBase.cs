@@ -19,7 +19,7 @@ namespace VaraniumSharp.Attributes
             Reuse = reuse;
         }
 
-        #endregion Constructor
+        #endregion
 
         #region Properties
 
@@ -28,6 +28,6 @@ namespace VaraniumSharp.Attributes
         /// </summary>
         public ServiceReuse Reuse { get; }
 
-        #endregion Properties
+        #endregion
     }
 }

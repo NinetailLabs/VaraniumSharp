@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NUnit.Framework;
+using System.Linq;
 using VaraniumSharp.Attributes;
 using VaraniumSharp.Enumerations;
 
@@ -8,6 +8,8 @@ namespace VaraniumSharp.Tests.Attributes
 {
     public class AutomaticConcretionContainerRegistrationTests
     {
+        #region Public Methods
+
         [Test]
         public void ReadCustomAttributeForDefaultSetup()
         {
@@ -40,15 +42,17 @@ namespace VaraniumSharp.Tests.Attributes
             attribute?.Reuse.Should().Be(ServiceReuse.Singleton);
         }
 
+        #endregion
+
         [AutomaticConcretionContainerRegistration]
         private class BaseClassDummy
-        {}
+        { }
 
         private class IheritorDummy : BaseClassDummy
         { }
 
         [AutomaticConcretionContainerRegistration(ServiceReuse.Singleton)]
         private interface IInterfaceDummy
-        {}
+        { }
     }
 }

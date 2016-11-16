@@ -1,26 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 using VaraniumSharp.Extensions;
 
 namespace VaraniumSharp.Tests.Extensions
 {
     public class StringExtensionsTest
     {
+        #region Public Methods
+
         [Test]
-        public void RetrieveStringKeyFromConfiguration()
+        public void RetrieveEmptyKeyFromConfiguration()
         {
             // arrange
-            const string key = "StringValue";
-            const string expectedValue = "TestValue";
+            const string key = "Empty";
 
             // act
-            var result = key.GetConfigurationValue<string>();
+            var result = key.GetConfigurationValue<DateTime>();
 
             // assert
-            result.GetType().Should().Be<string>();
-            result.Should().Be(expectedValue);
+            result.Should().Be(default(DateTime));
+        }
+
+        /// <summary>
+        /// #Issue-9 - Cannot retrieve Enum from configuration
+        /// </summary>
+        [Test]
+        public void RetrieveEnumerationValueFromConfiguration()
+        {
+            // arrange
+            const string key = "EnumValue";
+
+            // act
+            var result = key.GetConfigurationValue<TestEnum>();
+
+            // assert
+            result.Should().Be(TestEnum.EnumResult);
         }
 
         [Test]
@@ -39,19 +55,6 @@ namespace VaraniumSharp.Tests.Extensions
         }
 
         [Test]
-        public void RetrieveEmptyKeyFromConfiguration()
-        {
-            // arrange
-            const string key = "Empty";
-
-            // act
-            var result = key.GetConfigurationValue<DateTime>();
-
-            // assert
-            result.Should().Be(default(DateTime));
-        }
-
-        [Test]
         public void RetrieveKeyThatDoesNotExistFromConfiguration()
         {
             // arrange
@@ -63,21 +66,22 @@ namespace VaraniumSharp.Tests.Extensions
             action.ShouldThrow<KeyNotFoundException>();
         }
 
-        /// <summary>
-        /// #Issue-9 - Cannot retrieve Enum from configuration
-        /// </summary>
         [Test]
-        public void RetrieveEnumerationValueFromConfiguration()
+        public void RetrieveStringKeyFromConfiguration()
         {
             // arrange
-            const string key = "EnumValue";
+            const string key = "StringValue";
+            const string expectedValue = "TestValue";
 
             // act
-            var result = key.GetConfigurationValue<TestEnum>();
+            var result = key.GetConfigurationValue<string>();
 
             // assert
-            result.Should().Be(TestEnum.EnumResult);
+            result.GetType().Should().Be<string>();
+            result.Should().Be(expectedValue);
         }
+
+        #endregion
 
         private enum TestEnum
         {

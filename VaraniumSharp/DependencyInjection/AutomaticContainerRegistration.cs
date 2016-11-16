@@ -21,7 +21,7 @@ namespace VaraniumSharp.DependencyInjection
             ConcretionClassesToRegister = new Dictionary<Type, List<Type>>();
         }
 
-        #endregion Constructor
+        #endregion
 
         #region Properties
 
@@ -35,7 +35,7 @@ namespace VaraniumSharp.DependencyInjection
         /// </summary>
         protected Dictionary<Type, List<Type>> ConcretionClassesToRegister { get; }
 
-        #endregion Properties
+        #endregion
 
         #region Public Methods
 
@@ -54,7 +54,9 @@ namespace VaraniumSharp.DependencyInjection
                             (t.GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false).Length > 0)));
 
             if (!handleRegistration)
+            {
                 return;
+            }
             RegisterClasses();
         }
 
@@ -88,9 +90,7 @@ namespace VaraniumSharp.DependencyInjection
             RegisterConcretionClasses();
         }
 
-        #endregion Public Methods
-
-        #region Private Methods
+        #endregion
 
         #region Protected Methods
 
@@ -104,8 +104,6 @@ namespace VaraniumSharp.DependencyInjection
         /// </summary>
         protected abstract void RegisterConcretionClasses();
 
-        #endregion Protected Methods
-
-        #endregion Private Methods
+        #endregion
     }
 }

@@ -1,0 +1,7 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=DA0AF5C1B6104843B658FAB00002A632/AbsolutePath/@EntryValue">C:\Development\VaraniumSharp\VaraniumSharp.DotSettings</s:String>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=DA0AF5C1B6104843B658FAB00002A632/RelativePath/@EntryValue">..\VaraniumSharp.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=DA0AF5C1B6104843B658FAB00002A632/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileDA0AF5C1B6104843B658FAB00002A632/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileDA0AF5C1B6104843B658FAB00002A632/DisplayName/@EntryValue">NineTail Labs Style</s:String>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileDA0AF5C1B6104843B658FAB00002A632/RelativePriority/@EntryValue">1</s:Double></wpf:ResourceDictionary>

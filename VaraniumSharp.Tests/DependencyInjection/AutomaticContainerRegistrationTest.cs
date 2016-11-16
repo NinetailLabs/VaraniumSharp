@@ -12,6 +12,62 @@ namespace VaraniumSharp.Tests.DependencyInjection
         #region Public Methods
 
         [Test]
+        public void ConcretionRegistrationAvoidsAbstractChildClasses()
+        {
+            // arrange
+            const bool autoRegister = false;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.DiscoveredConcretionClasses[typeof(BaseClassDummy)].Should().NotContain(typeof(InheritingAbstractDummy));
+        }
+
+        [Test]
+        public void ConcretionRegistrationIgnoresInterfacesThatImplementInterfaces()
+        {
+            // arrange
+            const bool autoRegister = false;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should().NotContain(typeof(IDeepInterfaceDummy));
+        }
+
+        [Test]
+        public void ConcretionRegistrationPicksUpClassesThatInheritFromInterfacesInheritingBaseInterface()
+        {
+            // arrange
+            const bool autoRegister = false;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should().Contain(typeof(DoubleInterfaceImplementationDummy));
+        }
+
+        [Test]
+        public void GaterAndAutoRegisterConcretionClasses()
+        {
+            // arrange
+            const bool autoRegister = true;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.RegisterConcretionClassesCalled.Should().BeTrue();
+        }
+
+        [Test]
         public void GatherAndAutoRegisterClasses()
         {
             // arrange
@@ -43,20 +99,6 @@ namespace VaraniumSharp.Tests.DependencyInjection
         }
 
         [Test]
-        public void GaterAndAutoRegisterConcretionClasses()
-        {
-            // arrange
-            const bool autoRegister = true;
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.RegisterConcretionClassesCalled.Should().BeTrue();
-        }
-
-        [Test]
         public void RetrieveAllClassesImplementingABaseClass()
         {
             // arrange
@@ -80,49 +122,7 @@ namespace VaraniumSharp.Tests.DependencyInjection
                 .Contain(typeof(InterfaceImplementationDummy));
         }
 
-        [Test]
-        public void ConcretionRegistrationIgnoresInterfacesThatImplementInterfaces()
-        {
-            // arrange
-            const bool autoRegister = false;
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should().NotContain(typeof(IDeepInterfaceDummy));
-        }
-
-        [Test]
-        public void ConcretionRegistrationAvoidsAbstractChildClasses()
-        {
-            // arrange
-            const bool autoRegister = false;
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.DiscoveredConcretionClasses[typeof(BaseClassDummy)].Should().NotContain(typeof(InheritingAbstractDummy));
-        }
-
-        [Test]
-        public void ConcretionRegistrationPicksUpClassesThatInheritFromInterfacesInheritingBaseInterface()
-        {
-            // arrange
-            const bool autoRegister = false;
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should().Contain(typeof(DoubleInterfaceImplementationDummy));
-        }
-
-        #endregion Public Methods
+        #endregion
 
         #region Types
 
@@ -136,13 +136,17 @@ namespace VaraniumSharp.Tests.DependencyInjection
                 RegisterConcretionClassesCalled = false;
             }
 
-            #endregion Constructor
+            #endregion
 
             #region Properties
 
-            public IEnumerable<Type> DiscoveredTypes => ClassesToRegister;
+            public int ConcretionBaseClasses => ConcretionClassesToRegister.Count;
+
+            public int ConcretionClassesRegistered => ConcretionClassesToRegister.Values.Count;
 
             public Dictionary<Type, List<Type>> DiscoveredConcretionClasses => ConcretionClassesToRegister;
+
+            public IEnumerable<Type> DiscoveredTypes => ClassesToRegister;
 
             public bool RegisterClassesCalled { get; private set; }
 
@@ -150,11 +154,7 @@ namespace VaraniumSharp.Tests.DependencyInjection
 
             public int RegisteredClasses => ClassesToRegister.Count;
 
-            public int ConcretionClassesRegistered => ConcretionClassesToRegister.Values.Count;
-
-            public int ConcretionBaseClasses => ConcretionClassesToRegister.Count;
-
-            #endregion Properties
+            #endregion
 
             #region Private Methods
 
@@ -168,12 +168,12 @@ namespace VaraniumSharp.Tests.DependencyInjection
                 RegisterConcretionClassesCalled = true;
             }
 
-            #endregion Private Methods
+            #endregion
         }
 
         [AutomaticContainerRegistration(typeof(AutomaticRegistrationDummy))]
         private class AutomaticRegistrationDummy
-        {}
+        { }
 
         [AutomaticConcretionContainerRegistration]
         private abstract class BaseClassDummy

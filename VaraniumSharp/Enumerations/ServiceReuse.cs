@@ -9,6 +9,7 @@
         /// Set up the service with default reuse
         /// </summary>
         Default,
+
         /// <summary>
         /// Set up the service with singleton reuse
         /// </summary>
