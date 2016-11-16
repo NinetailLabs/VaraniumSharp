@@ -24,14 +24,14 @@ namespace VaraniumSharp.Extensions
             {
                 throw new KeyNotFoundException($"Could not locate key {key} in the configuration");
             }
-            
+
             var value = ConfigurationManager.AppSettings[key];
             if (string.IsNullOrEmpty(value))
             {
                 return default(T);
             }
-            var typedValue = typeof(T).IsEnum 
-                ? (T)Enum.Parse(typeof(T), value) 
+            var typedValue = typeof(T).IsEnum
+                ? (T)Enum.Parse(typeof(T), value)
                 : (T)Convert.ChangeType(value, typeof(T));
 
             return typedValue;

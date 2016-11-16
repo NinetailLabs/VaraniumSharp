@@ -18,9 +18,10 @@ namespace VaraniumSharp.DependencyInjection
         protected AutomaticContainerRegistration()
         {
             ClassesToRegister = new List<Type>();
+            ConcretionClassesToRegister = new Dictionary<Type, List<Type>>();
         }
 
-        #endregion Constructor
+        #endregion
 
         #region Properties
 
@@ -29,7 +30,12 @@ namespace VaraniumSharp.DependencyInjection
         /// </summary>
         protected List<Type> ClassesToRegister { get; }
 
-        #endregion Properties
+        /// <summary>
+        /// Contains all classes that should be registered under a single type
+        /// </summary>
+        protected Dictionary<Type, List<Type>> ConcretionClassesToRegister { get; }
+
+        #endregion
 
         #region Public Methods
 
@@ -48,13 +54,43 @@ namespace VaraniumSharp.DependencyInjection
                             (t.GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false).Length > 0)));
 
             if (!handleRegistration)
+            {
                 return;
+            }
             RegisterClasses();
         }
 
-        #endregion Public Methods
+        public virtual void RetrieveConcretionClassesRequiringRegistration(bool handleRegistration)
+        {
+            var classes = AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(t => t.GetTypes())
+                .Where(
+                    t =>
+                        ((t.IsClass && !t.IsSealed) || t.IsInterface)
+                        &&
+                        (t.GetCustomAttributes(typeof(AutomaticConcretionContainerRegistrationAttribute), false).Length >
+                         0)
+                );
 
-        #region Private Methods
+            foreach (var @class in classes)
+            {
+                var children = AppDomain.CurrentDomain.GetAssemblies().SelectMany(t => t.GetTypes())
+                    .Where(
+                        x =>
+                            !x.IsInterface && !x.IsAbstract && ((x.BaseType == @class) ||
+                            x.GetInterfaces().Contains(@class))).ToList();
+
+                ConcretionClassesToRegister.Add(@class, children);
+            }
+
+            if (!handleRegistration)
+            {
+                return;
+            }
+            RegisterConcretionClasses();
+        }
+
+        #endregion
 
         #region Protected Methods
 
@@ -63,8 +99,11 @@ namespace VaraniumSharp.DependencyInjection
         /// </summary>
         protected abstract void RegisterClasses();
 
-        #endregion Protected Methods
+        /// <summary>
+        /// Register concretion classes with Container
+        /// </summary>
+        protected abstract void RegisterConcretionClasses();
 
-        #endregion Private Methods
+        #endregion
     }
 }

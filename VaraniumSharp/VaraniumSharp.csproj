@@ -22,6 +22,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>
     </DocumentationFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,7 +48,9 @@
     <Content Include="SemVer.MSBuild.props">
       <SubType>Designer</SubType>
     </Content>
+    <Compile Include="Attributes\AutomaticConcretionContainerRegistrationAttribute.cs" />
     <Compile Include="Attributes\AutomaticContainerRegistrationAttribute.cs" />
+    <Compile Include="Attributes\AutomaticContainerRegistrationAttributeBase.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistration.cs" />
     <Compile Include="Enumerations\ServiceReuse.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />

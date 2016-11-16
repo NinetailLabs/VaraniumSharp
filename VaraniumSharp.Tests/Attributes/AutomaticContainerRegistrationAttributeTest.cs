@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NUnit.Framework;
+using System.Linq;
 using VaraniumSharp.Attributes;
 using VaraniumSharp.Enumerations;
 
@@ -8,6 +8,8 @@ namespace VaraniumSharp.Tests.Attributes
 {
     public class AutomaticContainerRegistrationAttributeTest
     {
+        #region Public Methods
+
         [Test]
         public void ReadCustomAttributesForDefaultSetup()
         {
@@ -36,6 +38,8 @@ namespace VaraniumSharp.Tests.Attributes
             attribute?.ServiceType.Should().Be<IInterface1>();
         }
 
+        #endregion
+
         #region Types
 
         [AutomaticContainerRegistration(typeof(DefaultTestDummy))]
@@ -43,11 +47,11 @@ namespace VaraniumSharp.Tests.Attributes
         {}
 
         private interface IInterface1
-        { }
+        {}
 
-        [AutomaticContainerRegistration(typeof(IInterface1), Reuse = ServiceReuse.Singleton)]
+        [AutomaticContainerRegistration(typeof(IInterface1), ServiceReuse.Singleton)]
         private class SingletonTestDummy : IInterface1
-        { }
+        {}
 
         #endregion
     }
