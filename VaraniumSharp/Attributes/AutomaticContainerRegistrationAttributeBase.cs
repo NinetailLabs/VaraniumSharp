@@ -6,7 +6,7 @@ namespace VaraniumSharp.Attributes
     /// <summary>
     /// Base class that can be used by attribute classes that deal with automatic container registration
     /// </summary>
-    public abstract class AutomaticContainerRegistrationAttributeBase : Attribute
+    public abstract class AutomaticContainerRegistrationBaseAttribute : Attribute
     {
         #region Constructor
 
@@ -14,7 +14,7 @@ namespace VaraniumSharp.Attributes
         /// Construcor that allows setting Reuse
         /// </summary>
         /// <param name="reuse"></param>
-        protected AutomaticContainerRegistrationAttributeBase(ServiceReuse reuse)
+        protected AutomaticContainerRegistrationBaseAttribute(ServiceReuse reuse)
         {
             Reuse = reuse;
         }

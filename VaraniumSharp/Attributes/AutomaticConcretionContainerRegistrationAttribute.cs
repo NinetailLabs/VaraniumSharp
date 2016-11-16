@@ -8,7 +8,7 @@ namespace VaraniumSharp.Attributes
     /// This attribute should be applied to the interface or base class that the class should be registered as in the Container
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface | AttributeTargets.Struct)]
-    public sealed class AutomaticConcretionContainerRegistrationAttribute : AutomaticContainerRegistrationAttributeBase
+    public sealed class AutomaticConcretionContainerRegistrationAttribute : AutomaticContainerRegistrationBaseAttribute
     {
         #region Constructor
 
