@@ -156,6 +156,20 @@ namespace VaraniumSharp.Tests.DependencyInjection
 
             #endregion
 
+            #region Public Methods
+
+            public override TService Resolve<TService>()
+            {
+                throw new NotImplementedException();
+            }
+
+            public override IEnumerable<TService> ResolveMany<TService>()
+            {
+                throw new NotImplementedException();
+            }
+
+            #endregion
+
             #region Private Methods
 
             protected override void RegisterClasses()
