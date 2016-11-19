@@ -84,7 +84,10 @@ Task("UnitTest")
 		var testAssemblies = GetFiles(unitTestPaths);
 		DotCoverAnalyse(tool => {
 				tool.NUnit3(testAssemblies, new NUnit3Settings {
-    				ErrorOutputFile = testErrorFile
+    				ErrorOutputFile = testErrorFile,
+					OutputFile = testResultFile,
+					WorkingDirectory = ".",
+					Work = MakeAbsolute(Directory("."))
     			});
 			},
 			new FilePath(coverPath),
@@ -95,6 +98,8 @@ Task("UnitTest")
 				.WithFilter("+:VaraniumSharp")
     			.WithFilter("-:VaraniumSharp.Tests")
 		);
+
+		PushTestResults(testResultFile);
 
 		if(FileExists(testErrorFile) && FileReadLines(testErrorFile).Count() > 0)
 		{

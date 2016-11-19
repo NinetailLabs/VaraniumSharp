@@ -40,6 +40,20 @@ namespace VaraniumSharp.DependencyInjection
         #region Public Methods
 
         /// <summary>
+        /// Resolve a Service from the Container
+        /// </summary>
+        /// <typeparam name="TService">Service to resolve</typeparam>
+        /// <returns>Resolved service</returns>
+        public abstract TService Resolve<TService>();
+
+        /// <summary>
+        /// Resolve Services from the container via a shared interface of parent class
+        /// </summary>
+        /// <typeparam name="TService">Interface or parent class that children are registered under</typeparam>
+        /// <returns>Collection of children classes that inherit from the parent or implement the interface</returns>
+        public abstract IEnumerable<TService> ResolveMany<TService>();
+
+        /// <summary>
         /// Call to retrieve classes that request Automatic registration
         /// Can optionally continue with registration
         /// </summary>
