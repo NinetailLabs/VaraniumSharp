@@ -45,6 +45,7 @@
     <Compile Include="Attributes\AutomaticContainerRegistrationAttributeTest.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistrationTest.cs" />
     <Compile Include="Extensions\StringExtensionsTest.cs" />
+    <Compile Include="Extensions\UrlBuilderExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

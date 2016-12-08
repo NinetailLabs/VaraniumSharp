@@ -54,6 +54,7 @@
     <Compile Include="DependencyInjection\AutomaticContainerRegistration.cs" />
     <Compile Include="Enumerations\ServiceReuse.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\UrlBuilderExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
