@@ -65,7 +65,7 @@ namespace VaraniumSharp.DependencyInjection
                     .Where(
                         t =>
                             t.IsClass &&
-                            (t.GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false).Length > 0)));
+                            t.GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false).Length > 0));
 
             if (!handleRegistration)
             {
@@ -80,10 +80,10 @@ namespace VaraniumSharp.DependencyInjection
                 .SelectMany(t => t.GetTypes())
                 .Where(
                     t =>
-                        ((t.IsClass && !t.IsSealed) || t.IsInterface)
+                        (t.IsClass && !t.IsSealed || t.IsInterface)
                         &&
-                        (t.GetCustomAttributes(typeof(AutomaticConcretionContainerRegistrationAttribute), false).Length >
-                         0)
+                        t.GetCustomAttributes(typeof(AutomaticConcretionContainerRegistrationAttribute), false).Length >
+                        0
                 );
 
             foreach (var @class in classes)
@@ -91,7 +91,7 @@ namespace VaraniumSharp.DependencyInjection
                 var children = AppDomain.CurrentDomain.GetAssemblies().SelectMany(t => t.GetTypes())
                     .Where(
                         x =>
-                            !x.IsInterface && !x.IsAbstract && ((x.BaseType == @class) ||
+                            !x.IsInterface && !x.IsAbstract && (x.IsSubclassOf(@class) ||
                             x.GetInterfaces().Contains(@class))).ToList();
 
                 ConcretionClassesToRegister.Add(@class, children);
