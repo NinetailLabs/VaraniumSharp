@@ -6,9 +6,7 @@
 
 A very simple helper library with the goal of having reusable, reliable components.
 
-
-Current functionality:
-- GetConfigurationValue extension - Retrieve typed configuration value from AppSettings based on string key 
+For a detailed overview of the library see our [documentation](https://ninetaillabs.github.io/VaraniumSharp/index.html)
 
 ## Icon
 [Sprout](https://thenounproject.com/term/sprout/607325/) by [parkjisun](https://thenounproject.com/naripuru/) from the Noun Project

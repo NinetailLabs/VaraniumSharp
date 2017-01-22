@@ -1,5 +1,7 @@
 # VaraniumSharp
 
+![Logo](images/logo.png)
+
 [![Build status](https://ci.appveyor.com/api/projects/status/vgyue0pbd6fqant0/branch/master?svg=true)](https://ci.appveyor.com/project/DeadlyEmbrace/varaniumsharp/branch/master)
 [![NuGet](https://img.shields.io/nuget/v/VaraniumSharp.svg)](https://www.nuget.org/packages/VaraniumSharp/)
 [![Coverage Status](https://coveralls.io/repos/github/NinetailLabs/VaraniumSharp/badge.svg?branch=master)](https://coveralls.io/github/NinetailLabs/VaraniumSharp?branch=master)

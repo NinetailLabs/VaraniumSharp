@@ -1,14 +1,17 @@
 //Addins
-#addin nuget:?package=Cake.VersionReader
-#addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.Coveralls
+#addin nuget:?package=Cake.DocFx
+#addin nuget:?package=Cake.FileHelpers
+#addin nuget:?package=Cake.Git
 #addin nuget:?package=Cake.PaketRestore
+#addin nuget:?package=Cake.VersionReader
 
 //Tools
+#tool nuget:?package=docfx.console
 #tool nuget:?package=GitReleaseNotes
 #tool nuget:?package=NUnit.ConsoleRunner
 #tool nuget:?package=OpenCover
-#tool coveralls.io
+#tool nuget:?package=coveralls.io
 
 //Project Variables
 var projectName = "VaraniumSharp";
@@ -185,12 +188,44 @@ Task ("Push")
 		});
 	});
 
+Task ("Documentation")
+	.Does (() => {
+		DocFx("docfx_project/docfx.json");
+
+		if(buildType != "master")
+		{
+			Information("Documentation is only pushed for master branch");
+			return;
+		}
+
+		var newDocumentationPath = MakeAbsolute(Directory("docfx_project/_site"));
+		var gitRepo = string.Format("https://github.com/NinetailLabs/{0}.git", projectName);
+		var botToken = EnvironmentVariable("BotToken");
+		var branch = "gh-pages";
+
+		Information("Cloning documentation branch");
+		GitClone(gitRepo, MakeAbsolute(Directory("docClone")), new GitCloneSettings{
+			BranchName = branch
+		});
+
+		Information("Preparing updated site");
+		CopyDirectory(MakeAbsolute(Directory("docClone/.git")), MakeAbsolute(Directory("docfx_project/_site/.git")));
+		GitAddAll(newDocumentationPath);
+
+		Information("Pushing updated documentation to repo");
+		GitCommit(newDocumentationPath, "NinetailLabsBot", "gitbot@ninetaillabs.com", "Documentation for " + version);
+		GitPush(newDocumentationPath, "NinetailLabsBot", botToken, branch);
+		Information("Completed Documentation update");
+	});
+
 Task ("Default")
-	.IsDependentOn ("OutputVariables")
-	.IsDependentOn ("DiscoverBuildDetails")
-	.IsDependentOn ("PaketRestore")
-	.IsDependentOn ("Build")
-	.IsDependentOn ("UnitTests");
+	// .IsDependentOn ("OutputVariables")
+	// .IsDependentOn ("DiscoverBuildDetails")
+	// .IsDependentOn ("PaketRestore")
+	// .IsDependentOn ("Build")
+	// .IsDependentOn ("UnitTests");	
+	.IsDependentOn ("Documentation");
+
 Task ("Release")
 	.IsDependentOn ("OutputVariables")
 	.IsDependentOn ("DiscoverBuildDetails")
@@ -200,7 +235,8 @@ Task ("Release")
 	.IsDependentOn ("CoverageUpload")
 	.IsDependentOn ("GenerateReleaseNotes")
 	.IsDependentOn ("Nuget")
-    .IsDependentOn ("Push");
+    .IsDependentOn ("Push")
+	.IsDependentOn ("Documentation");
 
 RunTarget (target);
 
