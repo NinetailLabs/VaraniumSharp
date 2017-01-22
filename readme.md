@@ -1,5 +1,7 @@
 # VaraniumSharp
 
+[![Coverage Status](https://coveralls.io/repos/github/NinetailLabs/VaraniumSharp/badge.svg?branch=master)](https://coveralls.io/github/NinetailLabs/VaraniumSharp?branch=master)
+
 A very simple helper library with the goal of having reusable, reliable components.
 
 
