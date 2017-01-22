@@ -57,6 +57,7 @@ namespace VaraniumSharp.DependencyInjection
         /// Call to retrieve classes that request Automatic registration
         /// Can optionally continue with registration
         /// </summary>
+        /// <param name="handleRegistration">Set to false to manually register class, otherwise use true</param>
         public virtual void RetrieveClassesRequiringRegistration(bool handleRegistration)
         {
             ClassesToRegister.AddRange(
@@ -74,6 +75,10 @@ namespace VaraniumSharp.DependencyInjection
             RegisterClasses();
         }
 
+        /// <summary>
+        /// Call to retrieve classes that request Automatic Concretion registation
+        /// </summary>
+        /// <param name="handleRegistration">Set to false to manually register class, otherwise use true</param>
         public virtual void RetrieveConcretionClassesRequiringRegistration(bool handleRegistration)
         {
             var classes = AppDomain.CurrentDomain.GetAssemblies()

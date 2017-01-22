@@ -3,5 +3,6 @@ source https://api.nuget.org/v3/index.json
 framework: >= net462
 
 nuget FluentAssertions ~>  4.14
+nuget msdn.4.5.2 0.1.0-alpha-1611021200
 nuget NUnit ~> 3.4
 nuget SemVer.Git.MSBuild >= 1.1.0 content:once
