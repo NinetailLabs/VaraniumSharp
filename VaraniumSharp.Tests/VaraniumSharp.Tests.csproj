@@ -58,7 +58,6 @@
       <Name>VaraniumSharp</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -70,13 +69,13 @@
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
-        <Reference Include="FluentAssertions.Core">
-          <HintPath>..\packages\FluentAssertions\lib\net45\FluentAssertions.Core.dll</HintPath>
+        <Reference Include="FluentAssertions">
+          <HintPath>..\packages\FluentAssertions\lib\net45\FluentAssertions.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
-        <Reference Include="FluentAssertions">
-          <HintPath>..\packages\FluentAssertions\lib\net45\FluentAssertions.dll</HintPath>
+        <Reference Include="FluentAssertions.Core">
+          <HintPath>..\packages\FluentAssertions\lib\net45\FluentAssertions.Core.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
