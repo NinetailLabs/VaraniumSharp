@@ -138,7 +138,6 @@ Task ("GenerateReleaseNotes")
 	});
 
 Task ("Nuget")
-	.WithCriteria (buildType == "master")
 	.Does (() => {
 		if(!testsSucceeded)
 		{
@@ -148,7 +147,7 @@ Task ("Nuget")
 
 		CreateDirectory ("./nupkg/");
 		ReplaceRegexInFiles(nuspecFile, "0.0.0", version);
-		//ReplaceRegexInFiles(nuspecFile, "ReleaseNotesHere", releaseNotesText);
+		ReplaceRegexInFiles(nuspecFile, "ReleaseNotesHere", releaseNotesText);
 		
 		NuGetPack (nuspecFile, new NuGetPackSettings { 
 			Verbosity = NuGetVerbosity.Detailed,
@@ -224,6 +223,7 @@ Task ("Default")
 	.IsDependentOn ("Build")
 	.IsDependentOn ("UnitTests")
 	.IsDependentOn ("GenerateReleaseNotes")
+	.IsDependentOn ("Nuget")
 	.IsDependentOn ("Documentation");
 
 Task ("Release")
