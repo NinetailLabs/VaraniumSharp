@@ -2,7 +2,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <metadata xmlns="http://schemas.microsoft.com/packaging/21.0.07/nuspec.xsd">
       <id>VaraniumSharp</id>
-      <version>0.0.0</version>
+      <version>1.9.0</version>
       <authors>NineTail Labs</authors>
       <owners>NineTail Labs</owners>
       <title>VaraniumSharp</title>
@@ -13,12 +13,28 @@
       <iconUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/develop/icon.png</iconUrl>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <copyright>Copyright (c) NineTail Labs 2016</copyright>
-      <releaseNotes>ReleaseNotesHere</releaseNotes>
+      <releaseNotes># 1.9.0 (26 January 2017)
+
+ - [#25](https://github.com/NinetailLabs/VaraniumSharp/issues/25) - Update AutomaticContainerRegistration attributes
+ - [#23](https://github.com/NinetailLabs/VaraniumSharp/issues/23) - Documentation
+ - [#21](https://github.com/NinetailLabs/VaraniumSharp/issues/21) - Code coverage +enhancement
+ - [#20](https://github.com/NinetailLabs/VaraniumSharp/issues/20) - Readme updates +enhancement
+
+Commits: b47702b040...84a8d95518
+
+
+# vNext
+
+ - [#22](https://github.com/NinetailLabs/VaraniumSharp/issues/22) - Concretion registration does not pick up classes that implements a class that implements a Concretion base class +fix
+ - [#19](https://github.com/NinetailLabs/VaraniumSharp/issues/19) - Url Builder +enhancement
+
+Commits: b47702b040...b28aa1a801
+</releaseNotes>
       <tags>C# VaraniumSharp Varanium</tags>
    </metadata>
 
    <files>
-      <file src="/bin/Release/VaraniumSharp.dll" target="lib/net462" />
-      <file src="/bin/Release/VaraniumSharp.xml" target="lib/net462" />      
+      <file src="./bin/Release/VaraniumSharp.dll" target="lib\net462" />
+      <file src="./bin/Release/VaraniumSharp.xml" target="lib\net462" />      
    </files>
 </package>
