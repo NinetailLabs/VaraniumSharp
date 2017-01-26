@@ -25,6 +25,12 @@ references:
   commentId: M:VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.#ctor(VaraniumSharp.Enumerations.ServiceReuse)
   fullName: VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.AutomaticConcretionContainerRegistrationAttribute(VaraniumSharp.Enumerations.ServiceReuse)
   nameWithType: AutomaticConcretionContainerRegistrationAttribute.AutomaticConcretionContainerRegistrationAttribute(ServiceReuse)
+- uid: VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.#ctor(VaraniumSharp.Enumerations.ServiceReuse,System.Boolean)
+  name: AutomaticConcretionContainerRegistrationAttribute(ServiceReuse, Boolean)
+  href: api/VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticConcretionContainerRegistrationAttribute__ctor_VaraniumSharp_Enumerations_ServiceReuse_System_Boolean_
+  commentId: M:VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.#ctor(VaraniumSharp.Enumerations.ServiceReuse,System.Boolean)
+  fullName: VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.AutomaticConcretionContainerRegistrationAttribute(VaraniumSharp.Enumerations.ServiceReuse, System.Boolean)
+  nameWithType: AutomaticConcretionContainerRegistrationAttribute.AutomaticConcretionContainerRegistrationAttribute(ServiceReuse, Boolean)
 - uid: VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.#ctor*
   name: AutomaticConcretionContainerRegistrationAttribute
   href: api/VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticConcretionContainerRegistrationAttribute__ctor_
@@ -49,6 +55,12 @@ references:
   commentId: M:VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.#ctor(System.Type,VaraniumSharp.Enumerations.ServiceReuse)
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute(System.Type, VaraniumSharp.Enumerations.ServiceReuse)
   nameWithType: AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute(Type, ServiceReuse)
+- uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.#ctor(System.Type,VaraniumSharp.Enumerations.ServiceReuse,System.Boolean)
+  name: AutomaticContainerRegistrationAttribute(Type, ServiceReuse, Boolean)
+  href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationAttribute__ctor_System_Type_VaraniumSharp_Enumerations_ServiceReuse_System_Boolean_
+  commentId: M:VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.#ctor(System.Type,VaraniumSharp.Enumerations.ServiceReuse,System.Boolean)
+  fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute(System.Type, VaraniumSharp.Enumerations.ServiceReuse, System.Boolean)
+  nameWithType: AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute(Type, ServiceReuse, Boolean)
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.#ctor*
   name: AutomaticContainerRegistrationAttribute
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationAttribute__ctor_
@@ -73,18 +85,30 @@ references:
   commentId: T:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute
   nameWithType: AutomaticContainerRegistrationBaseAttribute
-- uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.#ctor(VaraniumSharp.Enumerations.ServiceReuse)
-  name: AutomaticContainerRegistrationBaseAttribute(ServiceReuse)
-  href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute__ctor_VaraniumSharp_Enumerations_ServiceReuse_
-  commentId: M:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.#ctor(VaraniumSharp.Enumerations.ServiceReuse)
-  fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutomaticContainerRegistrationBaseAttribute(VaraniumSharp.Enumerations.ServiceReuse)
-  nameWithType: AutomaticContainerRegistrationBaseAttribute.AutomaticContainerRegistrationBaseAttribute(ServiceReuse)
+- uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.#ctor(VaraniumSharp.Enumerations.ServiceReuse,System.Boolean)
+  name: AutomaticContainerRegistrationBaseAttribute(ServiceReuse, Boolean)
+  href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute__ctor_VaraniumSharp_Enumerations_ServiceReuse_System_Boolean_
+  commentId: M:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.#ctor(VaraniumSharp.Enumerations.ServiceReuse,System.Boolean)
+  fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutomaticContainerRegistrationBaseAttribute(VaraniumSharp.Enumerations.ServiceReuse, System.Boolean)
+  nameWithType: AutomaticContainerRegistrationBaseAttribute.AutomaticContainerRegistrationBaseAttribute(ServiceReuse, Boolean)
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.#ctor*
   name: AutomaticContainerRegistrationBaseAttribute
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute__ctor_
   commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.#ctor
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutomaticContainerRegistrationBaseAttribute
   nameWithType: AutomaticContainerRegistrationBaseAttribute.AutomaticContainerRegistrationBaseAttribute
+- uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
+  name: MultipleConstructors
+  href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute_MultipleConstructors
+  commentId: P:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
+  fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
+  nameWithType: AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
+- uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.MultipleConstructors*
+  name: MultipleConstructors
+  href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute_MultipleConstructors_
+  commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
+  fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
+  nameWithType: AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.Reuse
   name: Reuse
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute_Reuse
@@ -170,14 +194,11 @@ references:
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RegisterConcretionClasses
   nameWithType: AutomaticContainerRegistration.RegisterConcretionClasses
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve*
-  name: Resolve<TService>
+  name: Resolve
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_Resolve_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve
-  name.vb: Resolve(Of TService)
-  fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve<TService>
-  fullName.vb: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve(Of TService)
-  nameWithType: AutomaticContainerRegistration.Resolve<TService>
-  nameWithType.vb: AutomaticContainerRegistration.Resolve(Of TService)
+  fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve
+  nameWithType: AutomaticContainerRegistration.Resolve
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve``1
   name: Resolve<TService>()
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_Resolve__1
@@ -186,16 +207,13 @@ references:
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve<TService>()
   fullName.vb: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve(Of TService)()
   nameWithType: AutomaticContainerRegistration.Resolve<TService>()
-  nameWithType.vb: Resolve(Of TService)()
+  nameWithType.vb: AutomaticContainerRegistration.Resolve(Of TService)()
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany*
-  name: ResolveMany<TService>
+  name: ResolveMany
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_ResolveMany_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany
-  name.vb: ResolveMany(Of TService)
-  fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany<TService>
-  fullName.vb: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany(Of TService)
-  nameWithType: AutomaticContainerRegistration.ResolveMany<TService>
-  nameWithType.vb: AutomaticContainerRegistration.ResolveMany(Of TService)
+  fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany
+  nameWithType: AutomaticContainerRegistration.ResolveMany
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany``1
   name: ResolveMany<TService>()
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_ResolveMany__1
@@ -204,7 +222,7 @@ references:
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany<TService>()
   fullName.vb: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany(Of TService)()
   nameWithType: AutomaticContainerRegistration.ResolveMany<TService>()
-  nameWithType.vb: ResolveMany(Of TService)()
+  nameWithType.vb: AutomaticContainerRegistration.ResolveMany(Of TService)()
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RetrieveClassesRequiringRegistration(System.Boolean)
   name: RetrieveClassesRequiringRegistration(Boolean)
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_RetrieveClassesRequiringRegistration_System_Boolean_
@@ -266,14 +284,11 @@ references:
   fullName: VaraniumSharp.Extensions.StringExtensions
   nameWithType: StringExtensions
 - uid: VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue*
-  name: GetConfigurationValue<T>
+  name: GetConfigurationValue
   href: api/VaraniumSharp.Extensions.StringExtensions.html#VaraniumSharp_Extensions_StringExtensions_GetConfigurationValue_
   commentId: Overload:VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue
-  name.vb: GetConfigurationValue(Of T)
-  fullName: VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue<T>
-  fullName.vb: VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue(Of T)
-  nameWithType: StringExtensions.GetConfigurationValue<T>
-  nameWithType.vb: StringExtensions.GetConfigurationValue(Of T)
+  fullName: VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue
+  nameWithType: StringExtensions.GetConfigurationValue
 - uid: VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue``1(System.String)
   name: GetConfigurationValue<T>(String)
   href: api/VaraniumSharp.Extensions.StringExtensions.html#VaraniumSharp_Extensions_StringExtensions_GetConfigurationValue__1_System_String_
@@ -282,7 +297,7 @@ references:
   fullName: VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue<T>(System.String)
   fullName.vb: VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue(Of T)(System.String)
   nameWithType: StringExtensions.GetConfigurationValue<T>(String)
-  nameWithType.vb: GetConfigurationValue(Of T)(String)
+  nameWithType.vb: StringExtensions.GetConfigurationValue(Of T)(String)
 - uid: VaraniumSharp.Extensions.UrlBuilderExtensions
   name: UrlBuilderExtensions
   href: api/VaraniumSharp.Extensions.UrlBuilderExtensions.html
@@ -297,7 +312,7 @@ references:
   fullName: VaraniumSharp.Extensions.UrlBuilderExtensions.AppendQueryString(System.String, System.Collections.Generic.KeyValuePair<System.String, System.String>[])
   fullName.vb: VaraniumSharp.Extensions.UrlBuilderExtensions.AppendQueryString(System.String, System.Collections.Generic.KeyValuePair(Of System.String, System.String)())
   nameWithType: UrlBuilderExtensions.AppendQueryString(String, KeyValuePair<String, String>[])
-  nameWithType.vb: AppendQueryString(String, KeyValuePair(Of String, String)())
+  nameWithType.vb: UrlBuilderExtensions.AppendQueryString(String, KeyValuePair(Of String, String)())
 - uid: VaraniumSharp.Extensions.UrlBuilderExtensions.AppendQueryString*
   name: AppendQueryString
   href: api/VaraniumSharp.Extensions.UrlBuilderExtensions.html#VaraniumSharp_Extensions_UrlBuilderExtensions_AppendQueryString_
@@ -312,7 +327,7 @@ references:
   fullName: VaraniumSharp.Extensions.UrlBuilderExtensions.BuildPath(System.String, System.String[])
   fullName.vb: VaraniumSharp.Extensions.UrlBuilderExtensions.BuildPath(System.String, System.String())
   nameWithType: UrlBuilderExtensions.BuildPath(String, String[])
-  nameWithType.vb: BuildPath(String, String())
+  nameWithType.vb: UrlBuilderExtensions.BuildPath(String, String())
 - uid: VaraniumSharp.Extensions.UrlBuilderExtensions.BuildPath*
   name: BuildPath
   href: api/VaraniumSharp.Extensions.UrlBuilderExtensions.html#VaraniumSharp_Extensions_UrlBuilderExtensions_BuildPath_
