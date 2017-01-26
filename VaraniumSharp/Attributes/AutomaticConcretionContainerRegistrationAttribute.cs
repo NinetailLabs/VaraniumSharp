@@ -24,7 +24,16 @@ namespace VaraniumSharp.Attributes
         /// </summary>
         /// <param name="reuse">Indicate service reuse type</param>
         public AutomaticConcretionContainerRegistrationAttribute(ServiceReuse reuse)
-            : base(reuse)
+            : this(reuse, false)
+        { }
+
+        /// <summary>
+        /// Constructor that allows setting Reuse directly
+        /// </summary>
+        /// <param name="reuse">Indicate service reuse type</param>
+        /// <param name="multipleConstructors">Indicate if the service has multiple constructors</param>
+        public AutomaticConcretionContainerRegistrationAttribute(ServiceReuse reuse, bool multipleConstructors)
+            : base(reuse, multipleConstructors)
         { }
 
         #endregion

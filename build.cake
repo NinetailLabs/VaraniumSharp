@@ -125,7 +125,6 @@ Task ("CoverageUpload")
 	});
 	
 Task ("GenerateReleaseNotes")
-	.WithCriteria (buildType == "master")
 	.Does (() => {
 		var releasePath = MakeAbsolute(File(releaseNotes));
 		GitReleaseNotes(releasePath, new GitReleaseNotesSettings{
@@ -219,11 +218,12 @@ Task ("Documentation")
 	});
 
 Task ("Default")
-	// .IsDependentOn ("OutputVariables")
-	// .IsDependentOn ("DiscoverBuildDetails")
-	// .IsDependentOn ("PaketRestore")
-	// .IsDependentOn ("Build")
-	// .IsDependentOn ("UnitTests");	
+	.IsDependentOn ("OutputVariables")
+	.IsDependentOn ("DiscoverBuildDetails")
+	.IsDependentOn ("PaketRestore")
+	.IsDependentOn ("Build")
+	.IsDependentOn ("UnitTests")
+	.IsDependentOn ("GenerateReleaseNotes")
 	.IsDependentOn ("Documentation");
 
 Task ("Release")
