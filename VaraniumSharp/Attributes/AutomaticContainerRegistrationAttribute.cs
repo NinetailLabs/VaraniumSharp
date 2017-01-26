@@ -22,10 +22,21 @@ namespace VaraniumSharp.Attributes
         /// <summary>
         /// Construct attribute with service type and reuse
         /// </summary>
-        /// <param name="serviceType"></param>
-        /// <param name="reuse"></param>
+        /// <param name="serviceType">The type that the service should be registered as</param>
+        /// <param name="reuse">Indicate reuse policy for the service</param>
         public AutomaticContainerRegistrationAttribute(Type serviceType, ServiceReuse reuse)
-            : base(reuse)
+            : this(serviceType, reuse, false)
+        { }
+
+        /// <summary>
+        /// Construct attribute with service type, reuse and multiple constructor flag
+        /// </summary>
+        /// <param name="serviceType">The type that the service should be registered as</param>
+        /// <param name="reuse">Indicate reuse policy for the service</param>
+        /// <param name="multipleConstructors">Indicate if the service has multiple constructors</param>
+        public AutomaticContainerRegistrationAttribute(Type serviceType, ServiceReuse reuse,
+            bool multipleConstructors)
+            : base(reuse, multipleConstructors)
         {
             ServiceType = serviceType;
         }
