@@ -16,7 +16,7 @@
         }
       ],
       "dest": "api",
-      "filter": "docfx_project/apifilter.yml"
+      "filter": "./apifilter.yml"
     }
   ],
   "build": {
