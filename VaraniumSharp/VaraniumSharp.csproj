@@ -51,6 +51,7 @@
     <Compile Include="Attributes\AutomaticContainerRegistrationAttributeBase.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistration.cs" />
     <Compile Include="Enumerations\ServiceReuse.cs" />
+    <Compile Include="Extensions\ObservableCollectionExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\UrlBuilderExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
