@@ -37,6 +37,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,16 +50,21 @@
     <Compile Include="Attributes\AutomaticConcretionContainerRegistrationAttribute.cs" />
     <Compile Include="Attributes\AutomaticContainerRegistrationAttribute.cs" />
     <Compile Include="Attributes\AutomaticContainerRegistrationAttributeBase.cs" />
+    <Compile Include="Caching\MemoryCacheWrapper.cs" />
+    <Compile Include="Caching\BasicMemoryCacheWrapperFactory.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistration.cs" />
     <Compile Include="Enumerations\ServiceReuse.cs" />
     <Compile Include="Extensions\ObservableCollectionExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\UrlBuilderExtensions.cs" />
+    <Compile Include="Interfaces\Caching\IMemoryCacheWrapper.cs" />
+    <Compile Include="Interfaces\Caching\IMemoryCacheWrapperFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="paket.references" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
