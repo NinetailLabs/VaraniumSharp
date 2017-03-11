@@ -49,6 +49,7 @@
     <Compile Include="Caching\MemoryCacheWrapperTests.cs" />
     <Compile Include="Configuration\ReconfigurableSettingBaseTests.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistrationTest.cs" />
+    <Compile Include="Extensions\HttpClientExtensionsTests.cs" />
     <Compile Include="Extensions\ObservableCollectionExtensionsTests.cs" />
     <Compile Include="Extensions\StringExtensionsTest.cs" />
     <Compile Include="Extensions\UrlBuilderExtensionsTests.cs" />
