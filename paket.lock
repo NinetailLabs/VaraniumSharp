@@ -5,4 +5,7 @@ NUGET
     NUnit (3.4.1)
     SemVer.Git.MSBuild (1.1) - content: once
   remote: https://api.nuget.org/v3/index.json
+    Fody (1.29.4) - content: once
     msdn.4.5.2 (0.1.0-alpha-1611021200)
+    PropertyChanged.Fody (1.52.1) - copy_local: false
+      Fody (>= 1.29.2 < 2.0)

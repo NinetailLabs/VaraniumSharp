@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using VaraniumSharp.Attributes;
 using VaraniumSharp.Interfaces.Caching;
 
+#pragma warning disable 0067
+
 namespace VaraniumSharp.Caching
 {
     /// <summary>

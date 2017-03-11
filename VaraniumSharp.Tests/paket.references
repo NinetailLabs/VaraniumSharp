@@ -1,2 +1,4 @@
 FluentAssertions
+Fody
 NUnit
+PropertyChanged.Fody
