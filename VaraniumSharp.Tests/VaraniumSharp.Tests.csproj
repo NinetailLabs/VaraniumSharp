@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Attributes\AutomaticConcretionContainerRegistrationTests.cs" />
     <Compile Include="Attributes\AutomaticContainerRegistrationAttributeTest.cs" />
+    <Compile Include="Caching\BasicMemoryCacheWrapperFactoryTests.cs" />
+    <Compile Include="Caching\MemoryCacheWrapperTests.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistrationTest.cs" />
     <Compile Include="Extensions\ObservableCollectionExtensionsTests.cs" />
     <Compile Include="Extensions\StringExtensionsTest.cs" />
