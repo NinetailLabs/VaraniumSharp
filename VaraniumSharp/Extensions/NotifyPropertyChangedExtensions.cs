@@ -67,7 +67,8 @@ namespace VaraniumSharp.Extensions
         {
             var self = (INotifyPropertyChanged)sender;
 
-            if (!self.TaskCompleted(out var completionSource))
+            TaskCompletionSource<bool> completionSource;
+            if (!self.TaskCompleted(out completionSource))
             {
                 return;
             }
