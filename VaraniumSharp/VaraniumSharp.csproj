@@ -51,12 +51,14 @@
     <Compile Include="Attributes\AutomaticConcretionContainerRegistrationAttribute.cs" />
     <Compile Include="Attributes\AutomaticContainerRegistrationAttribute.cs" />
     <Compile Include="Attributes\AutomaticContainerRegistrationAttributeBase.cs" />
+    <Compile Include="Attributes\BlockingPropertyAttribute.cs" />
     <Compile Include="Caching\MemoryCacheWrapper.cs" />
     <Compile Include="Caching\BasicMemoryCacheWrapperFactory.cs" />
     <Compile Include="Configuration\ReconfigurableSettingBase.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistration.cs" />
     <Compile Include="Enumerations\ServiceReuse.cs" />
     <Compile Include="Extensions\HttpClientExtensions.cs" />
+    <Compile Include="Extensions\NotifyPropertyChangedExtensions.cs" />
     <Compile Include="Extensions\ObservableCollectionExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\UrlBuilderExtensions.cs" />
