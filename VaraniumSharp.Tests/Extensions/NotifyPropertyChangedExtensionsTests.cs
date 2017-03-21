@@ -4,6 +4,8 @@ using NUnit.Framework;
 using VaraniumSharp.Attributes;
 using VaraniumSharp.Extensions;
 
+#pragma warning disable 0067
+
 namespace VaraniumSharp.Tests.Extensions
 {
     public class NotifyPropertyChangedExtensionsTests
