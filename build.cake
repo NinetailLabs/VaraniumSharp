@@ -224,7 +224,7 @@ Task ("Default")
 	.IsDependentOn ("PaketRestore")
 	.IsDependentOn ("Build")
 	.IsDependentOn ("UnitTests")
-	.IsDependentOn ("GenerateReleaseNotes")
+	//.IsDependentOn ("GenerateReleaseNotes")
 	.IsDependentOn ("Nuget")
 	.IsDependentOn ("Documentation");
 
@@ -235,7 +235,7 @@ Task ("Release")
 	.IsDependentOn ("Build")
 	.IsDependentOn ("UnitTests")
 	.IsDependentOn ("CoverageUpload")
-	.IsDependentOn ("GenerateReleaseNotes")
+	//.IsDependentOn ("GenerateReleaseNotes")
 	.IsDependentOn ("Nuget")
     .IsDependentOn ("Push")
 	.IsDependentOn ("Documentation");

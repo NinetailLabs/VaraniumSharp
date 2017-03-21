@@ -13,7 +13,7 @@
       <iconUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/develop/icon.png</iconUrl>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <copyright>Copyright (c) NineTail Labs 2016</copyright>
-      <releaseNotes>ReleaseNotesHere</releaseNotes>
+      <releaseNotes>Added BlockUntil extension to provide a cheap way of blocking while waiting for data processing</releaseNotes>
       <tags>C# VaraniumSharp Varanium</tags>
    </metadata>
 
