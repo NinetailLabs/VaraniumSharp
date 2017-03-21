@@ -121,6 +121,36 @@ references:
   commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.Reuse
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.Reuse
   nameWithType: AutomaticContainerRegistrationBaseAttribute.Reuse
+- uid: VaraniumSharp.Attributes.BlockingPropertyAttribute
+  name: BlockingPropertyAttribute
+  href: api/VaraniumSharp.Attributes.BlockingPropertyAttribute.html
+  commentId: T:VaraniumSharp.Attributes.BlockingPropertyAttribute
+  fullName: VaraniumSharp.Attributes.BlockingPropertyAttribute
+  nameWithType: BlockingPropertyAttribute
+- uid: VaraniumSharp.Attributes.BlockingPropertyAttribute.#ctor(System.Object)
+  name: BlockingPropertyAttribute(Object)
+  href: api/VaraniumSharp.Attributes.BlockingPropertyAttribute.html#VaraniumSharp_Attributes_BlockingPropertyAttribute__ctor_System_Object_
+  commentId: M:VaraniumSharp.Attributes.BlockingPropertyAttribute.#ctor(System.Object)
+  fullName: VaraniumSharp.Attributes.BlockingPropertyAttribute.BlockingPropertyAttribute(System.Object)
+  nameWithType: BlockingPropertyAttribute.BlockingPropertyAttribute(Object)
+- uid: VaraniumSharp.Attributes.BlockingPropertyAttribute.#ctor*
+  name: BlockingPropertyAttribute
+  href: api/VaraniumSharp.Attributes.BlockingPropertyAttribute.html#VaraniumSharp_Attributes_BlockingPropertyAttribute__ctor_
+  commentId: Overload:VaraniumSharp.Attributes.BlockingPropertyAttribute.#ctor
+  fullName: VaraniumSharp.Attributes.BlockingPropertyAttribute.BlockingPropertyAttribute
+  nameWithType: BlockingPropertyAttribute.BlockingPropertyAttribute
+- uid: VaraniumSharp.Attributes.BlockingPropertyAttribute.ExpectedValue
+  name: ExpectedValue
+  href: api/VaraniumSharp.Attributes.BlockingPropertyAttribute.html#VaraniumSharp_Attributes_BlockingPropertyAttribute_ExpectedValue
+  commentId: P:VaraniumSharp.Attributes.BlockingPropertyAttribute.ExpectedValue
+  fullName: VaraniumSharp.Attributes.BlockingPropertyAttribute.ExpectedValue
+  nameWithType: BlockingPropertyAttribute.ExpectedValue
+- uid: VaraniumSharp.Attributes.BlockingPropertyAttribute.ExpectedValue*
+  name: ExpectedValue
+  href: api/VaraniumSharp.Attributes.BlockingPropertyAttribute.html#VaraniumSharp_Attributes_BlockingPropertyAttribute_ExpectedValue_
+  commentId: Overload:VaraniumSharp.Attributes.BlockingPropertyAttribute.ExpectedValue
+  fullName: VaraniumSharp.Attributes.BlockingPropertyAttribute.ExpectedValue
+  nameWithType: BlockingPropertyAttribute.ExpectedValue
 - uid: VaraniumSharp.Caching
   name: VaraniumSharp.Caching
   href: api/VaraniumSharp.Caching.html
@@ -570,6 +600,24 @@ references:
   commentId: Overload:VaraniumSharp.Extensions.HttpClientExtensions.SetBasicAuthHeader
   fullName: VaraniumSharp.Extensions.HttpClientExtensions.SetBasicAuthHeader
   nameWithType: HttpClientExtensions.SetBasicAuthHeader
+- uid: VaraniumSharp.Extensions.NotifyPropertyChangedExtensions
+  name: NotifyPropertyChangedExtensions
+  href: api/VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.html
+  commentId: T:VaraniumSharp.Extensions.NotifyPropertyChangedExtensions
+  fullName: VaraniumSharp.Extensions.NotifyPropertyChangedExtensions
+  nameWithType: NotifyPropertyChangedExtensions
+- uid: VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil(System.ComponentModel.INotifyPropertyChanged)
+  name: BlockUntil(INotifyPropertyChanged)
+  href: api/VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.html#VaraniumSharp_Extensions_NotifyPropertyChangedExtensions_BlockUntil_System_ComponentModel_INotifyPropertyChanged_
+  commentId: M:VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil(System.ComponentModel.INotifyPropertyChanged)
+  fullName: VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil(System.ComponentModel.INotifyPropertyChanged)
+  nameWithType: NotifyPropertyChangedExtensions.BlockUntil(INotifyPropertyChanged)
+- uid: VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil*
+  name: BlockUntil
+  href: api/VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.html#VaraniumSharp_Extensions_NotifyPropertyChangedExtensions_BlockUntil_
+  commentId: Overload:VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil
+  fullName: VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil
+  nameWithType: NotifyPropertyChangedExtensions.BlockUntil
 - uid: VaraniumSharp.Extensions.ObservableCollectionExtensions
   name: ObservableCollectionExtensions
   href: api/VaraniumSharp.Extensions.ObservableCollectionExtensions.html
