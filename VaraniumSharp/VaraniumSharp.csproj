@@ -54,6 +54,7 @@
     <Compile Include="Attributes\BlockingPropertyAttribute.cs" />
     <Compile Include="Caching\MemoryCacheWrapper.cs" />
     <Compile Include="Caching\BasicMemoryCacheWrapperFactory.cs" />
+    <Compile Include="Collections\PriorityCollection.cs" />
     <Compile Include="Configuration\ReconfigurableSettingBase.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistration.cs" />
     <Compile Include="Enumerations\ServiceReuse.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Extensions\UrlBuilderExtensions.cs" />
     <Compile Include="Interfaces\Caching\IMemoryCacheWrapper.cs" />
     <Compile Include="Interfaces\Caching\IMemoryCacheWrapperFactory.cs" />
+    <Compile Include="Interfaces\Collections\IPriorityItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,4 +107,5 @@
   </Choose>
   <Import Project="..\packages\Fody\build\$(__paket__Fody_targets).targets" Condition="Exists('..\packages\Fody\build\$(__paket__Fody_targets).targets')" Label="Paket" />
   <Import Project="..\packages\SemVer.Git.MSBuild\build\$(__paket__SemVer_Git_MSBuild_targets).targets" Condition="Exists('..\packages\SemVer.Git.MSBuild\build\$(__paket__SemVer_Git_MSBuild_targets).targets')" Label="Paket" />
+  <Import Project="..\packages\SemVer.Git.MSBuild\build\$(__paket__SemVer_MSBuild_targets).targets" Condition="Exists('..\packages\SemVer.Git.MSBuild\build\$(__paket__SemVer_MSBuild_targets).targets')" Label="Paket" />
 </Project>

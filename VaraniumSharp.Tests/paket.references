@@ -1,4 +1,5 @@
 FluentAssertions
 Fody
+Moq
 NUnit
 PropertyChanged.Fody

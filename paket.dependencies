@@ -2,8 +2,10 @@ source https://api.nuget.org/v3/index.json
 
 framework: >= net462
 
+nuget Castle.Core >= 4.1.1 redirects: on
 nuget FluentAssertions ~>  4.14
 nuget Fody >= 1.29.4 content: once
+nuget Moq >= 4.7.63
 nuget msdn.4.5.2 0.1.0-alpha-1611021200
 nuget NUnit ~> 3.4
 nuget PropertyChanged.Fody >= 1.52.1 copy_local: false
