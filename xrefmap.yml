@@ -306,6 +306,177 @@ references:
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).RemoveFromCacheAsync
   nameWithType: MemoryCacheWrapper<T>.RemoveFromCacheAsync
   nameWithType.vb: MemoryCacheWrapper(Of T).RemoveFromCacheAsync
+- uid: VaraniumSharp.Collections
+  name: VaraniumSharp.Collections
+  href: api/VaraniumSharp.Collections.html
+  commentId: N:VaraniumSharp.Collections
+  fullName: VaraniumSharp.Collections
+  nameWithType: VaraniumSharp.Collections
+- uid: VaraniumSharp.Collections.PriorityCollection`1
+  name: PriorityCollection<T>
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html
+  commentId: T:VaraniumSharp.Collections.PriorityCollection`1
+  name.vb: PriorityCollection(Of T)
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T)
+  nameWithType: PriorityCollection<T>
+  nameWithType.vb: PriorityCollection(Of T)
+- uid: VaraniumSharp.Collections.PriorityCollection`1.CopyTo(`0[],System.Int32)
+  name: CopyTo(T[], Int32)
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_CopyTo__0___System_Int32_
+  commentId: M:VaraniumSharp.Collections.PriorityCollection`1.CopyTo(`0[],System.Int32)
+  name.vb: CopyTo(T(), Int32)
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.CopyTo(T[], System.Int32)
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).CopyTo(T(), System.Int32)
+  nameWithType: PriorityCollection<T>.CopyTo(T[], Int32)
+  nameWithType.vb: PriorityCollection(Of T).CopyTo(T(), Int32)
+- uid: VaraniumSharp.Collections.PriorityCollection`1.CopyTo(System.Array,System.Int32)
+  name: CopyTo(Array, Int32)
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_CopyTo_System_Array_System_Int32_
+  commentId: M:VaraniumSharp.Collections.PriorityCollection`1.CopyTo(System.Array,System.Int32)
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.CopyTo(System.Array, System.Int32)
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).CopyTo(System.Array, System.Int32)
+  nameWithType: PriorityCollection<T>.CopyTo(Array, Int32)
+  nameWithType.vb: PriorityCollection(Of T).CopyTo(Array, Int32)
+- uid: VaraniumSharp.Collections.PriorityCollection`1.CopyTo*
+  name: CopyTo
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_CopyTo_
+  commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.CopyTo
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.CopyTo
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).CopyTo
+  nameWithType: PriorityCollection<T>.CopyTo
+  nameWithType.vb: PriorityCollection(Of T).CopyTo
+- uid: VaraniumSharp.Collections.PriorityCollection`1.Count
+  name: Count
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_Count
+  commentId: P:VaraniumSharp.Collections.PriorityCollection`1.Count
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.Count
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).Count
+  nameWithType: PriorityCollection<T>.Count
+  nameWithType.vb: PriorityCollection(Of T).Count
+- uid: VaraniumSharp.Collections.PriorityCollection`1.Count*
+  name: Count
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_Count_
+  commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.Count
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.Count
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).Count
+  nameWithType: PriorityCollection<T>.Count
+  nameWithType.vb: PriorityCollection(Of T).Count
+- uid: VaraniumSharp.Collections.PriorityCollection`1.GetEnumerator
+  name: GetEnumerator()
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_GetEnumerator
+  commentId: M:VaraniumSharp.Collections.PriorityCollection`1.GetEnumerator
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.GetEnumerator()
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).GetEnumerator()
+  nameWithType: PriorityCollection<T>.GetEnumerator()
+  nameWithType.vb: PriorityCollection(Of T).GetEnumerator()
+- uid: VaraniumSharp.Collections.PriorityCollection`1.GetEnumerator*
+  name: GetEnumerator
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_GetEnumerator_
+  commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.GetEnumerator
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.GetEnumerator
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).GetEnumerator
+  nameWithType: PriorityCollection<T>.GetEnumerator
+  nameWithType.vb: PriorityCollection(Of T).GetEnumerator
+- uid: VaraniumSharp.Collections.PriorityCollection`1.IsSynchronized
+  name: IsSynchronized
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_IsSynchronized
+  commentId: P:VaraniumSharp.Collections.PriorityCollection`1.IsSynchronized
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.IsSynchronized
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).IsSynchronized
+  nameWithType: PriorityCollection<T>.IsSynchronized
+  nameWithType.vb: PriorityCollection(Of T).IsSynchronized
+- uid: VaraniumSharp.Collections.PriorityCollection`1.IsSynchronized*
+  name: IsSynchronized
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_IsSynchronized_
+  commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.IsSynchronized
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.IsSynchronized
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).IsSynchronized
+  nameWithType: PriorityCollection<T>.IsSynchronized
+  nameWithType.vb: PriorityCollection(Of T).IsSynchronized
+- uid: VaraniumSharp.Collections.PriorityCollection`1.SyncRoot
+  name: SyncRoot
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_SyncRoot
+  commentId: P:VaraniumSharp.Collections.PriorityCollection`1.SyncRoot
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.SyncRoot
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).SyncRoot
+  nameWithType: PriorityCollection<T>.SyncRoot
+  nameWithType.vb: PriorityCollection(Of T).SyncRoot
+- uid: VaraniumSharp.Collections.PriorityCollection`1.SyncRoot*
+  name: SyncRoot
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_SyncRoot_
+  commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.SyncRoot
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.SyncRoot
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).SyncRoot
+  nameWithType: PriorityCollection<T>.SyncRoot
+  nameWithType.vb: PriorityCollection(Of T).SyncRoot
+- uid: VaraniumSharp.Collections.PriorityCollection`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:VaraniumSharp.Collections.PriorityCollection`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: PriorityCollection<T>.IEnumerable.GetEnumerator()
+  nameWithType.vb: PriorityCollection(Of T).System.Collections.IEnumerable.GetEnumerator()
+- uid: VaraniumSharp.Collections.PriorityCollection`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: PriorityCollection<T>.IEnumerable.GetEnumerator
+  nameWithType.vb: PriorityCollection(Of T).System.Collections.IEnumerable.GetEnumerator
+- uid: VaraniumSharp.Collections.PriorityCollection`1.ToArray
+  name: ToArray()
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_ToArray
+  commentId: M:VaraniumSharp.Collections.PriorityCollection`1.ToArray
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.ToArray()
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).ToArray()
+  nameWithType: PriorityCollection<T>.ToArray()
+  nameWithType.vb: PriorityCollection(Of T).ToArray()
+- uid: VaraniumSharp.Collections.PriorityCollection`1.ToArray*
+  name: ToArray
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_ToArray_
+  commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.ToArray
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.ToArray
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).ToArray
+  nameWithType: PriorityCollection<T>.ToArray
+  nameWithType.vb: PriorityCollection(Of T).ToArray
+- uid: VaraniumSharp.Collections.PriorityCollection`1.TryAdd(`0)
+  name: TryAdd(T)
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_TryAdd__0_
+  commentId: M:VaraniumSharp.Collections.PriorityCollection`1.TryAdd(`0)
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.TryAdd(T)
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).TryAdd(T)
+  nameWithType: PriorityCollection<T>.TryAdd(T)
+  nameWithType.vb: PriorityCollection(Of T).TryAdd(T)
+- uid: VaraniumSharp.Collections.PriorityCollection`1.TryAdd*
+  name: TryAdd
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_TryAdd_
+  commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.TryAdd
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.TryAdd
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).TryAdd
+  nameWithType: PriorityCollection<T>.TryAdd
+  nameWithType.vb: PriorityCollection(Of T).TryAdd
+- uid: VaraniumSharp.Collections.PriorityCollection`1.TryTake(`0@)
+  name: TryTake(out T)
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_TryTake__0__
+  commentId: M:VaraniumSharp.Collections.PriorityCollection`1.TryTake(`0@)
+  name.vb: TryTake(ByRef T)
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.TryTake(out T)
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).TryTake(ByRef T)
+  nameWithType: PriorityCollection<T>.TryTake(out T)
+  nameWithType.vb: PriorityCollection(Of T).TryTake(ByRef T)
+- uid: VaraniumSharp.Collections.PriorityCollection`1.TryTake*
+  name: TryTake
+  href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_TryTake_
+  commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.TryTake
+  fullName: VaraniumSharp.Collections.PriorityCollection<T>.TryTake
+  fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).TryTake
+  nameWithType: PriorityCollection<T>.TryTake
+  nameWithType.vb: PriorityCollection(Of T).TryTake
 - uid: VaraniumSharp.Configuration
   name: VaraniumSharp.Configuration
   href: api/VaraniumSharp.Configuration.html
@@ -811,3 +982,33 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy(Of T)(System.Func(Of System.String, System.Threading.Tasks.Task(Of T)))
   nameWithType: IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy<T>(Func<String, Task<T>>)
   nameWithType.vb: IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy(Of T)(Func(Of String, Task(Of T)))
+- uid: VaraniumSharp.Interfaces.Collections
+  name: VaraniumSharp.Interfaces.Collections
+  href: api/VaraniumSharp.Interfaces.Collections.html
+  commentId: N:VaraniumSharp.Interfaces.Collections
+  fullName: VaraniumSharp.Interfaces.Collections
+  nameWithType: VaraniumSharp.Interfaces.Collections
+- uid: VaraniumSharp.Interfaces.Collections.IPriorityItem
+  name: IPriorityItem
+  href: api/VaraniumSharp.Interfaces.Collections.IPriorityItem.html
+  commentId: T:VaraniumSharp.Interfaces.Collections.IPriorityItem
+  fullName: VaraniumSharp.Interfaces.Collections.IPriorityItem
+  nameWithType: IPriorityItem
+- uid: VaraniumSharp.Interfaces.Collections.IPriorityItem.Priority
+  name: Priority
+  href: api/VaraniumSharp.Interfaces.Collections.IPriorityItem.html#VaraniumSharp_Interfaces_Collections_IPriorityItem_Priority
+  commentId: P:VaraniumSharp.Interfaces.Collections.IPriorityItem.Priority
+  fullName: VaraniumSharp.Interfaces.Collections.IPriorityItem.Priority
+  nameWithType: IPriorityItem.Priority
+- uid: VaraniumSharp.Interfaces.Collections.IPriorityItem.Priority*
+  name: Priority
+  href: api/VaraniumSharp.Interfaces.Collections.IPriorityItem.html#VaraniumSharp_Interfaces_Collections_IPriorityItem_Priority_
+  commentId: Overload:VaraniumSharp.Interfaces.Collections.IPriorityItem.Priority
+  fullName: VaraniumSharp.Interfaces.Collections.IPriorityItem.Priority
+  nameWithType: IPriorityItem.Priority
+- uid: VaraniumSharp.Interfaces.Collections.IPriorityItem.PriorityChanged
+  name: PriorityChanged
+  href: api/VaraniumSharp.Interfaces.Collections.IPriorityItem.html#VaraniumSharp_Interfaces_Collections_IPriorityItem_PriorityChanged
+  commentId: E:VaraniumSharp.Interfaces.Collections.IPriorityItem.PriorityChanged
+  fullName: VaraniumSharp.Interfaces.Collections.IPriorityItem.PriorityChanged
+  nameWithType: IPriorityItem.PriorityChanged
