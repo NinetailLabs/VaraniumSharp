@@ -14,6 +14,21 @@ namespace VaraniumSharp.Tests.Collections
         #region Public Methods
 
         [Test]
+        public void AddingPrioritylessItemToEmptyCollectionDoesNotThrowAnException()
+        {
+            // arrange
+            var unprioritizedDummy = PriorityItemHelper.CreatePriorityMock(null);
+            unprioritizedDummy.SetupAllProperties();
+
+            var sut = new PriorityCollection<IPriorityItem>();
+            var act = new Action(() => sut.TryAdd(unprioritizedDummy.Object));
+
+            // act
+            // assert
+            act.ShouldNotThrow<InvalidOperationException>();
+        }
+
+        [Test]
         public void AddingPrioritylessItemWillAddItToTheEndOfTheCollection()
         {
             // arrange
