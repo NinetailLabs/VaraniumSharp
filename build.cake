@@ -90,7 +90,6 @@ Task ("UnitTests")
                 ErrorOutputFile = errorResultFile,
                 OutputFile = testResultFile,
                 TeamCity = runningOnTeamCity,
-                Full = true,
                 WorkingDirectory = ".",
                 Work = MakeAbsolute(Directory("."))
             });
