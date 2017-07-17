@@ -109,7 +109,7 @@ namespace VaraniumSharp.Collections
             {
                 if (item.Priority == null)
                 {
-                    item.Priority = _items.Last()?.Priority ?? 0;
+                    item.Priority = _items.LastOrDefault()?.Priority ?? 0;
                 }
 
                 var priorityIndex = _items.FindLastIndex(x => x.Priority <= item.Priority);
