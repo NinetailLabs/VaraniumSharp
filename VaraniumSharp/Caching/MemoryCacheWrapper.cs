@@ -97,6 +97,22 @@ namespace VaraniumSharp.Caching
 
         #region Public Methods
 
+        /// <inheritdoc />
+        public async Task<bool> ContainsKeyAsync(string key)
+        {
+            var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
+            await semaphore.WaitAsync();
+
+            try
+            {
+                return _memoryCache.Contains(key);
+            }
+            finally
+            {
+                semaphore.Release();
+            }
+        }
+
         /// <summary>
         /// Retrieve an item from the cache
         /// </summary>
