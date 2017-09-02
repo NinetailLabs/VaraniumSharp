@@ -35,6 +35,13 @@ namespace VaraniumSharp.Interfaces.Caching
         #region Public Methods
 
         /// <summary>
+        /// Check if an item with a specific key is currently in the cache
+        /// </summary>
+        /// <param name="key">The key under which the item is stored</param>
+        /// <returns>True - Item is currently cache, otherwise false</returns>
+        Task<bool> ContainsKeyAsync(string key);
+
+        /// <summary>
         /// Retrieve an item from the cache
         /// </summary>
         /// <exception cref="InvalidOperationException">Thrown if CachePolicy or DataRetrievalFunc has not been set</exception>

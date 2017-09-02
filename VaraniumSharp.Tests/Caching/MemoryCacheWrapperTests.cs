@@ -1,8 +1,8 @@
-﻿using System;
+﻿using FluentAssertions;
+using NUnit.Framework;
+using System;
 using System.Runtime.Caching;
 using System.Threading.Tasks;
-using FluentAssertions;
-using NUnit.Framework;
 using VaraniumSharp.Caching;
 
 namespace VaraniumSharp.Tests.Caching
@@ -96,6 +96,47 @@ namespace VaraniumSharp.Tests.Caching
             // act
             // assert
             act.ShouldThrow<InvalidOperationException>("DataRetrievalFunc has not been set");
+        }
+
+        [Test]
+        public async Task CheckingIfCacheContainsKeyWhenTheCacheContainsTheItemReturnsTrue()
+        {
+            // arrange
+            const string key = "test";
+            var cacheItemDummy = new CacheItemFixture();
+            var retrievalFixture = new RetrievalFixture<CacheItemFixture>(cacheItemDummy);
+            var sut = new MemoryCacheWrapper<CacheItemFixture>
+            {
+                CachePolicy = new CacheItemPolicy(),
+                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc
+            };
+            await sut.GetAsync(key);
+
+            // act
+            var result = await sut.ContainsKeyAsync(key);
+
+            // assert
+            result.Should().BeTrue();
+        }
+
+        [Test]
+        public async Task CheckingIfCacheContainsKeyWhenTheCacheDoesNotContainTheItemReturnsFalse()
+        {
+            // arrange
+            const string key = "test";
+            var cacheItemDummy = new CacheItemFixture();
+            var retrievalFixture = new RetrievalFixture<CacheItemFixture>(cacheItemDummy);
+            var sut = new MemoryCacheWrapper<CacheItemFixture>
+            {
+                CachePolicy = new CacheItemPolicy(),
+                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc
+            };
+
+            // act
+            var result = await sut.ContainsKeyAsync(key);
+
+            // assert
+            result.Should().BeFalse();
         }
 
         [Test]
