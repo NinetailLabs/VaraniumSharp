@@ -234,6 +234,22 @@ references:
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).CachePolicy
   nameWithType: MemoryCacheWrapper<T>.CachePolicy
   nameWithType.vb: MemoryCacheWrapper(Of T).CachePolicy
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.ContainsKeyAsync(System.String)
+  name: ContainsKeyAsync(String)
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_ContainsKeyAsync_System_String_
+  commentId: M:VaraniumSharp.Caching.MemoryCacheWrapper`1.ContainsKeyAsync(System.String)
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.ContainsKeyAsync(System.String)
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).ContainsKeyAsync(System.String)
+  nameWithType: MemoryCacheWrapper<T>.ContainsKeyAsync(String)
+  nameWithType.vb: MemoryCacheWrapper(Of T).ContainsKeyAsync(String)
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.ContainsKeyAsync*
+  name: ContainsKeyAsync
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_ContainsKeyAsync_
+  commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.ContainsKeyAsync
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.ContainsKeyAsync
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).ContainsKeyAsync
+  nameWithType: MemoryCacheWrapper<T>.ContainsKeyAsync
+  nameWithType.vb: MemoryCacheWrapper(Of T).ContainsKeyAsync
 - uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.DataRetrievalFunc
   name: DataRetrievalFunc
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_DataRetrievalFunc
@@ -898,6 +914,22 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).CachePolicy
   nameWithType: IMemoryCacheWrapper<T>.CachePolicy
   nameWithType.vb: IMemoryCacheWrapper(Of T).CachePolicy
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.ContainsKeyAsync(System.String)
+  name: ContainsKeyAsync(String)
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_ContainsKeyAsync_System_String_
+  commentId: M:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.ContainsKeyAsync(System.String)
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.ContainsKeyAsync(System.String)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).ContainsKeyAsync(System.String)
+  nameWithType: IMemoryCacheWrapper<T>.ContainsKeyAsync(String)
+  nameWithType.vb: IMemoryCacheWrapper(Of T).ContainsKeyAsync(String)
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.ContainsKeyAsync*
+  name: ContainsKeyAsync
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_ContainsKeyAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.ContainsKeyAsync
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.ContainsKeyAsync
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).ContainsKeyAsync
+  nameWithType: IMemoryCacheWrapper<T>.ContainsKeyAsync
+  nameWithType.vb: IMemoryCacheWrapper(Of T).ContainsKeyAsync
 - uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.DataRetrievalFunc
   name: DataRetrievalFunc
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_DataRetrievalFunc
