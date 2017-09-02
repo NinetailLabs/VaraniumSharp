@@ -13,7 +13,7 @@
       <iconUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/develop/icon.png</iconUrl>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <copyright>Copyright (c) NineTail Labs 2016</copyright>
-      <releaseNotes>Fixed exception that occurs if item with null priority is added to empty PriorityCollection</releaseNotes>
+      <releaseNotes>Added method to check if a key is already in the cache</releaseNotes>
       <tags>C# VaraniumSharp Varanium</tags>
    </metadata>
 
