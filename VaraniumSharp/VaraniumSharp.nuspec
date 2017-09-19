@@ -2,7 +2,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <metadata xmlns="http://schemas.microsoft.com/packaging/21.0.07/nuspec.xsd">
       <id>VaraniumSharp</id>
-      <version>1.16.0</version>
+      <version>0.0.0</version>
       <authors>NineTail Labs</authors>
       <owners>NineTail Labs</owners>
       <title>VaraniumSharp</title>
