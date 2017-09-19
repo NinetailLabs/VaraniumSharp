@@ -328,6 +328,111 @@ references:
   commentId: N:VaraniumSharp.Collections
   fullName: VaraniumSharp.Collections
   nameWithType: VaraniumSharp.Collections
+- uid: VaraniumSharp.Collections.PackageManager
+  name: PackageManager
+  href: api/VaraniumSharp.Collections.PackageManager.html
+  commentId: T:VaraniumSharp.Collections.PackageManager
+  fullName: VaraniumSharp.Collections.PackageManager
+  nameWithType: PackageManager
+- uid: VaraniumSharp.Collections.PackageManager.#ctor
+  name: PackageManager()
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager__ctor
+  commentId: M:VaraniumSharp.Collections.PackageManager.#ctor
+  fullName: VaraniumSharp.Collections.PackageManager.PackageManager()
+  nameWithType: PackageManager.PackageManager()
+- uid: VaraniumSharp.Collections.PackageManager.#ctor*
+  name: PackageManager
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager__ctor_
+  commentId: Overload:VaraniumSharp.Collections.PackageManager.#ctor
+  fullName: VaraniumSharp.Collections.PackageManager.PackageManager
+  nameWithType: PackageManager.PackageManager
+- uid: VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync(System.String,System.IO.Stream,System.String)
+  name: AddItemToPackageAsync(String, Stream, String)
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_AddItemToPackageAsync_System_String_System_IO_Stream_System_String_
+  commentId: M:VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync(System.String,System.IO.Stream,System.String)
+  fullName: VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync(System.String, System.IO.Stream, System.String)
+  nameWithType: PackageManager.AddItemToPackageAsync(String, Stream, String)
+- uid: VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync*
+  name: AddItemToPackageAsync
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_AddItemToPackageAsync_
+  commentId: Overload:VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync
+  fullName: VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync
+  nameWithType: PackageManager.AddItemToPackageAsync
+- uid: VaraniumSharp.Collections.PackageManager.Dispose
+  name: Dispose()
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_Dispose
+  commentId: M:VaraniumSharp.Collections.PackageManager.Dispose
+  fullName: VaraniumSharp.Collections.PackageManager.Dispose()
+  nameWithType: PackageManager.Dispose()
+- uid: VaraniumSharp.Collections.PackageManager.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_Dispose_System_Boolean_
+  commentId: M:VaraniumSharp.Collections.PackageManager.Dispose(System.Boolean)
+  fullName: VaraniumSharp.Collections.PackageManager.Dispose(System.Boolean)
+  nameWithType: PackageManager.Dispose(Boolean)
+- uid: VaraniumSharp.Collections.PackageManager.Dispose*
+  name: Dispose
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_Dispose_
+  commentId: Overload:VaraniumSharp.Collections.PackageManager.Dispose
+  fullName: VaraniumSharp.Collections.PackageManager.Dispose
+  nameWithType: PackageManager.Dispose
+- uid: VaraniumSharp.Collections.PackageManager.LockingDictionary
+  name: LockingDictionary
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_LockingDictionary
+  commentId: F:VaraniumSharp.Collections.PackageManager.LockingDictionary
+  fullName: VaraniumSharp.Collections.PackageManager.LockingDictionary
+  nameWithType: PackageManager.LockingDictionary
+- uid: VaraniumSharp.Collections.PackageManager.PackageDictionary
+  name: PackageDictionary
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_PackageDictionary
+  commentId: F:VaraniumSharp.Collections.PackageManager.PackageDictionary
+  fullName: VaraniumSharp.Collections.PackageManager.PackageDictionary
+  nameWithType: PackageManager.PackageDictionary
+- uid: VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync(System.String,System.String)
+  name: RemoveDataFromPackageAsync(String, String)
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_RemoveDataFromPackageAsync_System_String_System_String_
+  commentId: M:VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync(System.String,System.String)
+  fullName: VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync(System.String, System.String)
+  nameWithType: PackageManager.RemoveDataFromPackageAsync(String, String)
+- uid: VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync*
+  name: RemoveDataFromPackageAsync
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_RemoveDataFromPackageAsync_
+  commentId: Overload:VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync
+  fullName: VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync
+  nameWithType: PackageManager.RemoveDataFromPackageAsync
+- uid: VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync(System.String,System.String)
+  name: RetrieveDataFromPackageAsync(String, String)
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_RetrieveDataFromPackageAsync_System_String_System_String_
+  commentId: M:VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync(System.String,System.String)
+  fullName: VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync(System.String, System.String)
+  nameWithType: PackageManager.RetrieveDataFromPackageAsync(String, String)
+- uid: VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync*
+  name: RetrieveDataFromPackageAsync
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_RetrieveDataFromPackageAsync_
+  commentId: Overload:VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync
+  fullName: VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync
+  nameWithType: PackageManager.RetrieveDataFromPackageAsync
+- uid: VaraniumSharp.Collections.PackageManager.ScrubProgress
+  name: ScrubProgress
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_ScrubProgress
+  commentId: E:VaraniumSharp.Collections.PackageManager.ScrubProgress
+  fullName: VaraniumSharp.Collections.PackageManager.ScrubProgress
+  nameWithType: PackageManager.ScrubProgress
+- uid: VaraniumSharp.Collections.PackageManager.ScrubStorageAsync(System.String,System.Collections.Generic.List{System.String})
+  name: ScrubStorageAsync(String, List<String>)
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_ScrubStorageAsync_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:VaraniumSharp.Collections.PackageManager.ScrubStorageAsync(System.String,System.Collections.Generic.List{System.String})
+  name.vb: ScrubStorageAsync(String, List(Of String))
+  fullName: VaraniumSharp.Collections.PackageManager.ScrubStorageAsync(System.String, System.Collections.Generic.List<System.String>)
+  fullName.vb: VaraniumSharp.Collections.PackageManager.ScrubStorageAsync(System.String, System.Collections.Generic.List(Of System.String))
+  nameWithType: PackageManager.ScrubStorageAsync(String, List<String>)
+  nameWithType.vb: PackageManager.ScrubStorageAsync(String, List(Of String))
+- uid: VaraniumSharp.Collections.PackageManager.ScrubStorageAsync*
+  name: ScrubStorageAsync
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_ScrubStorageAsync_
+  commentId: Overload:VaraniumSharp.Collections.PackageManager.ScrubStorageAsync
+  fullName: VaraniumSharp.Collections.PackageManager.ScrubStorageAsync
+  nameWithType: PackageManager.ScrubStorageAsync
 - uid: VaraniumSharp.Collections.PriorityCollection`1
   name: PriorityCollection<T>
   href: api/VaraniumSharp.Collections.PriorityCollection-1.html
@@ -763,6 +868,78 @@ references:
   commentId: F:VaraniumSharp.Enumerations.ServiceReuse.Singleton
   fullName: VaraniumSharp.Enumerations.ServiceReuse.Singleton
   nameWithType: ServiceReuse.Singleton
+- uid: VaraniumSharp.EventArguments
+  name: VaraniumSharp.EventArguments
+  href: api/VaraniumSharp.EventArguments.html
+  commentId: N:VaraniumSharp.EventArguments
+  fullName: VaraniumSharp.EventArguments
+  nameWithType: VaraniumSharp.EventArguments
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs
+  name: ScrubProgressArgs
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html
+  commentId: T:VaraniumSharp.EventArguments.ScrubProgressArgs
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs
+  nameWithType: ScrubProgressArgs
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs.#ctor(System.String,System.Int32,System.Int32)
+  name: ScrubProgressArgs(String, Int32, Int32)
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs__ctor_System_String_System_Int32_System_Int32_
+  commentId: M:VaraniumSharp.EventArguments.ScrubProgressArgs.#ctor(System.String,System.Int32,System.Int32)
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.ScrubProgressArgs(System.String, System.Int32, System.Int32)
+  nameWithType: ScrubProgressArgs.ScrubProgressArgs(String, Int32, Int32)
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs.#ctor*
+  name: ScrubProgressArgs
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs__ctor_
+  commentId: Overload:VaraniumSharp.EventArguments.ScrubProgressArgs.#ctor
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.ScrubProgressArgs
+  nameWithType: ScrubProgressArgs.ScrubProgressArgs
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs.EntriesProcessed
+  name: EntriesProcessed
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_EntriesProcessed
+  commentId: P:VaraniumSharp.EventArguments.ScrubProgressArgs.EntriesProcessed
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.EntriesProcessed
+  nameWithType: ScrubProgressArgs.EntriesProcessed
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs.EntriesProcessed*
+  name: EntriesProcessed
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_EntriesProcessed_
+  commentId: Overload:VaraniumSharp.EventArguments.ScrubProgressArgs.EntriesProcessed
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.EntriesProcessed
+  nameWithType: ScrubProgressArgs.EntriesProcessed
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs.PackagePath
+  name: PackagePath
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_PackagePath
+  commentId: P:VaraniumSharp.EventArguments.ScrubProgressArgs.PackagePath
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.PackagePath
+  nameWithType: ScrubProgressArgs.PackagePath
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs.PackagePath*
+  name: PackagePath
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_PackagePath_
+  commentId: Overload:VaraniumSharp.EventArguments.ScrubProgressArgs.PackagePath
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.PackagePath
+  nameWithType: ScrubProgressArgs.PackagePath
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs.PercentageCompleted
+  name: PercentageCompleted
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_PercentageCompleted
+  commentId: P:VaraniumSharp.EventArguments.ScrubProgressArgs.PercentageCompleted
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.PercentageCompleted
+  nameWithType: ScrubProgressArgs.PercentageCompleted
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs.PercentageCompleted*
+  name: PercentageCompleted
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_PercentageCompleted_
+  commentId: Overload:VaraniumSharp.EventArguments.ScrubProgressArgs.PercentageCompleted
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.PercentageCompleted
+  nameWithType: ScrubProgressArgs.PercentageCompleted
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs.TotalEntries
+  name: TotalEntries
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_TotalEntries
+  commentId: P:VaraniumSharp.EventArguments.ScrubProgressArgs.TotalEntries
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.TotalEntries
+  nameWithType: ScrubProgressArgs.TotalEntries
+- uid: VaraniumSharp.EventArguments.ScrubProgressArgs.TotalEntries*
+  name: TotalEntries
+  href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_TotalEntries_
+  commentId: Overload:VaraniumSharp.EventArguments.ScrubProgressArgs.TotalEntries
+  fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.TotalEntries
+  nameWithType: ScrubProgressArgs.TotalEntries
 - uid: VaraniumSharp.Extensions
   name: VaraniumSharp.Extensions
   href: api/VaraniumSharp.Extensions.html
@@ -1020,6 +1197,63 @@ references:
   commentId: N:VaraniumSharp.Interfaces.Collections
   fullName: VaraniumSharp.Interfaces.Collections
   nameWithType: VaraniumSharp.Interfaces.Collections
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager
+  name: IPackageManager
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html
+  commentId: T:VaraniumSharp.Interfaces.Collections.IPackageManager
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager
+  nameWithType: IPackageManager
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync(System.String,System.IO.Stream,System.String)
+  name: AddItemToPackageAsync(String, Stream, String)
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_AddItemToPackageAsync_System_String_System_IO_Stream_System_String_
+  commentId: M:VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync(System.String,System.IO.Stream,System.String)
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync(System.String, System.IO.Stream, System.String)
+  nameWithType: IPackageManager.AddItemToPackageAsync(String, Stream, String)
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync*
+  name: AddItemToPackageAsync
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_AddItemToPackageAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync
+  nameWithType: IPackageManager.AddItemToPackageAsync
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync(System.String,System.String)
+  name: RemoveDataFromPackageAsync(String, String)
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_RemoveDataFromPackageAsync_System_String_System_String_
+  commentId: M:VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync(System.String,System.String)
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync(System.String, System.String)
+  nameWithType: IPackageManager.RemoveDataFromPackageAsync(String, String)
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync*
+  name: RemoveDataFromPackageAsync
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_RemoveDataFromPackageAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync
+  nameWithType: IPackageManager.RemoveDataFromPackageAsync
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync(System.String,System.String)
+  name: RetrieveDataFromPackageAsync(String, String)
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_RetrieveDataFromPackageAsync_System_String_System_String_
+  commentId: M:VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync(System.String,System.String)
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync(System.String, System.String)
+  nameWithType: IPackageManager.RetrieveDataFromPackageAsync(String, String)
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync*
+  name: RetrieveDataFromPackageAsync
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_RetrieveDataFromPackageAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync
+  nameWithType: IPackageManager.RetrieveDataFromPackageAsync
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync(System.String,System.Collections.Generic.List{System.String})
+  name: ScrubStorageAsync(String, List<String>)
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_ScrubStorageAsync_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync(System.String,System.Collections.Generic.List{System.String})
+  name.vb: ScrubStorageAsync(String, List(Of String))
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync(System.String, System.Collections.Generic.List<System.String>)
+  fullName.vb: VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync(System.String, System.Collections.Generic.List(Of System.String))
+  nameWithType: IPackageManager.ScrubStorageAsync(String, List<String>)
+  nameWithType.vb: IPackageManager.ScrubStorageAsync(String, List(Of String))
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync*
+  name: ScrubStorageAsync
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_ScrubStorageAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync
+  nameWithType: IPackageManager.ScrubStorageAsync
 - uid: VaraniumSharp.Interfaces.Collections.IPriorityItem
   name: IPriorityItem
   href: api/VaraniumSharp.Interfaces.Collections.IPriorityItem.html
