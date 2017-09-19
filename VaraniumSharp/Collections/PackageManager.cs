@@ -6,6 +6,8 @@ using System.IO.Compression;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using VaraniumSharp.Attributes;
+using VaraniumSharp.Enumerations;
 using VaraniumSharp.EventArguments;
 using VaraniumSharp.Interfaces.Collections;
 
@@ -18,6 +20,7 @@ namespace VaraniumSharp.Collections
     /// All methods in this class are Thread safe
     /// </remark>
     /// </summary>
+    [AutomaticContainerRegistration(typeof(IPackageManager), ServiceReuse.Singleton)]
     public class PackageManager : IPackageManager
     {
         #region Constructor
