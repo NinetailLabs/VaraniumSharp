@@ -2,7 +2,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <metadata xmlns="http://schemas.microsoft.com/packaging/21.0.07/nuspec.xsd">
       <id>VaraniumSharp</id>
-      <version>0.0.0</version>
+      <version>1.16.0</version>
       <authors>NineTail Labs</authors>
       <owners>NineTail Labs</owners>
       <title>VaraniumSharp</title>
@@ -13,7 +13,7 @@
       <iconUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/develop/icon.png</iconUrl>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <copyright>Copyright (c) NineTail Labs 2016</copyright>
-      <releaseNotes>Added method to check if a key is already in the cache</releaseNotes>
+      <releaseNotes>Added PackageManager to assist with packing and retrieving items from a zip archive</releaseNotes>
       <tags>C# VaraniumSharp Varanium</tags>
    </metadata>
 

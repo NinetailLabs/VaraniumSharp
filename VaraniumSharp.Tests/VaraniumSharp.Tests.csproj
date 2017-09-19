@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +48,7 @@
     <Compile Include="Attributes\AutomaticContainerRegistrationAttributeTest.cs" />
     <Compile Include="Caching\BasicMemoryCacheWrapperFactoryTests.cs" />
     <Compile Include="Caching\MemoryCacheWrapperTests.cs" />
+    <Compile Include="Collections\PackageManagerTests.cs" />
     <Compile Include="Collections\PriorityCollectionTests.cs" />
     <Compile Include="Configuration\ReconfigurableSettingBaseTests.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistrationTest.cs" />
@@ -58,6 +60,12 @@
     <Compile Include="Fixtures\ReconfigurableImplementationFixture.cs" />
     <Compile Include="Helpers\PriorityItemHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Resources\File1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\File2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

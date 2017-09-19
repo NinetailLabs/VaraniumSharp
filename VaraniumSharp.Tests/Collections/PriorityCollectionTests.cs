@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
@@ -240,6 +241,7 @@ namespace VaraniumSharp.Tests.Collections
         }
 
         [Test]
+        [SuppressMessage("ReSharper", "NotAccessedVariable", Justification = "We need to remove the item from the sut event though we don't do anything with it")]
         public void TakingAnItemFromTheCollectionCorrectlyDetachesItsEvent()
         {
             // arrange
