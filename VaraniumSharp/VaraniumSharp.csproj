@@ -37,6 +37,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,10 +55,13 @@
     <Compile Include="Attributes\BlockingPropertyAttribute.cs" />
     <Compile Include="Caching\MemoryCacheWrapper.cs" />
     <Compile Include="Caching\BasicMemoryCacheWrapperFactory.cs" />
+    <Compile Include="Interfaces\Collections\IPackageManager.cs" />
+    <Compile Include="Collections\PackageManager.cs" />
     <Compile Include="Collections\PriorityCollection.cs" />
     <Compile Include="Configuration\ReconfigurableSettingBase.cs" />
     <Compile Include="DependencyInjection\AutomaticContainerRegistration.cs" />
     <Compile Include="Enumerations\ServiceReuse.cs" />
+    <Compile Include="EventArguments\ScrubProgressArgs.cs" />
     <Compile Include="Extensions\HttpClientExtensions.cs" />
     <Compile Include="Extensions\NotifyPropertyChangedExtensions.cs" />
     <Compile Include="Extensions\ObservableCollectionExtensions.cs" />
