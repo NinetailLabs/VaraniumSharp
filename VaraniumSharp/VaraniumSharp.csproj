@@ -77,15 +77,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
-      <PropertyGroup>
-        <__paket__SemVer_Git_MSBuild_targets>SemVer.Git.MSBuild</__paket__SemVer_Git_MSBuild_targets>
-        <__paket__SemVer_MSBuild_targets>SemVer.MSBuild</__paket__SemVer_MSBuild_targets>
-      </PropertyGroup>
-    </When>
-  </Choose>
-  <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3' Or $(TargetFrameworkVersion) == 'v4.7' Or $(TargetFrameworkVersion) == 'v5.0')">
       <PropertyGroup>
         <__paket__Fody_targets>portable-net+sl+win+wpa+wp\Fody</__paket__Fody_targets>
       </PropertyGroup>
@@ -99,7 +91,7 @@
   </Target>
   -->
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3' Or $(TargetFrameworkVersion) == 'v4.7' Or $(TargetFrameworkVersion) == 'v5.0')">
       <ItemGroup>
         <Reference Include="PropertyChanged">
           <HintPath>..\packages\PropertyChanged.Fody\Lib\netstandard10\PropertyChanged.dll</HintPath>
@@ -110,6 +102,5 @@
     </When>
   </Choose>
   <Import Project="..\packages\Fody\build\$(__paket__Fody_targets).targets" Condition="Exists('..\packages\Fody\build\$(__paket__Fody_targets).targets')" Label="Paket" />
-  <Import Project="..\packages\SemVer.Git.MSBuild\build\$(__paket__SemVer_Git_MSBuild_targets).targets" Condition="Exists('..\packages\SemVer.Git.MSBuild\build\$(__paket__SemVer_Git_MSBuild_targets).targets')" Label="Paket" />
-  <Import Project="..\packages\SemVer.Git.MSBuild\build\$(__paket__SemVer_MSBuild_targets).targets" Condition="Exists('..\packages\SemVer.Git.MSBuild\build\$(__paket__SemVer_MSBuild_targets).targets')" Label="Paket" />
+  <Import Project="..\packages\SemVer.Git.MSBuild\build\SemVer.Git.MSBuild.targets" Condition="Exists('..\packages\SemVer.Git.MSBuild\build\SemVer.Git.MSBuild.targets')" Label="Paket" />
 </Project>
