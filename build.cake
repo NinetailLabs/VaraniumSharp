@@ -11,7 +11,7 @@
 #tool nuget:?package=GitReleaseNotes
 #tool nuget:?package=NUnit.ConsoleRunner
 #tool nuget:?package=OpenCover
-#tool nuget:?package=coveralls.io
+//#tool nuget:?package=coveralls.io
 
 //Project Variables
 var projectName = "VaraniumSharp";
