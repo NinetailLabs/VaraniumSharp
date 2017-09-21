@@ -61,12 +61,30 @@ references:
   commentId: M:VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.#ctor(System.Type,VaraniumSharp.Enumerations.ServiceReuse,System.Boolean)
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute(System.Type, VaraniumSharp.Enumerations.ServiceReuse, System.Boolean)
   nameWithType: AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute(Type, ServiceReuse, Boolean)
+- uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.#ctor(System.Type,VaraniumSharp.Enumerations.ServiceReuse,System.Boolean,System.Int32)
+  name: AutomaticContainerRegistrationAttribute(Type, ServiceReuse, Boolean, Int32)
+  href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationAttribute__ctor_System_Type_VaraniumSharp_Enumerations_ServiceReuse_System_Boolean_System_Int32_
+  commentId: M:VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.#ctor(System.Type,VaraniumSharp.Enumerations.ServiceReuse,System.Boolean,System.Int32)
+  fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute(System.Type, VaraniumSharp.Enumerations.ServiceReuse, System.Boolean, System.Int32)
+  nameWithType: AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute(Type, ServiceReuse, Boolean, Int32)
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.#ctor*
   name: AutomaticContainerRegistrationAttribute
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationAttribute__ctor_
   commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.#ctor
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute
   nameWithType: AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute
+- uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.Priority
+  name: Priority
+  href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationAttribute_Priority
+  commentId: P:VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.Priority
+  fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.Priority
+  nameWithType: AutomaticContainerRegistrationAttribute.Priority
+- uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.Priority*
+  name: Priority
+  href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationAttribute_Priority_
+  commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.Priority
+  fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.Priority
+  nameWithType: AutomaticContainerRegistrationAttribute.Priority
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.ServiceType
   name: ServiceType
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationAttribute_ServiceType
