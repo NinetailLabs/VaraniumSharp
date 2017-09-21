@@ -11,7 +11,7 @@ namespace VaraniumSharp.Tests.Attributes
         #region Public Methods
 
         [Test]
-        public void ReadCustomAttributeForMultpleConstructorSetup()
+        public void ReadCustomAttributeForMultipleConstructorSetup()
         {
             // arrange
             // act
@@ -41,6 +41,7 @@ namespace VaraniumSharp.Tests.Attributes
             attribute?.Reuse.Should().Be(ServiceReuse.Default);
             attribute?.ServiceType.Should().Be<DefaultTestDummy>();
             attribute?.MultipleConstructors.Should().BeFalse();
+            attribute?.Priority.Should().Be(0);
         }
 
         [Test]
@@ -61,6 +62,22 @@ namespace VaraniumSharp.Tests.Attributes
             attribute?.MultipleConstructors.Should().BeFalse();
         }
 
+        [Test]
+        public void ReadCustomAttributeWithNonDefaultPriority()
+        {
+            // arrange
+            // act
+            var sut = new HighPriorityDummy();
+
+            // assert
+            var attribute = (AutomaticContainerRegistrationAttribute)sut
+                .GetType()
+                .GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false)
+                .FirstOrDefault();
+            attribute.Should().NotBeNull();
+            attribute?.Priority.Should().Be(1);
+        }
+
         #endregion
 
         #region Types
@@ -78,7 +95,10 @@ namespace VaraniumSharp.Tests.Attributes
 
         [AutomaticContainerRegistration(typeof(MultipleConstructorDummy), ServiceReuse.Default, true)]
         private class MultipleConstructorDummy
+        { }
 
+        [AutomaticContainerRegistration(typeof(HighPriorityDummy), Priority = 1)]
+        private class HighPriorityDummy
         { }
 
         #endregion

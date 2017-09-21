@@ -60,13 +60,22 @@ namespace VaraniumSharp.DependencyInjection
         /// <param name="handleRegistration">Set to false to manually register class, otherwise use true</param>
         public virtual void RetrieveClassesRequiringRegistration(bool handleRegistration)
         {
-            ClassesToRegister.AddRange(
-                AppDomain.CurrentDomain.GetAssemblies()
-                    .SelectMany(t => t.GetTypes())
-                    .Where(
-                        t =>
-                            t.IsClass &&
-                            t.GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false).Length > 0));
+            var classList = AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(x => x.GetTypes())
+                .Where(
+                    t =>
+                        t.IsClass &&
+                        t.GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false).Length > 0)
+                .Select(x => new Tuple<AutomaticContainerRegistrationAttribute, Type>(
+                    (AutomaticContainerRegistrationAttribute)x
+                        .GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false)
+                        .First(), x));
+
+            ClassesToRegister.AddRange(classList
+                .GroupBy(x => x.Item1.ServiceType)
+                .SelectMany(x =>
+                    x.Where(z => z.Item1.Priority == x.Max(q => q.Item1.Priority))
+                    .Select(z => z.Item2)));
 
             if (!handleRegistration)
             {

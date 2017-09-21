@@ -99,6 +99,20 @@ namespace VaraniumSharp.Tests.DependencyInjection
         }
 
         [Test]
+        public void HigherPriorityClassIsPickedOverLowerPriorityDuringRegistration()
+        {
+            // arrange
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveClassesRequiringRegistration(true);
+
+            // assert
+            sut.DiscoveredTypes.Should().Contain(typeof(HigherPriorityDummy));
+            sut.DiscoveredTypes.Should().NotContain(typeof(DefaultPriorityDummy));
+        }
+
+        [Test]
         public void RetrieveAllClassesImplementingABaseClass()
         {
             // arrange
@@ -210,6 +224,17 @@ namespace VaraniumSharp.Tests.DependencyInjection
         { }
 
         private class InterfaceImplementationDummy : IInterfaceDummy
+        { }
+
+        private interface IMultiImplementationDummy
+        { }
+
+        [AutomaticContainerRegistration(typeof(IMultiImplementationDummy))]
+        private class DefaultPriorityDummy : IMultiImplementationDummy
+        { }
+
+        [AutomaticContainerRegistration(typeof(IMultiImplementationDummy), Priority = 2)]
+        private class HigherPriorityDummy : IMultiImplementationDummy
         { }
 
         #endregion Types
