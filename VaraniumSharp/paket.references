@@ -1,3 +1,4 @@
 Fody
+Microsoft.Extensions.Logging 
 PropertyChanged.Fody
 SemVer.Git.MSBuild

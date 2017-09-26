@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.Logging;
 using VaraniumSharp.Attributes;
+using VaraniumSharp.Logging;
 
 namespace VaraniumSharp.DependencyInjection
 {
@@ -19,6 +21,7 @@ namespace VaraniumSharp.DependencyInjection
         {
             ClassesToRegister = new List<Type>();
             ConcretionClassesToRegister = new Dictionary<Type, List<Type>>();
+            _logger = StaticLogger.GetLogger<AutomaticContainerRegistration>();
         }
 
         #endregion
@@ -69,7 +72,18 @@ namespace VaraniumSharp.DependencyInjection
                 .Select(x => new Tuple<AutomaticContainerRegistrationAttribute, Type>(
                     (AutomaticContainerRegistrationAttribute)x
                         .GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false)
-                        .First(), x));
+                        .First(), x))
+                        .ToList();
+
+            var detectedTypes = classList.Select(x =>
+                new
+                {
+                    Class = x.Item2.FullName,
+                    x.Item1.ServiceType,
+                    x.Item1.Priority
+                });
+
+            _logger.LogDebug("Discovered {AttributeImplementations} that implement the AutomaticContainerRegistration attribute. {@DetectedTypes}", classList.Count, detectedTypes);
 
             ClassesToRegister.AddRange(classList
                 .GroupBy(x => x.Item1.ServiceType)
@@ -77,8 +91,11 @@ namespace VaraniumSharp.DependencyInjection
                     x.Where(z => z.Item1.Priority == x.Max(q => q.Item1.Priority))
                     .Select(z => z.Item2)));
 
+            _logger.LogDebug("After removing duplicates {AttributeImplementations} remain and that will be passed for DI registrations", ClassesToRegister.Count);
+
             if (!handleRegistration)
             {
+                _logger.LogDebug("Automatic registration is not enabled - Skipping");
                 return;
             }
             RegisterClasses();
@@ -98,7 +115,10 @@ namespace VaraniumSharp.DependencyInjection
                         &&
                         t.GetCustomAttributes(typeof(AutomaticConcretionContainerRegistrationAttribute), false).Length >
                         0
-                );
+                )
+                .ToList();
+
+            _logger.LogDebug("Discovered {AttributeImplementations} that implement the AutomaticConcretionContainerRegistration attribute", classes.Count);
 
             foreach (var @class in classes)
             {
@@ -113,6 +133,7 @@ namespace VaraniumSharp.DependencyInjection
 
             if (!handleRegistration)
             {
+                _logger.LogDebug("Automatic registration is not enabled - Skipping");
                 return;
             }
             RegisterConcretionClasses();
@@ -131,6 +152,11 @@ namespace VaraniumSharp.DependencyInjection
         /// Register concretion classes with Container
         /// </summary>
         protected abstract void RegisterConcretionClasses();
+
+        /// <summary>
+        /// Logger instance
+        /// </summary>
+        private readonly ILogger _logger;
 
         #endregion
     }
