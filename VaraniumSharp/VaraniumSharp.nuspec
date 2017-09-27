@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <metadata xmlns="http://schemas.microsoft.com/packaging/21.0.07/nuspec.xsd">
-      <id>VaraniumSharp</id>
-      <version>0.0.0</version>
-      <authors>NineTail Labs</authors>
-      <owners>NineTail Labs</owners>
-      <title>VaraniumSharp</title>
-      <description>Library containing useful extensions and helper methods.</description>
-      <summary>Library containing useful extensions and helper methods.</summary>
-      <licenseUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/master/LICENSE</licenseUrl>
-      <projectUrl>https://github.com/NinetailLabs/VaraniumSharp</projectUrl>
-      <iconUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/develop/icon.png</iconUrl>
-      <requireLicenseAcceptance>false</requireLicenseAcceptance>
-      <copyright>Copyright (c) NineTail Labs 2016</copyright>
-      <releaseNotes>Added Priority to AutomaticContainer registration attribute to allow implementers to overwrite default registrations with custom implementations</releaseNotes>
-      <tags>C# VaraniumSharp Varanium</tags>
+    <metadata xmlns="http://schemas.microsoft.com/packaging/21.0.07/nuspec.xsd">
+        <id>VaraniumSharp</id>
+        <version>0.0.0</version>
+        <authors>NineTail Labs</authors>
+        <owners>NineTail Labs</owners>
+        <title>VaraniumSharp</title>
+        <description>Library containing useful extensions and helper methods.</description>
+        <summary>Library containing useful extensions and helper methods.</summary>
+        <licenseUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/NinetailLabs/VaraniumSharp</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/develop/icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <copyright>Copyright (c) NineTail Labs 2016</copyright>
+        <releaseNotes>Added Microsoft.Extensions.Logging to use for logging with initial logging around AutomaticRegistration.
+        Added injectable StaticHelper class to wrap static method (like Process.Start())</releaseNotes>
+        <tags>C# VaraniumSharp Varanium</tags>
+
+        <dependencies>
+            <dependency id="Microsoft.Extensions.Logging" version="1.1.2" />
+        </dependencies>
+
    </metadata>
 
    <files>

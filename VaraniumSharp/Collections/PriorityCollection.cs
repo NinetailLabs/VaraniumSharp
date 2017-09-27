@@ -18,7 +18,16 @@ namespace VaraniumSharp.Collections
         /// <summary>
         ///     Number of items in the collection
         /// </summary>
-        public int Count => _items.Count;
+        public int Count
+        {
+            get
+            {
+                lock (SyncRoot)
+                {
+                    return _items.Count;
+                }
+            }
+        }
 
         /// <summary>
         ///     Indicate if the collection is Synchronized (thread-safe)
