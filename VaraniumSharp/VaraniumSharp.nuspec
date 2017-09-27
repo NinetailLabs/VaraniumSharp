@@ -13,7 +13,7 @@
       <iconUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/develop/icon.png</iconUrl>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <copyright>Copyright (c) NineTail Labs 2016</copyright>
-      <releaseNotes>Added Priority to AutomaticContainer registration attribute to allow implementers to overwrite default registrations with custom implementations</releaseNotes>
+      <releaseNotes>Added injectable StaticHelper class to wrap static method (like Process.Start())</releaseNotes>
       <tags>C# VaraniumSharp Varanium</tags>
    </metadata>
 

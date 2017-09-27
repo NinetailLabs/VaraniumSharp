@@ -55,6 +55,8 @@
     <Compile Include="Attributes\BlockingPropertyAttribute.cs" />
     <Compile Include="Caching\MemoryCacheWrapper.cs" />
     <Compile Include="Caching\BasicMemoryCacheWrapperFactory.cs" />
+    <Compile Include="Interfaces\GenericHelpers\IStaticMethodWrapper.cs" />
+    <Compile Include="GenericHelpers\StaticMethodWrapper.cs" />
     <Compile Include="Interfaces\Collections\IPackageManager.cs" />
     <Compile Include="Collections\PackageManager.cs" />
     <Compile Include="Collections\PriorityCollection.cs" />
