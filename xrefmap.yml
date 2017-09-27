@@ -1078,6 +1078,30 @@ references:
   commentId: Overload:VaraniumSharp.Extensions.UrlBuilderExtensions.BuildPath
   fullName: VaraniumSharp.Extensions.UrlBuilderExtensions.BuildPath
   nameWithType: UrlBuilderExtensions.BuildPath
+- uid: VaraniumSharp.GenericHelpers
+  name: VaraniumSharp.GenericHelpers
+  href: api/VaraniumSharp.GenericHelpers.html
+  commentId: N:VaraniumSharp.GenericHelpers
+  fullName: VaraniumSharp.GenericHelpers
+  nameWithType: VaraniumSharp.GenericHelpers
+- uid: VaraniumSharp.GenericHelpers.StaticMethodWrapper
+  name: StaticMethodWrapper
+  href: api/VaraniumSharp.GenericHelpers.StaticMethodWrapper.html
+  commentId: T:VaraniumSharp.GenericHelpers.StaticMethodWrapper
+  fullName: VaraniumSharp.GenericHelpers.StaticMethodWrapper
+  nameWithType: StaticMethodWrapper
+- uid: VaraniumSharp.GenericHelpers.StaticMethodWrapper.StartProcess(System.String)
+  name: StartProcess(String)
+  href: api/VaraniumSharp.GenericHelpers.StaticMethodWrapper.html#VaraniumSharp_GenericHelpers_StaticMethodWrapper_StartProcess_System_String_
+  commentId: M:VaraniumSharp.GenericHelpers.StaticMethodWrapper.StartProcess(System.String)
+  fullName: VaraniumSharp.GenericHelpers.StaticMethodWrapper.StartProcess(System.String)
+  nameWithType: StaticMethodWrapper.StartProcess(String)
+- uid: VaraniumSharp.GenericHelpers.StaticMethodWrapper.StartProcess*
+  name: StartProcess
+  href: api/VaraniumSharp.GenericHelpers.StaticMethodWrapper.html#VaraniumSharp_GenericHelpers_StaticMethodWrapper_StartProcess_
+  commentId: Overload:VaraniumSharp.GenericHelpers.StaticMethodWrapper.StartProcess
+  fullName: VaraniumSharp.GenericHelpers.StaticMethodWrapper.StartProcess
+  nameWithType: StaticMethodWrapper.StartProcess
 - uid: VaraniumSharp.Interfaces.Caching
   name: VaraniumSharp.Interfaces.Caching
   href: api/VaraniumSharp.Interfaces.Caching.html
@@ -1296,3 +1320,66 @@ references:
   commentId: E:VaraniumSharp.Interfaces.Collections.IPriorityItem.PriorityChanged
   fullName: VaraniumSharp.Interfaces.Collections.IPriorityItem.PriorityChanged
   nameWithType: IPriorityItem.PriorityChanged
+- uid: VaraniumSharp.Interfaces.GenericHelpers
+  name: VaraniumSharp.Interfaces.GenericHelpers
+  href: api/VaraniumSharp.Interfaces.GenericHelpers.html
+  commentId: N:VaraniumSharp.Interfaces.GenericHelpers
+  fullName: VaraniumSharp.Interfaces.GenericHelpers
+  nameWithType: VaraniumSharp.Interfaces.GenericHelpers
+- uid: VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper
+  name: IStaticMethodWrapper
+  href: api/VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.html
+  commentId: T:VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper
+  fullName: VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper
+  nameWithType: IStaticMethodWrapper
+- uid: VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.StartProcess(System.String)
+  name: StartProcess(String)
+  href: api/VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.html#VaraniumSharp_Interfaces_GenericHelpers_IStaticMethodWrapper_StartProcess_System_String_
+  commentId: M:VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.StartProcess(System.String)
+  fullName: VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.StartProcess(System.String)
+  nameWithType: IStaticMethodWrapper.StartProcess(String)
+- uid: VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.StartProcess*
+  name: StartProcess
+  href: api/VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.html#VaraniumSharp_Interfaces_GenericHelpers_IStaticMethodWrapper_StartProcess_
+  commentId: Overload:VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.StartProcess
+  fullName: VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.StartProcess
+  nameWithType: IStaticMethodWrapper.StartProcess
+- uid: VaraniumSharp.Logging
+  name: VaraniumSharp.Logging
+  href: api/VaraniumSharp.Logging.html
+  commentId: N:VaraniumSharp.Logging
+  fullName: VaraniumSharp.Logging
+  nameWithType: VaraniumSharp.Logging
+- uid: VaraniumSharp.Logging.StaticLogger
+  name: StaticLogger
+  href: api/VaraniumSharp.Logging.StaticLogger.html
+  commentId: T:VaraniumSharp.Logging.StaticLogger
+  fullName: VaraniumSharp.Logging.StaticLogger
+  nameWithType: StaticLogger
+- uid: VaraniumSharp.Logging.StaticLogger.GetLogger*
+  name: GetLogger
+  href: api/VaraniumSharp.Logging.StaticLogger.html#VaraniumSharp_Logging_StaticLogger_GetLogger_
+  commentId: Overload:VaraniumSharp.Logging.StaticLogger.GetLogger
+  fullName: VaraniumSharp.Logging.StaticLogger.GetLogger
+  nameWithType: StaticLogger.GetLogger
+- uid: VaraniumSharp.Logging.StaticLogger.GetLogger``1
+  name: GetLogger<T>()
+  href: api/VaraniumSharp.Logging.StaticLogger.html#VaraniumSharp_Logging_StaticLogger_GetLogger__1
+  commentId: M:VaraniumSharp.Logging.StaticLogger.GetLogger``1
+  name.vb: GetLogger(Of T)()
+  fullName: VaraniumSharp.Logging.StaticLogger.GetLogger<T>()
+  fullName.vb: VaraniumSharp.Logging.StaticLogger.GetLogger(Of T)()
+  nameWithType: StaticLogger.GetLogger<T>()
+  nameWithType.vb: StaticLogger.GetLogger(Of T)()
+- uid: VaraniumSharp.Logging.StaticLogger.LoggerFactory
+  name: LoggerFactory
+  href: api/VaraniumSharp.Logging.StaticLogger.html#VaraniumSharp_Logging_StaticLogger_LoggerFactory
+  commentId: P:VaraniumSharp.Logging.StaticLogger.LoggerFactory
+  fullName: VaraniumSharp.Logging.StaticLogger.LoggerFactory
+  nameWithType: StaticLogger.LoggerFactory
+- uid: VaraniumSharp.Logging.StaticLogger.LoggerFactory*
+  name: LoggerFactory
+  href: api/VaraniumSharp.Logging.StaticLogger.html#VaraniumSharp_Logging_StaticLogger_LoggerFactory_
+  commentId: Overload:VaraniumSharp.Logging.StaticLogger.LoggerFactory
+  fullName: VaraniumSharp.Logging.StaticLogger.LoggerFactory
+  nameWithType: StaticLogger.LoggerFactory

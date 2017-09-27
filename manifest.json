@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Collections.PriorityCollection-1.html",
-          "hash": "7lxDnrTwKxbL0mtIUCVcIA=="
+          "hash": "K/r9z35esNOsnS5TbxGR3g=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html",
-          "hash": "Ne8QmKmw+rANrS+8tHLfAg=="
+          "hash": "7Waac4XBRgk+jiuUY+YlkA=="
         }
       },
       "is_incremental": false,
@@ -305,6 +305,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.GenericHelpers.StaticMethodWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.GenericHelpers.StaticMethodWrapper.html",
+          "hash": "YBa/4qRyNqsgeYLiALl/UA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.GenericHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.GenericHelpers.html",
+          "hash": "Hw/iDUXT1Anu338xbG897w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.yml",
       "output": {
         ".html": {
@@ -376,6 +400,54 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.html",
+          "hash": "a7yuabMveu1U3rExL7k8IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.GenericHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.GenericHelpers.html",
+          "hash": "BUeC7w2xG9fPdIjMaV+vhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Logging.StaticLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Logging.StaticLogger.html",
+          "hash": "C8hGHth+Cm15zZTNMv9hAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Logging.html",
+          "hash": "YBIZg2UnqMSMGuB5c93fSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
@@ -393,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/GKKsE3mcYJtN9frLXjmmQ=="
+          "hash": "gF39oUSVczP6uSUJDN/7rQ=="
         }
       },
       "is_incremental": false,
