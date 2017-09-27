@@ -63,42 +63,58 @@ namespace VaraniumSharp.DependencyInjection
         /// <param name="handleRegistration">Set to false to manually register class, otherwise use true</param>
         public virtual void RetrieveClassesRequiringRegistration(bool handleRegistration)
         {
-            var classList = AppDomain.CurrentDomain.GetAssemblies()
-                .SelectMany(x => x.GetTypes())
-                .Where(
-                    t =>
-                        t.IsClass &&
-                        t.GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false).Length > 0)
-                .Select(x => new Tuple<AutomaticContainerRegistrationAttribute, Type>(
-                    (AutomaticContainerRegistrationAttribute)x
-                        .GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false)
-                        .First(), x))
-                        .ToList();
-
-            var detectedTypes = classList.Select(x =>
-                new
-                {
-                    Class = x.Item2.FullName,
-                    x.Item1.ServiceType,
-                    x.Item1.Priority
-                });
-
-            _logger.LogDebug("Discovered {AttributeImplementations} that implement the AutomaticContainerRegistration attribute. {@DetectedTypes}", classList.Count, detectedTypes);
-
-            ClassesToRegister.AddRange(classList
-                .GroupBy(x => x.Item1.ServiceType)
-                .SelectMany(x =>
-                    x.Where(z => z.Item1.Priority == x.Max(q => q.Item1.Priority))
-                    .Select(z => z.Item2)));
-
-            _logger.LogDebug("After removing duplicates {AttributeImplementations} remain and that will be passed for DI registrations", ClassesToRegister.Count);
-
-            if (!handleRegistration)
+            using (_logger.BeginScope("AutomaticRegistration"))
             {
-                _logger.LogDebug("Automatic registration is not enabled - Skipping");
-                return;
+                var classList = AppDomain.CurrentDomain.GetAssemblies()
+                    .SelectMany(x => x.GetTypes())
+                    .Where(
+                        t =>
+                            t.IsClass &&
+                            t.GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false).Length > 0)
+                    .Select(x => new Tuple<AutomaticContainerRegistrationAttribute, Type>(
+                        (AutomaticContainerRegistrationAttribute)x
+                            .GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false)
+                            .First(), x))
+                    .ToList();
+
+                var detectedTypes = classList.Select(x =>
+                    new
+                    {
+                        Class = x.Item2.FullName,
+                        x.Item1.ServiceType,
+                        x.Item1.Priority
+                    });
+
+                _logger.LogDebug(
+                    "Discovered {AttributeImplementations} that implement the AutomaticContainerRegistration attribute. {@DetectedTypes}",
+                    classList.Count, detectedTypes);
+
+                ClassesToRegister.AddRange(classList
+                    .GroupBy(x => x.Item1.ServiceType)
+                    .SelectMany(x =>
+                        x.Where(z => z.Item1.Priority == x.Max(q => q.Item1.Priority))
+                            .Select(z => z.Item2)));
+
+                var registrationClasses = classList.Select(x =>
+                    new
+                    {
+                        Class = x.Item2.FullName,
+                        x.Item1.ServiceType,
+                        x.Item1.Priority
+                    });
+
+                _logger.LogDebug(
+                    "After removing duplicates {AttributeImplementations} remain and that will be passed for DI registrations. {@RegistrationClasses}",
+                    ClassesToRegister.Count,
+                    registrationClasses);
+
+                if (!handleRegistration)
+                {
+                    _logger.LogDebug("Automatic registration is not enabled - Skipping");
+                    return;
+                }
+                RegisterClasses();
             }
-            RegisterClasses();
         }
 
         /// <summary>
@@ -107,36 +123,49 @@ namespace VaraniumSharp.DependencyInjection
         /// <param name="handleRegistration">Set to false to manually register class, otherwise use true</param>
         public virtual void RetrieveConcretionClassesRequiringRegistration(bool handleRegistration)
         {
-            var classes = AppDomain.CurrentDomain.GetAssemblies()
-                .SelectMany(t => t.GetTypes())
-                .Where(
-                    t =>
-                        (t.IsClass && !t.IsSealed || t.IsInterface)
-                        &&
-                        t.GetCustomAttributes(typeof(AutomaticConcretionContainerRegistrationAttribute), false).Length >
-                        0
-                )
-                .ToList();
-
-            _logger.LogDebug("Discovered {AttributeImplementations} that implement the AutomaticConcretionContainerRegistration attribute", classes.Count);
-
-            foreach (var @class in classes)
+            using (_logger.BeginScope("AutomaticConcretionRegistration"))
             {
-                var children = AppDomain.CurrentDomain.GetAssemblies().SelectMany(t => t.GetTypes())
+                var classes = AppDomain.CurrentDomain.GetAssemblies()
+                    .SelectMany(t => t.GetTypes())
                     .Where(
-                        x =>
-                            !x.IsInterface && !x.IsAbstract && (x.IsSubclassOf(@class) ||
-                            x.GetInterfaces().Contains(@class))).ToList();
+                        t =>
+                            (t.IsClass && !t.IsSealed || t.IsInterface)
+                            &&
+                            t.GetCustomAttributes(typeof(AutomaticConcretionContainerRegistrationAttribute), false)
+                                .Length >
+                            0
+                    )
+                    .ToList();
 
-                ConcretionClassesToRegister.Add(@class, children);
-            }
+                foreach (var @class in classes)
+                {
+                    var children = AppDomain.CurrentDomain.GetAssemblies().SelectMany(t => t.GetTypes())
+                        .Where(
+                            x =>
+                                !x.IsInterface && !x.IsAbstract && (x.IsSubclassOf(@class) ||
+                                                                    x.GetInterfaces().Contains(@class))).ToList();
 
-            if (!handleRegistration)
-            {
-                _logger.LogDebug("Automatic registration is not enabled - Skipping");
-                return;
+                    ConcretionClassesToRegister.Add(@class, children);
+                }
+
+                var concretionClasses = ConcretionClassesToRegister.Select(x =>
+                    new
+                    {
+                        ServiceType = x.Key.FullName,
+                        Inheritors = x.Value.Select(z => z.FullName)
+                    });
+
+                _logger.LogDebug(
+                    "Discovered {AttributeImplementations} that implement the AutomaticConcretionContainerRegistration attribute. {@ConcretionClasses}",
+                    classes.Count, concretionClasses);
+
+                if (!handleRegistration)
+                {
+                    _logger.LogDebug("Automatic registration is not enabled - Skipping");
+                    return;
+                }
+                RegisterConcretionClasses();
             }
-            RegisterConcretionClasses();
         }
 
         #endregion
