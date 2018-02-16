@@ -69,7 +69,11 @@ Task ("OutputVariables")
 // Builds the code
 Task ("Build")
 	.Does (() => {
-		MSBuild (sln, c => c.Configuration = "Release");
+		MSBuild (sln, new MSBuildSettings 
+						{
+							Verbosity = Verbosity.Normal,
+							Configuration = "Release"
+						});
 		var file = MakeAbsolute(Directory(releaseFolder)) + releaseDll;
 		version = GetVersionNumber(file);
 		ciVersion = GetVersionNumberWithContinuesIntegrationNumberAppended(file, buildCounter);
