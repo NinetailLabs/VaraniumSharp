@@ -71,7 +71,7 @@ Task ("Build")
 	.Does (() => {
 		MSBuild (sln, new MSBuildSettings 
 						{
-							Verbosity = Verbosity.Normal,
+							Verbosity = Verbosity.Quiet,
 							Configuration = "Release"
 						});
 		var file = MakeAbsolute(Directory(releaseFolder)) + releaseDll;
