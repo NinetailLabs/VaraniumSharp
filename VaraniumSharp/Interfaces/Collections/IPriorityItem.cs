@@ -23,7 +23,7 @@ namespace VaraniumSharp.Interfaces.Collections
         ///     Priority of the item to add.
         ///     Leaving this null will automatically set the priority and add the item to the end of the collection
         /// </summary>
-        int? Priority { get; set; }
+        long? Priority { get; set; }
 
         #endregion
     }
