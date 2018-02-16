@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <metadata xmlns="http://schemas.microsoft.com/packaging/21.0.07/nuspec.xsd">
-        <id>VaraniumSharp</id>
-        <version>0.0.0</version>
-        <authors>NineTail Labs</authors>
-        <owners>NineTail Labs</owners>
-        <title>VaraniumSharp</title>
-        <description>Library containing useful extensions and helper methods.</description>
-        <summary>Library containing useful extensions and helper methods.</summary>
-        <licenseUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/master/LICENSE</licenseUrl>
-        <projectUrl>https://github.com/NinetailLabs/VaraniumSharp</projectUrl>
-        <iconUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/develop/icon.png</iconUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <copyright>Copyright (c) NineTail Labs 2018</copyright>
-        <releaseNotes>ReleaseNotesHere</releaseNotes>
-        <tags>C# VaraniumSharp Varanium</tags>
+  <metadata xmlns="http://schemas.microsoft.com/packaging/21.0.07/nuspec.xsd">
+    <id>VaraniumSharp</id>
+    <version>0.0.0</version>
+    <authors>NineTail Labs</authors>
+    <owners>NineTail Labs</owners>
+    <title>VaraniumSharp</title>
+    <description>Library containing useful extensions and helper methods.</description>
+    <summary>Library containing useful extensions and helper methods.</summary>
+    <licenseUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/NinetailLabs/VaraniumSharp</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/develop/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright (c) NineTail Labs 2018</copyright>
+    <releaseNotes>ReleaseNotesHere</releaseNotes>
+    <tags>C# VaraniumSharp Varanium</tags>
 
-   </metadata>
+    <dependencies>
+      <dependency id="Microsoft.Extensions.Logging" version="2.0.0" />
+      <dependency id="System.Configuration.ConfigurationManager" version="4.4.1" />
+      <dependency id="System.Runtime.Caching" version="4.5.0-preview1-25914-04" />
+    </dependencies>
+  </metadata>
 
-   <files>
-      <file src="./bin/Release/netstandard2.0/VaraniumSharp.dll" target="lib\netstandard2.0" />
-      <file src="./bin/Release/netstandard2.0/VaraniumSharp.xml" target="lib\netstandard2.0" />
-     <file src="./bin/Release/netstandard2.0/VaraniumSharp.deps.json" target="lib\netstandard2.0" />
-   </files>
+  <files>
+    <file src="./bin/Release/netstandard2.0/VaraniumSharp.dll" target="lib\netstandard2.0" />
+    <file src="./bin/Release/netstandard2.0/VaraniumSharp.xml" target="lib\netstandard2.0" />
+    <file src="./bin/Release/netstandard2.0/VaraniumSharp.deps.json" target="lib\netstandard2.0" />
+  </files>
 </package>
