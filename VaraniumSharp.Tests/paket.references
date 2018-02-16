@@ -1,5 +1,9 @@
 FluentAssertions
 Fody
+Microsoft.Extensions.Logging
+Microsoft.Net.Http redirects:on
 Moq
 NUnit
 PropertyChanged.Fody
+System.Threading.Tasks.Extensions redirects:on
+System.Configuration.ConfigurationManager

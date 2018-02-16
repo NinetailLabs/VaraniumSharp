@@ -12,19 +12,15 @@
         <projectUrl>https://github.com/NinetailLabs/VaraniumSharp</projectUrl>
         <iconUrl>https://raw.githubusercontent.com/NinetailLabs/VaraniumSharp/develop/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <copyright>Copyright (c) NineTail Labs 2016</copyright>
-        <releaseNotes>Added Microsoft.Extensions.Logging to use for logging with initial logging around AutomaticRegistration.
-        Added injectable StaticHelper class to wrap static method (like Process.Start())</releaseNotes>
+        <copyright>Copyright (c) NineTail Labs 2018</copyright>
+        <releaseNotes>ReleaseNotesHere</releaseNotes>
         <tags>C# VaraniumSharp Varanium</tags>
-
-        <dependencies>
-            <dependency id="Microsoft.Extensions.Logging" version="1.1.2" />
-        </dependencies>
 
    </metadata>
 
    <files>
-      <file src="./bin/Release/VaraniumSharp.dll" target="lib\net462" />
-      <file src="./bin/Release/VaraniumSharp.xml" target="lib\net462" />      
+      <file src="./bin/Release/netstandard2.0/VaraniumSharp.dll" target="lib\netstandard2.0" />
+      <file src="./bin/Release/netstandard2.0/VaraniumSharp.xml" target="lib\netstandard2.0" />
+     <file src="./bin/Release/netstandard2.0/VaraniumSharp.deps.json" target="lib\netstandard2.0" />
    </files>
 </package>
