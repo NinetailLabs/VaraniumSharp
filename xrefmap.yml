@@ -35,6 +35,7 @@ references:
   name: AutomaticConcretionContainerRegistrationAttribute
   href: api/VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticConcretionContainerRegistrationAttribute__ctor_
   commentId: Overload:VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.#ctor
+  isSpec: "True"
   fullName: VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.AutomaticConcretionContainerRegistrationAttribute
   nameWithType: AutomaticConcretionContainerRegistrationAttribute.AutomaticConcretionContainerRegistrationAttribute
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute
@@ -71,6 +72,7 @@ references:
   name: AutomaticContainerRegistrationAttribute
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationAttribute__ctor_
   commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.#ctor
+  isSpec: "True"
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute
   nameWithType: AutomaticContainerRegistrationAttribute.AutomaticContainerRegistrationAttribute
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.Priority
@@ -83,6 +85,7 @@ references:
   name: Priority
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationAttribute_Priority_
   commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.Priority
+  isSpec: "True"
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.Priority
   nameWithType: AutomaticContainerRegistrationAttribute.Priority
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.ServiceType
@@ -95,6 +98,7 @@ references:
   name: ServiceType
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationAttribute_ServiceType_
   commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.ServiceType
+  isSpec: "True"
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.ServiceType
   nameWithType: AutomaticContainerRegistrationAttribute.ServiceType
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute
@@ -113,6 +117,7 @@ references:
   name: AutomaticContainerRegistrationBaseAttribute
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute__ctor_
   commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.#ctor
+  isSpec: "True"
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutomaticContainerRegistrationBaseAttribute
   nameWithType: AutomaticContainerRegistrationBaseAttribute.AutomaticContainerRegistrationBaseAttribute
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
@@ -125,6 +130,7 @@ references:
   name: MultipleConstructors
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute_MultipleConstructors_
   commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
+  isSpec: "True"
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
   nameWithType: AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.Reuse
@@ -137,6 +143,7 @@ references:
   name: Reuse
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute_Reuse_
   commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.Reuse
+  isSpec: "True"
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.Reuse
   nameWithType: AutomaticContainerRegistrationBaseAttribute.Reuse
 - uid: VaraniumSharp.Attributes.BlockingPropertyAttribute
@@ -155,6 +162,7 @@ references:
   name: BlockingPropertyAttribute
   href: api/VaraniumSharp.Attributes.BlockingPropertyAttribute.html#VaraniumSharp_Attributes_BlockingPropertyAttribute__ctor_
   commentId: Overload:VaraniumSharp.Attributes.BlockingPropertyAttribute.#ctor
+  isSpec: "True"
   fullName: VaraniumSharp.Attributes.BlockingPropertyAttribute.BlockingPropertyAttribute
   nameWithType: BlockingPropertyAttribute.BlockingPropertyAttribute
 - uid: VaraniumSharp.Attributes.BlockingPropertyAttribute.ExpectedValue
@@ -167,6 +175,7 @@ references:
   name: ExpectedValue
   href: api/VaraniumSharp.Attributes.BlockingPropertyAttribute.html#VaraniumSharp_Attributes_BlockingPropertyAttribute_ExpectedValue_
   commentId: Overload:VaraniumSharp.Attributes.BlockingPropertyAttribute.ExpectedValue
+  isSpec: "True"
   fullName: VaraniumSharp.Attributes.BlockingPropertyAttribute.ExpectedValue
   nameWithType: BlockingPropertyAttribute.ExpectedValue
 - uid: VaraniumSharp.Caching
@@ -185,6 +194,7 @@ references:
   name: Create
   href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.html#VaraniumSharp_Caching_BasicMemoryCacheWrapperFactory_Create_
   commentId: Overload:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.Create
+  isSpec: "True"
   fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.Create
   nameWithType: BasicMemoryCacheWrapperFactory.Create
 - uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.Create``1(System.Runtime.Caching.CacheItemPolicy,System.Func{System.String,System.Threading.Tasks.Task{``0}})
@@ -200,6 +210,7 @@ references:
   name: CreateWithDefaultSlidingPolicy
   href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.html#VaraniumSharp_Caching_BasicMemoryCacheWrapperFactory_CreateWithDefaultSlidingPolicy_
   commentId: Overload:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
+  isSpec: "True"
   fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
   nameWithType: BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
 - uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy``1(System.Func{System.String,System.Threading.Tasks.Task{``0}})
@@ -232,6 +243,7 @@ references:
   name: MemoryCacheWrapper
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1__ctor_
   commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.#ctor
+  isSpec: "True"
   fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.MemoryCacheWrapper
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).MemoryCacheWrapper
   nameWithType: MemoryCacheWrapper<T>.MemoryCacheWrapper
@@ -248,6 +260,7 @@ references:
   name: CachePolicy
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_CachePolicy_
   commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.CachePolicy
+  isSpec: "True"
   fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.CachePolicy
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).CachePolicy
   nameWithType: MemoryCacheWrapper<T>.CachePolicy
@@ -264,6 +277,7 @@ references:
   name: ContainsKeyAsync
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_ContainsKeyAsync_
   commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.ContainsKeyAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.ContainsKeyAsync
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).ContainsKeyAsync
   nameWithType: MemoryCacheWrapper<T>.ContainsKeyAsync
@@ -280,6 +294,7 @@ references:
   name: DataRetrievalFunc
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_DataRetrievalFunc_
   commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.DataRetrievalFunc
+  isSpec: "True"
   fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.DataRetrievalFunc
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).DataRetrievalFunc
   nameWithType: MemoryCacheWrapper<T>.DataRetrievalFunc
@@ -296,6 +311,7 @@ references:
   name: GetAsync
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_GetAsync_
   commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.GetAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.GetAsync
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).GetAsync
   nameWithType: MemoryCacheWrapper<T>.GetAsync
@@ -312,6 +328,7 @@ references:
   name: ItemsInCache
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_ItemsInCache_
   commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.ItemsInCache
+  isSpec: "True"
   fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.ItemsInCache
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).ItemsInCache
   nameWithType: MemoryCacheWrapper<T>.ItemsInCache
@@ -336,6 +353,7 @@ references:
   name: RemoveFromCacheAsync
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_RemoveFromCacheAsync_
   commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.RemoveFromCacheAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.RemoveFromCacheAsync
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).RemoveFromCacheAsync
   nameWithType: MemoryCacheWrapper<T>.RemoveFromCacheAsync
@@ -362,6 +380,7 @@ references:
   name: PackageManager
   href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager__ctor_
   commentId: Overload:VaraniumSharp.Collections.PackageManager.#ctor
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PackageManager.PackageManager
   nameWithType: PackageManager.PackageManager
 - uid: VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync(System.String,System.IO.Stream,System.String)
@@ -374,6 +393,7 @@ references:
   name: AddItemToPackageAsync
   href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_AddItemToPackageAsync_
   commentId: Overload:VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync
   nameWithType: PackageManager.AddItemToPackageAsync
 - uid: VaraniumSharp.Collections.PackageManager.Dispose
@@ -392,6 +412,7 @@ references:
   name: Dispose
   href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_Dispose_
   commentId: Overload:VaraniumSharp.Collections.PackageManager.Dispose
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PackageManager.Dispose
   nameWithType: PackageManager.Dispose
 - uid: VaraniumSharp.Collections.PackageManager.LockingDictionary
@@ -416,6 +437,7 @@ references:
   name: RemoveDataFromPackageAsync
   href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_RemoveDataFromPackageAsync_
   commentId: Overload:VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync
   nameWithType: PackageManager.RemoveDataFromPackageAsync
 - uid: VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync(System.String,System.String)
@@ -428,6 +450,7 @@ references:
   name: RetrieveDataFromPackageAsync
   href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_RetrieveDataFromPackageAsync_
   commentId: Overload:VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync
   nameWithType: PackageManager.RetrieveDataFromPackageAsync
 - uid: VaraniumSharp.Collections.PackageManager.ScrubProgress
@@ -449,6 +472,7 @@ references:
   name: ScrubStorageAsync
   href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_ScrubStorageAsync_
   commentId: Overload:VaraniumSharp.Collections.PackageManager.ScrubStorageAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PackageManager.ScrubStorageAsync
   nameWithType: PackageManager.ScrubStorageAsync
 - uid: VaraniumSharp.Collections.PriorityCollection`1
@@ -481,6 +505,7 @@ references:
   name: CopyTo
   href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_CopyTo_
   commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.CopyTo
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PriorityCollection<T>.CopyTo
   fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).CopyTo
   nameWithType: PriorityCollection<T>.CopyTo
@@ -497,6 +522,7 @@ references:
   name: Count
   href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_Count_
   commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.Count
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PriorityCollection<T>.Count
   fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).Count
   nameWithType: PriorityCollection<T>.Count
@@ -513,6 +539,7 @@ references:
   name: GetEnumerator
   href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_GetEnumerator_
   commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.GetEnumerator
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PriorityCollection<T>.GetEnumerator
   fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).GetEnumerator
   nameWithType: PriorityCollection<T>.GetEnumerator
@@ -529,6 +556,7 @@ references:
   name: IsSynchronized
   href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_IsSynchronized_
   commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.IsSynchronized
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PriorityCollection<T>.IsSynchronized
   fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).IsSynchronized
   nameWithType: PriorityCollection<T>.IsSynchronized
@@ -545,6 +573,7 @@ references:
   name: SyncRoot
   href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_SyncRoot_
   commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.SyncRoot
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PriorityCollection<T>.SyncRoot
   fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).SyncRoot
   nameWithType: PriorityCollection<T>.SyncRoot
@@ -562,6 +591,7 @@ references:
   name: IEnumerable.GetEnumerator
   href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_System_Collections_IEnumerable_GetEnumerator_
   commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
   name.vb: System.Collections.IEnumerable.GetEnumerator
   fullName: VaraniumSharp.Collections.PriorityCollection<T>.System.Collections.IEnumerable.GetEnumerator
   fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).System.Collections.IEnumerable.GetEnumerator
@@ -579,6 +609,7 @@ references:
   name: ToArray
   href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_ToArray_
   commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.ToArray
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PriorityCollection<T>.ToArray
   fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).ToArray
   nameWithType: PriorityCollection<T>.ToArray
@@ -595,6 +626,7 @@ references:
   name: TryAdd
   href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_TryAdd_
   commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.TryAdd
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PriorityCollection<T>.TryAdd
   fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).TryAdd
   nameWithType: PriorityCollection<T>.TryAdd
@@ -612,6 +644,7 @@ references:
   name: TryTake
   href: api/VaraniumSharp.Collections.PriorityCollection-1.html#VaraniumSharp_Collections_PriorityCollection_1_TryTake_
   commentId: Overload:VaraniumSharp.Collections.PriorityCollection`1.TryTake
+  isSpec: "True"
   fullName: VaraniumSharp.Collections.PriorityCollection<T>.TryTake
   fullName.vb: VaraniumSharp.Collections.PriorityCollection(Of T).TryTake
   nameWithType: PriorityCollection<T>.TryTake
@@ -638,6 +671,7 @@ references:
   name: ReconfigurableSettingBase
   href: api/VaraniumSharp.Configuration.ReconfigurableSettingBase.html#VaraniumSharp_Configuration_ReconfigurableSettingBase__ctor_
   commentId: Overload:VaraniumSharp.Configuration.ReconfigurableSettingBase.#ctor
+  isSpec: "True"
   fullName: VaraniumSharp.Configuration.ReconfigurableSettingBase.ReconfigurableSettingBase
   nameWithType: ReconfigurableSettingBase.ReconfigurableSettingBase
 - uid: VaraniumSharp.Configuration.ReconfigurableSettingBase.CancelChanges
@@ -650,6 +684,7 @@ references:
   name: CancelChanges
   href: api/VaraniumSharp.Configuration.ReconfigurableSettingBase.html#VaraniumSharp_Configuration_ReconfigurableSettingBase_CancelChanges_
   commentId: Overload:VaraniumSharp.Configuration.ReconfigurableSettingBase.CancelChanges
+  isSpec: "True"
   fullName: VaraniumSharp.Configuration.ReconfigurableSettingBase.CancelChanges
   nameWithType: ReconfigurableSettingBase.CancelChanges
 - uid: VaraniumSharp.Configuration.ReconfigurableSettingBase.DataCanBePersisted
@@ -662,6 +697,7 @@ references:
   name: DataCanBePersisted
   href: api/VaraniumSharp.Configuration.ReconfigurableSettingBase.html#VaraniumSharp_Configuration_ReconfigurableSettingBase_DataCanBePersisted_
   commentId: Overload:VaraniumSharp.Configuration.ReconfigurableSettingBase.DataCanBePersisted
+  isSpec: "True"
   fullName: VaraniumSharp.Configuration.ReconfigurableSettingBase.DataCanBePersisted
   nameWithType: ReconfigurableSettingBase.DataCanBePersisted
 - uid: VaraniumSharp.Configuration.ReconfigurableSettingBase.ExecuteDataLoadAsync
@@ -674,6 +710,7 @@ references:
   name: ExecuteDataLoadAsync
   href: api/VaraniumSharp.Configuration.ReconfigurableSettingBase.html#VaraniumSharp_Configuration_ReconfigurableSettingBase_ExecuteDataLoadAsync_
   commentId: Overload:VaraniumSharp.Configuration.ReconfigurableSettingBase.ExecuteDataLoadAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Configuration.ReconfigurableSettingBase.ExecuteDataLoadAsync
   nameWithType: ReconfigurableSettingBase.ExecuteDataLoadAsync
 - uid: VaraniumSharp.Configuration.ReconfigurableSettingBase.ExecuteDataPersistanceAsync
@@ -686,6 +723,7 @@ references:
   name: ExecuteDataPersistanceAsync
   href: api/VaraniumSharp.Configuration.ReconfigurableSettingBase.html#VaraniumSharp_Configuration_ReconfigurableSettingBase_ExecuteDataPersistanceAsync_
   commentId: Overload:VaraniumSharp.Configuration.ReconfigurableSettingBase.ExecuteDataPersistanceAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Configuration.ReconfigurableSettingBase.ExecuteDataPersistanceAsync
   nameWithType: ReconfigurableSettingBase.ExecuteDataPersistanceAsync
 - uid: VaraniumSharp.Configuration.ReconfigurableSettingBase.LoadSettingsAsync
@@ -698,6 +736,7 @@ references:
   name: LoadSettingsAsync
   href: api/VaraniumSharp.Configuration.ReconfigurableSettingBase.html#VaraniumSharp_Configuration_ReconfigurableSettingBase_LoadSettingsAsync_
   commentId: Overload:VaraniumSharp.Configuration.ReconfigurableSettingBase.LoadSettingsAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Configuration.ReconfigurableSettingBase.LoadSettingsAsync
   nameWithType: ReconfigurableSettingBase.LoadSettingsAsync
 - uid: VaraniumSharp.Configuration.ReconfigurableSettingBase.PersistSettingsAsync
@@ -710,6 +749,7 @@ references:
   name: PersistSettingsAsync
   href: api/VaraniumSharp.Configuration.ReconfigurableSettingBase.html#VaraniumSharp_Configuration_ReconfigurableSettingBase_PersistSettingsAsync_
   commentId: Overload:VaraniumSharp.Configuration.ReconfigurableSettingBase.PersistSettingsAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Configuration.ReconfigurableSettingBase.PersistSettingsAsync
   nameWithType: ReconfigurableSettingBase.PersistSettingsAsync
 - uid: VaraniumSharp.Configuration.ReconfigurableSettingBase.PropertyChanged
@@ -734,6 +774,7 @@ references:
   name: UnsavedChanges
   href: api/VaraniumSharp.Configuration.ReconfigurableSettingBase.html#VaraniumSharp_Configuration_ReconfigurableSettingBase_UnsavedChanges_
   commentId: Overload:VaraniumSharp.Configuration.ReconfigurableSettingBase.UnsavedChanges
+  isSpec: "True"
   fullName: VaraniumSharp.Configuration.ReconfigurableSettingBase.UnsavedChanges
   nameWithType: ReconfigurableSettingBase.UnsavedChanges
 - uid: VaraniumSharp.DependencyInjection
@@ -758,6 +799,7 @@ references:
   name: AutomaticContainerRegistration
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration__ctor_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.#ctor
+  isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutomaticContainerRegistration
   nameWithType: AutomaticContainerRegistration.AutomaticContainerRegistration
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ClassesToRegister
@@ -770,6 +812,7 @@ references:
   name: ClassesToRegister
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_ClassesToRegister_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ClassesToRegister
+  isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ClassesToRegister
   nameWithType: AutomaticContainerRegistration.ClassesToRegister
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ConcretionClassesToRegister
@@ -782,6 +825,7 @@ references:
   name: ConcretionClassesToRegister
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_ConcretionClassesToRegister_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ConcretionClassesToRegister
+  isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ConcretionClassesToRegister
   nameWithType: AutomaticContainerRegistration.ConcretionClassesToRegister
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RegisterClasses
@@ -794,6 +838,7 @@ references:
   name: RegisterClasses
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_RegisterClasses_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RegisterClasses
+  isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RegisterClasses
   nameWithType: AutomaticContainerRegistration.RegisterClasses
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RegisterConcretionClasses
@@ -806,12 +851,14 @@ references:
   name: RegisterConcretionClasses
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_RegisterConcretionClasses_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RegisterConcretionClasses
+  isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RegisterConcretionClasses
   nameWithType: AutomaticContainerRegistration.RegisterConcretionClasses
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve*
   name: Resolve
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_Resolve_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve
+  isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve
   nameWithType: AutomaticContainerRegistration.Resolve
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.Resolve``1
@@ -827,6 +874,7 @@ references:
   name: ResolveMany
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_ResolveMany_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany
+  isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany
   nameWithType: AutomaticContainerRegistration.ResolveMany
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ResolveMany``1
@@ -848,6 +896,7 @@ references:
   name: RetrieveClassesRequiringRegistration
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_RetrieveClassesRequiringRegistration_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RetrieveClassesRequiringRegistration
+  isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RetrieveClassesRequiringRegistration
   nameWithType: AutomaticContainerRegistration.RetrieveClassesRequiringRegistration
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RetrieveConcretionClassesRequiringRegistration(System.Boolean)
@@ -860,6 +909,7 @@ references:
   name: RetrieveConcretionClassesRequiringRegistration
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_RetrieveConcretionClassesRequiringRegistration_
   commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RetrieveConcretionClassesRequiringRegistration
+  isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.RetrieveConcretionClassesRequiringRegistration
   nameWithType: AutomaticContainerRegistration.RetrieveConcretionClassesRequiringRegistration
 - uid: VaraniumSharp.Enumerations
@@ -908,6 +958,7 @@ references:
   name: ScrubProgressArgs
   href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs__ctor_
   commentId: Overload:VaraniumSharp.EventArguments.ScrubProgressArgs.#ctor
+  isSpec: "True"
   fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.ScrubProgressArgs
   nameWithType: ScrubProgressArgs.ScrubProgressArgs
 - uid: VaraniumSharp.EventArguments.ScrubProgressArgs.EntriesProcessed
@@ -920,6 +971,7 @@ references:
   name: EntriesProcessed
   href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_EntriesProcessed_
   commentId: Overload:VaraniumSharp.EventArguments.ScrubProgressArgs.EntriesProcessed
+  isSpec: "True"
   fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.EntriesProcessed
   nameWithType: ScrubProgressArgs.EntriesProcessed
 - uid: VaraniumSharp.EventArguments.ScrubProgressArgs.PackagePath
@@ -932,6 +984,7 @@ references:
   name: PackagePath
   href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_PackagePath_
   commentId: Overload:VaraniumSharp.EventArguments.ScrubProgressArgs.PackagePath
+  isSpec: "True"
   fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.PackagePath
   nameWithType: ScrubProgressArgs.PackagePath
 - uid: VaraniumSharp.EventArguments.ScrubProgressArgs.PercentageCompleted
@@ -944,6 +997,7 @@ references:
   name: PercentageCompleted
   href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_PercentageCompleted_
   commentId: Overload:VaraniumSharp.EventArguments.ScrubProgressArgs.PercentageCompleted
+  isSpec: "True"
   fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.PercentageCompleted
   nameWithType: ScrubProgressArgs.PercentageCompleted
 - uid: VaraniumSharp.EventArguments.ScrubProgressArgs.TotalEntries
@@ -956,6 +1010,7 @@ references:
   name: TotalEntries
   href: api/VaraniumSharp.EventArguments.ScrubProgressArgs.html#VaraniumSharp_EventArguments_ScrubProgressArgs_TotalEntries_
   commentId: Overload:VaraniumSharp.EventArguments.ScrubProgressArgs.TotalEntries
+  isSpec: "True"
   fullName: VaraniumSharp.EventArguments.ScrubProgressArgs.TotalEntries
   nameWithType: ScrubProgressArgs.TotalEntries
 - uid: VaraniumSharp.Extensions
@@ -980,6 +1035,7 @@ references:
   name: SetBasicAuthHeader
   href: api/VaraniumSharp.Extensions.HttpClientExtensions.html#VaraniumSharp_Extensions_HttpClientExtensions_SetBasicAuthHeader_
   commentId: Overload:VaraniumSharp.Extensions.HttpClientExtensions.SetBasicAuthHeader
+  isSpec: "True"
   fullName: VaraniumSharp.Extensions.HttpClientExtensions.SetBasicAuthHeader
   nameWithType: HttpClientExtensions.SetBasicAuthHeader
 - uid: VaraniumSharp.Extensions.NotifyPropertyChangedExtensions
@@ -998,6 +1054,7 @@ references:
   name: BlockUntil
   href: api/VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.html#VaraniumSharp_Extensions_NotifyPropertyChangedExtensions_BlockUntil_
   commentId: Overload:VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil
+  isSpec: "True"
   fullName: VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil
   nameWithType: NotifyPropertyChangedExtensions.BlockUntil
 - uid: VaraniumSharp.Extensions.ObservableCollectionExtensions
@@ -1010,6 +1067,7 @@ references:
   name: Clear
   href: api/VaraniumSharp.Extensions.ObservableCollectionExtensions.html#VaraniumSharp_Extensions_ObservableCollectionExtensions_Clear_
   commentId: Overload:VaraniumSharp.Extensions.ObservableCollectionExtensions.Clear
+  isSpec: "True"
   fullName: VaraniumSharp.Extensions.ObservableCollectionExtensions.Clear
   nameWithType: ObservableCollectionExtensions.Clear
 - uid: VaraniumSharp.Extensions.ObservableCollectionExtensions.Clear``1(System.Collections.ObjectModel.ObservableCollection{``0},System.Action{System.Collections.ObjectModel.ObservableCollection{``0}})
@@ -1031,6 +1089,7 @@ references:
   name: GetConfigurationValue
   href: api/VaraniumSharp.Extensions.StringExtensions.html#VaraniumSharp_Extensions_StringExtensions_GetConfigurationValue_
   commentId: Overload:VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue
+  isSpec: "True"
   fullName: VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue
   nameWithType: StringExtensions.GetConfigurationValue
 - uid: VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue``1(System.String)
@@ -1061,6 +1120,7 @@ references:
   name: AppendQueryString
   href: api/VaraniumSharp.Extensions.UrlBuilderExtensions.html#VaraniumSharp_Extensions_UrlBuilderExtensions_AppendQueryString_
   commentId: Overload:VaraniumSharp.Extensions.UrlBuilderExtensions.AppendQueryString
+  isSpec: "True"
   fullName: VaraniumSharp.Extensions.UrlBuilderExtensions.AppendQueryString
   nameWithType: UrlBuilderExtensions.AppendQueryString
 - uid: VaraniumSharp.Extensions.UrlBuilderExtensions.BuildPath(System.String,System.String[])
@@ -1076,6 +1136,7 @@ references:
   name: BuildPath
   href: api/VaraniumSharp.Extensions.UrlBuilderExtensions.html#VaraniumSharp_Extensions_UrlBuilderExtensions_BuildPath_
   commentId: Overload:VaraniumSharp.Extensions.UrlBuilderExtensions.BuildPath
+  isSpec: "True"
   fullName: VaraniumSharp.Extensions.UrlBuilderExtensions.BuildPath
   nameWithType: UrlBuilderExtensions.BuildPath
 - uid: VaraniumSharp.GenericHelpers
@@ -1100,6 +1161,7 @@ references:
   name: StartProcess
   href: api/VaraniumSharp.GenericHelpers.StaticMethodWrapper.html#VaraniumSharp_GenericHelpers_StaticMethodWrapper_StartProcess_
   commentId: Overload:VaraniumSharp.GenericHelpers.StaticMethodWrapper.StartProcess
+  isSpec: "True"
   fullName: VaraniumSharp.GenericHelpers.StaticMethodWrapper.StartProcess
   nameWithType: StaticMethodWrapper.StartProcess
 - uid: VaraniumSharp.Interfaces.Caching
@@ -1129,6 +1191,7 @@ references:
   name: CachePolicy
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_CachePolicy_
   commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CachePolicy
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.CachePolicy
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).CachePolicy
   nameWithType: IMemoryCacheWrapper<T>.CachePolicy
@@ -1145,6 +1208,7 @@ references:
   name: ContainsKeyAsync
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_ContainsKeyAsync_
   commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.ContainsKeyAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.ContainsKeyAsync
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).ContainsKeyAsync
   nameWithType: IMemoryCacheWrapper<T>.ContainsKeyAsync
@@ -1161,6 +1225,7 @@ references:
   name: DataRetrievalFunc
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_DataRetrievalFunc_
   commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.DataRetrievalFunc
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.DataRetrievalFunc
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).DataRetrievalFunc
   nameWithType: IMemoryCacheWrapper<T>.DataRetrievalFunc
@@ -1177,6 +1242,7 @@ references:
   name: GetAsync
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_GetAsync_
   commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.GetAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.GetAsync
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).GetAsync
   nameWithType: IMemoryCacheWrapper<T>.GetAsync
@@ -1193,6 +1259,7 @@ references:
   name: RemoveFromCacheAsync
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_RemoveFromCacheAsync_
   commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.RemoveFromCacheAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.RemoveFromCacheAsync
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).RemoveFromCacheAsync
   nameWithType: IMemoryCacheWrapper<T>.RemoveFromCacheAsync
@@ -1207,6 +1274,7 @@ references:
   name: Create
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapperFactory_Create_
   commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.Create
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.Create
   nameWithType: IMemoryCacheWrapperFactory.Create
 - uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.Create``1(System.Runtime.Caching.CacheItemPolicy,System.Func{System.String,System.Threading.Tasks.Task{``0}})
@@ -1222,6 +1290,7 @@ references:
   name: CreateWithDefaultSlidingPolicy
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapperFactory_CreateWithDefaultSlidingPolicy_
   commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
   nameWithType: IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
 - uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy``1(System.Func{System.String,System.Threading.Tasks.Task{``0}})
@@ -1255,6 +1324,7 @@ references:
   name: AddItemToPackageAsync
   href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_AddItemToPackageAsync_
   commentId: Overload:VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync
   nameWithType: IPackageManager.AddItemToPackageAsync
 - uid: VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync(System.String,System.String)
@@ -1267,6 +1337,7 @@ references:
   name: RemoveDataFromPackageAsync
   href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_RemoveDataFromPackageAsync_
   commentId: Overload:VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync
   nameWithType: IPackageManager.RemoveDataFromPackageAsync
 - uid: VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync(System.String,System.String)
@@ -1279,6 +1350,7 @@ references:
   name: RetrieveDataFromPackageAsync
   href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_RetrieveDataFromPackageAsync_
   commentId: Overload:VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync
   nameWithType: IPackageManager.RetrieveDataFromPackageAsync
 - uid: VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync(System.String,System.Collections.Generic.List{System.String})
@@ -1294,6 +1366,7 @@ references:
   name: ScrubStorageAsync
   href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_ScrubStorageAsync_
   commentId: Overload:VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync
   nameWithType: IPackageManager.ScrubStorageAsync
 - uid: VaraniumSharp.Interfaces.Collections.IPriorityItem
@@ -1312,6 +1385,7 @@ references:
   name: Priority
   href: api/VaraniumSharp.Interfaces.Collections.IPriorityItem.html#VaraniumSharp_Interfaces_Collections_IPriorityItem_Priority_
   commentId: Overload:VaraniumSharp.Interfaces.Collections.IPriorityItem.Priority
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Collections.IPriorityItem.Priority
   nameWithType: IPriorityItem.Priority
 - uid: VaraniumSharp.Interfaces.Collections.IPriorityItem.PriorityChanged
@@ -1342,8 +1416,118 @@ references:
   name: StartProcess
   href: api/VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.html#VaraniumSharp_Interfaces_GenericHelpers_IStaticMethodWrapper_StartProcess_
   commentId: Overload:VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.StartProcess
+  isSpec: "True"
   fullName: VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.StartProcess
   nameWithType: IStaticMethodWrapper.StartProcess
+- uid: VaraniumSharp.Interfaces.Wrappers
+  name: VaraniumSharp.Interfaces.Wrappers
+  href: api/VaraniumSharp.Interfaces.Wrappers.html
+  commentId: N:VaraniumSharp.Interfaces.Wrappers
+  fullName: VaraniumSharp.Interfaces.Wrappers
+  nameWithType: VaraniumSharp.Interfaces.Wrappers
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient
+  name: IHttpClient
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html
+  commentId: T:VaraniumSharp.Interfaces.Wrappers.IHttpClient
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient
+  nameWithType: IHttpClient
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.BaseAddress
+  name: BaseAddress
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_BaseAddress
+  commentId: P:VaraniumSharp.Interfaces.Wrappers.IHttpClient.BaseAddress
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.BaseAddress
+  nameWithType: IHttpClient.BaseAddress
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.BaseAddress*
+  name: BaseAddress
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_BaseAddress_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IHttpClient.BaseAddress
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.BaseAddress
+  nameWithType: IHttpClient.BaseAddress
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.CancelPendingRequests
+  name: CancelPendingRequests()
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_CancelPendingRequests
+  commentId: M:VaraniumSharp.Interfaces.Wrappers.IHttpClient.CancelPendingRequests
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.CancelPendingRequests()
+  nameWithType: IHttpClient.CancelPendingRequests()
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.CancelPendingRequests*
+  name: CancelPendingRequests
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_CancelPendingRequests_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IHttpClient.CancelPendingRequests
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.CancelPendingRequests
+  nameWithType: IHttpClient.CancelPendingRequests
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.DefaultRequestHeaders
+  name: DefaultRequestHeaders
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_DefaultRequestHeaders
+  commentId: P:VaraniumSharp.Interfaces.Wrappers.IHttpClient.DefaultRequestHeaders
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.DefaultRequestHeaders
+  nameWithType: IHttpClient.DefaultRequestHeaders
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.DefaultRequestHeaders*
+  name: DefaultRequestHeaders
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_DefaultRequestHeaders_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IHttpClient.DefaultRequestHeaders
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.DefaultRequestHeaders
+  nameWithType: IHttpClient.DefaultRequestHeaders
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetAsync(System.Uri)
+  name: GetAsync(Uri)
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_GetAsync_System_Uri_
+  commentId: M:VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetAsync(System.Uri)
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetAsync(System.Uri)
+  nameWithType: IHttpClient.GetAsync(Uri)
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetAsync(System.Uri,System.Threading.CancellationToken)
+  name: GetAsync(Uri, CancellationToken)
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_GetAsync_System_Uri_System_Threading_CancellationToken_
+  commentId: M:VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetAsync(System.Uri,System.Threading.CancellationToken)
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetAsync(System.Uri, System.Threading.CancellationToken)
+  nameWithType: IHttpClient.GetAsync(Uri, CancellationToken)
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetAsync*
+  name: GetAsync
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_GetAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetAsync
+  nameWithType: IHttpClient.GetAsync
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetStreamAsync(System.Uri)
+  name: GetStreamAsync(Uri)
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_GetStreamAsync_System_Uri_
+  commentId: M:VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetStreamAsync(System.Uri)
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetStreamAsync(System.Uri)
+  nameWithType: IHttpClient.GetStreamAsync(Uri)
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetStreamAsync*
+  name: GetStreamAsync
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_GetStreamAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetStreamAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.GetStreamAsync
+  nameWithType: IHttpClient.GetStreamAsync
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.MaxResponseContentBufferSize
+  name: MaxResponseContentBufferSize
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_MaxResponseContentBufferSize
+  commentId: P:VaraniumSharp.Interfaces.Wrappers.IHttpClient.MaxResponseContentBufferSize
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.MaxResponseContentBufferSize
+  nameWithType: IHttpClient.MaxResponseContentBufferSize
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.MaxResponseContentBufferSize*
+  name: MaxResponseContentBufferSize
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_MaxResponseContentBufferSize_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IHttpClient.MaxResponseContentBufferSize
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.MaxResponseContentBufferSize
+  nameWithType: IHttpClient.MaxResponseContentBufferSize
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.Timeout
+  name: Timeout
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_Timeout
+  commentId: P:VaraniumSharp.Interfaces.Wrappers.IHttpClient.Timeout
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.Timeout
+  nameWithType: IHttpClient.Timeout
+- uid: VaraniumSharp.Interfaces.Wrappers.IHttpClient.Timeout*
+  name: Timeout
+  href: api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html#VaraniumSharp_Interfaces_Wrappers_IHttpClient_Timeout_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IHttpClient.Timeout
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IHttpClient.Timeout
+  nameWithType: IHttpClient.Timeout
 - uid: VaraniumSharp.Logging
   name: VaraniumSharp.Logging
   href: api/VaraniumSharp.Logging.html
@@ -1360,6 +1544,7 @@ references:
   name: GetLogger
   href: api/VaraniumSharp.Logging.StaticLogger.html#VaraniumSharp_Logging_StaticLogger_GetLogger_
   commentId: Overload:VaraniumSharp.Logging.StaticLogger.GetLogger
+  isSpec: "True"
   fullName: VaraniumSharp.Logging.StaticLogger.GetLogger
   nameWithType: StaticLogger.GetLogger
 - uid: VaraniumSharp.Logging.StaticLogger.GetLogger``1
@@ -1381,5 +1566,141 @@ references:
   name: LoggerFactory
   href: api/VaraniumSharp.Logging.StaticLogger.html#VaraniumSharp_Logging_StaticLogger_LoggerFactory_
   commentId: Overload:VaraniumSharp.Logging.StaticLogger.LoggerFactory
+  isSpec: "True"
   fullName: VaraniumSharp.Logging.StaticLogger.LoggerFactory
   nameWithType: StaticLogger.LoggerFactory
+- uid: VaraniumSharp.Wrappers
+  name: VaraniumSharp.Wrappers
+  href: api/VaraniumSharp.Wrappers.html
+  commentId: N:VaraniumSharp.Wrappers
+  fullName: VaraniumSharp.Wrappers
+  nameWithType: VaraniumSharp.Wrappers
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper
+  name: HttpClientWrapper
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html
+  commentId: T:VaraniumSharp.Wrappers.HttpClientWrapper
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper
+  nameWithType: HttpClientWrapper
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.#ctor
+  name: HttpClientWrapper()
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper__ctor
+  commentId: M:VaraniumSharp.Wrappers.HttpClientWrapper.#ctor
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.HttpClientWrapper()
+  nameWithType: HttpClientWrapper.HttpClientWrapper()
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.#ctor*
+  name: HttpClientWrapper
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper__ctor_
+  commentId: Overload:VaraniumSharp.Wrappers.HttpClientWrapper.#ctor
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.HttpClientWrapper
+  nameWithType: HttpClientWrapper.HttpClientWrapper
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.BaseAddress
+  name: BaseAddress
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_BaseAddress
+  commentId: P:VaraniumSharp.Wrappers.HttpClientWrapper.BaseAddress
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.BaseAddress
+  nameWithType: HttpClientWrapper.BaseAddress
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.BaseAddress*
+  name: BaseAddress
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_BaseAddress_
+  commentId: Overload:VaraniumSharp.Wrappers.HttpClientWrapper.BaseAddress
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.BaseAddress
+  nameWithType: HttpClientWrapper.BaseAddress
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.CancelPendingRequests
+  name: CancelPendingRequests()
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_CancelPendingRequests
+  commentId: M:VaraniumSharp.Wrappers.HttpClientWrapper.CancelPendingRequests
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.CancelPendingRequests()
+  nameWithType: HttpClientWrapper.CancelPendingRequests()
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.CancelPendingRequests*
+  name: CancelPendingRequests
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_CancelPendingRequests_
+  commentId: Overload:VaraniumSharp.Wrappers.HttpClientWrapper.CancelPendingRequests
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.CancelPendingRequests
+  nameWithType: HttpClientWrapper.CancelPendingRequests
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.DefaultRequestHeaders
+  name: DefaultRequestHeaders
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_DefaultRequestHeaders
+  commentId: P:VaraniumSharp.Wrappers.HttpClientWrapper.DefaultRequestHeaders
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.DefaultRequestHeaders
+  nameWithType: HttpClientWrapper.DefaultRequestHeaders
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.DefaultRequestHeaders*
+  name: DefaultRequestHeaders
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_DefaultRequestHeaders_
+  commentId: Overload:VaraniumSharp.Wrappers.HttpClientWrapper.DefaultRequestHeaders
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.DefaultRequestHeaders
+  nameWithType: HttpClientWrapper.DefaultRequestHeaders
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.Dispose
+  name: Dispose()
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_Dispose
+  commentId: M:VaraniumSharp.Wrappers.HttpClientWrapper.Dispose
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.Dispose()
+  nameWithType: HttpClientWrapper.Dispose()
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.Dispose*
+  name: Dispose
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_Dispose_
+  commentId: Overload:VaraniumSharp.Wrappers.HttpClientWrapper.Dispose
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.Dispose
+  nameWithType: HttpClientWrapper.Dispose
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync(System.Uri)
+  name: GetAsync(Uri)
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_GetAsync_System_Uri_
+  commentId: M:VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync(System.Uri)
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync(System.Uri)
+  nameWithType: HttpClientWrapper.GetAsync(Uri)
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync(System.Uri,System.Threading.CancellationToken)
+  name: GetAsync(Uri, CancellationToken)
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_GetAsync_System_Uri_System_Threading_CancellationToken_
+  commentId: M:VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync(System.Uri,System.Threading.CancellationToken)
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync(System.Uri, System.Threading.CancellationToken)
+  nameWithType: HttpClientWrapper.GetAsync(Uri, CancellationToken)
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync*
+  name: GetAsync
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_GetAsync_
+  commentId: Overload:VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync
+  nameWithType: HttpClientWrapper.GetAsync
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.GetStreamAsync(System.Uri)
+  name: GetStreamAsync(Uri)
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_GetStreamAsync_System_Uri_
+  commentId: M:VaraniumSharp.Wrappers.HttpClientWrapper.GetStreamAsync(System.Uri)
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.GetStreamAsync(System.Uri)
+  nameWithType: HttpClientWrapper.GetStreamAsync(Uri)
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.GetStreamAsync*
+  name: GetStreamAsync
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_GetStreamAsync_
+  commentId: Overload:VaraniumSharp.Wrappers.HttpClientWrapper.GetStreamAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.GetStreamAsync
+  nameWithType: HttpClientWrapper.GetStreamAsync
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.MaxResponseContentBufferSize
+  name: MaxResponseContentBufferSize
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_MaxResponseContentBufferSize
+  commentId: P:VaraniumSharp.Wrappers.HttpClientWrapper.MaxResponseContentBufferSize
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.MaxResponseContentBufferSize
+  nameWithType: HttpClientWrapper.MaxResponseContentBufferSize
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.MaxResponseContentBufferSize*
+  name: MaxResponseContentBufferSize
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_MaxResponseContentBufferSize_
+  commentId: Overload:VaraniumSharp.Wrappers.HttpClientWrapper.MaxResponseContentBufferSize
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.MaxResponseContentBufferSize
+  nameWithType: HttpClientWrapper.MaxResponseContentBufferSize
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.Timeout
+  name: Timeout
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_Timeout
+  commentId: P:VaraniumSharp.Wrappers.HttpClientWrapper.Timeout
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.Timeout
+  nameWithType: HttpClientWrapper.Timeout
+- uid: VaraniumSharp.Wrappers.HttpClientWrapper.Timeout*
+  name: Timeout
+  href: api/VaraniumSharp.Wrappers.HttpClientWrapper.html#VaraniumSharp_Wrappers_HttpClientWrapper_Timeout_
+  commentId: Overload:VaraniumSharp.Wrappers.HttpClientWrapper.Timeout
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.HttpClientWrapper.Timeout
+  nameWithType: HttpClientWrapper.Timeout
