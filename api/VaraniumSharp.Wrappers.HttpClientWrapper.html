@@ -117,7 +117,8 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
   <h6><strong>Assembly</strong>: VaraniumSharp.dll</h6>
   <h5 id="VaraniumSharp_Wrappers_HttpClientWrapper_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HttpClientWrapper : IHttpClient, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">[AutomaticContainerRegistration(typeof(IHttpClient))]
+public class HttpClientWrapper : IHttpClient, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -126,7 +127,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper__ctor.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L19">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L21">View Source</a>
   </span>
   <a id="VaraniumSharp_Wrappers_HttpClientWrapper__ctor_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.#ctor*"></a>
   <h4 id="VaraniumSharp_Wrappers_HttpClientWrapper__ctor" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.#ctor">HttpClientWrapper()</h4>
@@ -144,7 +145,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper_BaseAddress.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper.BaseAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L29">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L31">View Source</a>
   </span>
   <a id="VaraniumSharp_Wrappers_HttpClientWrapper_BaseAddress_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.BaseAddress*"></a>
   <h4 id="VaraniumSharp_Wrappers_HttpClientWrapper_BaseAddress" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.BaseAddress">BaseAddress</h4>
@@ -175,7 +176,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper_DefaultRequestHeaders.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper.DefaultRequestHeaders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L36">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L38">View Source</a>
   </span>
   <a id="VaraniumSharp_Wrappers_HttpClientWrapper_DefaultRequestHeaders_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.DefaultRequestHeaders*"></a>
   <h4 id="VaraniumSharp_Wrappers_HttpClientWrapper_DefaultRequestHeaders" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.DefaultRequestHeaders">DefaultRequestHeaders</h4>
@@ -206,7 +207,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper_MaxResponseContentBufferSize.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper.MaxResponseContentBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L39">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L41">View Source</a>
   </span>
   <a id="VaraniumSharp_Wrappers_HttpClientWrapper_MaxResponseContentBufferSize_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.MaxResponseContentBufferSize*"></a>
   <h4 id="VaraniumSharp_Wrappers_HttpClientWrapper_MaxResponseContentBufferSize" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.MaxResponseContentBufferSize">MaxResponseContentBufferSize</h4>
@@ -237,7 +238,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper_Timeout.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper.Timeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L46">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L48">View Source</a>
   </span>
   <a id="VaraniumSharp_Wrappers_HttpClientWrapper_Timeout_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.Timeout*"></a>
   <h4 id="VaraniumSharp_Wrappers_HttpClientWrapper_Timeout" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.Timeout">Timeout</h4>
@@ -270,7 +271,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper_CancelPendingRequests.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper.CancelPendingRequests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L57">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L59">View Source</a>
   </span>
   <a id="VaraniumSharp_Wrappers_HttpClientWrapper_CancelPendingRequests_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.CancelPendingRequests*"></a>
   <h4 id="VaraniumSharp_Wrappers_HttpClientWrapper_CancelPendingRequests" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.CancelPendingRequests">CancelPendingRequests()</h4>
@@ -286,7 +287,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper_Dispose.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L63">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L65">View Source</a>
   </span>
   <a id="VaraniumSharp_Wrappers_HttpClientWrapper_Dispose_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.Dispose*"></a>
   <h4 id="VaraniumSharp_Wrappers_HttpClientWrapper_Dispose" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.Dispose">Dispose()</h4>
@@ -301,7 +302,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper_GetAsync_System_Uri_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync(System.Uri)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L69">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L71">View Source</a>
   </span>
   <a id="VaraniumSharp_Wrappers_HttpClientWrapper_GetAsync_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync*"></a>
   <h4 id="VaraniumSharp_Wrappers_HttpClientWrapper_GetAsync_System_Uri_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync(System.Uri)">GetAsync(Uri)</h4>
@@ -351,7 +352,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper_GetAsync_System_Uri_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync(System.Uri%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L75">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L77">View Source</a>
   </span>
   <a id="VaraniumSharp_Wrappers_HttpClientWrapper_GetAsync_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync*"></a>
   <h4 id="VaraniumSharp_Wrappers_HttpClientWrapper_GetAsync_System_Uri_System_Threading_CancellationToken_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.GetAsync(System.Uri,System.Threading.CancellationToken)">GetAsync(Uri, CancellationToken)</h4>
@@ -407,7 +408,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper_GetStreamAsync_System_Uri_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper.GetStreamAsync(System.Uri)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L81">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L83">View Source</a>
   </span>
   <a id="VaraniumSharp_Wrappers_HttpClientWrapper_GetStreamAsync_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.GetStreamAsync*"></a>
   <h4 id="VaraniumSharp_Wrappers_HttpClientWrapper_GetStreamAsync_System_Uri_" data-uid="VaraniumSharp.Wrappers.HttpClientWrapper.GetStreamAsync(System.Uri)">GetStreamAsync(Uri)</h4>
@@ -470,7 +471,7 @@ The wrapper currently only covers GetAsync and GetStreamAsync method. If a metho
                     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Wrappers_HttpClientWrapper.md&amp;value=---%0Auid%3A%20VaraniumSharp.Wrappers.HttpClientWrapper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Wrappers/HttpClientWrapper.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
