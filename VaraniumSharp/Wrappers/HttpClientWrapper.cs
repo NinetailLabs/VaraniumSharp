@@ -4,11 +4,13 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
+using VaraniumSharp.Attributes;
 using VaraniumSharp.Interfaces.Wrappers;
 
 namespace VaraniumSharp.Wrappers
 {
     /// <inheritdoc />
+    [AutomaticContainerRegistration(typeof(IHttpClient))]
     public class HttpClientWrapper : IHttpClient
     {
         #region Constructor
