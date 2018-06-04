@@ -34,3 +34,4 @@ NUGET
     System.Runtime.CompilerServices.Unsafe (4.4)
     System.Threading.Tasks.Extensions (4.4)
     System.ValueTuple (4.4)
+    Viki.HttpMockSlim (1.0.3)

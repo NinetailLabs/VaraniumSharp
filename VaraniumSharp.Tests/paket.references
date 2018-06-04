@@ -7,3 +7,4 @@ NUnit
 PropertyChanged.Fody
 System.Threading.Tasks.Extensions redirects:on
 System.Configuration.ConfigurationManager
+Viki.HttpMockSlim
