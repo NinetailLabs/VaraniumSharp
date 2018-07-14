@@ -53,11 +53,7 @@ Param(
     [switch]$Mono,
     [switch]$SkipToolPackageRestore,
     [Parameter(Position=0,Mandatory=$false,ValueFromRemainingArguments=$true)]
-    [string[]]$ScriptArgs,
-    [string]$Branch,
-    [int]$BuildCounter,
-    [string]$BuildConfiguration
-
+    [string[]]$ScriptArgs
 )
 
 [Reflection.Assembly]::LoadWithPartialName("System.Security") | Out-Null
@@ -233,9 +229,6 @@ if ($DryRun) { $cakeArguments += "-dryrun" }
 if ($Experimental) { $cakeArguments += "-experimental" }
 if ($Mono) { $cakeArguments += "-mono" }
 $cakeArguments += $ScriptArgs
-if ($Branch) { $cakeArguments += "-branch=$Branch"}
-if ($BuildCounter) { $cakeArguments += "-buildCounter=$BuildCounter" }
-if ($BuildConfiguration) { $cakeArguments += "-buildConfiguration=$BuildConfiguration" }
 
 # Start Cake
 Write-Host "Running build script..."
