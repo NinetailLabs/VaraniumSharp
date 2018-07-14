@@ -1,0 +1,4 @@
+[submodule "CakeScripts"]
+	path = CakeScripts
+	url = https://github.com/DeadlyEmbrace/CakeScripts.git
+	branch = master
