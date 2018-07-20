@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace VaraniumSharp.Interfaces.Collections
     /// All methods in this class are Thread safe
     /// </remark>
     /// </summary>
-    public interface IPackageManager
+    public interface IPackageManager : IDisposable
     {
         #region Public Methods
 
