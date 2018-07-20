@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Collections.PackageManager.html",
-          "hash": "DMkJDKX4Xk7tk3itdPgSvw=="
+          "hash": "XG5SZdgsOBiEhmpXoWn1WQ=="
         }
       },
       "is_incremental": false,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Interfaces.Collections.IPackageManager.html",
-          "hash": "5htt+77MbG5CWcTJrab9Sg=="
+          "hash": "pYqeGBqijpZEUpd+UF+cSg=="
         }
       },
       "is_incremental": false,
@@ -596,13 +596,13 @@
           "can_incremental": false,
           "incrementalPhase": "build"
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
