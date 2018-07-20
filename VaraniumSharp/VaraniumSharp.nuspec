@@ -17,14 +17,15 @@
     <tags>C# VaraniumSharp Varanium</tags>
 
     <dependencies>
-      <dependency id="Microsoft.Extensions.Logging" version="2.0.0" />
-      <dependency id="System.Configuration.ConfigurationManager" version="4.4.1" />
+      <dependency id="Microsoft.Extensions.Logging" version="2.1.1" />
+      <dependency id="System.Configuration.ConfigurationManager" version="4.5.0" />
       <dependency id="System.Runtime.Caching" version="4.5.0" />
     </dependencies>
   </metadata>
 
   <files>
     <file src="./bin/Release/netstandard2.0/VaraniumSharp.dll" target="lib\netstandard2.0" />
+    <file src="./bin/Release/netstandard2.0/VaraniumSharp.pdb" target="lib\netstandard2.0" />
     <file src="./bin/Release/netstandard2.0/VaraniumSharp.xml" target="lib\netstandard2.0" />
     <file src="./bin/Release/netstandard2.0/VaraniumSharp.deps.json" target="lib\netstandard2.0" />
   </files>

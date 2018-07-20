@@ -77,6 +77,7 @@ namespace VaraniumSharp.Collections
             }
         }
 
+        /// <inheritdoc />
         public void Dispose()
         {
             Dispose(true);
@@ -186,6 +187,10 @@ namespace VaraniumSharp.Collections
 
         #region Private Methods
 
+        /// <summary>
+        /// Handle disposal if we are disposing the class
+        /// </summary>
+        /// <param name="disposing">Indicate if disposal has already been done</param>
         protected virtual void Dispose(bool disposing)
         {
             if (disposing)
