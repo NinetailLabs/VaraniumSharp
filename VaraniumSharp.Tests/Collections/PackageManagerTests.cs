@@ -51,6 +51,44 @@ namespace VaraniumSharp.Tests.Collections
         }
 
         [Test]
+        public async Task AutomaticFlushingCorrectlyReattachesTheArchive()
+        {
+            // arrange
+            var appPath = AppDomain.CurrentDomain.BaseDirectory;
+            var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
+            var filePath = Path.Combine(appPath, ResouceDirectory, "File1.txt");
+            const string storagePath = "docs/File1.txt";
+
+            File.Exists(packagePath).Should().BeFalse();
+
+            var sut = new PackageManager
+            {
+                AutoFlush = true
+            };
+            using (var fileStream = File.Open(filePath, FileMode.Open))
+            {
+                await sut.AddItemToPackageAsync(packagePath, fileStream, storagePath);
+            }
+
+            // act
+            var result = await sut.RetrieveDataFromPackageAsync(packagePath, storagePath);
+
+            // assert
+            using (var fileData = File.OpenRead(filePath))
+            using (var streamReader = new StreamReader(fileData))
+            using (var resultReader = new StreamReader(result))
+            {
+                var expectedData = streamReader.ReadToEnd();
+                var resultData = resultReader.ReadToEnd();
+
+                expectedData.Should().Be(resultData);
+            }
+
+            sut.Dispose();
+            File.Delete(packagePath);
+        }
+
+        [Test]
         public async Task ItemIsAddedToThePackageCorrectly()
         {
             // arrange

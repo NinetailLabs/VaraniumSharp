@@ -45,6 +45,13 @@ namespace VaraniumSharp.Collections
 
         #endregion
 
+        #region Properties
+
+        /// <inheritdoc />
+        public bool AutoFlush { get; set; }
+
+        #endregion
+
         #region Public Methods
 
         /// <summary>
@@ -70,6 +77,8 @@ namespace VaraniumSharp.Collections
                 {
                     await data.CopyToAsync(partStream);
                 }
+
+                AutoFlushPackage(packagePath);
             }
             finally
             {
@@ -106,7 +115,9 @@ namespace VaraniumSharp.Collections
                     return;
                 }
 
-                package.GetEntry(storagePath).Delete();
+                package.GetEntry(storagePath)?.Delete();
+
+                AutoFlushPackage(packagePath);
             }
             finally
             {
@@ -136,6 +147,7 @@ namespace VaraniumSharp.Collections
                 }
 
                 var part = package.GetEntry(storagePath);
+
                 var returnStream = new MemoryStream();
                 using (var partStream = part.Open())
                 {
@@ -176,6 +188,8 @@ namespace VaraniumSharp.Collections
                     progress++;
                     ScrubProgress?.Invoke(this, new ScrubProgressArgs(packagePath, totalEntries, progress));
                 }
+
+                AutoFlushPackage(packagePath);
             }
             finally
             {
@@ -186,6 +200,27 @@ namespace VaraniumSharp.Collections
         #endregion
 
         #region Private Methods
+
+        /// <summary>
+        /// Flush (Dispose) the <see cref="ZipArchive"/> in <see cref="PackageDictionary"/> and reconnect to it
+        /// to force data to be persisted to disk after an operation.
+        /// Flush will only occur if the pacakge is in the <see cref="PackageDictionary"/> and <see cref="AutoFlush"/> is set to true.
+        /// <remarks>
+        /// This method does not lock use the Semaphore from the <see cref="LockingDictionary"/> so it must be called when the archive is already locked
+        /// </remarks>
+        /// </summary>
+        /// <param name="packagePath">Package path used to retrieve it from the Dictionary</param>
+        private void AutoFlushPackage(string packagePath)
+        {
+            if (!AutoFlush
+                || !PackageDictionary.ContainsKey(packagePath))
+            {
+                return;
+            }
+
+            PackageDictionary[packagePath].Dispose();
+            PackageDictionary[packagePath] = new ZipArchive(File.Open(packagePath, FileMode.OpenOrCreate), ZipArchiveMode.Update);
+        }
 
         /// <summary>
         /// Handle disposal if we are disposing the class
