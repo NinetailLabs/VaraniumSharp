@@ -396,6 +396,19 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync
   nameWithType: PackageManager.AddItemToPackageAsync
+- uid: VaraniumSharp.Collections.PackageManager.AutoFlush
+  name: AutoFlush
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_AutoFlush
+  commentId: P:VaraniumSharp.Collections.PackageManager.AutoFlush
+  fullName: VaraniumSharp.Collections.PackageManager.AutoFlush
+  nameWithType: PackageManager.AutoFlush
+- uid: VaraniumSharp.Collections.PackageManager.AutoFlush*
+  name: AutoFlush
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_AutoFlush_
+  commentId: Overload:VaraniumSharp.Collections.PackageManager.AutoFlush
+  isSpec: "True"
+  fullName: VaraniumSharp.Collections.PackageManager.AutoFlush
+  nameWithType: PackageManager.AutoFlush
 - uid: VaraniumSharp.Collections.PackageManager.Dispose
   name: Dispose()
   href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_Dispose
@@ -1327,6 +1340,19 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync
   nameWithType: IPackageManager.AddItemToPackageAsync
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.AutoFlush
+  name: AutoFlush
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_AutoFlush
+  commentId: P:VaraniumSharp.Interfaces.Collections.IPackageManager.AutoFlush
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.AutoFlush
+  nameWithType: IPackageManager.AutoFlush
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.AutoFlush*
+  name: AutoFlush
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_AutoFlush_
+  commentId: Overload:VaraniumSharp.Interfaces.Collections.IPackageManager.AutoFlush
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.AutoFlush
+  nameWithType: IPackageManager.AutoFlush
 - uid: VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync(System.String,System.String)
   name: RemoveDataFromPackageAsync(String, String)
   href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_RemoveDataFromPackageAsync_System_String_System_String_
