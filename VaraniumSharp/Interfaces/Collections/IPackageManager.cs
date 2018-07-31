@@ -14,6 +14,16 @@ namespace VaraniumSharp.Interfaces.Collections
     /// </summary>
     public interface IPackageManager : IDisposable
     {
+        #region Properties
+
+        /// <summary>
+        /// Gets or Sets if the PackageManager should automatically dispose and recreate the connection to the <see cref="ZipArchive"/>
+        /// to prevent data only being written to disk on Disposal
+        /// </summary>
+        bool AutoFlush { get; set; }
+
+        #endregion
+
         #region Public Methods
 
         /// <summary>
