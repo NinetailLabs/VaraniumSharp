@@ -13,4 +13,4 @@ If an older version is required please file an issue and request support, we're 
 For a detailed overview of the library see our [documentation](https://ninetaillabs.github.io/VaraniumSharp/index.html)
 
 ## Icon
-[Sprout](https://thenounproject.com/term/sprout/607325/) by [parkjisun](https://thenounproject.com/naripuru/) from the Noun Project
+[Sprout](https://thenounproject.com/term/sprout/607325/) by [parkjisun](https://thenounproject.com/naripuru/) from the Noun Project 
