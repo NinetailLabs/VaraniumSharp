@@ -281,3 +281,6 @@ __pycache__/
 /ReleaseNotes.md
 /coverageResults.xml
 /ErrorResult.xml
+/coverage-hits.txt
+/coverage.json
+/coverage.xml

@@ -1,8 +1,9 @@
-##########################################################################
+#####################################################################################
 # This is the Cake bootstrapper script for PowerShell.
 # This file was downloaded from https://github.com/cake-build/resources
 # Feel free to change this file to fit your needs.
-##########################################################################
+# This version of the build file has been modified by NineTail Labs for CakeScripts
+#####################################################################################
 
 <#
 
@@ -56,8 +57,9 @@ Param(
     [string[]]$ScriptArgs,
     [string]$Branch,
     [int]$BuildCounter,
-    [string]$BuildConfiguration
-
+    [string]$GitHash,
+    [string]$BuildConfiguration,
+    [string]$CommitMessage
 )
 
 [Reflection.Assembly]::LoadWithPartialName("System.Security") | Out-Null
@@ -235,9 +237,12 @@ if ($Mono) { $cakeArguments += "-mono" }
 $cakeArguments += $ScriptArgs
 if ($Branch) { $cakeArguments += "-branch=$Branch"}
 if ($BuildCounter) { $cakeArguments += "-buildCounter=$BuildCounter" }
+if ($GitHash) { $cakeArguments += "-gitHash=$GitHash" }
 if ($BuildConfiguration) { $cakeArguments += "-buildConfiguration=$BuildConfiguration" }
+if ($CommitMessage) { $cakeArguments += "-commitMessage=$CommitMessage" }
 
 # Start Cake
 Write-Host "Running build script..."
+Write-Host $cakeArguments
 &$CAKE_EXE $cakeArguments
 exit $LASTEXITCODE
