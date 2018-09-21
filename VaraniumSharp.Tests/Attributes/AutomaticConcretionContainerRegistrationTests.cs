@@ -1,16 +1,32 @@
 ﻿using FluentAssertions;
-using NUnit.Framework;
 using System.Linq;
 using VaraniumSharp.Attributes;
 using VaraniumSharp.Enumerations;
+using Xunit;
 
 namespace VaraniumSharp.Tests.Attributes
 {
     public class AutomaticConcretionContainerRegistrationTests
     {
-        #region Public Methods
+        [AutomaticConcretionContainerRegistration]
+        private class BaseClassDummy
+        { }
 
-        [Test]
+        private class IheritorDummy : BaseClassDummy
+        { }
+
+        [AutomaticConcretionContainerRegistration(ServiceReuse.Singleton)]
+        private interface IInterfaceDummy
+        { }
+
+        [AutomaticConcretionContainerRegistration(ServiceReuse.Default, true)]
+        private class MultiConstructorBase
+        { }
+
+        private class MultiClassInheritor : MultiConstructorBase
+        { }
+
+        [Fact]
         public void ReadCustomAttributeForDefaultSetup()
         {
             // arrange
@@ -27,7 +43,7 @@ namespace VaraniumSharp.Tests.Attributes
             attribute?.MultipleConstructors.Should().BeFalse();
         }
 
-        [Test]
+        [Fact]
         public void ReadCustomAttributeForMultipleConstructorSetup()
         {
             // arrange
@@ -42,7 +58,7 @@ namespace VaraniumSharp.Tests.Attributes
             attribute.MultipleConstructors.Should().BeTrue();
         }
 
-        [Test]
+        [Fact]
         public void ReadCustomAttributeForSingletonSetup()
         {
             // arrange
@@ -55,25 +71,5 @@ namespace VaraniumSharp.Tests.Attributes
             attribute?.Reuse.Should().Be(ServiceReuse.Singleton);
             attribute?.MultipleConstructors.Should().BeFalse();
         }
-
-        #endregion
-
-        [AutomaticConcretionContainerRegistration]
-        private class BaseClassDummy
-        {}
-
-        private class IheritorDummy : BaseClassDummy
-        {}
-
-        [AutomaticConcretionContainerRegistration(ServiceReuse.Singleton)]
-        private interface IInterfaceDummy
-        {}
-
-        [AutomaticConcretionContainerRegistration(ServiceReuse.Default, true)]
-        private class MultiConstructorBase
-        {}
-
-        private class MultiClassInheritor : MultiConstructorBase
-        {}
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 using FluentAssertions;
-using NUnit.Framework;
 using VaraniumSharp.Attributes;
 using VaraniumSharp.Extensions;
+using Xunit;
 
 #pragma warning disable 0067
 
@@ -10,10 +10,9 @@ namespace VaraniumSharp.Tests.Extensions
 {
     public class NotifyPropertyChangedExtensionsTests
     {
-        #region Public Methods
-
-        [TestCase(true)]
-        [TestCase(false)]
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
         public void ClassWithoutAttributeReturnsACompletedTask(bool startValue)
         {
             // arrange
@@ -26,7 +25,7 @@ namespace VaraniumSharp.Tests.Extensions
             result.IsCompleted.Should().BeTrue();
         }
 
-        [Test]
+        [Fact]
         public void MultiPropertyClassWillBlockIfOnePropertyIsNotAtTheExpectedValue()
         {
             // arrange
@@ -39,7 +38,7 @@ namespace VaraniumSharp.Tests.Extensions
             result.IsCompleted.Should().BeFalse();
         }
 
-        [Test]
+        [Fact]
         public void MultiPropertyClassWithAllPropertiesSetToExpectedValueReturnsCompletedTask()
         {
             // arrange
@@ -52,7 +51,7 @@ namespace VaraniumSharp.Tests.Extensions
             result.IsCompleted.Should().BeTrue();
         }
 
-        [Test]
+        [Fact]
         public void MultiPropertyCorrectlyCompletesTaskIfAllPropertiesAreSetToExpectedValues()
         {
             // arrange
@@ -67,7 +66,7 @@ namespace VaraniumSharp.Tests.Extensions
             result.IsCompleted.Should().BeTrue();
         }
 
-        [Test]
+        [Fact]
         public void PropertyChangesToExpectedValueCompletesTheTask()
         {
             // arrange
@@ -81,7 +80,7 @@ namespace VaraniumSharp.Tests.Extensions
             result.IsCompleted.Should().BeTrue();
         }
 
-        [Test]
+        [Fact]
         public void PropertyIsAlreadyInExpectedStateReturnsACompletedTask()
         {
             // arrange
@@ -94,7 +93,7 @@ namespace VaraniumSharp.Tests.Extensions
             result.IsCompleted.Should().BeTrue();
         }
 
-        [Test]
+        [Fact]
         public void PropertyWithIncorrectStateReturnsAWaitingTask()
         {
             // arrange
@@ -106,8 +105,6 @@ namespace VaraniumSharp.Tests.Extensions
             // assert
             result.IsCompleted.Should().BeFalse();
         }
-
-        #endregion
     }
 
     public class SingleAttributeFixture : INotifyPropertyChanged

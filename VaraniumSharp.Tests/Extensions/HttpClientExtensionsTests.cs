@@ -2,16 +2,14 @@
 using System.Net.Http;
 using System.Text;
 using FluentAssertions;
-using NUnit.Framework;
 using VaraniumSharp.Extensions;
+using Xunit;
 
 namespace VaraniumSharp.Tests.Extensions
 {
     public class HttpClientExtensionsTests
     {
-        #region Public Methods
-
-        [Test]
+        [Fact]
         public void SettingAuthenticationHeaderWorks()
         {
             // arrange
@@ -27,7 +25,5 @@ namespace VaraniumSharp.Tests.Extensions
             sut.DefaultRequestHeaders.GetValues("Authorization")
                 .Should().Contain(authValue);
         }
-
-        #endregion
     }
 }

@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
-using NUnit.Framework;
 using VaraniumSharp.Tests.Fixtures;
+using Xunit;
 
 namespace VaraniumSharp.Tests.Configuration
 {
@@ -8,7 +8,7 @@ namespace VaraniumSharp.Tests.Configuration
     {
         #region Public Methods
 
-        [Test]
+        [Fact]
         public void AdjustingValuesInInheritedClassCorrectlyUpdatesBaseProperties()
         {
             // arrange
@@ -24,7 +24,7 @@ namespace VaraniumSharp.Tests.Configuration
             sut.UnsavedChanges.Should().BeTrue();
         }
 
-        [Test]
+        [Fact]
         public void CancellingChangesCorrectlyRestoresOriginalValues()
         {
             // arrange
@@ -43,7 +43,7 @@ namespace VaraniumSharp.Tests.Configuration
             sut.UnsavedChanges.Should().BeFalse();
         }
 
-        [Test]
+        [Fact]
         public void FailedSaveDoesNotBroadcastUpdate()
         {
             // arrange
@@ -66,7 +66,7 @@ namespace VaraniumSharp.Tests.Configuration
             sut.UnsavedChanges.Should().BeTrue();
         }
 
-        [Test]
+        [Fact]
         public void LoadingSettingsWorksCorrectly()
         {
             // arrange
@@ -88,7 +88,7 @@ namespace VaraniumSharp.Tests.Configuration
             sut.UnsavedChanges.Should().BeFalse();
         }
 
-        [Test]
+        [Fact]
         public void SaveSettingsWorksCorrectly()
         {
             // arrange

@@ -1,17 +1,15 @@
 ﻿using FluentAssertions;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using VaraniumSharp.Extensions;
+using Xunit;
 
 namespace VaraniumSharp.Tests.Extensions
 {
     public class UrlBuilderExtensionsTests
     {
-        #region Public Methods
-
-        [Test]
+        [Fact]
         public void AppendMultiplePathElementsToBase()
         {
             // arrange
@@ -26,7 +24,7 @@ namespace VaraniumSharp.Tests.Extensions
             result.Should().Be($"{basePath}/{pathElement1}/{pathElement2}");
         }
 
-        [Test]
+        [Fact]
         public void AppendMultipleQueryStringParametersToPath()
         {
             // arrange
@@ -46,7 +44,7 @@ namespace VaraniumSharp.Tests.Extensions
             result.Should().Be($"{basePath}?{key1}={value1}&{key2}={value2}");
         }
 
-        [Test]
+        [Fact]
         public void AppendSinglePathElementToBase()
         {
             // arrange
@@ -60,7 +58,7 @@ namespace VaraniumSharp.Tests.Extensions
             result.Should().Be($"{basePath}/{pathElement}");
         }
 
-        [Test]
+        [Fact]
         public void AppendSingleQueryStringParameterToPath()
         {
             // arrange
@@ -76,7 +74,7 @@ namespace VaraniumSharp.Tests.Extensions
             result.Should().Be($"{basePath}?{key}={value}");
         }
 
-        [Test]
+        [Fact]
         public void CannotAppendAQueryStringToABaseThatAlreadyHasOne()
         {
             // arrange
@@ -88,9 +86,7 @@ namespace VaraniumSharp.Tests.Extensions
 
             // act
             // assert
-            act.ShouldThrow<InvalidEnumArgumentException>($"The base path {basePath} already has a query string appended");
+            act.Should().Throw<InvalidEnumArgumentException>($"The base path {basePath} already has a query string appended");
         }
-
-        #endregion
     }
 }

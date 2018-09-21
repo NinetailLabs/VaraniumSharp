@@ -1,62 +1,12 @@
 ﻿using FluentAssertions;
-using NUnit.Framework;
 using System.Collections.ObjectModel;
 using VaraniumSharp.Extensions;
+using Xunit;
 
 namespace VaraniumSharp.Tests.Extensions
 {
     public class ObservableCollectionExtensionsTests
     {
-        #region Public Methods
-
-        [Test]
-        public void CleaningCollectionInvokesAction()
-        {
-            // arrange
-            var itemDummy = new CollectionContentFixture();
-            var sut = new ObservableCollection<CollectionContentFixture> { itemDummy };
-            var helper = new CleanupHelper();
-
-            // act
-            sut.Clear(helper.ClearAction);
-
-            // assert
-            helper.WasInvoked.Should().BeTrue();
-            helper.CollectionPassedIn.Should().BeSameAs(sut);
-        }
-
-        [Test]
-        public void ClearingCollectionExecutesActionAgainstItemsInTheCollectionPriorToClearingTheCollection()
-        {
-            // arrange
-            var itemDummy = new CollectionContentFixture();
-            var sut = new ObservableCollection<CollectionContentFixture> { itemDummy };
-            var helper = new CleanupHelper();
-
-            // act
-            sut.Clear(helper.ClearAction);
-
-            // assert
-            itemDummy.CleanupWasInvoked.Should().BeTrue();
-        }
-
-        [Test]
-        public void CollectionIsCleared()
-        {
-            // arrange
-            var itemDummy = new CollectionContentFixture();
-            var sut = new ObservableCollection<CollectionContentFixture> { itemDummy };
-            var helper = new CleanupHelper();
-
-            // act
-            sut.Clear(helper.ClearAction);
-
-            // assert
-            sut.Count.Should().Be(0);
-        }
-
-        #endregion
-
         private class CleanupHelper
         {
             #region Properties
@@ -98,6 +48,52 @@ namespace VaraniumSharp.Tests.Extensions
             }
 
             #endregion
+        }
+
+        [Fact]
+        public void CleaningCollectionInvokesAction()
+        {
+            // arrange
+            var itemDummy = new CollectionContentFixture();
+            var sut = new ObservableCollection<CollectionContentFixture> { itemDummy };
+            var helper = new CleanupHelper();
+
+            // act
+            sut.Clear(helper.ClearAction);
+
+            // assert
+            helper.WasInvoked.Should().BeTrue();
+            helper.CollectionPassedIn.Should().BeSameAs(sut);
+        }
+
+        [Fact]
+        public void ClearingCollectionExecutesActionAgainstItemsInTheCollectionPriorToClearingTheCollection()
+        {
+            // arrange
+            var itemDummy = new CollectionContentFixture();
+            var sut = new ObservableCollection<CollectionContentFixture> { itemDummy };
+            var helper = new CleanupHelper();
+
+            // act
+            sut.Clear(helper.ClearAction);
+
+            // assert
+            itemDummy.CleanupWasInvoked.Should().BeTrue();
+        }
+
+        [Fact]
+        public void CollectionIsCleared()
+        {
+            // arrange
+            var itemDummy = new CollectionContentFixture();
+            var sut = new ObservableCollection<CollectionContentFixture> { itemDummy };
+            var helper = new CleanupHelper();
+
+            // act
+            sut.Clear(helper.ClearAction);
+
+            // assert
+            sut.Count.Should().Be(0);
         }
     }
 }
