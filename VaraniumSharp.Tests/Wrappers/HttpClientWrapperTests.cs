@@ -1,17 +1,15 @@
 ﻿using FluentAssertions;
-using NUnit.Framework;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 using VaraniumSharp.Wrappers;
+using Xunit;
 
 namespace VaraniumSharp.Tests.Wrappers
 {
     public class HttpClientWrapperTests
     {
-        #region Public Methods
-
-        [Test]
+        [Fact]
         public void BaseAddressIsSetCorrectly()
         {
             // arrange
@@ -26,7 +24,7 @@ namespace VaraniumSharp.Tests.Wrappers
             }
         }
 
-        [Test]
+        [Fact]
         public void CancellationTokenStopsWebRequest()
         {
             // arrange
@@ -48,12 +46,12 @@ namespace VaraniumSharp.Tests.Wrappers
 
             // act
             // assert
-            act.ShouldThrow<TaskCanceledException>();
+            act.Should().Throw<TaskCanceledException>();
 
             httpMock.Stop();
         }
 
-        [Test]
+        [Fact]
         public void CancellingRequestCorrectlyCancelsTheHttpRequests()
         {
             // arrange
@@ -81,7 +79,7 @@ namespace VaraniumSharp.Tests.Wrappers
             httpMock.Stop();
         }
 
-        [Test]
+        [Fact]
         public void DefaultRequestHeaderIsCorrectlyReturned()
         {
             // arrange
@@ -94,7 +92,7 @@ namespace VaraniumSharp.Tests.Wrappers
             headers.Should().NotBeNull();
         }
 
-        [Test]
+        [Fact]
         public async Task GetAsyncWorksCorrectly()
         {
             // arrange
@@ -122,7 +120,7 @@ namespace VaraniumSharp.Tests.Wrappers
             httpMock.Stop();
         }
 
-        [Test]
+        [Fact]
         public void MaxResponseContentBufferIsCorrectlySet()
         {
             // arrange
@@ -136,7 +134,7 @@ namespace VaraniumSharp.Tests.Wrappers
             sut.MaxResponseContentBufferSize.Should().Be(maxResponseBufferSize);
         }
 
-        [Test]
+        [Fact]
         public async Task RetrievingHttpBodyAsStreamWorksCorrectly()
         {
             // arrange
@@ -156,10 +154,12 @@ namespace VaraniumSharp.Tests.Wrappers
             var result = await sut.GetStreamAsync(new Uri($"{url}{urlPath}"));
 
             // assert
-            result.GetType().Name.Should().Be("ReadOnlyStream");
+            result.GetType().Name.Should().Be("ChunkedEncodingReadStream");
+
+            httpMock.Stop();
         }
 
-        [Test]
+        [Fact]
         public void TimeoutIsCorrectlySet()
         {
             // arrange
@@ -172,7 +172,5 @@ namespace VaraniumSharp.Tests.Wrappers
             // assert
             sut.Timeout.Should().Be(timeout);
         }
-
-        #endregion
     }
 }

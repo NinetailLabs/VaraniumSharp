@@ -2,16 +2,20 @@
 using System.Runtime.Caching;
 using System.Threading.Tasks;
 using FluentAssertions;
-using NUnit.Framework;
 using VaraniumSharp.Caching;
+using Xunit;
 
 namespace VaraniumSharp.Tests.Caching
 {
     public class BasicMemoryCacheWrapperFactoryTests
     {
-        #region Public Methods
+        private static async Task<int> DataRetrievalFunc(string s)
+        {
+            await Task.Delay(10);
+            return 0;
+        }
 
-        [Test]
+        [Fact]
         public void CreateInstanceWithDefaultPolicy()
         {
             // arrange
@@ -27,7 +31,7 @@ namespace VaraniumSharp.Tests.Caching
             cache.CachePolicy.SlidingExpiration.Minutes.Should().Be(5);
         }
 
-        [Test]
+        [Fact]
         public void CreateInstanceWithPolicy()
         {
             // arrange
@@ -43,17 +47,5 @@ namespace VaraniumSharp.Tests.Caching
             cache.CachePolicy.Should().Be(policy);
             cache.DataRetrievalFunc.Should().Be(func);
         }
-
-        #endregion
-
-        #region Private Methods
-
-        private static async Task<int> DataRetrievalFunc(string s)
-        {
-            await Task.Delay(10);
-            return 0;
-        }
-
-        #endregion
     }
 }

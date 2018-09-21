@@ -5,17 +5,17 @@ using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
 using FluentAssertions;
-using NUnit.Framework;
 using VaraniumSharp.Collections;
 using VaraniumSharp.EventArguments;
+using Xunit;
 
 namespace VaraniumSharp.Tests.Collections
 {
     public class PackageManagerTests
     {
-        #region Public Methods
+        private const string ResouceDirectory = "Resources";
 
-        [Test]
+        [Fact]
         public async Task AddingDataWithTheSameInteralStoragePathAsExistingDataOverwritesTheExistingData()
         {
             // arrange
@@ -50,7 +50,7 @@ namespace VaraniumSharp.Tests.Collections
             File.Delete(packagePath);
         }
 
-        [Test]
+        [Fact]
         public async Task AutomaticFlushingCorrectlyReattachesTheArchive()
         {
             // arrange
@@ -88,7 +88,7 @@ namespace VaraniumSharp.Tests.Collections
             File.Delete(packagePath);
         }
 
-        [Test]
+        [Fact]
         public async Task ItemIsAddedToThePackageCorrectly()
         {
             // arrange
@@ -116,7 +116,7 @@ namespace VaraniumSharp.Tests.Collections
             File.Delete(packagePath);
         }
 
-        [Test]
+        [Fact]
         public async Task RemovingDataFromThePackageCorrectlyRemoveIt()
         {
             // arrange
@@ -145,7 +145,7 @@ namespace VaraniumSharp.Tests.Collections
             File.Delete(packagePath);
         }
 
-        [Test]
+        [Fact]
         public async Task ScrubbingPackageCorrectlyRemovesUnwantedDataFromThePackage()
         {
             // arrange
@@ -179,7 +179,7 @@ namespace VaraniumSharp.Tests.Collections
             File.Delete(packagePath);
         }
 
-        [Test]
+        [Fact]
         public async Task ScrubbingPackageCorrectlyReportsTheScrubbingProgress()
         {
             // arrange
@@ -217,7 +217,7 @@ namespace VaraniumSharp.Tests.Collections
             scrubProgress.Last().TotalEntries.Should().Be(2);
         }
 
-        [Test]
+        [Fact]
         public async Task ScrubbingPackageDoesNotRemoveDataForPathsThatWereRequestedToBeLeft()
         {
             // arrange
@@ -251,7 +251,7 @@ namespace VaraniumSharp.Tests.Collections
             File.Delete(packagePath);
         }
 
-        [Test]
+        [Fact]
         public async Task StoredDataIsCorrectlyRetrievedFromThePackage()
         {
             // arrange
@@ -281,7 +281,7 @@ namespace VaraniumSharp.Tests.Collections
             File.Delete(packagePath);
         }
 
-        [Test]
+        [Fact]
         public async Task WhenAnItemIsAddedToAPackageThatDoesNotExistThePackageIsCreated()
         {
             // arrange
@@ -307,7 +307,7 @@ namespace VaraniumSharp.Tests.Collections
             File.Delete(packagePath);
         }
 
-        [Test]
+        [Fact]
         public void WhenAPackageDoesNotContainTheDesiredItemAnExceptionIsThrown()
         {
             // arrange
@@ -320,15 +320,7 @@ namespace VaraniumSharp.Tests.Collections
 
             // act
             // assert
-            act.ShouldThrow<KeyNotFoundException>();
+            act.Should().Throw<KeyNotFoundException>();
         }
-
-        #endregion
-
-        #region Variables
-
-        private const string ResouceDirectory = "Resources";
-
-        #endregion
     }
 }

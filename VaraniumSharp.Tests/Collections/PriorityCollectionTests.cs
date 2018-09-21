@@ -3,158 +3,18 @@ using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using FluentAssertions;
-using NUnit.Framework;
 using VaraniumSharp.Collections;
 using VaraniumSharp.Interfaces.Collections;
 using VaraniumSharp.Tests.Helpers;
+using Xunit;
 
 namespace VaraniumSharp.Tests.Collections
 {
     public class PriorityCollectionTests
     {
-        #region Public Methods
-
-        [Test]
-        public void AddingPrioritylessItemToEmptyCollectionDoesNotThrowAnException()
-        {
-            // arrange
-            var unprioritizedDummy = PriorityItemHelper.CreatePriorityMock(null);
-            unprioritizedDummy.SetupAllProperties();
-
-            var sut = new PriorityCollection<IPriorityItem>();
-            var act = new Action(() => sut.TryAdd(unprioritizedDummy.Object));
-
-            // act
-            // assert
-            act.ShouldNotThrow<InvalidOperationException>();
-        }
-
-        [Test]
-        public void AddingPrioritylessItemWillAddItToTheEndOfTheCollection()
-        {
-            // arrange
-            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
-            var unprioritizedDummy = PriorityItemHelper.CreatePriorityMock(null);
-            unprioritizedDummy.SetupAllProperties();
-
-            var sut = new PriorityCollection<IPriorityItem>();
-            sut.TryAdd(itemDummy.Object);
-
-            // act
-            var result = sut.TryAdd(unprioritizedDummy.Object);
-
-            // assert
-            result.Should().BeTrue();
-            sut.AsEnumerable().Last().Should().Be(unprioritizedDummy.Object);
-            unprioritizedDummy.Object.Priority.Should().Be(1);
-        }
-
-        [Test]
-        public void AddingSecondItemToCollectionAddsItInTheCorrectPosition()
-        {
-            // arrange
-            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
-            var higherPriorityDummy = PriorityItemHelper.CreatePriorityMock(0);
-
-            var sut = new PriorityCollection<IPriorityItem>();
-            sut.TryAdd(itemDummy.Object);
-
-            // act
-            var result = sut.TryAdd(higherPriorityDummy.Object);
-
-            // assert
-            result.Should().BeTrue();
-            sut.AsEnumerable().First().Should().Be(higherPriorityDummy.Object);
-        }
-
-        [Test]
-        public void AddingSingleItemToCollectionWorksCorrectly()
-        {
-            // arrange
-            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
-
-            var sut = new PriorityCollection<IPriorityItem>();
-
-            // act
-            var result = sut.TryAdd(itemDummy.Object);
-
-            // assert
-            result.Should().BeTrue();
-            sut.AsEnumerable().First().Should().Be(itemDummy.Object);
-        }
-
-        [Test]
-        public void AdjustingItemPriorityMovesTheItemToTheCorrectLocation()
-        {
-            // arrange
-            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
-            var higherPriorityDummy = PriorityItemHelper.CreatePriorityMock(0);
-
-            var sut = new PriorityCollection<IPriorityItem>();
-            sut.TryAdd(itemDummy.Object);
-            sut.TryAdd(higherPriorityDummy.Object);
-
-            higherPriorityDummy
-                .Setup(t => t.Priority)
-                .Returns(2);
-
-            // act
-            higherPriorityDummy.Raise(t => t.PriorityChanged += null, new EventArgs());
-
-            // assert
-            sut.AsEnumerable().Last().Should().Be(higherPriorityDummy.Object);
-        }
-
-        [Test]
-        public void ArraySizeIsCheckedCorrectlyForCopying()
-        {
-            // arrange
-            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
-            var higherPriorityDummy = PriorityItemHelper.CreatePriorityMock(0);
-            var arr = new IPriorityItem[1];
-
-            var sut = new PriorityCollection<IPriorityItem>();
-            sut.TryAdd(itemDummy.Object);
-            sut.TryAdd(higherPriorityDummy.Object);
-            var act = new Action(() => sut.CopyTo(arr, 0));
-
-            // act
-            // assert
-            act.ShouldThrow<ArgumentException>("Target array is too small to copy items");
-        }
-
-        [Test]
-        public void CastingToIEnumerableAndEnumeratingTheCollectionWorksCorrectly()
-        {
-            // arrange
-            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
-            var higherPriorityDummy = PriorityItemHelper.CreatePriorityMock(0);
-
-            var sut = new PriorityCollection<IPriorityItem>();
-            sut.TryAdd(itemDummy.Object);
-            sut.TryAdd(higherPriorityDummy.Object);
-
-            // act
-            var enumerator = ((IEnumerable)sut).GetEnumerator();
-
-            // assert
-            enumerator.MoveNext();
-            enumerator.Current.Should().Be(higherPriorityDummy.Object);
-        }
-
-        [Test]
-        public void CollectionIsSynchronized()
-        {
-            // arrange
-            // act
-            var result = new PriorityCollection<IPriorityItem>().IsSynchronized;
-
-            // assert
-            result.Should().BeTrue();
-        }
-
-        [TestCase(0)]
-        [TestCase(1)]
+        [Theory]
+        [InlineData(0)]
+        [InlineData(1)]
         public void CopyingToArrayWorksCorrectly(int startIndex)
         {
             // arrange
@@ -178,7 +38,146 @@ namespace VaraniumSharp.Tests.Collections
             arr[startIndex + 1].Should().Be(itemDummy.Object);
         }
 
-        [Test]
+        [Fact]
+        public void AddingPrioritylessItemToEmptyCollectionDoesNotThrowAnException()
+        {
+            // arrange
+            var unprioritizedDummy = PriorityItemHelper.CreatePriorityMock(null);
+            unprioritizedDummy.SetupAllProperties();
+
+            var sut = new PriorityCollection<IPriorityItem>();
+            var act = new Action(() => sut.TryAdd(unprioritizedDummy.Object));
+
+            // act
+            // assert
+            act.Should().NotThrow<InvalidOperationException>();
+        }
+
+        [Fact]
+        public void AddingPrioritylessItemWillAddItToTheEndOfTheCollection()
+        {
+            // arrange
+            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
+            var unprioritizedDummy = PriorityItemHelper.CreatePriorityMock(null);
+            unprioritizedDummy.SetupAllProperties();
+
+            var sut = new PriorityCollection<IPriorityItem>();
+            sut.TryAdd(itemDummy.Object);
+
+            // act
+            var result = sut.TryAdd(unprioritizedDummy.Object);
+
+            // assert
+            result.Should().BeTrue();
+            sut.AsEnumerable().Last().Should().Be(unprioritizedDummy.Object);
+            unprioritizedDummy.Object.Priority.Should().Be(1);
+        }
+
+        [Fact]
+        public void AddingSecondItemToCollectionAddsItInTheCorrectPosition()
+        {
+            // arrange
+            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
+            var higherPriorityDummy = PriorityItemHelper.CreatePriorityMock(0);
+
+            var sut = new PriorityCollection<IPriorityItem>();
+            sut.TryAdd(itemDummy.Object);
+
+            // act
+            var result = sut.TryAdd(higherPriorityDummy.Object);
+
+            // assert
+            result.Should().BeTrue();
+            sut.AsEnumerable().First().Should().Be(higherPriorityDummy.Object);
+        }
+
+        [Fact]
+        public void AddingSingleItemToCollectionWorksCorrectly()
+        {
+            // arrange
+            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
+
+            var sut = new PriorityCollection<IPriorityItem>();
+
+            // act
+            var result = sut.TryAdd(itemDummy.Object);
+
+            // assert
+            result.Should().BeTrue();
+            sut.AsEnumerable().First().Should().Be(itemDummy.Object);
+        }
+
+        [Fact]
+        public void AdjustingItemPriorityMovesTheItemToTheCorrectLocation()
+        {
+            // arrange
+            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
+            var higherPriorityDummy = PriorityItemHelper.CreatePriorityMock(0);
+
+            var sut = new PriorityCollection<IPriorityItem>();
+            sut.TryAdd(itemDummy.Object);
+            sut.TryAdd(higherPriorityDummy.Object);
+
+            higherPriorityDummy
+                .Setup(t => t.Priority)
+                .Returns(2);
+
+            // act
+            higherPriorityDummy.Raise(t => t.PriorityChanged += null, new EventArgs());
+
+            // assert
+            sut.AsEnumerable().Last().Should().Be(higherPriorityDummy.Object);
+        }
+
+        [Fact]
+        public void ArraySizeIsCheckedCorrectlyForCopying()
+        {
+            // arrange
+            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
+            var higherPriorityDummy = PriorityItemHelper.CreatePriorityMock(0);
+            var arr = new IPriorityItem[1];
+
+            var sut = new PriorityCollection<IPriorityItem>();
+            sut.TryAdd(itemDummy.Object);
+            sut.TryAdd(higherPriorityDummy.Object);
+            var act = new Action(() => sut.CopyTo(arr, 0));
+
+            // act
+            // assert
+            act.Should().Throw<ArgumentException>("Target array is too small to copy items");
+        }
+
+        [Fact]
+        public void CastingToIEnumerableAndEnumeratingTheCollectionWorksCorrectly()
+        {
+            // arrange
+            var itemDummy = PriorityItemHelper.CreatePriorityMock(1);
+            var higherPriorityDummy = PriorityItemHelper.CreatePriorityMock(0);
+
+            var sut = new PriorityCollection<IPriorityItem>();
+            sut.TryAdd(itemDummy.Object);
+            sut.TryAdd(higherPriorityDummy.Object);
+
+            // act
+            var enumerator = ((IEnumerable)sut).GetEnumerator();
+
+            // assert
+            enumerator.MoveNext();
+            enumerator.Current.Should().Be(higherPriorityDummy.Object);
+        }
+
+        [Fact]
+        public void CollectionIsSynchronized()
+        {
+            // arrange
+            // act
+            var result = new PriorityCollection<IPriorityItem>().IsSynchronized;
+
+            // assert
+            result.Should().BeTrue();
+        }
+
+        [Fact]
         public void EnumeratingCollectionWorksCorrectly()
         {
             // arrange
@@ -201,7 +200,7 @@ namespace VaraniumSharp.Tests.Collections
             }
         }
 
-        [Test]
+        [Fact]
         public void IndexOutOfRangeIsCheckedCorrectly()
         {
             // arrange
@@ -216,10 +215,10 @@ namespace VaraniumSharp.Tests.Collections
 
             // act
             // assert
-            act.ShouldThrow<ArgumentOutOfRangeException>();
+            act.Should().Throw<ArgumentOutOfRangeException>();
         }
 
-        [Test]
+        [Fact]
         public void TakingAnItemFromTheCollectionAlwaysReturnsTheItemWithTheHighestPriority()
         {
             // arrange
@@ -240,7 +239,7 @@ namespace VaraniumSharp.Tests.Collections
             retrievedItem.Should().Be(higherPriorityDummy.Object);
         }
 
-        [Test]
+        [Fact]
         [SuppressMessage("ReSharper", "NotAccessedVariable", Justification = "We need to remove the item from the sut event though we don't do anything with it")]
         public void TakingAnItemFromTheCollectionCorrectlyDetachesItsEvent()
         {
@@ -260,7 +259,7 @@ namespace VaraniumSharp.Tests.Collections
             sut.Count.Should().Be(0);
         }
 
-        [Test]
+        [Fact]
         public void ToArrayCopiesItemsInCollectionToANewArray()
         {
             // arrange
@@ -279,7 +278,7 @@ namespace VaraniumSharp.Tests.Collections
             array.First().Should().Be(higherPriorityDummy.Object);
         }
 
-        [Test]
+        [Fact]
         public void TryingToTakeAnItemWhenTheCollectionIsEmptyReturnsFalse()
         {
             // arrange
@@ -293,7 +292,5 @@ namespace VaraniumSharp.Tests.Collections
             result.Should().BeFalse();
             retrievedItem.Should().BeNull();
         }
-
-        #endregion
     }
 }

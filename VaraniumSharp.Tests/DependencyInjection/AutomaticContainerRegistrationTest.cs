@@ -1,145 +1,14 @@
 ﻿using FluentAssertions;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using VaraniumSharp.Attributes;
 using VaraniumSharp.DependencyInjection;
+using Xunit;
 
 namespace VaraniumSharp.Tests.DependencyInjection
 {
     public class AutomaticContainerRegistrationTest
     {
-        #region Public Methods
-
-        [Test]
-        public void ConcretionRegistrationAvoidsAbstractChildClasses()
-        {
-            // arrange
-            const bool autoRegister = false;
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.DiscoveredConcretionClasses[typeof(BaseClassDummy)].Should().NotContain(typeof(InheritingAbstractDummy));
-        }
-
-        [Test]
-        public void ConcretionRegistrationIgnoresInterfacesThatImplementInterfaces()
-        {
-            // arrange
-            const bool autoRegister = false;
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should().NotContain(typeof(IDeepInterfaceDummy));
-        }
-
-        [Test]
-        public void ConcretionRegistrationPicksUpClassesThatInheritFromInterfacesInheritingBaseInterface()
-        {
-            // arrange
-            const bool autoRegister = false;
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should().Contain(typeof(DoubleInterfaceImplementationDummy));
-        }
-
-        [Test]
-        public void GaterAndAutoRegisterConcretionClasses()
-        {
-            // arrange
-            const bool autoRegister = true;
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.RegisterConcretionClassesCalled.Should().BeTrue();
-        }
-
-        [Test]
-        public void GatherAndAutoRegisterClasses()
-        {
-            // arrange
-            const bool autoRegister = true;
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.RegisterClassesCalled.Should().BeTrue();
-        }
-
-        [Test]
-        public void GatherClassesForAutomaticRegistration()
-        {
-            // arrange
-            const bool autoRegister = false;
-            const int knownClassesWithAutomaticRegistration = 1;
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.RegisterClassesCalled.Should().BeFalse();
-            sut.RegisteredClasses.Should().BeGreaterOrEqualTo(knownClassesWithAutomaticRegistration);
-            sut.DiscoveredTypes.Should().Contain(typeof(AutomaticRegistrationDummy));
-        }
-
-        [Test]
-        public void HigherPriorityClassIsPickedOverLowerPriorityDuringRegistration()
-        {
-            // arrange
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveClassesRequiringRegistration(true);
-
-            // assert
-            sut.DiscoveredTypes.Should().Contain(typeof(HigherPriorityDummy));
-            sut.DiscoveredTypes.Should().NotContain(typeof(DefaultPriorityDummy));
-        }
-
-        [Test]
-        public void RetrieveAllClassesImplementingABaseClass()
-        {
-            // arrange
-            const bool autoRegister = false;
-            const int knowConcretionClasses = 2;
-            const int knownConcretionBases = 2;
-
-            var sut = new AutomaticRegistrationMock();
-
-            // act
-            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
-
-            // assert
-            sut.ConcretionClassesRegistered.Should().BeGreaterOrEqualTo(knowConcretionClasses);
-            sut.ConcretionBaseClasses.Should().BeGreaterOrEqualTo(knownConcretionBases);
-            sut.RegisterConcretionClassesCalled.Should().BeFalse();
-            sut.DiscoveredConcretionClasses.Should().ContainKey(typeof(BaseClassDummy));
-            sut.DiscoveredConcretionClasses.Should().ContainKey(typeof(IInterfaceDummy));
-            sut.DiscoveredConcretionClasses[typeof(BaseClassDummy)].Should().Contain(typeof(ConcretionClassDummy));
-            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should()
-                .Contain(typeof(InterfaceImplementationDummy));
-        }
-
-        #endregion
-
-        #region Types
-
         private class AutomaticRegistrationMock : AutomaticContainerRegistration
         {
             #region Constructor
@@ -237,6 +106,129 @@ namespace VaraniumSharp.Tests.DependencyInjection
         private class HigherPriorityDummy : IMultiImplementationDummy
         { }
 
-        #endregion Types
+        [Fact]
+        public void ConcretionRegistrationAvoidsAbstractChildClasses()
+        {
+            // arrange
+            const bool autoRegister = false;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.DiscoveredConcretionClasses[typeof(BaseClassDummy)].Should().NotContain(typeof(InheritingAbstractDummy));
+        }
+
+        [Fact]
+        public void ConcretionRegistrationIgnoresInterfacesThatImplementInterfaces()
+        {
+            // arrange
+            const bool autoRegister = false;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should().NotContain(typeof(IDeepInterfaceDummy));
+        }
+
+        [Fact]
+        public void ConcretionRegistrationPicksUpClassesThatInheritFromInterfacesInheritingBaseInterface()
+        {
+            // arrange
+            const bool autoRegister = false;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should().Contain(typeof(DoubleInterfaceImplementationDummy));
+        }
+
+        [Fact]
+        public void GatherAndAutoRegisterClasses()
+        {
+            // arrange
+            const bool autoRegister = true;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.RegisterClassesCalled.Should().BeTrue();
+        }
+
+        [Fact]
+        public void GatherAndAutoRegisterConcretionClasses()
+        {
+            // arrange
+            const bool autoRegister = true;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.RegisterConcretionClassesCalled.Should().BeTrue();
+        }
+
+        [Fact]
+        public void GatherClassesForAutomaticRegistration()
+        {
+            // arrange
+            const bool autoRegister = false;
+            const int knownClassesWithAutomaticRegistration = 1;
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.RegisterClassesCalled.Should().BeFalse();
+            sut.RegisteredClasses.Should().BeGreaterOrEqualTo(knownClassesWithAutomaticRegistration);
+            sut.DiscoveredTypes.Should().Contain(typeof(AutomaticRegistrationDummy));
+        }
+
+        [Fact]
+        public void HigherPriorityClassIsPickedOverLowerPriorityDuringRegistration()
+        {
+            // arrange
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveClassesRequiringRegistration(true);
+
+            // assert
+            sut.DiscoveredTypes.Should().Contain(typeof(HigherPriorityDummy));
+            sut.DiscoveredTypes.Should().NotContain(typeof(DefaultPriorityDummy));
+        }
+
+        [Fact]
+        public void RetrieveAllClassesImplementingABaseClass()
+        {
+            // arrange
+            const bool autoRegister = false;
+            const int knowConcretionClasses = 2;
+            const int knownConcretionBases = 2;
+
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.RetrieveConcretionClassesRequiringRegistration(autoRegister);
+
+            // assert
+            sut.ConcretionClassesRegistered.Should().BeGreaterOrEqualTo(knowConcretionClasses);
+            sut.ConcretionBaseClasses.Should().BeGreaterOrEqualTo(knownConcretionBases);
+            sut.RegisterConcretionClassesCalled.Should().BeFalse();
+            sut.DiscoveredConcretionClasses.Should().ContainKey(typeof(BaseClassDummy));
+            sut.DiscoveredConcretionClasses.Should().ContainKey(typeof(IInterfaceDummy));
+            sut.DiscoveredConcretionClasses[typeof(BaseClassDummy)].Should().Contain(typeof(ConcretionClassDummy));
+            sut.DiscoveredConcretionClasses[typeof(IInterfaceDummy)].Should()
+                .Contain(typeof(InterfaceImplementationDummy));
+        }
     }
 }

@@ -1,19 +1,24 @@
-﻿using FluentAssertions;
-using NUnit.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
+using FluentAssertions;
 using VaraniumSharp.Extensions;
+using Xunit;
 
-namespace VaraniumSharp.Tests.Extensions
+namespace VaraniumSharp.Tests
 {
     public class StringExtensionsTest
     {
-        #region Public Methods
+        private enum TestEnum
+        {
+            EnumResult
+        }
 
-        [Test]
+        [Fact]
         public void RetrieveEmptyKeyFromConfiguration()
         {
             // arrange
+            StringExtensions.ConfigurationLocation = Assembly.GetExecutingAssembly().Location;
             const string key = "Empty";
 
             // act
@@ -26,10 +31,11 @@ namespace VaraniumSharp.Tests.Extensions
         /// <summary>
         /// #Issue-9 - Cannot retrieve Enum from configuration
         /// </summary>
-        [Test]
+        [Fact]
         public void RetrieveEnumerationValueFromConfiguration()
         {
             // arrange
+            StringExtensions.ConfigurationLocation = Assembly.GetExecutingAssembly().Location;
             const string key = "EnumValue";
 
             // act
@@ -39,10 +45,11 @@ namespace VaraniumSharp.Tests.Extensions
             result.Should().Be(TestEnum.EnumResult);
         }
 
-        [Test]
+        [Fact]
         public void RetrieveIntegerKeyFromConfiguration()
         {
             // arrange
+            StringExtensions.ConfigurationLocation = Assembly.GetExecutingAssembly().Location;
             const string key = "IntValue";
             const int expectedValue = 20787;
 
@@ -54,22 +61,24 @@ namespace VaraniumSharp.Tests.Extensions
             result.Should().Be(expectedValue);
         }
 
-        [Test]
+        [Fact]
         public void RetrieveKeyThatDoesNotExistFromConfiguration()
         {
             // arrange
+            StringExtensions.ConfigurationLocation = Assembly.GetExecutingAssembly().Location;
             const string key = "InvalidKey";
             var action = new Action(() => key.GetConfigurationValue<string>());
 
             // act
             // assert
-            action.ShouldThrow<KeyNotFoundException>();
+            action.Should().Throw<KeyNotFoundException>();
         }
 
-        [Test]
+        [Fact]
         public void RetrieveStringKeyFromConfiguration()
         {
             // arrange
+            StringExtensions.ConfigurationLocation = Assembly.GetExecutingAssembly().Location;
             const string key = "StringValue";
             const string expectedValue = "TestValue";
 
@@ -79,13 +88,6 @@ namespace VaraniumSharp.Tests.Extensions
             // assert
             result.GetType().Should().Be<string>();
             result.Should().Be(expectedValue);
-        }
-
-        #endregion
-
-        private enum TestEnum
-        {
-            EnumResult
         }
     }
 }
