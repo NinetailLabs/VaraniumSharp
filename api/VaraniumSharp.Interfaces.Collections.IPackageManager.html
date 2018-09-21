@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IPackageManager
    ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.39.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
   
   <h1 id="VaraniumSharp_Interfaces_Collections_IPackageManager" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager" class="text-break">Interface IPackageManager
   </h1>
-  <div class="markdown level0 summary"><p>Manager used to pack files into a <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.compression.ziparchive(v=vs.110).aspx">ZipArchive</a> without compression.
+  <div class="markdown level0 summary"><p>Manager used to pack files into a <span class="xref">System.IO.Compression.ZipArchive</span> without compression.
 <remark>
 All methods in this class are Thread safe
 </remark></p>
@@ -82,7 +82,7 @@ All methods in this class are Thread safe
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/es4s3w1d(v=vs.110).aspx">IDisposable.Dispose()</a>
+      <span class="xref">System.IDisposable.Dispose()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VaraniumSharp.Interfaces.Collections.html">VaraniumSharp.Interfaces.Collections</a></h6>
@@ -102,7 +102,7 @@ All methods in this class are Thread safe
   </span>
   <a id="VaraniumSharp_Interfaces_Collections_IPackageManager_AutoFlush_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.AutoFlush*"></a>
   <h4 id="VaraniumSharp_Interfaces_Collections_IPackageManager_AutoFlush" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.AutoFlush">AutoFlush</h4>
-  <div class="markdown level1 summary"><p>Gets or Sets if the PackageManager should automatically dispose and recreate the connection to the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.compression.ziparchive(v=vs.110).aspx">ZipArchive</a>
+  <div class="markdown level1 summary"><p>Gets or Sets if the PackageManager should automatically dispose and recreate the connection to the <span class="xref">System.IO.Compression.ZipArchive</span>
 to prevent data only being written to disk on Disposal</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -120,7 +120,7 @@ to prevent data only being written to disk on Disposal</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -155,19 +155,19 @@ If the data already exists in the Package it will be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">packagePath</span></td>
         <td><p>Path to the Package</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><span class="xref">System.IO.Stream</span></td>
         <td><span class="parametername">data</span></td>
         <td><p>The stream that should be stored in the Package</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">storagePath</span></td>
         <td><p>The relative path where the data should be stored inside the Package</p>
 </td>
@@ -184,7 +184,7 @@ If the data already exists in the Package it will be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -219,13 +219,13 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">packagePath</span></td>
         <td><p>Path to the Package</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">storagePath</span></td>
         <td><p>The relative path where data is stored inside the Package</p>
 </td>
@@ -242,7 +242,7 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -274,13 +274,13 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">packagePath</span></td>
         <td><p>Path to the Package</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">storagePath</span></td>
         <td><p>The relative path where data is stored inside the Package</p>
 </td>
@@ -297,7 +297,7 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.IO.Stream</span>&gt;</td>
         <td><p>MemoryStream containing the data from the Package</p>
 </td>
       </tr>
@@ -313,7 +313,7 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.generic.keynotfoundexception(v=vs.110).aspx">KeyNotFoundException</a></td>
+        <td><span class="xref">System.Collections.Generic.KeyNotFoundException</span></td>
         <td><p>Thrown if the storagePath could not be found in the package</p>
 </td>
       </tr>
@@ -346,13 +346,13 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">packagePath</span></td>
         <td><p>Path to the Package</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">storagePathsToKeep</span></td>
         <td><p>List of relative paths of data in the package that should be kept</p>
 </td>
@@ -369,7 +369,7 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>

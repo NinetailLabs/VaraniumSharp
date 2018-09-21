@@ -1098,6 +1098,19 @@ references:
   commentId: T:VaraniumSharp.Extensions.StringExtensions
   fullName: VaraniumSharp.Extensions.StringExtensions
   nameWithType: StringExtensions
+- uid: VaraniumSharp.Extensions.StringExtensions.ConfigurationLocation
+  name: ConfigurationLocation
+  href: api/VaraniumSharp.Extensions.StringExtensions.html#VaraniumSharp_Extensions_StringExtensions_ConfigurationLocation
+  commentId: P:VaraniumSharp.Extensions.StringExtensions.ConfigurationLocation
+  fullName: VaraniumSharp.Extensions.StringExtensions.ConfigurationLocation
+  nameWithType: StringExtensions.ConfigurationLocation
+- uid: VaraniumSharp.Extensions.StringExtensions.ConfigurationLocation*
+  name: ConfigurationLocation
+  href: api/VaraniumSharp.Extensions.StringExtensions.html#VaraniumSharp_Extensions_StringExtensions_ConfigurationLocation_
+  commentId: Overload:VaraniumSharp.Extensions.StringExtensions.ConfigurationLocation
+  isSpec: "True"
+  fullName: VaraniumSharp.Extensions.StringExtensions.ConfigurationLocation
+  nameWithType: StringExtensions.ConfigurationLocation
 - uid: VaraniumSharp.Extensions.StringExtensions.GetConfigurationValue*
   name: GetConfigurationValue
   href: api/VaraniumSharp.Extensions.StringExtensions.html#VaraniumSharp_Extensions_StringExtensions_GetConfigurationValue_

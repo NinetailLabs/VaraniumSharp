@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PackageManager
    ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.39.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
   
   <h1 id="VaraniumSharp_Collections_PackageManager" data-uid="VaraniumSharp.Collections.PackageManager" class="text-break">Class PackageManager
   </h1>
-  <div class="markdown level0 summary"><p>Manager used to pack files into a <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.compression.ziparchive(v=vs.110).aspx">ZipArchive</a> without compression.
+  <div class="markdown level0 summary"><p>Manager used to pack files into a <span class="xref">System.IO.Compression.ZipArchive</span> without compression.
 <remark>
 All methods in this class are Thread safe
 </remark></p>
@@ -81,36 +81,36 @@ All methods in this class are Thread safe
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+    <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PackageManager</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="VaraniumSharp.Interfaces.Collections.IPackageManager.html">IPackageManager</a></div>
-    <div><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx">IDisposable</a></div>
+    <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
+      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Object.Equals(Object, Object)</a>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
+      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">Object.GetType()</a>
+      <span class="xref">System.Object.GetType()</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">Object.MemberwiseClone()</a>
+      <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">Object.ReferenceEquals(Object, Object)</a>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
+      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VaraniumSharp.Collections.html">VaraniumSharp.Collections</a></h6>
@@ -118,6 +118,7 @@ All methods in this class are Thread safe
   <h5 id="VaraniumSharp_Collections_PackageManager_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AutomaticContainerRegistration(typeof(IPackageManager), ServiceReuse.Singleton)]
+[Obsolete(&quot;This class should no longer be used as it continually rewrite the file on disk - Instead use https://github.com/NinetailLabs/VaraniumSharp.CompoundDocumentFormatStorage which does not have the issue&quot;)]
 public class PackageManager : IPackageManager, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
@@ -127,7 +128,7 @@ public class PackageManager : IPackageManager, IDisposable</code></pre>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager__ctor.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L31">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L32">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager__ctor_" data-uid="VaraniumSharp.Collections.PackageManager.#ctor*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager__ctor" data-uid="VaraniumSharp.Collections.PackageManager.#ctor">PackageManager()</h4>
@@ -145,7 +146,7 @@ public class PackageManager : IPackageManager, IDisposable</code></pre>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_LockingDictionary.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.LockingDictionary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L279">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L280">View Source</a>
   </span>
   <h4 id="VaraniumSharp_Collections_PackageManager_LockingDictionary" data-uid="VaraniumSharp.Collections.PackageManager.LockingDictionary">LockingDictionary</h4>
   <div class="markdown level1 summary"><p>Dictionary used to lock access to entries in the archive</p>
@@ -165,7 +166,7 @@ public class PackageManager : IPackageManager, IDisposable</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd287191(v=vs.110).aspx">ConcurrentDictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.semaphoreslim(v=vs.110).aspx">SemaphoreSlim</a>&gt;</td>
+        <td><span class="xref">System.Collections.Concurrent.ConcurrentDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Threading.SemaphoreSlim</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -175,7 +176,7 @@ public class PackageManager : IPackageManager, IDisposable</code></pre>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_PackageDictionary.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.PackageDictionary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L284">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L285">View Source</a>
   </span>
   <h4 id="VaraniumSharp_Collections_PackageManager_PackageDictionary" data-uid="VaraniumSharp.Collections.PackageManager.PackageDictionary">PackageDictionary</h4>
   <div class="markdown level1 summary"><p>Dictionary to Store package instances</p>
@@ -195,7 +196,7 @@ public class PackageManager : IPackageManager, IDisposable</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.compression.ziparchive(v=vs.110).aspx">ZipArchive</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.IO.Compression.ZipArchive</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -207,11 +208,11 @@ public class PackageManager : IPackageManager, IDisposable</code></pre>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_AutoFlush.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.AutoFlush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L51">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L52">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_AutoFlush_" data-uid="VaraniumSharp.Collections.PackageManager.AutoFlush*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_AutoFlush" data-uid="VaraniumSharp.Collections.PackageManager.AutoFlush">AutoFlush</h4>
-  <div class="markdown level1 summary"><p>Gets or Sets if the PackageManager should automatically dispose and recreate the connection to the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.compression.ziparchive(v=vs.110).aspx">ZipArchive</a>
+  <div class="markdown level1 summary"><p>Gets or Sets if the PackageManager should automatically dispose and recreate the connection to the <span class="xref">System.IO.Compression.ZipArchive</span>
 to prevent data only being written to disk on Disposal</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -229,7 +230,7 @@ to prevent data only being written to disk on Disposal</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -241,7 +242,7 @@ to prevent data only being written to disk on Disposal</p>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_AddItemToPackageAsync_System_String_System_IO_Stream_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync(System.String%2CSystem.IO.Stream%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L64">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L65">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_AddItemToPackageAsync_" data-uid="VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_AddItemToPackageAsync_System_String_System_IO_Stream_System_String_" data-uid="VaraniumSharp.Collections.PackageManager.AddItemToPackageAsync(System.String,System.IO.Stream,System.String)">AddItemToPackageAsync(String, Stream, String)</h4>
@@ -264,19 +265,19 @@ If the data already exists in the Package it will be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">packagePath</span></td>
         <td><p>Path to the Package</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><span class="xref">System.IO.Stream</span></td>
         <td><span class="parametername">data</span></td>
         <td><p>The stream that should be stored in the Package</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">storagePath</span></td>
         <td><p>The relative path where the data should be stored inside the Package</p>
 </td>
@@ -293,7 +294,7 @@ If the data already exists in the Package it will be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -303,7 +304,7 @@ If the data already exists in the Package it will be overwritten.</p>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_Dispose.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L90">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L91">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_Dispose_" data-uid="VaraniumSharp.Collections.PackageManager.Dispose*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_Dispose" data-uid="VaraniumSharp.Collections.PackageManager.Dispose">Dispose()</h4>
@@ -318,7 +319,7 @@ If the data already exists in the Package it will be overwritten.</p>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L229">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L230">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_Dispose_" data-uid="VaraniumSharp.Collections.PackageManager.Dispose*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_Dispose_System_Boolean_" data-uid="VaraniumSharp.Collections.PackageManager.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -340,7 +341,7 @@ If the data already exists in the Package it will be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">disposing</span></td>
         <td><p>Indicate if disposal has already been done</p>
 </td>
@@ -352,7 +353,7 @@ If the data already exists in the Package it will be overwritten.</p>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_RemoveDataFromPackageAsync_System_String_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L104">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L105">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_RemoveDataFromPackageAsync_" data-uid="VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_RemoveDataFromPackageAsync_System_String_System_String_" data-uid="VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync(System.String,System.String)">RemoveDataFromPackageAsync(String, String)</h4>
@@ -377,13 +378,13 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">packagePath</span></td>
         <td><p>Path to the Package</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">storagePath</span></td>
         <td><p>The relative path where data is stored inside the Package</p>
 </td>
@@ -400,7 +401,7 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -410,7 +411,7 @@ If the data does not exist in the package nothing will be done
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_RetrieveDataFromPackageAsync_System_String_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L135">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L136">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_RetrieveDataFromPackageAsync_" data-uid="VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_RetrieveDataFromPackageAsync_System_String_System_String_" data-uid="VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync(System.String,System.String)">RetrieveDataFromPackageAsync(String, String)</h4>
@@ -432,13 +433,13 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">packagePath</span></td>
         <td><p>Path to the Package</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">storagePath</span></td>
         <td><p>The relative path where data is stored inside the Package</p>
 </td>
@@ -455,7 +456,7 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.IO.Stream</span>&gt;</td>
         <td><p>MemoryStream containing the data from the Package</p>
 </td>
       </tr>
@@ -471,7 +472,7 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.generic.keynotfoundexception(v=vs.110).aspx">KeyNotFoundException</a></td>
+        <td><span class="xref">System.Collections.Generic.KeyNotFoundException</span></td>
         <td><p>Thrown if the storagePath could not be found in the package</p>
 </td>
       </tr>
@@ -482,7 +483,7 @@ If the data does not exist in the package nothing will be done
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_ScrubStorageAsync_System_String_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.ScrubStorageAsync(System.String%2CSystem.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L171">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L172">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_ScrubStorageAsync_" data-uid="VaraniumSharp.Collections.PackageManager.ScrubStorageAsync*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_ScrubStorageAsync_System_String_System_Collections_Generic_List_System_String__" data-uid="VaraniumSharp.Collections.PackageManager.ScrubStorageAsync(System.String,System.Collections.Generic.List{System.String})">ScrubStorageAsync(String, List&lt;String&gt;)</h4>
@@ -504,13 +505,13 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">packagePath</span></td>
         <td><p>Path to the Package</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">storagePathsToKeep</span></td>
         <td><p>List of relative paths of data in the package that should be kept</p>
 </td>
@@ -527,7 +528,7 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -539,7 +540,7 @@ If the data does not exist in the package nothing will be done
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_ScrubProgress.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.ScrubProgress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L44">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L45">View Source</a>
   </span>
   <h4 id="VaraniumSharp_Collections_PackageManager_ScrubProgress" data-uid="VaraniumSharp.Collections.PackageManager.ScrubProgress">ScrubProgress</h4>
   <div class="markdown level1 summary"><p>Event used to indicate scrubbing progress on a Package</p>
@@ -559,7 +560,7 @@ If the data does not exist in the package nothing will be done
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/db0etb8x(v=vs.110).aspx">EventHandler</a>&lt;<a class="xref" href="VaraniumSharp.EventArguments.ScrubProgressArgs.html">ScrubProgressArgs</a>&gt;</td>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="VaraniumSharp.EventArguments.ScrubProgressArgs.html">ScrubProgressArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -569,7 +570,7 @@ If the data does not exist in the package nothing will be done
       <a class="xref" href="VaraniumSharp.Interfaces.Collections.IPackageManager.html">IPackageManager</a>
   </div>
   <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx">IDisposable</a>
+      <span class="xref">System.IDisposable</span>
   </div>
 </article>
           </div>

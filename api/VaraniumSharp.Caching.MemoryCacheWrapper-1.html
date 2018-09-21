@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MemoryCacheWrapper&lt;T&gt;
    ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.39.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,41 +73,41 @@
   
   <h1 id="VaraniumSharp_Caching_MemoryCacheWrapper_1" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1" class="text-break">Class MemoryCacheWrapper&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Wrapper for <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.caching.memorycache(v=vs.110).aspx">MemoryCache</a> that provides an easy double-checked lock method for retrieving items from the cache</p>
+  <div class="markdown level0 summary"><p>Wrapper for <span class="xref">System.Runtime.Caching.MemoryCache</span> that provides an easy double-checked lock method for retrieving items from the cache</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+    <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">MemoryCacheWrapper&lt;T&gt;</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html">IMemoryCacheWrapper</a>&lt;T&gt;</div>
-    <div><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx">INotifyPropertyChanged</a></div>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
+      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Object.Equals(Object, Object)</a>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
+      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">Object.GetType()</a>
+      <span class="xref">System.Object.GetType()</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">Object.MemberwiseClone()</a>
+      <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">Object.ReferenceEquals(Object, Object)</a>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
+      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VaraniumSharp.Caching.html">VaraniumSharp.Caching</a></h6>
@@ -168,7 +168,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     <a href="https://msdn.microsoft.com/en-us/library/system.runtime.caching.cacheitempolicy(v=vs.110).aspx">https://msdn.microsoft.com/en-us/library/system.runtime.caching.cacheitempolicy(v=vs.110).aspx</a>
 </cref>
 </see>
-<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.invalidoperationexception(v=vs.110).aspx">InvalidOperationException</a></p>
+<span class="xref">System.InvalidOperationException</span></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -185,7 +185,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.caching.cacheitempolicy(v=vs.110).aspx">CacheItemPolicy</a></td>
+        <td><span class="xref">System.Runtime.Caching.CacheItemPolicy</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -200,7 +200,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_DataRetrievalFunc_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.DataRetrievalFunc*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_DataRetrievalFunc" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.DataRetrievalFunc">DataRetrievalFunc</h4>
   <div class="markdown level1 summary"><p>Func that will be used to retrieve data if it is not available in the cache
-<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.invalidoperationexception(v=vs.110).aspx">InvalidOperationException</a></p>
+<span class="xref">System.InvalidOperationException</span></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -217,7 +217,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx">Func</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -248,7 +248,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -281,7 +281,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
@@ -297,7 +297,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -329,7 +329,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">key</span></td>
         <td><p>The key under which the item is stored</p>
 </td>
@@ -346,7 +346,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
         <td><p>Cached copy of T</p>
 </td>
       </tr>
@@ -362,7 +362,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.invalidoperationexception(v=vs.110).aspx">InvalidOperationException</a></td>
+        <td><span class="xref">System.InvalidOperationException</span></td>
         <td><p>Thrown if CachePolicy or DataRetrievalFunc has not been set</p>
 </td>
       </tr>
@@ -395,7 +395,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">key</span></td>
         <td><p>The key under which the item is stored</p>
 </td>
@@ -412,7 +412,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>True if the item has been removed. False if it is not in the cache</p>
 </td>
       </tr>
@@ -445,7 +445,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.componentmodel.propertychangedeventhandler(v=vs.110).aspx">PropertyChangedEventHandler</a></td>
+        <td><span class="xref">System.ComponentModel.PropertyChangedEventHandler</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -455,7 +455,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
       <a class="xref" href="VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html">IMemoryCacheWrapper&lt;T&gt;</a>
   </div>
   <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx">INotifyPropertyChanged</a>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
