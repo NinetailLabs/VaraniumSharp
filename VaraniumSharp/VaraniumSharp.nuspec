@@ -16,6 +16,8 @@
     <releaseNotes>ReleaseNotesHere</releaseNotes>
     <tags>C# VaraniumSharp Varanium</tags>
 
+    <repository type="git" url="https://github.com/NinetailLabs/VaraniumSharp" commit="GitHashHere" />
+
     <dependencies>
       <dependency id="Microsoft.Extensions.Logging" version="2.1.1" />
       <dependency id="System.Configuration.ConfigurationManager" version="4.5.0" />
