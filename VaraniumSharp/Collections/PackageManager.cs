@@ -21,6 +21,7 @@ namespace VaraniumSharp.Collections
     /// </remark>
     /// </summary>
     [AutomaticContainerRegistration(typeof(IPackageManager), ServiceReuse.Singleton)]
+    [Obsolete("This class should no longer be used as it continually rewrite the file on disk - Instead use https://github.com/NinetailLabs/VaraniumSharp.CompoundDocumentFormatStorage which does not have the issue")]
     public class PackageManager : IPackageManager
     {
         #region Constructor
