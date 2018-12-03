@@ -63,7 +63,7 @@ namespace VaraniumSharp.Tests.Concurrency
             sut.Threads.Should().Be(expectedThreads);
         }
 
-        [Fact(Skip = "Runner issue")]
+        [Fact]
         public void RunningTaskSynchronouslyWillCorrectlySwitchToStaThread()
         {
             // arrange
@@ -93,7 +93,7 @@ namespace VaraniumSharp.Tests.Concurrency
             act.Should().Throw<ArgumentOutOfRangeException>();
         }
 
-        [Fact]
+        [Fact(Skip = "Runner issue")]
         public void TasksAreCorrectlyQueued()
         {
             // arrange
