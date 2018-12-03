@@ -93,7 +93,7 @@ namespace VaraniumSharp.Tests.Concurrency
             act.Should().Throw<ArgumentOutOfRangeException>();
         }
 
-        [Fact(Skip = "Runner issue")]
+        [Fact(Skip = "Runner issue - Not sure why this test fails on the build server")]
         public void TasksAreCorrectlyQueued()
         {
             // arrange
