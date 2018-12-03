@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class NotifyPropertyChangedExtensions
+    <title>Class StaTask
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class NotifyPropertyChangedExtensions
+    <meta name="title" content="Class StaTask
    ">
     <meta name="generator" content="docfx 2.40.4.0">
     
@@ -68,18 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VaraniumSharp.Extensions.NotifyPropertyChangedExtensions">
+            <article class="content wrap" id="_content" data-uid="VaraniumSharp.Concurrency.StaTask">
   
   
-  <h1 id="VaraniumSharp_Extensions_NotifyPropertyChangedExtensions" data-uid="VaraniumSharp.Extensions.NotifyPropertyChangedExtensions" class="text-break">Class NotifyPropertyChangedExtensions
+  <h1 id="VaraniumSharp_Concurrency_StaTask" data-uid="VaraniumSharp.Concurrency.StaTask" class="text-break">Class StaTask
   </h1>
-  <div class="markdown level0 summary"><p>Extension methods for <span class="xref">System.ComponentModel.INotifyPropertyChanged</span></p>
+  <div class="markdown level0 summary"><p>Helper for executing asynchronous operations on <span class="xref">System.Threading.ApartmentState.STA</span> threads</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">NotifyPropertyChangedExtensions</span></div>
+    <div class="level1"><span class="xref">StaTask</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,30 +105,29 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="VaraniumSharp.Extensions.html">VaraniumSharp.Extensions</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VaraniumSharp.Concurrency.html">VaraniumSharp.Concurrency</a></h6>
   <h6><strong>Assembly</strong>: VaraniumSharp.dll</h6>
-  <h5 id="VaraniumSharp_Extensions_NotifyPropertyChangedExtensions_syntax">Syntax</h5>
+  <h5 id="VaraniumSharp_Concurrency_StaTask_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class NotifyPropertyChangedExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class StaTask</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Extensions_NotifyPropertyChangedExtensions_BlockUntil_System_ComponentModel_INotifyPropertyChanged_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil(System.ComponentModel.INotifyPropertyChanged)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Concurrency_StaTask_Run_System_Action_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Concurrency.StaTask.Run(System.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Extensions/NotifyPropertyChangedExtensions.cs/#L23">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Concurrency/StaTask.cs/#L31">View Source</a>
   </span>
-  <a id="VaraniumSharp_Extensions_NotifyPropertyChangedExtensions_BlockUntil_" data-uid="VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil*"></a>
-  <h4 id="VaraniumSharp_Extensions_NotifyPropertyChangedExtensions_BlockUntil_System_ComponentModel_INotifyPropertyChanged_" data-uid="VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.BlockUntil(System.ComponentModel.INotifyPropertyChanged)">BlockUntil(INotifyPropertyChanged)</h4>
-  <div class="markdown level1 summary"><p>Returns a task that can be blocked against until a specific property changes.
-The property or properties should be marked with <a class="xref" href="VaraniumSharp.Attributes.BlockingPropertyAttribute.html">BlockingPropertyAttribute</a> otherwise a completed task will be returned immediately.</p>
+  <a id="VaraniumSharp_Concurrency_StaTask_Run_" data-uid="VaraniumSharp.Concurrency.StaTask.Run*"></a>
+  <h4 id="VaraniumSharp_Concurrency_StaTask_Run_System_Action_" data-uid="VaraniumSharp.Concurrency.StaTask.Run(System.Action)">Run(Action)</h4>
+  <div class="markdown level1 summary"><p>Queues an asynchronous action on a <span class="xref">System.Threading.ApartmentState.STA</span> thread and returns a <span class="xref">System.Threading.Tasks.Task</span> that represents that work</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; BlockUntil(this INotifyPropertyChanged self)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task Run(Action action)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,9 +140,9 @@ The property or properties should be marked with <a class="xref" href="VaraniumS
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></td>
-        <td><span class="parametername">self</span></td>
-        <td><p>Class instance that contains the properties</p>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The work to execute asynchronously</p>
 </td>
       </tr>
     </tbody>
@@ -158,8 +157,64 @@ The property or properties should be marked with <a class="xref" href="VaraniumS
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td><p>Task that can be awaited until the decorated properties change</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>Representation of asynchronous work</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Concurrency_StaTask_Run_System_Action_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Concurrency.StaTask.Run(System.Action%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Concurrency/StaTask.cs/#L42">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Concurrency_StaTask_Run_" data-uid="VaraniumSharp.Concurrency.StaTask.Run*"></a>
+  <h4 id="VaraniumSharp_Concurrency_StaTask_Run_System_Action_System_Threading_CancellationToken_" data-uid="VaraniumSharp.Concurrency.StaTask.Run(System.Action,System.Threading.CancellationToken)">Run(Action, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Queues an asynchronous action on a <span class="xref">System.Threading.ApartmentState.STA</span> thread and returns a <span class="xref">System.Threading.Tasks.Task</span> that represents that work</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task Run(Action action, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The work to execute asynchronously</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Token that can be used to cancel the execution of the action</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>Representation of asynchronous work</p>
 </td>
       </tr>
     </tbody>
@@ -172,10 +227,10 @@ The property or properties should be marked with <a class="xref" href="VaraniumS
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Extensions_NotifyPropertyChangedExtensions.md&amp;value=---%0Auid%3A%20VaraniumSharp.Extensions.NotifyPropertyChangedExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Concurrency_StaTask.md&amp;value=---%0Auid%3A%20VaraniumSharp.Concurrency.StaTask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Extensions/NotifyPropertyChangedExtensions.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Concurrency/StaTask.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
