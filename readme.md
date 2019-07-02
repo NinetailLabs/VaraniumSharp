@@ -4,6 +4,7 @@
 [![NuGet](https://img.shields.io/nuget/v/VaraniumSharp.svg)](https://www.nuget.org/packages/VaraniumSharp/)
 [![Coverage Status](https://coveralls.io/repos/github/NinetailLabs/VaraniumSharp/badge.svg?branch=master)](https://coveralls.io/github/NinetailLabs/VaraniumSharp?branch=master)
 [![CodeFactor](https://www.codefactor.io/repository/github/ninetaillabs/varaniumsharp/badge)](https://www.codefactor.io/repository/github/ninetaillabs/varaniumsharp)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FNinetailLabs%2FVaraniumSharp.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FNinetailLabs%2FVaraniumSharp?ref=badge_shield)
 
 A very simple helper library with the goal of having reusable, reliable components.
 
@@ -14,3 +15,6 @@ For a detailed overview of the library see our [documentation](https://ninetaill
 
 ## Icon
 [Sprout](https://thenounproject.com/term/sprout/607325/) by [parkjisun](https://thenounproject.com/naripuru/) from the Noun Project 
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FNinetailLabs%2FVaraniumSharp.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FNinetailLabs%2FVaraniumSharp?ref=badge_large)
