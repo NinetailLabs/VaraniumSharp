@@ -132,7 +132,7 @@ namespace VaraniumSharp.Caching
 
             try
             {
-                Parallel.ForEach(keys, key =>
+                foreach(var key in keys)
                 {
                     var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
                     lockedSemaphores.TryAdd(key, semaphore);
@@ -147,17 +147,17 @@ namespace VaraniumSharp.Caching
                     {
                         keysToRetrieve.Add(key);
                     }
-                });
+                }
 
                 var batchResult = await _batchRetrievalFunc.Invoke(keysToRetrieve.ToList());
 
-                Parallel.ForEach(batchResult, entry =>
+                foreach(var entry in batchResult)
                 {
                     _memoryCache.Add(entry.Key, entry.Value, CachePolicy);
                     lockedSemaphores[entry.Key].Release();
                     lockedSemaphores.TryRemove(entry.Key, out _);
                     entriesAdded++;
-                });
+                }
             }
             finally
             {
