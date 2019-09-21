@@ -248,6 +248,41 @@ references:
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).MemoryCacheWrapper
   nameWithType: MemoryCacheWrapper<T>.MemoryCacheWrapper
   nameWithType.vb: MemoryCacheWrapper(Of T).MemoryCacheWrapper
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchAddToCacheAsync(System.Collections.Generic.List{System.String})
+  name: BatchAddToCacheAsync(List<String>)
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchAddToCacheAsync_System_Collections_Generic_List_System_String__
+  commentId: M:VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchAddToCacheAsync(System.Collections.Generic.List{System.String})
+  name.vb: BatchAddToCacheAsync(List(Of String))
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.BatchAddToCacheAsync(System.Collections.Generic.List<System.String>)
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).BatchAddToCacheAsync(System.Collections.Generic.List(Of System.String))
+  nameWithType: MemoryCacheWrapper<T>.BatchAddToCacheAsync(List<String>)
+  nameWithType.vb: MemoryCacheWrapper(Of T).BatchAddToCacheAsync(List(Of String))
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchAddToCacheAsync*
+  name: BatchAddToCacheAsync
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchAddToCacheAsync_
+  commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchAddToCacheAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.BatchAddToCacheAsync
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).BatchAddToCacheAsync
+  nameWithType: MemoryCacheWrapper<T>.BatchAddToCacheAsync
+  nameWithType.vb: MemoryCacheWrapper(Of T).BatchAddToCacheAsync
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchRetrievalFunc
+  name: BatchRetrievalFunc
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchRetrievalFunc
+  commentId: P:VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchRetrievalFunc
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.BatchRetrievalFunc
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).BatchRetrievalFunc
+  nameWithType: MemoryCacheWrapper<T>.BatchRetrievalFunc
+  nameWithType.vb: MemoryCacheWrapper(Of T).BatchRetrievalFunc
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchRetrievalFunc*
+  name: BatchRetrievalFunc
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchRetrievalFunc_
+  commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchRetrievalFunc
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.BatchRetrievalFunc
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).BatchRetrievalFunc
+  nameWithType: MemoryCacheWrapper<T>.BatchRetrievalFunc
+  nameWithType.vb: MemoryCacheWrapper(Of T).BatchRetrievalFunc
 - uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.CachePolicy
   name: CachePolicy
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_CachePolicy
@@ -1416,6 +1451,41 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T)
   nameWithType: IMemoryCacheWrapper<T>
   nameWithType.vb: IMemoryCacheWrapper(Of T)
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.BatchAddToCacheAsync(System.Collections.Generic.List{System.String})
+  name: BatchAddToCacheAsync(List<String>)
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_BatchAddToCacheAsync_System_Collections_Generic_List_System_String__
+  commentId: M:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.BatchAddToCacheAsync(System.Collections.Generic.List{System.String})
+  name.vb: BatchAddToCacheAsync(List(Of String))
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.BatchAddToCacheAsync(System.Collections.Generic.List<System.String>)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).BatchAddToCacheAsync(System.Collections.Generic.List(Of System.String))
+  nameWithType: IMemoryCacheWrapper<T>.BatchAddToCacheAsync(List<String>)
+  nameWithType.vb: IMemoryCacheWrapper(Of T).BatchAddToCacheAsync(List(Of String))
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.BatchAddToCacheAsync*
+  name: BatchAddToCacheAsync
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_BatchAddToCacheAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.BatchAddToCacheAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.BatchAddToCacheAsync
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).BatchAddToCacheAsync
+  nameWithType: IMemoryCacheWrapper<T>.BatchAddToCacheAsync
+  nameWithType.vb: IMemoryCacheWrapper(Of T).BatchAddToCacheAsync
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.BatchRetrievalFunc
+  name: BatchRetrievalFunc
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_BatchRetrievalFunc
+  commentId: P:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.BatchRetrievalFunc
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.BatchRetrievalFunc
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).BatchRetrievalFunc
+  nameWithType: IMemoryCacheWrapper<T>.BatchRetrievalFunc
+  nameWithType.vb: IMemoryCacheWrapper(Of T).BatchRetrievalFunc
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.BatchRetrievalFunc*
+  name: BatchRetrievalFunc
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_BatchRetrievalFunc_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.BatchRetrievalFunc
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.BatchRetrievalFunc
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).BatchRetrievalFunc
+  nameWithType: IMemoryCacheWrapper<T>.BatchRetrievalFunc
+  nameWithType.vb: IMemoryCacheWrapper(Of T).BatchRetrievalFunc
 - uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CachePolicy
   name: CachePolicy
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_CachePolicy
