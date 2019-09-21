@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.Caching;
 using System.Threading;
 using System.Threading.Tasks;
@@ -125,7 +126,7 @@ namespace VaraniumSharp.Caching
                 throw new InvalidOperationException("BatchRetrievalFunc has not been set");
             }
 
-            var keysToRetrieve = new List<string>();
+            var keysToRetrieve = new ConcurrentBag<string>();
             var lockedSemaphores = new ConcurrentDictionary<string, SemaphoreSlim>();
             var entriesAdded = 0;
 
@@ -148,7 +149,7 @@ namespace VaraniumSharp.Caching
                     }
                 });
 
-                var batchResult = await _batchRetrievalFunc.Invoke(keysToRetrieve);
+                var batchResult = await _batchRetrievalFunc.Invoke(keysToRetrieve.ToList());
 
                 Parallel.ForEach(batchResult, entry =>
                 {
