@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.Caching;
 using System.Threading.Tasks;
@@ -30,9 +31,24 @@ namespace VaraniumSharp.Interfaces.Caching
         /// </summary>
         Func<string, Task<T>> DataRetrievalFunc { get; set; }
 
+        /// <summary>
+        /// Func that will be used to batch retrieve data to warm up the cache
+        /// <exception cref="InvalidOperationException">Thrown if the Func has already been set</exception>
+        /// </summary>
+        Func<List<string>, Task<Dictionary<string, T>>> BatchRetrievalFunc { get; set; } 
+
         #endregion
 
         #region Public Methods
+
+        /// <summary>
+        /// Request that a batch of entries be added to the cache.
+        /// This method will not retrieve entries that are already in the cache again.
+        /// <exception cref="InvalidOperationException">Thrown if the <see cref="BatchRetrievalFunc"/> has not been set</exception>
+        /// </summary>
+        /// <param name="keys">Collection of keys of the entries that should be added to the cache</param>
+        /// <returns>Number of entries that were added to the cache</returns>
+        Task<int> BatchAddToCacheAsync(List<string> keys);
 
         /// <summary>
         /// Check if an item with a specific key is currently in the cache

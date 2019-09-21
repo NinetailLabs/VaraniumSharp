@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using System;
+using System.Collections.Generic;
 using System.Runtime.Caching;
 using System.Threading.Tasks;
 using VaraniumSharp.Caching;
@@ -22,7 +23,7 @@ namespace VaraniumSharp.Tests.Caching
         }
 
         private class CacheItemFixture
-        { }
+        {}
 
         private class RetrievalFixture<T>
         {
@@ -60,6 +61,130 @@ namespace VaraniumSharp.Tests.Caching
             private readonly T _returnValue;
 
             #endregion
+        }
+
+        [Fact]
+        public void IfBatchRetrievalFuncIsNotSetAttemptingToBatchAddThrowsAnException()
+        {
+            // arrange
+            var sut = new MemoryCacheWrapper<int>();
+
+            var act = new Action(() => sut.BatchAddToCacheAsync(new List<string>()).Wait());
+
+            // act
+            // assert
+            act.Should().Throw<InvalidOperationException>();
+        }
+
+        [Fact]
+        public async Task IfKeyIsAlreadyInTheCacheBatchAddingWillNotAddItAgain()
+        {
+            // arrange
+            const string key = "TestKey";
+            const int returnValue = 12;
+            var requestedKeys = new List<string>();
+            var dummyFunc = new Func<List<string>, Task<Dictionary<string, int>>>(async list =>
+            {
+                await Task.Delay(1);
+                requestedKeys = list;
+                return new Dictionary<string, int>();
+            });
+            var retrievalFixture = new RetrievalFixture<int>(returnValue);
+            var sut = new MemoryCacheWrapper<int>
+            {
+                CachePolicy = new CacheItemPolicy(),
+                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc,
+                BatchRetrievalFunc = dummyFunc
+            };
+            var _ = await sut.GetAsync(key);
+
+            // act
+            await sut.BatchAddToCacheAsync(new List<string> { key });
+
+            // assert
+            requestedKeys.Count.Should().Be(0);
+        }
+
+        [Fact]
+        public async Task BatchRetrievalAddsAllBatchEntriesToTheCache()
+        {
+            // arrange
+            const string key = "TestKey";
+            const int returnValue = 12;
+            var requestedKeys = new List<string>();
+            var dummyFunc = new Func<List<string>, Task<Dictionary<string, int>>>(async list =>
+            {
+                await Task.Delay(1);
+                requestedKeys = list;
+                return new Dictionary<string, int>
+                {
+                    { key, 1 }
+                };
+            });
+            var retrievalFixture = new RetrievalFixture<int>(returnValue);
+            var sut = new MemoryCacheWrapper<int>
+            {
+                CachePolicy = new CacheItemPolicy(),
+                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc,
+                BatchRetrievalFunc = dummyFunc
+            };
+
+            // act
+            var entriesAdded = await sut.BatchAddToCacheAsync(new List<string> { key });
+
+            // assert
+            entriesAdded.Should().Be(1);
+            requestedKeys.Count.Should().Be(1);
+        }
+
+        [Fact]
+        public void IfAnErrorOccursDuringBatchRetrievalAnExceptionIsThrown()
+        {
+            // arrange
+            const string key = "TestKey";
+            const int returnValue = 12;
+            var dummyFunc = new Func<List<string>, Task<Dictionary<string, int>>>(async list =>
+            {
+                await Task.Delay(1);
+                throw new Exception();
+            });
+            var retrievalFixture = new RetrievalFixture<int>(returnValue);
+            var sut = new MemoryCacheWrapper<int>
+            {
+                CachePolicy = new CacheItemPolicy(),
+                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc,
+                BatchRetrievalFunc = dummyFunc
+            };
+
+            var act = new Action(() => sut.BatchAddToCacheAsync(new List<string> { key }).Wait());
+
+            // act
+            // assert
+            act.Should().Throw<Exception>();
+        }
+
+        [Fact]
+        public void AttemptingToSetTheBatchRetrievalASecondTimeThrowsAnException()
+        {
+            // arrange
+            var dummyFunc = new Func<List<string>, Task<Dictionary<string, int>>>(async list =>
+            {
+                await Task.Delay(1);
+                return new Dictionary<string, int>();
+            });
+            var newDummyFunc = new Func<List<string>, Task<Dictionary<string, int>>>(async list =>
+            {
+                await Task.Delay(1);
+                return new Dictionary<string, int>();
+            });
+
+            var sut = new MemoryCacheWrapper<int> { BatchRetrievalFunc = dummyFunc };
+
+            var act = new Action(() => sut.BatchRetrievalFunc = newDummyFunc);
+
+            // act
+            // assert
+            act.Should().Throw<InvalidOperationException>();
         }
 
         [Fact]
