@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.Caching;
 using System.Threading;
@@ -41,6 +42,25 @@ namespace VaraniumSharp.Caching
 
         #region Properties
 
+        /// <inheritdoc />
+        public Func<List<string>, Task<Dictionary<string, T>>> BatchRetrievalFunc
+        {
+            get => _batchRetrievalFunc;
+            set
+            {
+                lock (_funcLock)
+                {
+                    if (_batchFuncAlreadySet)
+                    {
+                        throw new InvalidOperationException("Func can only be set once");
+                    }
+
+                    _batchRetrievalFunc = value;
+                    _batchFuncAlreadySet = true;
+                }
+            }
+        }
+
         /// <summary>
         /// Policy to use for cached items
         /// <see>
@@ -52,7 +72,7 @@ namespace VaraniumSharp.Caching
         /// </summary>
         public CacheItemPolicy CachePolicy
         {
-            get { return _cacheItemPolicy; }
+            get => _cacheItemPolicy;
             set
             {
                 lock (_policyLock)
@@ -73,7 +93,7 @@ namespace VaraniumSharp.Caching
         /// </summary>
         public Func<string, Task<T>> DataRetrievalFunc
         {
-            get { return _dataRetrievalFunc; }
+            get => _dataRetrievalFunc;
             set
             {
                 lock (_funcLock)
@@ -96,6 +116,58 @@ namespace VaraniumSharp.Caching
         #endregion
 
         #region Public Methods
+
+        /// <inheritdoc />
+        public async Task<int> BatchAddToCacheAsync(List<string> keys)
+        {
+            if (_batchRetrievalFunc == null)
+            {
+                throw new InvalidOperationException("BatchRetrievalFunc has not been set");
+            }
+
+            var keysToRetrieve = new List<string>();
+            var lockedSemaphores = new Dictionary<string, SemaphoreSlim>();
+            var entriesAdded = 0;
+
+            try
+            {
+                foreach (var key in keys)
+                {
+                    var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
+                    lockedSemaphores.Add(key, semaphore);
+                    await semaphore.WaitAsync();
+
+                    if (_memoryCache.Contains(key))
+                    {
+                        semaphore.Release();
+                        lockedSemaphores.Remove(key);
+                    }
+                    else
+                    {
+                        keysToRetrieve.Add(key);
+                    }
+                }
+
+                var batchResult = await _batchRetrievalFunc.Invoke(keysToRetrieve);
+
+                foreach (var entry in batchResult)
+                {
+                    _memoryCache.Add(entry.Key, entry.Value, CachePolicy);
+                    lockedSemaphores[entry.Key].Release();
+                    lockedSemaphores.Remove(entry.Key);
+                    entriesAdded++;
+                }
+            }
+            finally
+            {
+                foreach (var semaphore in lockedSemaphores)
+                {
+                    semaphore.Value.Release();
+                }
+            }
+
+            return entriesAdded;
+        }
 
         /// <inheritdoc />
         public async Task<bool> ContainsKeyAsync(string key)
@@ -178,14 +250,54 @@ namespace VaraniumSharp.Caching
 
         #region Variables
 
+        /// <summary>
+        /// Dictionary used to lock cache access per key
+        /// </summary>
         private readonly ConcurrentDictionary<string, SemaphoreSlim> _cacheLockDictionary;
+
+        /// <summary>
+        /// Object used to lock access to Func properties for setting
+        /// </summary>
         private readonly object _funcLock = new object();
 
+        /// <summary>
+        /// Memory cache instance
+        /// </summary>
         private readonly MemoryCache _memoryCache;
+
+        /// <summary>
+        /// Object used to lock access to the <see cref="CachePolicy"/> property
+        /// </summary>
         private readonly object _policyLock = new object();
+
+        /// <summary>
+        /// Variable used to indicate if the <see cref="BatchRetrievalFunc"/> has already been set
+        /// </summary>
+        private bool _batchFuncAlreadySet;
+
+        /// <summary>
+        /// Backing variable for the <see cref="BatchRetrievalFunc"/> property
+        /// </summary>
+        private Func<List<string>, Task<Dictionary<string, T>>> _batchRetrievalFunc;
+
+        /// <summary>
+        /// Variable backing the <see cref="CachePolicy"/> property
+        /// </summary>
         private CacheItemPolicy _cacheItemPolicy;
+
+        /// <summary>
+        /// Func used to retrieve entries that are not in the cache
+        /// </summary>
         private Func<string, Task<T>> _dataRetrievalFunc;
+
+        /// <summary>
+        /// Indicates if the <see cref="DataRetrievalFunc"/> has already been set
+        /// </summary>
         private bool _funcAlreadySet;
+
+        /// <summary>
+        /// Indicates if the <see cref="CachePolicy"/> has already been set
+        /// </summary>
         private bool _policyAlreadySet;
 
         #endregion
