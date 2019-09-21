@@ -126,27 +126,25 @@ namespace VaraniumSharp.Caching
             }
 
             var keysToRetrieve = new List<string>();
-            var lockedSemaphores = new Dictionary<string, SemaphoreSlim>();
+            var lockedSemaphores = new ConcurrentDictionary<string, SemaphoreSlim>();
             var entriesAdded = 0;
 
             try
             {
                 Parallel.ForEach(keys, key =>
                 {
-                    {
-                        var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
-                        lockedSemaphores.Add(key, semaphore);
-                        semaphore.Wait();
+                    var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
+                    lockedSemaphores.TryAdd(key, semaphore);
+                    semaphore.Wait();
 
-                        if (_memoryCache.Contains(key))
-                        {
-                            semaphore.Release();
-                            lockedSemaphores.Remove(key);
-                        }
-                        else
-                        {
-                            keysToRetrieve.Add(key);
-                        }
+                    if (_memoryCache.Contains(key))
+                    {
+                        semaphore.Release();
+                        lockedSemaphores.TryRemove(key, out _);
+                    }
+                    else
+                    {
+                        keysToRetrieve.Add(key);
                     }
                 });
 
@@ -154,12 +152,10 @@ namespace VaraniumSharp.Caching
 
                 Parallel.ForEach(batchResult, entry =>
                 {
-                    {
-                        _memoryCache.Add(entry.Key, entry.Value, CachePolicy);
-                        lockedSemaphores[entry.Key].Release();
-                        lockedSemaphores.Remove(entry.Key);
-                        entriesAdded++;
-                    }
+                    _memoryCache.Add(entry.Key, entry.Value, CachePolicy);
+                    lockedSemaphores[entry.Key].Release();
+                    lockedSemaphores.TryRemove(entry.Key, out _);
+                    entriesAdded++;
                 });
             }
             finally
