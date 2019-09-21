@@ -131,32 +131,36 @@ namespace VaraniumSharp.Caching
 
             try
             {
-                foreach (var key in keys)
+                Parallel.ForEach(keys, key =>
                 {
-                    var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
-                    lockedSemaphores.Add(key, semaphore);
-                    await semaphore.WaitAsync();
+                    {
+                        var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
+                        lockedSemaphores.Add(key, semaphore);
+                        semaphore.Wait();
 
-                    if (_memoryCache.Contains(key))
-                    {
-                        semaphore.Release();
-                        lockedSemaphores.Remove(key);
+                        if (_memoryCache.Contains(key))
+                        {
+                            semaphore.Release();
+                            lockedSemaphores.Remove(key);
+                        }
+                        else
+                        {
+                            keysToRetrieve.Add(key);
+                        }
                     }
-                    else
-                    {
-                        keysToRetrieve.Add(key);
-                    }
-                }
+                });
 
                 var batchResult = await _batchRetrievalFunc.Invoke(keysToRetrieve);
 
-                foreach (var entry in batchResult)
+                Parallel.ForEach(batchResult, entry =>
                 {
-                    _memoryCache.Add(entry.Key, entry.Value, CachePolicy);
-                    lockedSemaphores[entry.Key].Release();
-                    lockedSemaphores.Remove(entry.Key);
-                    entriesAdded++;
-                }
+                    {
+                        _memoryCache.Add(entry.Key, entry.Value, CachePolicy);
+                        lockedSemaphores[entry.Key].Release();
+                        lockedSemaphores.Remove(entry.Key);
+                        entriesAdded++;
+                    }
+                });
             }
             finally
             {
