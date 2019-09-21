@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.Caching;
 using System.Threading;
 using System.Threading.Tasks;
@@ -125,41 +126,37 @@ namespace VaraniumSharp.Caching
                 throw new InvalidOperationException("BatchRetrievalFunc has not been set");
             }
 
-            var keysToRetrieve = new List<string>();
-            var lockedSemaphores = new Dictionary<string, SemaphoreSlim>();
+            var keysToRetrieve = new ConcurrentBag<string>();
+            var lockedSemaphores = new ConcurrentDictionary<string, SemaphoreSlim>();
             var entriesAdded = 0;
 
             try
             {
                 Parallel.ForEach(keys, key =>
                 {
-                    {
-                        var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
-                        lockedSemaphores.Add(key, semaphore);
-                        semaphore.Wait();
+                    var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
+                    lockedSemaphores.TryAdd(key, semaphore);
+                    semaphore.Wait();
 
-                        if (_memoryCache.Contains(key))
-                        {
-                            semaphore.Release();
-                            lockedSemaphores.Remove(key);
-                        }
-                        else
-                        {
-                            keysToRetrieve.Add(key);
-                        }
+                    if (_memoryCache.Contains(key))
+                    {
+                        semaphore.Release();
+                        lockedSemaphores.TryRemove(key, out _);
+                    }
+                    else
+                    {
+                        keysToRetrieve.Add(key);
                     }
                 });
 
-                var batchResult = await _batchRetrievalFunc.Invoke(keysToRetrieve);
+                var batchResult = await _batchRetrievalFunc.Invoke(keysToRetrieve.ToList());
 
                 Parallel.ForEach(batchResult, entry =>
                 {
-                    {
-                        _memoryCache.Add(entry.Key, entry.Value, CachePolicy);
-                        lockedSemaphores[entry.Key].Release();
-                        lockedSemaphores.Remove(entry.Key);
-                        entriesAdded++;
-                    }
+                    _memoryCache.Add(entry.Key, entry.Value, CachePolicy);
+                    lockedSemaphores[entry.Key].Release();
+                    lockedSemaphores.TryRemove(entry.Key, out _);
+                    entriesAdded++;
                 });
             }
             finally
