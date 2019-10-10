@@ -20,11 +20,13 @@ namespace VaraniumSharp.GenericHelpers
             {
                 filename = filename.Replace("&", "^&");
                 Process.Start(new ProcessStartInfo("cmd", $"/c start {filename}") { CreateNoWindow = true });
+                return;
             }
 
             if (filename.EndsWith(".exe"))
             {
                 Process.Start(filename);
+                return;
             }
 
             var attr = File.GetAttributes(filename);
