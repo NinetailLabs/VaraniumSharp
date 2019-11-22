@@ -186,6 +186,28 @@ namespace VaraniumSharp.Caching
             }
         }
 
+        /// <inheritdoc />
+        public async Task<bool> ContainsKeyAsync(string key, TimeSpan timeout)
+        {
+            var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
+
+            try
+            {
+
+                if (!await semaphore.WaitAsync(timeout))
+                {
+                    throw new TimeoutException();
+                }
+
+                return _memoryCache.Contains(key);
+            }
+            finally
+            {
+                semaphore.Release();
+            }
+
+        }
+
         /// <summary>
         /// Retrieve an item from the cache
         /// </summary>

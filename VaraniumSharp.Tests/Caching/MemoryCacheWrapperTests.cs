@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Caching;
+using System.Threading;
 using System.Threading.Tasks;
 using VaraniumSharp.Caching;
 using Xunit;
@@ -61,6 +62,80 @@ namespace VaraniumSharp.Tests.Caching
             private readonly T _returnValue;
 
             #endregion
+        }
+
+        private class BlockingRetrievalFixture<T>
+        {
+            private readonly T _returnValue;
+
+            public BlockingRetrievalFixture(T returnValue)
+            {
+                _returnValue = returnValue;
+            }
+
+            public SemaphoreSlim SemaphoreToBlock { get; } = new SemaphoreSlim(1);
+
+            public async Task<T> DataRetrievalFunc(string s)
+            {
+                try
+                {
+                    await SemaphoreToBlock.WaitAsync();
+                    return _returnValue;
+                }
+                finally
+                {
+                    SemaphoreToBlock.Release();
+                }
+            }
+        }
+
+        [Fact]
+        public async Task IfSemaphoreIsBlockedAndTimeoutExpiresContainsKeyThrowsATimeoutException()
+        {
+            // arrange
+            const string key = "test";
+            var timeout = new TimeSpan(0, 0, 2);
+            var cacheItemDummy = new CacheItemFixture();
+            var retrievalFixture = new BlockingRetrievalFixture<CacheItemFixture>(cacheItemDummy);
+            var sut = new MemoryCacheWrapper<CacheItemFixture>
+            {
+                CachePolicy = new CacheItemPolicy(),
+                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc
+            };
+            await retrievalFixture.SemaphoreToBlock.WaitAsync();
+#pragma warning disable 4014 Do not await, otherwise the test will not work correctly
+            sut.GetAsync(key);
+#pragma warning restore 4014
+
+            var act = new Action(() => sut.ContainsKeyAsync(key, timeout).Wait());
+
+            // act
+            // assert
+            act.Should().Throw<TimeoutException>();
+
+            retrievalFixture.SemaphoreToBlock.Release();
+        }
+
+        [Fact]
+        public async Task IfSemaphoreIsNotBlockedTheExceptionIsNotThrown()
+        {
+            // arrange
+            const string key = "test";
+            var timeout = new TimeSpan(0, 0, 2);
+            var cacheItemDummy = new CacheItemFixture();
+            var retrievalFixture = new BlockingRetrievalFixture<CacheItemFixture>(cacheItemDummy);
+            var sut = new MemoryCacheWrapper<CacheItemFixture>
+            {
+                CachePolicy = new CacheItemPolicy(),
+                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc
+            };
+            await sut.GetAsync(key);
+
+            var act = new Action(() => sut.ContainsKeyAsync(key, timeout).Wait());
+
+            // act
+            // assert
+            act.Should().NotThrow<TimeoutException>();
         }
 
         [Fact]

@@ -15,6 +15,12 @@ namespace VaraniumSharp.Interfaces.Caching
         #region Properties
 
         /// <summary>
+        /// Func that will be used to batch retrieve data to warm up the cache
+        /// <exception cref="InvalidOperationException">Thrown if the Func has already been set</exception>
+        /// </summary>
+        Func<List<string>, Task<Dictionary<string, T>>> BatchRetrievalFunc { get; set; }
+
+        /// <summary>
         /// Policy to use for cached items
         /// <see>
         ///     <cref>
@@ -30,12 +36,6 @@ namespace VaraniumSharp.Interfaces.Caching
         /// <exception cref="InvalidOperationException">Thrown if the Func has already been set</exception>
         /// </summary>
         Func<string, Task<T>> DataRetrievalFunc { get; set; }
-
-        /// <summary>
-        /// Func that will be used to batch retrieve data to warm up the cache
-        /// <exception cref="InvalidOperationException">Thrown if the Func has already been set</exception>
-        /// </summary>
-        Func<List<string>, Task<Dictionary<string, T>>> BatchRetrievalFunc { get; set; } 
 
         #endregion
 
@@ -56,6 +56,15 @@ namespace VaraniumSharp.Interfaces.Caching
         /// <param name="key">The key under which the item is stored</param>
         /// <returns>True - Item is currently cache, otherwise false</returns>
         Task<bool> ContainsKeyAsync(string key);
+
+        /// <summary>
+        /// Check if an item with a specific key is currently in the cache.
+        /// </summary>
+        /// <exception cref="TimeoutException">Thrown if the timeout expires without acquiring the Semaphore</exception>
+        /// <param name="key">The key under which the item is stored</param>
+        /// <param name="timeout">Duration to wait for the semaphore before timing out</param>
+        /// <returns></returns>
+        Task<bool> ContainsKeyAsync(string key, TimeSpan timeout);
 
         /// <summary>
         /// Retrieve an item from the cache
