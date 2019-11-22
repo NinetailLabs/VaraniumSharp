@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html",
-          "hash": "U5lovbxaTTjNy4A5v5tgQg=="
+          "hash": "U3PSUO+pNsRjP0DQ/7xgYQ=="
         }
       },
       "is_incremental": false,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html",
-          "hash": "SO9KQD+0ghZ/4fBdTYG1gw=="
+          "hash": "HF34Fw2roYh0ifVPYRQMgg=="
         }
       },
       "is_incremental": false,
@@ -657,6 +657,12 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 46,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
@@ -668,12 +674,6 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 46,
           "skipped_file_count": 0
         }
       }
