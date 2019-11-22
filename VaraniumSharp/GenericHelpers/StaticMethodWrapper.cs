@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using VaraniumSharp.Attributes;
 using VaraniumSharp.Interfaces.GenericHelpers;
 
@@ -15,7 +16,24 @@ namespace VaraniumSharp.GenericHelpers
         /// <inheritdoc />
         public void StartProcess(string filename)
         {
-            Process.Start(filename);
+            if (filename.StartsWith("http"))
+            {
+                filename = filename.Replace("&", "^&");
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {filename}") { CreateNoWindow = true });
+                return;
+            }
+
+            if (filename.EndsWith(".exe"))
+            {
+                Process.Start(filename);
+                return;
+            }
+
+            var attr = File.GetAttributes(filename);
+            Process.Start("explorer.exe",
+                attr.HasFlag(FileAttributes.Directory) 
+                    ? $"-p, \"{filename}\"" 
+                    : $"/select, \"{filename}\"");
         }
 
         #endregion
