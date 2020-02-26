@@ -8,6 +8,7 @@ using FluentAssertions;
 using VaraniumSharp.Collections;
 using VaraniumSharp.EventArguments;
 using Xunit;
+#pragma warning disable 618 // Unit tests are still required to cover the Obsolete FileManager
 
 namespace VaraniumSharp.Tests.Collections
 {

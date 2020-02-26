@@ -103,7 +103,7 @@ namespace VaraniumSharp.Tests.Caching
                 DataRetrievalFunc = retrievalFixture.DataRetrievalFunc
             };
             await retrievalFixture.SemaphoreToBlock.WaitAsync();
-#pragma warning disable 4014 Do not await, otherwise the test will not work correctly
+#pragma warning disable 4014 //Do not await, otherwise the test will not work correctly
             sut.GetAsync(key);
 #pragma warning restore 4014
 
