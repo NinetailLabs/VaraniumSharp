@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PriorityCollection&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PriorityCollection&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VaraniumSharp.Collections.PriorityCollection`1">
+  
+  
+  <h1 id="VaraniumSharp_Collections_PriorityCollection_1" data-uid="VaraniumSharp.Collections.PriorityCollection`1" class="text-break">Class PriorityCollection&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Collection that enforces and monitors priority of items that are added to the collection</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+    <div class="level1"><span class="xref">PriorityCollection&lt;T&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd287147(v=vs.110).aspx">IProducerConsumerCollection</a>&lt;T&gt;</div>
+    <div><a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;T&gt;</div>
+    <div><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.icollection(v=vs.110).aspx">ICollection</a></div>
+    <div><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.ienumerable(v=vs.110).aspx">IEnumerable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VaraniumSharp.Collections.html">VaraniumSharp.Collections</a></h6>
+  <h6><strong>Assembly</strong>: VaraniumSharp.dll</h6>
+  <h5 id="VaraniumSharp_Collections_PriorityCollection_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PriorityCollection&lt;T&gt; : IProducerConsumerCollection&lt;T&gt;, IEnumerable&lt;T&gt;, ICollection, IEnumerable where T : IPriorityItem</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of object added to the collection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1_Count.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L21">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PriorityCollection_1_Count_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.Count*"></a>
+  <h4 id="VaraniumSharp_Collections_PriorityCollection_1_Count" data-uid="VaraniumSharp.Collections.PriorityCollection`1.Count">Count</h4>
+  <div class="markdown level1 summary"><p>Number of items in the collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1_IsSynchronized.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601.IsSynchronized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L35">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PriorityCollection_1_IsSynchronized_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.IsSynchronized*"></a>
+  <h4 id="VaraniumSharp_Collections_PriorityCollection_1_IsSynchronized" data-uid="VaraniumSharp.Collections.PriorityCollection`1.IsSynchronized">IsSynchronized</h4>
+  <div class="markdown level1 summary"><p>Indicate if the collection is Synchronized (thread-safe)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSynchronized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1_SyncRoot.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601.SyncRoot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L40">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PriorityCollection_1_SyncRoot_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.SyncRoot*"></a>
+  <h4 id="VaraniumSharp_Collections_PriorityCollection_1_SyncRoot" data-uid="VaraniumSharp.Collections.PriorityCollection`1.SyncRoot">SyncRoot</h4>
+  <div class="markdown level1 summary"><p>Object used to synchronize access to the collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object SyncRoot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1_CopyTo__0___System_Int32_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601.CopyTo(%600%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L79">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PriorityCollection_1_CopyTo_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.CopyTo*"></a>
+  <h4 id="VaraniumSharp_Collections_PriorityCollection_1_CopyTo__0___System_Int32_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.CopyTo(`0[],System.Int32)">CopyTo(T[], Int32)</h4>
+  <div class="markdown level1 summary"><p>Copy the collection to an array</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(T[] array, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">array</span></td>
+        <td><p>The array to copy the values to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index to start inserting at</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1_CopyTo_System_Array_System_Int32_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601.CopyTo(System.Array%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L53">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PriorityCollection_1_CopyTo_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.CopyTo*"></a>
+  <h4 id="VaraniumSharp_Collections_PriorityCollection_1_CopyTo_System_Array_System_Int32_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.CopyTo(System.Array,System.Int32)">CopyTo(Array, Int32)</h4>
+  <div class="markdown level1 summary"><p>Copy the collection to an <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.array(v=vs.110).aspx">Array</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(Array array, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.array(v=vs.110).aspx">Array</a></td>
+        <td><span class="parametername">array</span></td>
+        <td><p>Array that the collection should be copied to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Index to start inserting at in the target array</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.argumentexception(v=vs.110).aspx">ArgumentException</a></td>
+        <td><p>Target array is smaller than the number of items to inser</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.argumentoutofrangeexception(v=vs.110).aspx">ArgumentOutOfRangeException</a></td>
+        <td><p>The index is below the lower bound of the array</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1_GetEnumerator.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L88">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PriorityCollection_1_GetEnumerator_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.GetEnumerator*"></a>
+  <h4 id="VaraniumSharp_Collections_PriorityCollection_1_GetEnumerator" data-uid="VaraniumSharp.Collections.PriorityCollection`1.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Get typed enumerator for the collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;T&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/78dfe2yb(v=vs.110).aspx">IEnumerator</a>&lt;T&gt;</td>
+        <td><p>Enumerator for the collection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1_ToArray.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601.ToArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L100">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PriorityCollection_1_ToArray_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.ToArray*"></a>
+  <h4 id="VaraniumSharp_Collections_PriorityCollection_1_ToArray" data-uid="VaraniumSharp.Collections.PriorityCollection`1.ToArray">ToArray()</h4>
+  <div class="markdown level1 summary"><p>Convert the collection to a shallow copied array</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T[] ToArray()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><p>Array containing references to the items</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1_TryAdd__0_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601.TryAdd(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L115">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PriorityCollection_1_TryAdd_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.TryAdd*"></a>
+  <h4 id="VaraniumSharp_Collections_PriorityCollection_1_TryAdd__0_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.TryAdd(`0)">TryAdd(T)</h4>
+  <div class="markdown level1 summary"><p>Try to add an item to the collection.
+If the item has a null priority it will be added to the end of the collection and a priority value will be assigned
+to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryAdd(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to add</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td><p>True means the item has been successfully added</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1_TryTake__0__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601.TryTake(%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L137">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PriorityCollection_1_TryTake_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.TryTake*"></a>
+  <h4 id="VaraniumSharp_Collections_PriorityCollection_1_TryTake__0__" data-uid="VaraniumSharp.Collections.PriorityCollection`1.TryTake(`0@)">TryTake(out T)</h4>
+  <div class="markdown level1 summary"><p>Try to take an item from the collection.
+<remarks>The item with the highest priority (lowest int value) will always be taken</remarks></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryTake(out T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>Out parameter the item will be assigned to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td><p>True if an item could be found in the array</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L159">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PriorityCollection_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="VaraniumSharp.Collections.PriorityCollection`1.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="VaraniumSharp_Collections_PriorityCollection_1_System_Collections_IEnumerable_GetEnumerator" data-uid="VaraniumSharp.Collections.PriorityCollection`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Get enumerator for the collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.ienumerator(v=vs.110).aspx">IEnumerator</a></td>
+        <td><p>Enumerator for the collection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd287147(v=vs.110).aspx">IProducerConsumerCollection&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.icollection(v=vs.110).aspx">ICollection</a>
+  </div>
+  <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.ienumerable(v=vs.110).aspx">IEnumerable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PriorityCollection_1.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PriorityCollection%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PriorityCollection.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

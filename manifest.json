@@ -1,0 +1,698 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/projects/varaniumsharp/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Attributes.AutomaticConcretionContainerRegistrationAttribute.html",
+          "hash": "CDiA1xnt51IR6ePQsz+vwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Attributes.AutomaticContainerRegistrationAttribute.html",
+          "hash": "Cn9LnwWg7X+ZTdzEPyFlEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html",
+          "hash": "6YumNX1e6uCttnle+94aIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Attributes.BlockingPropertyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Attributes.BlockingPropertyAttribute.html",
+          "hash": "Ommmvx0GG76L2cvUcI1MNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Attributes.html",
+          "hash": "kTstdOKD62tD+63uIIWJHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.html",
+          "hash": "Xy1BtVayBQ428ksBfaJpFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Caching.MemoryCacheWrapper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html",
+          "hash": "pjnpknRd68THxPkNhewjEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Caching.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Caching.html",
+          "hash": "3V0FcdFdGBkO7PArCEWRcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Collections.PackageManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Collections.PackageManager.html",
+          "hash": "so/8k5SUdbc4C/PN/5SqFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Collections.PriorityCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Collections.PriorityCollection-1.html",
+          "hash": "xb7gAY5hbIOah2VWG+lpzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Collections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Collections.html",
+          "hash": "wqYZIC0Q+M4xFSt2iANUhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Concurrency.DisposableSemaphoreSlim-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Concurrency.DisposableSemaphoreSlim-1.html",
+          "hash": "2m1TD+5If30J6uMpwh2qjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Concurrency.SemaphoreSlimHelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Concurrency.SemaphoreSlimHelper-1.html",
+          "hash": "eM86J614xbCh1ZA1srRPYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Concurrency.StaTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Concurrency.StaTask.html",
+          "hash": "SOVsGKUdCRTAveOjf+w29w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Concurrency.StaTaskScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Concurrency.StaTaskScheduler.html",
+          "hash": "nlh0oeGH4+S3f/21PjpE9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Concurrency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Concurrency.html",
+          "hash": "r/gdMrT1QLuQ5cwqV0Qnow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Configuration.ReconfigurableSettingBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Configuration.ReconfigurableSettingBase.html",
+          "hash": "3aahmqfYAlZYiEfTMyYgWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Configuration.html",
+          "hash": "Ic+S3K3l40PSR0F5npFmMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html",
+          "hash": "c3SEZGU+9R8cJYEPmTh4FQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.DependencyInjection.html",
+          "hash": "7BvlBOqo/cY6AU41DNJWIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Enumerations.ServiceReuse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Enumerations.ServiceReuse.html",
+          "hash": "LfZLTbC5MVPRnEUeDGHjyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Enumerations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Enumerations.html",
+          "hash": "GL9PBx77WtBtmSIDkxHgYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.EventArguments.ScrubProgressArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.EventArguments.ScrubProgressArgs.html",
+          "hash": "ZK8tQc5lXAx3CkxSbTDEkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.EventArguments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.EventArguments.html",
+          "hash": "2JA2JBdMeVvAXzavG1ltsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Extensions.HttpClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Extensions.HttpClientExtensions.html",
+          "hash": "TmrkdwgdzHvKyhWYSFsQ7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Extensions.NotifyPropertyChangedExtensions.html",
+          "hash": "QyO/J/wzHw0dqx6boT3Aog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Extensions.ObservableCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Extensions.ObservableCollectionExtensions.html",
+          "hash": "zj/PJH+5gJJ4ubovZP6OiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Extensions.StringExtensions.html",
+          "hash": "pkxUEuNuXe+Q7QYUdPDZEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Extensions.UrlBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Extensions.UrlBuilderExtensions.html",
+          "hash": "gTAVK5w6aD7WpIlogJ5f+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Extensions.html",
+          "hash": "G3lHPewr1KhrvUKubReSmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.GenericHelpers.StaticMethodWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.GenericHelpers.StaticMethodWrapper.html",
+          "hash": "agfiDNgu+kc1wrZFuXDzrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.GenericHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.GenericHelpers.html",
+          "hash": "6wqni6NqIC1JL5MKLGiBoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html",
+          "hash": "uuobF9DJVB5oZp4Lf5vs3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.html",
+          "hash": "KY6/fD6XDal0py+krpxuVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Caching.html",
+          "hash": "QQKVJikZtb+YqR9I2xpH9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Collections.IPackageManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Collections.IPackageManager.html",
+          "hash": "Dl6j6KmGaf6XN/5mFpp7Ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Collections.IPriorityItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Collections.IPriorityItem.html",
+          "hash": "5pL+w7HaC07wsM+eFxnElw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Collections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Collections.html",
+          "hash": "QcbzVqZAHRCwYFmijBz1Eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.GenericHelpers.IStaticMethodWrapper.html",
+          "hash": "Vckb9wiaRWW2xgkj3xp0lQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.GenericHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.GenericHelpers.html",
+          "hash": "Rrp37herM3kALtKChPEl0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Wrappers.IHttpClient.html",
+          "hash": "Iq2uEO01Hnyt1+9O07R2hw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Wrappers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Wrappers.html",
+          "hash": "NkyWDthM6qXBq3eWhpV90g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Logging.StaticLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Logging.StaticLogger.html",
+          "hash": "xGV1SYfQebkQ9Owzf/nlNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Logging.html",
+          "hash": "egM2x6yk4HH6v8/ZiFNZyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Wrappers.HttpClientWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Wrappers.HttpClientWrapper.html",
+          "hash": "tPmVeqPpxgZ4oZeYe4yxiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Wrappers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Wrappers.html",
+          "hash": "+j+1wUIUo6P7oeSmdzE9Jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "cvkuXrrUvVx9pODkZ0kgmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "3ze15Ete+5iQRsZRgxRQPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "mTR3OmwAvzXuP0sguRTDBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "zr+Vk3H9Xpd/TQBOegzhMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "EIhwD2+o19OxxQFCB6JJTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 46,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
