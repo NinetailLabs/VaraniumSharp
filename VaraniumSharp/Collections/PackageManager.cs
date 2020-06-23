@@ -88,6 +88,12 @@ namespace VaraniumSharp.Collections
         }
 
         /// <inheritdoc />
+        public void ClosePackage(string packagePath)
+        {
+            throw new NotImplementedException("This is a new function and is not supported as this class has been deprecated - Instead use https://github.com/NinetailLabs/VaraniumSharp.CompoundDocumentFormatStorage to enable closing of a package");
+        }
+
+        /// <inheritdoc />
         public void Dispose()
         {
             Dispose(true);
