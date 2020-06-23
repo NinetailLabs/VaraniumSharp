@@ -146,7 +146,7 @@ public class PackageManager : IPackageManager, IDisposable</code></pre>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_LockingDictionary.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.LockingDictionary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L280">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L286">View Source</a>
   </span>
   <h4 id="VaraniumSharp_Collections_PackageManager_LockingDictionary" data-uid="VaraniumSharp.Collections.PackageManager.LockingDictionary">LockingDictionary</h4>
   <div class="markdown level1 summary"><p>Dictionary used to lock access to entries in the archive</p>
@@ -176,7 +176,7 @@ public class PackageManager : IPackageManager, IDisposable</code></pre>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_PackageDictionary.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.PackageDictionary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L285">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L291">View Source</a>
   </span>
   <h4 id="VaraniumSharp_Collections_PackageManager_PackageDictionary" data-uid="VaraniumSharp.Collections.PackageManager.PackageDictionary">PackageDictionary</h4>
   <div class="markdown level1 summary"><p>Dictionary to Store package instances</p>
@@ -301,10 +301,44 @@ If the data already exists in the Package it will be overwritten.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_Dispose.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_ClosePackage_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.ClosePackage(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L91">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Collections_PackageManager_ClosePackage_" data-uid="VaraniumSharp.Collections.PackageManager.ClosePackage*"></a>
+  <h4 id="VaraniumSharp_Collections_PackageManager_ClosePackage_System_String_" data-uid="VaraniumSharp.Collections.PackageManager.ClosePackage(System.String)">ClosePackage(String)</h4>
+  <div class="markdown level1 summary"><p>Closes the package for the specified path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClosePackage(string packagePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">packagePath</span></td>
+        <td><p>Path to the Package</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_Dispose.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L97">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_Dispose_" data-uid="VaraniumSharp.Collections.PackageManager.Dispose*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_Dispose" data-uid="VaraniumSharp.Collections.PackageManager.Dispose">Dispose()</h4>
@@ -319,7 +353,7 @@ If the data already exists in the Package it will be overwritten.</p>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L230">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L236">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_Dispose_" data-uid="VaraniumSharp.Collections.PackageManager.Dispose*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_Dispose_System_Boolean_" data-uid="VaraniumSharp.Collections.PackageManager.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -353,7 +387,7 @@ If the data already exists in the Package it will be overwritten.</p>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_RemoveDataFromPackageAsync_System_String_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L105">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L111">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_RemoveDataFromPackageAsync_" data-uid="VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_RemoveDataFromPackageAsync_System_String_System_String_" data-uid="VaraniumSharp.Collections.PackageManager.RemoveDataFromPackageAsync(System.String,System.String)">RemoveDataFromPackageAsync(String, String)</h4>
@@ -411,7 +445,7 @@ If the data does not exist in the package nothing will be done
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_RetrieveDataFromPackageAsync_System_String_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L136">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L142">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_RetrieveDataFromPackageAsync_" data-uid="VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_RetrieveDataFromPackageAsync_System_String_System_String_" data-uid="VaraniumSharp.Collections.PackageManager.RetrieveDataFromPackageAsync(System.String,System.String)">RetrieveDataFromPackageAsync(String, String)</h4>
@@ -483,7 +517,7 @@ If the data does not exist in the package nothing will be done
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_ScrubStorageAsync_System_String_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.ScrubStorageAsync(System.String%2CSystem.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L172">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L178">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_ScrubStorageAsync_" data-uid="VaraniumSharp.Collections.PackageManager.ScrubStorageAsync*"></a>
   <h4 id="VaraniumSharp_Collections_PackageManager_ScrubStorageAsync_System_String_System_Collections_Generic_List_System_String__" data-uid="VaraniumSharp.Collections.PackageManager.ScrubStorageAsync(System.String,System.Collections.Generic.List{System.String})">ScrubStorageAsync(String, List&lt;String&gt;)</h4>

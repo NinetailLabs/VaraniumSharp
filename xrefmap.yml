@@ -452,6 +452,19 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.Collections.PackageManager.AutoFlush
   nameWithType: PackageManager.AutoFlush
+- uid: VaraniumSharp.Collections.PackageManager.ClosePackage(System.String)
+  name: ClosePackage(String)
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_ClosePackage_System_String_
+  commentId: M:VaraniumSharp.Collections.PackageManager.ClosePackage(System.String)
+  fullName: VaraniumSharp.Collections.PackageManager.ClosePackage(System.String)
+  nameWithType: PackageManager.ClosePackage(String)
+- uid: VaraniumSharp.Collections.PackageManager.ClosePackage*
+  name: ClosePackage
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_ClosePackage_
+  commentId: Overload:VaraniumSharp.Collections.PackageManager.ClosePackage
+  isSpec: "True"
+  fullName: VaraniumSharp.Collections.PackageManager.ClosePackage
+  nameWithType: PackageManager.ClosePackage
 - uid: VaraniumSharp.Collections.PackageManager.Dispose
   name: Dispose()
   href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_Dispose
@@ -1663,6 +1676,19 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.AutoFlush
   nameWithType: IPackageManager.AutoFlush
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.ClosePackage(System.String)
+  name: ClosePackage(String)
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_ClosePackage_System_String_
+  commentId: M:VaraniumSharp.Interfaces.Collections.IPackageManager.ClosePackage(System.String)
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.ClosePackage(System.String)
+  nameWithType: IPackageManager.ClosePackage(String)
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.ClosePackage*
+  name: ClosePackage
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_ClosePackage_
+  commentId: Overload:VaraniumSharp.Interfaces.Collections.IPackageManager.ClosePackage
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.ClosePackage
+  nameWithType: IPackageManager.ClosePackage
 - uid: VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync(System.String,System.String)
   name: RemoveDataFromPackageAsync(String, String)
   href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_RemoveDataFromPackageAsync_System_String_System_String_
