@@ -1,4 +1,6 @@
-﻿namespace VaraniumSharp.Wrappers
+﻿using System.IO;
+
+namespace VaraniumSharp.Wrappers
 {
     /// <summary>
     /// Basic information about a file
@@ -10,10 +12,11 @@
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public FileInformation()
+        public FileInformation(FileInfo fileInfo)
         {
-            Filename = string.Empty;
-            Folder = string.Empty;
+            Filename = fileInfo.Name;
+            Folder = fileInfo.Directory.FullName;
+            Size = fileInfo.Length;
         }
 
         #endregion
@@ -23,17 +26,17 @@
         /// <summary>
         /// The name of the file
         /// </summary>
-        public string Filename { get; set; }
+        public string Filename { get; }
 
         /// <summary>
         /// The folder where the file is located
         /// </summary>
-        public string Folder { get; set; }
+        public string Folder { get; }
 
         /// <summary>
         /// The size of the file in bytes
         /// </summary>
-        public long Size { get; set; }
+        public long Size { get; }
 
         #endregion
     }

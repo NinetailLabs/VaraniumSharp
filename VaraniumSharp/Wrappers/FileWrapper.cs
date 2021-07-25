@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System;
+using System.IO;
 using VaraniumSharp.Attributes;
 using VaraniumSharp.Enumerations;
 using VaraniumSharp.Interfaces.Wrappers;
@@ -22,49 +24,57 @@ namespace VaraniumSharp.Wrappers
         /// <inheritdoc />
         public bool FileExists(string filePath)
         {
-            throw new System.NotImplementedException();
+            return File.Exists(filePath);
         }
 
         /// <inheritdoc />
         public FileInformation GetFileInformation(string filePath)
         {
-            throw new System.NotImplementedException();
+            return new FileInformation(new FileInfo(filePath));
         }
 
         /// <inheritdoc />
         public long GetFileSize(string filePath)
         {
-            throw new System.NotImplementedException();
+            return new FileInfo(filePath).Length;
         }
 
         /// <inheritdoc />
         public string GetFileVersion(string filePath)
         {
-            throw new System.NotImplementedException();
+            var fileExtension = Path.GetExtension(filePath);
+            if (fileExtension != ".dll"
+                && fileExtension != ".exe")
+            {
+                throw new InvalidOperationException("Cannot retrieve file version for files that are not DLL or EXE");
+            }
+
+            var versionInfo = FileVersionInfo.GetVersionInfo(filePath);
+            return versionInfo.ProductVersion;
         }
 
         /// <inheritdoc />
         public FileStream OpenFile(string filePath, FileMode mode, FileAccess fileAccess, FileShare fileShare)
         {
-            throw new System.NotImplementedException();
+            return File.Open(filePath, mode, fileAccess, fileShare);
         }
 
         /// <inheritdoc />
         public string ReadAllText(string filePath)
         {
-            throw new System.NotImplementedException();
+            return File.ReadAllText(filePath);
         }
 
         /// <inheritdoc />
         public void RenameFile(string source, string target)
         {
-            throw new System.NotImplementedException();
+            File.Move(source, target);
         }
 
         /// <inheritdoc />
         public void WriteAllText(string filePath, string textToWrite)
         {
-            throw new System.NotImplementedException();
+            File.WriteAllText(filePath, textToWrite);
         }
 
         #endregion
