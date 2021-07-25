@@ -36,6 +36,12 @@ namespace VaraniumSharp.Interfaces.Collections
         Task AddItemToPackageAsync(string packagePath, Stream data, string storagePath);
 
         /// <summary>
+        /// Closes the package for the specified path
+        /// </summary>
+        /// <param name="packagePath">Path to the Package</param>
+        void ClosePackage(string packagePath);
+
+        /// <summary>
         /// Remove data from a Package
         /// <remark>
         /// If the data does not exist in the package nothing will be done

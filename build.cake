@@ -6,17 +6,13 @@
 #load "CakeScripts/base/base.setup.cake"
 #load "CakeScripts/base/base.nuget.restore.cake"
 #load "CakeScripts/base/base.msbuild.cake"
-#load "CakeScripts/base/base.dotnetcoretest.minicover.cake"
+#load "CakeScripts/base/base.altcover.cake"
+#load "CakeScripts/base/base.altcover.cake"
+#load "CakeScripts/base/base.coveralls.upload.cake"
 #load "CakeScripts/base/base.gitreleasenotes.cake"
 #load "CakeScripts/base/base.nuget.pack.cake"
 #load "CakeScripts/base/base.nuget.push.cake"
 #load "CakeScripts/base/base.docfx.cake"
-
-#endregion
-
-#region Variables
-
-var miniCoverProject = "";
 
 #endregion
 
@@ -33,9 +29,6 @@ Task ("VariableSetup")
 		botEmail = "gitbot@ninetaillabs.com";
 		botToken = EnvironmentVariable("BotToken");
 		gitRepo = string.Format("https://github.com/{0}/{1}.git", repoOwner, projectName);
-		
-		miniCoverProject = string.Format("./{0}.Tests/{0}.Tests.csproj", projectName);
-		SetMiniCoverToolsProject(miniCoverProject);
 	});
 
 Task ("Default")
@@ -46,7 +39,7 @@ Task ("Default")
 	.IsDependentOn ("NugetRestore")
 	.IsDependentOn ("Build")
 	.IsDependentOn ("UnitTests")
-	.IsDependentOn ("GenerateReleaseNotes")
+	.IsDependentOn ("CoverageUpload")
 	.IsDependentOn ("NugetPack")
 	.IsDependentOn ("NugetPush")
 	.IsDependentOn ("Documentation")

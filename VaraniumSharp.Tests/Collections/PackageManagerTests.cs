@@ -8,12 +8,28 @@ using FluentAssertions;
 using VaraniumSharp.Collections;
 using VaraniumSharp.EventArguments;
 using Xunit;
+#pragma warning disable 618 // Unit tests are still required to cover the Obsolete FileManager
 
 namespace VaraniumSharp.Tests.Collections
 {
     public class PackageManagerTests
     {
         private const string ResouceDirectory = "Resources";
+
+        [Fact]
+        public void AttemptingToCloseThePackageThrowsANotImplementedException()
+        {
+            // arrange
+            var appPath = AppDomain.CurrentDomain.BaseDirectory;
+            var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
+            var sut = new PackageManager();
+
+            var act = new Action(() => sut.ClosePackage(packagePath));
+
+            // act
+            // assert
+            act.Should().Throw<NotImplementedException>();
+        }
 
         [Fact]
         public async Task AddingDataWithTheSameInteralStoragePathAsExistingDataOverwritesTheExistingData()
