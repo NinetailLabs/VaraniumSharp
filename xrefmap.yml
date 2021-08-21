@@ -1768,6 +1768,12 @@ references:
   commentId: T:VaraniumSharp.Interfaces.DependencyInjection.IContainerFactoryWrapper
   fullName: VaraniumSharp.Interfaces.DependencyInjection.IContainerFactoryWrapper
   nameWithType: IContainerFactoryWrapper
+- uid: VaraniumSharp.Interfaces.DependencyInjection.IContainerFactoryWrapper.Resolve(System.Type)
+  name: Resolve(Type)
+  href: api/VaraniumSharp.Interfaces.DependencyInjection.IContainerFactoryWrapper.html#VaraniumSharp_Interfaces_DependencyInjection_IContainerFactoryWrapper_Resolve_System_Type_
+  commentId: M:VaraniumSharp.Interfaces.DependencyInjection.IContainerFactoryWrapper.Resolve(System.Type)
+  fullName: VaraniumSharp.Interfaces.DependencyInjection.IContainerFactoryWrapper.Resolve(System.Type)
+  nameWithType: IContainerFactoryWrapper.Resolve(Type)
 - uid: VaraniumSharp.Interfaces.DependencyInjection.IContainerFactoryWrapper.Resolve*
   name: Resolve
   href: api/VaraniumSharp.Interfaces.DependencyInjection.IContainerFactoryWrapper.html#VaraniumSharp_Interfaces_DependencyInjection_IContainerFactoryWrapper_Resolve_
