@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace VaraniumSharp.Interfaces.DependencyInjection
 {
@@ -17,6 +18,13 @@ namespace VaraniumSharp.Interfaces.DependencyInjection
         /// <typeparam name="TService">Service to resolve</typeparam>
         /// <returns>Resolved service</returns>
         TService Resolve<TService>();
+
+        /// <summary>
+        /// Resolve a Service from the Container
+        /// </summary>
+        /// <param name="type">The type of the Service to resolve</param>
+        /// <returns>The Service as an object</returns>
+        object Resolve(Type type);
 
         /// <summary>
         /// Resolve Services from the container via a shared interface of parent class
