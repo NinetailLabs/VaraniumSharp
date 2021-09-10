@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <None Remove="FodyWeavers.xml" />
+    <None Remove="Resources\DirectoryToEnumerate\File1.txt" />
+    <None Remove="Resources\DirectoryToEnumerate\File2.txt" />
     <None Remove="Resources\File1.txt" />
     <None Remove="Resources\File2.txt" />
     <None Remove="SemVer.MSBuild.props" />
@@ -13,6 +15,12 @@
 
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <Content Include="Resources\DirectoryToEnumerate\File1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DirectoryToEnumerate\File2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\File1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
