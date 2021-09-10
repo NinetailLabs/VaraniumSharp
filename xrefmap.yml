@@ -1837,6 +1837,51 @@ references:
   commentId: N:VaraniumSharp.Interfaces.Wrappers
   fullName: VaraniumSharp.Interfaces.Wrappers
   nameWithType: VaraniumSharp.Interfaces.Wrappers
+- uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper
+  name: IDirectoryWrapper
+  href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html
+  commentId: T:VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper
+  fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper
+  nameWithType: IDirectoryWrapper
+- uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.CreateDirectory(System.String)
+  name: CreateDirectory(String)
+  href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html#VaraniumSharp_Interfaces_Wrappers_IDirectoryWrapper_CreateDirectory_System_String_
+  commentId: M:VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.CreateDirectory(System.String)
+  fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.CreateDirectory(System.String)
+  nameWithType: IDirectoryWrapper.CreateDirectory(String)
+- uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.CreateDirectory*
+  name: CreateDirectory
+  href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html#VaraniumSharp_Interfaces_Wrappers_IDirectoryWrapper_CreateDirectory_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.CreateDirectory
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.CreateDirectory
+  nameWithType: IDirectoryWrapper.CreateDirectory
+- uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.EnumerateFiles(System.String)
+  name: EnumerateFiles(String)
+  href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html#VaraniumSharp_Interfaces_Wrappers_IDirectoryWrapper_EnumerateFiles_System_String_
+  commentId: M:VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.EnumerateFiles(System.String)
+  fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.EnumerateFiles(System.String)
+  nameWithType: IDirectoryWrapper.EnumerateFiles(String)
+- uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.EnumerateFiles*
+  name: EnumerateFiles
+  href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html#VaraniumSharp_Interfaces_Wrappers_IDirectoryWrapper_EnumerateFiles_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.EnumerateFiles
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.EnumerateFiles
+  nameWithType: IDirectoryWrapper.EnumerateFiles
+- uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.Exists(System.String)
+  name: Exists(String)
+  href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html#VaraniumSharp_Interfaces_Wrappers_IDirectoryWrapper_Exists_System_String_
+  commentId: M:VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.Exists(System.String)
+  fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.Exists(System.String)
+  nameWithType: IDirectoryWrapper.Exists(String)
+- uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.Exists*
+  name: Exists
+  href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html#VaraniumSharp_Interfaces_Wrappers_IDirectoryWrapper_Exists_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.Exists
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.Exists
+  nameWithType: IDirectoryWrapper.Exists
 - uid: VaraniumSharp.Interfaces.Wrappers.IFileWrapper
   name: IFileWrapper
   href: api/VaraniumSharp.Interfaces.Wrappers.IFileWrapper.html
@@ -2110,6 +2155,51 @@ references:
   commentId: N:VaraniumSharp.Wrappers
   fullName: VaraniumSharp.Wrappers
   nameWithType: VaraniumSharp.Wrappers
+- uid: VaraniumSharp.Wrappers.DirectoryWrapper
+  name: DirectoryWrapper
+  href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html
+  commentId: T:VaraniumSharp.Wrappers.DirectoryWrapper
+  fullName: VaraniumSharp.Wrappers.DirectoryWrapper
+  nameWithType: DirectoryWrapper
+- uid: VaraniumSharp.Wrappers.DirectoryWrapper.CreateDirectory(System.String)
+  name: CreateDirectory(String)
+  href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html#VaraniumSharp_Wrappers_DirectoryWrapper_CreateDirectory_System_String_
+  commentId: M:VaraniumSharp.Wrappers.DirectoryWrapper.CreateDirectory(System.String)
+  fullName: VaraniumSharp.Wrappers.DirectoryWrapper.CreateDirectory(System.String)
+  nameWithType: DirectoryWrapper.CreateDirectory(String)
+- uid: VaraniumSharp.Wrappers.DirectoryWrapper.CreateDirectory*
+  name: CreateDirectory
+  href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html#VaraniumSharp_Wrappers_DirectoryWrapper_CreateDirectory_
+  commentId: Overload:VaraniumSharp.Wrappers.DirectoryWrapper.CreateDirectory
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.DirectoryWrapper.CreateDirectory
+  nameWithType: DirectoryWrapper.CreateDirectory
+- uid: VaraniumSharp.Wrappers.DirectoryWrapper.EnumerateFiles(System.String)
+  name: EnumerateFiles(String)
+  href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html#VaraniumSharp_Wrappers_DirectoryWrapper_EnumerateFiles_System_String_
+  commentId: M:VaraniumSharp.Wrappers.DirectoryWrapper.EnumerateFiles(System.String)
+  fullName: VaraniumSharp.Wrappers.DirectoryWrapper.EnumerateFiles(System.String)
+  nameWithType: DirectoryWrapper.EnumerateFiles(String)
+- uid: VaraniumSharp.Wrappers.DirectoryWrapper.EnumerateFiles*
+  name: EnumerateFiles
+  href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html#VaraniumSharp_Wrappers_DirectoryWrapper_EnumerateFiles_
+  commentId: Overload:VaraniumSharp.Wrappers.DirectoryWrapper.EnumerateFiles
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.DirectoryWrapper.EnumerateFiles
+  nameWithType: DirectoryWrapper.EnumerateFiles
+- uid: VaraniumSharp.Wrappers.DirectoryWrapper.Exists(System.String)
+  name: Exists(String)
+  href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html#VaraniumSharp_Wrappers_DirectoryWrapper_Exists_System_String_
+  commentId: M:VaraniumSharp.Wrappers.DirectoryWrapper.Exists(System.String)
+  fullName: VaraniumSharp.Wrappers.DirectoryWrapper.Exists(System.String)
+  nameWithType: DirectoryWrapper.Exists(String)
+- uid: VaraniumSharp.Wrappers.DirectoryWrapper.Exists*
+  name: Exists
+  href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html#VaraniumSharp_Wrappers_DirectoryWrapper_Exists_
+  commentId: Overload:VaraniumSharp.Wrappers.DirectoryWrapper.Exists
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.DirectoryWrapper.Exists
+  nameWithType: DirectoryWrapper.Exists
 - uid: VaraniumSharp.Wrappers.FileInformation
   name: FileInformation
   href: api/VaraniumSharp.Wrappers.FileInformation.html
