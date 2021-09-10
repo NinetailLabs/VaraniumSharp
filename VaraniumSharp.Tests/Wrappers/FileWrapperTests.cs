@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System;
+using System.Threading.Tasks;
 using Xunit;
 using VaraniumSharp.Wrappers;
 using FluentAssertions;
@@ -75,7 +76,7 @@ namespace VaraniumSharp.Tests.Wrappers
             // assert
             var externalInfo = new FileInfo(location);
             externalInfo.Should().NotBeNull();
-            result.Folder.Should().Be(externalInfo.Directory.FullName);
+            result.Folder.Should().Be(externalInfo.Directory?.FullName);
             result.Filename.Should().Be(externalInfo.Name);
             result.Size.Should().Be(externalInfo.Length);
         }
@@ -148,6 +149,23 @@ namespace VaraniumSharp.Tests.Wrappers
         }
 
         [Fact]
+        public async Task AllTextIsCorrectlyReadFromTheTextFileAsync()
+        {
+            // arrange
+            const string expectedText = "Hello\r\nWorld!";
+            var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "TextFile.txt");
+            await File.WriteAllTextAsync(filePath, expectedText);
+
+            var sut = new FileWrapper();
+
+            // act
+            var result = await sut.ReadAllTextAsync(filePath);
+
+            // assert
+            result.Should().Be(expectedText);
+        }
+
+        [Fact]
         public void RenamingFileCorrectlyRenamesTheSelectedFile()
         {
             // arrange
@@ -183,14 +201,35 @@ namespace VaraniumSharp.Tests.Wrappers
             var sut = new FileWrapper();
 
             // act
-            sut.WriteAllText(fileName, textToWrite);
+            sut.WriteAllText(filePath, textToWrite);
 
             // assert
-            File.Exists(fileName).Should().BeTrue();
-            var fileText = File.ReadAllText(fileName);
+            File.Exists(filePath).Should().BeTrue();
+            var fileText = File.ReadAllText(filePath);
             fileText.Should().Be(textToWrite);
 
-            File.Delete(fileName);
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public async Task TextIsCorrectlyWrittenToFileAsync()
+        {
+            // arrange
+            const string textToWrite = "Hello World\r\nHope you are fine";
+            var fileName = $"{Guid.NewGuid()}.txt";
+            var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
+
+            var sut = new FileWrapper();
+
+            // act
+            await sut.WriteAllTextAsync(filePath, textToWrite);
+
+            // assert
+            File.Exists(filePath).Should().BeTrue();
+            var fileText = await File.ReadAllTextAsync(filePath);
+            fileText.Should().Be(textToWrite);
+
+            File.Delete(filePath);
         }
     }
 }
