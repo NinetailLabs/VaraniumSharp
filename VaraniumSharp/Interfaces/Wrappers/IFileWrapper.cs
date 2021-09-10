@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Threading.Tasks;
 using VaraniumSharp.Wrappers;
 
 namespace VaraniumSharp.Interfaces.Wrappers
@@ -78,5 +79,23 @@ namespace VaraniumSharp.Interfaces.Wrappers
         void WriteAllText(string filePath, string textToWrite);
 
         #endregion
+
+#if NETSTANDARD2_1_OR_GREATER
+
+        /// <summary>
+        /// Read text from a file. 
+        /// </summary>
+        /// <param name="filePath">Path to the file from which text should be read</param>
+        /// <returns>All text that was in the file</returns>
+        Task<string> ReadAllTextAsync(string filePath);
+
+        /// <summary>
+        /// Write text to a file.
+        /// If the file does not exist it will be created, if the file exists it will be overwritten
+        /// </summary>
+        /// <param name="filePath">Path to the file to which text should be written</param>
+        /// <param name="textToWrite">The text to write to the file</param>
+        Task WriteAllTextAsync(string filePath, string textToWrite);
+#endif
     }
 }

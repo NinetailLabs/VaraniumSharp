@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using VaraniumSharp.Attributes;
 using VaraniumSharp.Enumerations;
 using VaraniumSharp.Interfaces.Wrappers;
@@ -78,5 +79,20 @@ namespace VaraniumSharp.Wrappers
         }
 
         #endregion
+
+#if NETSTANDARD2_1_OR_GREATER
+
+        /// <inheritdoc />
+        public async Task<string> ReadAllTextAsync(string filePath)
+        {
+            return await File.ReadAllTextAsync(filePath);
+        }
+
+        /// <inheritdoc />
+        public async Task WriteAllTextAsync(string filePath, string textToWrite)
+        {
+            await File.WriteAllTextAsync(filePath, textToWrite);
+        }
+#endif
     }
 }

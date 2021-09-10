@@ -6,8 +6,6 @@ namespace VaraniumSharp.Tests.Configuration
 {
     public class ReconfigurableSettingBaseTests
     {
-        #region Public Methods
-
         [Fact]
         public void AdjustingValuesInInheritedClassCorrectlyUpdatesBaseProperties()
         {
@@ -110,7 +108,5 @@ namespace VaraniumSharp.Tests.Configuration
             sut.DataCanBePersisted.Should().BeFalse();
             sut.UnsavedChanges.Should().BeFalse();
         }
-
-        #endregion
     }
 }
