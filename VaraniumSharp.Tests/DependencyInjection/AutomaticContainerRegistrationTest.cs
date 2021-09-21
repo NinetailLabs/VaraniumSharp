@@ -114,6 +114,19 @@ namespace VaraniumSharp.Tests.DependencyInjection
         {}
 
         [Fact]
+        public void AutoResolveCorrectlyInvokesImplementation()
+        {
+            // arrange
+            var sut = new AutomaticRegistrationMock();
+
+            // act
+            sut.AutoResolveRequiredClasses();
+            
+            // assert
+            sut.AutoResolveAtStartupCalled.Should().BeTrue();
+        }
+
+        [Fact]
         public void ConcretionRegistrationAvoidsAbstractChildClasses()
         {
             // arrange
