@@ -1095,6 +1095,19 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutomaticContainerRegistration
   nameWithType: AutomaticContainerRegistration.AutomaticContainerRegistration
+- uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveRequiredClasses
+  name: AutoResolveRequiredClasses()
+  href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_AutoResolveRequiredClasses
+  commentId: M:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveRequiredClasses
+  fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveRequiredClasses()
+  nameWithType: AutomaticContainerRegistration.AutoResolveRequiredClasses()
+- uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveRequiredClasses*
+  name: AutoResolveRequiredClasses
+  href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_AutoResolveRequiredClasses_
+  commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveRequiredClasses
+  isSpec: "True"
+  fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveRequiredClasses
+  nameWithType: AutomaticContainerRegistration.AutoResolveRequiredClasses
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveStartupInstance
   name: AutoResolveStartupInstance()
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_AutoResolveStartupInstance
