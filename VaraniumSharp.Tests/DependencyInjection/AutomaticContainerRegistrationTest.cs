@@ -33,6 +33,8 @@ namespace VaraniumSharp.Tests.DependencyInjection
 
             public IEnumerable<Type> DiscoveredTypes => ClassesToRegister;
 
+            public IEnumerable<Type> AutoRegisteredTypes => ClassesToAutoRegister;
+
             public bool RegisterClassesCalled { get; private set; }
 
             public bool RegisterConcretionClassesCalled { get; private set; }
@@ -75,6 +77,10 @@ namespace VaraniumSharp.Tests.DependencyInjection
             #endregion
         }
 
+        [AutomaticContainerRegistration(typeof(IAutoInjectInterface), AutoResolveAtStartup = true)]
+        private class StartupRegistrationDummy
+        { }
+
         [AutomaticContainerRegistration(typeof(AutomaticRegistrationDummy))]
         private class AutomaticRegistrationDummy
         {}
@@ -88,6 +94,9 @@ namespace VaraniumSharp.Tests.DependencyInjection
 
         [AutomaticConcretionContainerRegistration]
         private interface IInterfaceDummy
+        {}
+
+        private interface IAutoInjectInterface
         {}
 
         private interface IDeepInterfaceDummy : IInterfaceDummy
@@ -124,6 +133,19 @@ namespace VaraniumSharp.Tests.DependencyInjection
             
             // assert
             sut.AutoResolveAtStartupCalled.Should().BeTrue();
+        }
+
+        [Fact]
+        public void AutoResolveRegistrationForInterfacesIsCorrectlyRegistered()
+        {
+            // arrange
+            var sut = new AutomaticRegistrationMock();
+            
+            // act
+            sut.RetrieveClassesRequiringRegistration(true);
+
+            // assert
+            sut.AutoRegisteredTypes.Should().Contain(typeof(IAutoInjectInterface));
         }
 
         [Fact]
