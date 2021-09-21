@@ -11,7 +11,7 @@ namespace VaraniumSharp.Attributes
         #region Constructor
 
         /// <summary>
-        /// Construcor that allows setting Reuse
+        /// Constructor that allows setting Reuse
         /// </summary>
         /// <param name="reuse">Indicate reuse policy for the service</param>
         /// <param name="multipleConstructors">Indicate if the service has multiple constructors</param>
@@ -24,6 +24,11 @@ namespace VaraniumSharp.Attributes
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Indicate if the service should be automatically resolved during startup.
+        /// </summary>
+        public bool AutoResolveAtStartup { get; set; }
 
         /// <summary>
         /// Indicate if the service has multiple constructors.

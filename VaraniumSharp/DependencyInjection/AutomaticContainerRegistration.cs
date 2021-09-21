@@ -21,12 +21,18 @@ namespace VaraniumSharp.DependencyInjection
         {
             ClassesToRegister = new List<Type>();
             ConcretionClassesToRegister = new Dictionary<Type, List<Type>>();
+            ClassesToAutoRegister = new List<Type>();
             _logger = StaticLogger.GetLogger<AutomaticContainerRegistration>();
         }
 
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Contains all classes that should be auto-resolved after container construction
+        /// </summary>
+        protected List<Type> ClassesToAutoRegister { get; }
 
         /// <summary>
         /// Contains all classes that have the AutomaticContainerRegistrationAttribute
@@ -82,18 +88,24 @@ namespace VaraniumSharp.DependencyInjection
                     {
                         Class = x.Item2.FullName,
                         x.Item1.ServiceType,
-                        x.Item1.Priority
+                        x.Item1.Priority,
+                        x.Item1.AutoResolveAtStartup
                     });
 
                 _logger.LogDebug(
                     "Discovered {AttributeImplementations} that implement the AutomaticContainerRegistration attribute. {@DetectedTypes}",
                     classList.Count, detectedTypes);
 
-                ClassesToRegister.AddRange(classList
+                var classesToRegister = classList
                     .GroupBy(x => x.Item1.ServiceType)
                     .SelectMany(x =>
-                        x.Where(z => z.Item1.Priority == x.Max(q => q.Item1.Priority))
-                            .Select(z => z.Item2)));
+                        x.Where(z => z.Item1.Priority == x.Max(q => q.Item1.Priority)))
+                            .ToList();
+                ClassesToRegister.AddRange(classesToRegister.Select(z => z.Item2));
+
+                ClassesToAutoRegister.AddRange(classesToRegister
+                    .Where(x => x.Item1.AutoResolveAtStartup)
+                    .Select(x => x.Item2));
 
                 var registrationClasses = classList.Select(x =>
                     new
@@ -118,7 +130,7 @@ namespace VaraniumSharp.DependencyInjection
         }
 
         /// <summary>
-        /// Call to retrieve classes that request Automatic Concretion registation
+        /// Call to retrieve classes that request Automatic Concretion registration
         /// </summary>
         /// <param name="handleRegistration">Set to false to manually register class, otherwise use true</param>
         public virtual void RetrieveConcretionClassesRequiringRegistration(bool handleRegistration)
@@ -139,13 +151,21 @@ namespace VaraniumSharp.DependencyInjection
 
                 foreach (var @class in classes)
                 {
+                    var attribute = (AutomaticConcretionContainerRegistrationAttribute)@class
+                        .GetCustomAttributes(typeof(AutomaticConcretionContainerRegistrationAttribute), false)
+                        .First();
+
                     var children = AppDomain.CurrentDomain.GetAssemblies().SelectMany(t => t.GetTypes())
                         .Where(
                             x =>
-                                !x.IsInterface && !x.IsAbstract && (x.IsSubclassOf(@class) ||
-                                                                    x.GetInterfaces().Contains(@class))).ToList();
+                                !x.IsInterface && !x.IsAbstract && (x.IsSubclassOf(@class) 
+                                                                    || x.GetInterfaces().Contains(@class))).ToList();
 
                     ConcretionClassesToRegister.Add(@class, children);
+                    if (@attribute.AutoResolveAtStartup)
+                    {
+                        ClassesToAutoRegister.Add(@class);
+                    }
                 }
 
                 var concretionClasses = ConcretionClassesToRegister.Select(x =>
@@ -181,6 +201,11 @@ namespace VaraniumSharp.DependencyInjection
         /// Register concretion classes with Container
         /// </summary>
         protected abstract void RegisterConcretionClasses();
+
+        /// <summary>
+        /// Request that auto-resolve instance are resolved
+        /// </summary>
+        protected abstract void AutoResolveStartupInstance();
 
         /// <summary>
         /// Logger instance

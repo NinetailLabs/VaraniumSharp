@@ -10,22 +10,41 @@ namespace VaraniumSharp.Tests.Attributes
     {
         [AutomaticContainerRegistration(typeof(DefaultTestDummy))]
         private class DefaultTestDummy
-        { }
+        {}
 
         private interface IInterface1
-        { }
+        {}
 
         [AutomaticContainerRegistration(typeof(IInterface1), ServiceReuse.Singleton)]
         private class SingletonTestDummy : IInterface1
-        { }
+        {}
 
         [AutomaticContainerRegistration(typeof(MultipleConstructorDummy), ServiceReuse.Default, true)]
         private class MultipleConstructorDummy
-        { }
+        {}
 
         [AutomaticContainerRegistration(typeof(HighPriorityDummy), Priority = 1)]
         private class HighPriorityDummy
-        { }
+        {}
+
+        [AutomaticContainerRegistration(typeof(AutoStartupResolve), AutoResolveAtStartup = true)]
+        private class AutoStartupResolve
+        {}
+
+        [Fact]
+        public void AutomaticResolutionAtStartUpIsSetCorrectly()
+        {
+            // arrange
+            // act
+            var instance = new AutoStartupResolve();
+
+            // assert
+            var attribute = (AutomaticContainerRegistrationAttribute)instance
+                .GetType()
+                .GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false)
+                .First();
+            attribute.AutoResolveAtStartup.Should().BeTrue();
+        }
 
         [Fact]
         public void ReadCustomAttributeForMultipleConstructorSetup()
@@ -39,7 +58,7 @@ namespace VaraniumSharp.Tests.Attributes
                 .GetType()
                 .GetCustomAttributes(typeof(AutomaticContainerRegistrationAttribute), false)
                 .First();
-            attribute?.MultipleConstructors.Should().BeTrue();
+            attribute.MultipleConstructors.Should().BeTrue();
         }
 
         [Fact]
