@@ -23,6 +23,8 @@ namespace VaraniumSharp.Tests.DependencyInjection
 
             #region Properties
 
+            public bool AutoResolveAtStartupCalled { get; private set; }
+
             public int ConcretionBaseClasses => ConcretionClassesToRegister.Count;
 
             public int ConcretionClassesRegistered => ConcretionClassesToRegister.Values.Count;
@@ -55,6 +57,11 @@ namespace VaraniumSharp.Tests.DependencyInjection
 
             #region Private Methods
 
+            protected override void AutoResolveStartupInstance()
+            {
+                AutoResolveAtStartupCalled = true;
+            }
+
             protected override void RegisterClasses()
             {
                 RegisterClassesCalled = true;
@@ -70,41 +77,41 @@ namespace VaraniumSharp.Tests.DependencyInjection
 
         [AutomaticContainerRegistration(typeof(AutomaticRegistrationDummy))]
         private class AutomaticRegistrationDummy
-        { }
+        {}
 
         [AutomaticConcretionContainerRegistration]
         private abstract class BaseClassDummy
-        { }
+        {}
 
         private class ConcretionClassDummy : BaseClassDummy
-        { }
+        {}
 
         [AutomaticConcretionContainerRegistration]
         private interface IInterfaceDummy
-        { }
+        {}
 
         private interface IDeepInterfaceDummy : IInterfaceDummy
-        { }
+        {}
 
         private abstract class InheritingAbstractDummy : BaseClassDummy
-        { }
+        {}
 
         private class DoubleInterfaceImplementationDummy : IDeepInterfaceDummy
-        { }
+        {}
 
         private class InterfaceImplementationDummy : IInterfaceDummy
-        { }
+        {}
 
         private interface IMultiImplementationDummy
-        { }
+        {}
 
         [AutomaticContainerRegistration(typeof(IMultiImplementationDummy))]
         private class DefaultPriorityDummy : IMultiImplementationDummy
-        { }
+        {}
 
         [AutomaticContainerRegistration(typeof(IMultiImplementationDummy), Priority = 2)]
         private class HigherPriorityDummy : IMultiImplementationDummy
-        { }
+        {}
 
         [Fact]
         public void ConcretionRegistrationAvoidsAbstractChildClasses()
