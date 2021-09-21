@@ -49,6 +49,18 @@ namespace VaraniumSharp.DependencyInjection
         #region Public Methods
 
         /// <summary>
+        /// Call to register class that have auto startup resolution set to true
+        /// </summary>
+        public virtual void AutoResolveRequiredClasses()
+        {
+            _logger.LogDebug("Running auto-resolve for {AutoResolveCount} classes", ClassesToAutoRegister.Capacity);
+            
+            AutoResolveStartupInstance();
+
+            _logger.LogDebug("Auto-resolve completed");
+        }
+
+        /// <summary>
         /// Resolve a Service from the Container
         /// </summary>
         /// <typeparam name="TService">Service to resolve</typeparam>
