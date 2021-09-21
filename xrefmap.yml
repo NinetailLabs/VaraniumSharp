@@ -120,6 +120,19 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutomaticContainerRegistrationBaseAttribute
   nameWithType: AutomaticContainerRegistrationBaseAttribute.AutomaticContainerRegistrationBaseAttribute
+- uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutoResolveAtStartup
+  name: AutoResolveAtStartup
+  href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute_AutoResolveAtStartup
+  commentId: P:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutoResolveAtStartup
+  fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutoResolveAtStartup
+  nameWithType: AutomaticContainerRegistrationBaseAttribute.AutoResolveAtStartup
+- uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutoResolveAtStartup*
+  name: AutoResolveAtStartup
+  href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute_AutoResolveAtStartup_
+  commentId: Overload:VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutoResolveAtStartup
+  isSpec: "True"
+  fullName: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.AutoResolveAtStartup
+  nameWithType: AutomaticContainerRegistrationBaseAttribute.AutoResolveAtStartup
 - uid: VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.MultipleConstructors
   name: MultipleConstructors
   href: api/VaraniumSharp.Attributes.AutomaticContainerRegistrationBaseAttribute.html#VaraniumSharp_Attributes_AutomaticContainerRegistrationBaseAttribute_MultipleConstructors
@@ -1082,6 +1095,32 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutomaticContainerRegistration
   nameWithType: AutomaticContainerRegistration.AutomaticContainerRegistration
+- uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveStartupInstance
+  name: AutoResolveStartupInstance()
+  href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_AutoResolveStartupInstance
+  commentId: M:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveStartupInstance
+  fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveStartupInstance()
+  nameWithType: AutomaticContainerRegistration.AutoResolveStartupInstance()
+- uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveStartupInstance*
+  name: AutoResolveStartupInstance
+  href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_AutoResolveStartupInstance_
+  commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveStartupInstance
+  isSpec: "True"
+  fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.AutoResolveStartupInstance
+  nameWithType: AutomaticContainerRegistration.AutoResolveStartupInstance
+- uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ClassesToAutoRegister
+  name: ClassesToAutoRegister
+  href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_ClassesToAutoRegister
+  commentId: P:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ClassesToAutoRegister
+  fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ClassesToAutoRegister
+  nameWithType: AutomaticContainerRegistration.ClassesToAutoRegister
+- uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ClassesToAutoRegister*
+  name: ClassesToAutoRegister
+  href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_ClassesToAutoRegister_
+  commentId: Overload:VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ClassesToAutoRegister
+  isSpec: "True"
+  fullName: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ClassesToAutoRegister
+  nameWithType: AutomaticContainerRegistration.ClassesToAutoRegister
 - uid: VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.ClassesToRegister
   name: ClassesToRegister
   href: api/VaraniumSharp.DependencyInjection.AutomaticContainerRegistration.html#VaraniumSharp_DependencyInjection_AutomaticContainerRegistration_ClassesToRegister
