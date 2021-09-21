@@ -117,7 +117,7 @@ namespace VaraniumSharp.DependencyInjection
 
                 ClassesToAutoRegister.AddRange(classesToRegister
                     .Where(x => x.Item1.AutoResolveAtStartup)
-                    .Select(x => x.Item2));
+                    .Select(x => x.Item1.ServiceType));
 
                 var registrationClasses = classList.Select(x =>
                     new
