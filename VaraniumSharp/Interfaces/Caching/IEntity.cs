@@ -1,5 +1,4 @@
-﻿#if NETSTANDARD2_1_OR_GREATER
-namespace VaraniumSharp.Interfaces.Caching
+﻿namespace VaraniumSharp.Interfaces.Caching
 {
     /// <summary>
     /// Base entity for storing items in the data store
@@ -16,4 +15,3 @@ namespace VaraniumSharp.Interfaces.Caching
         #endregion
     }
 }
-#endif

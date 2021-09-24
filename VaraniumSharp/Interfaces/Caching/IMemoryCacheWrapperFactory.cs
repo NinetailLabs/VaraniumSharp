@@ -7,7 +7,7 @@ namespace VaraniumSharp.Interfaces.Caching
     /// <summary>
     /// Creates and initializes instances of <see cref="IMemoryCacheWrapper{T}"/>
     /// </summary>
-    public interface IMemoryCacheWrapperFactory
+    public interface IMemoryCacheWrapperFactory<T> where T: class
     {
         #region Public Methods
 
@@ -18,7 +18,7 @@ namespace VaraniumSharp.Interfaces.Caching
         /// <param name="policy">Cache eviction policy</param>
         /// <param name="dataRetrievalFunc">Function used to retrieve items if they are not in the cache</param>
         /// <returns>Initialized instance of MemoryCacheWrapper</returns>
-        IMemoryCacheWrapper<T> Create<T>(CacheItemPolicy policy, Func<string, Task<T>> dataRetrievalFunc);
+        IMemoryCacheWrapper<T> Create(CacheItemPolicy policy, Func<string, Task<T>> dataRetrievalFunc);
 
         /// <summary>
         /// Creates a new instance of the MemoryCacheWrapper and initialize it with a default cache policy.
@@ -27,7 +27,7 @@ namespace VaraniumSharp.Interfaces.Caching
         /// <typeparam name="T">Type of items that will be stored in the cache</typeparam>
         /// <param name="dataRetrievalFunc">Function used to retrieve items if they are not in the cache</param>
         /// <returns>Initialized instance of MemoryCacheWrapper</returns>
-        IMemoryCacheWrapper<T> CreateWithDefaultSlidingPolicy<T>(Func<string, Task<T>> dataRetrievalFunc);
+        IMemoryCacheWrapper<T> CreateWithDefaultSlidingPolicy(Func<string, Task<T>> dataRetrievalFunc);
 
         #endregion
     }

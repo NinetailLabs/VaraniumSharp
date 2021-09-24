@@ -1,4 +1,7 @@
-﻿using System;
+﻿#if NETSTANDARD2_1_OR_GREATER
+#nullable enable
+#endif
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +21,7 @@ namespace VaraniumSharp.Caching
     /// </summary>
     /// <typeparam name="T">Type of items that will be stored in the cache</typeparam>
     [AutomaticContainerRegistration(typeof(IMemoryCacheWrapper<>))]
-    public class MemoryCacheWrapper<T> : IMemoryCacheWrapper<T>
+    public class MemoryCacheWrapper<T> : IMemoryCacheWrapper<T> where T: class
     {
         #region Constructor
 
@@ -37,7 +40,11 @@ namespace VaraniumSharp.Caching
         #region Events
 
         /// <summary>Occurs when a property value changes.</summary>
+#if NETSTANDARD2_1_OR_GREATER
+        public event PropertyChangedEventHandler? PropertyChanged;
+#else
         public event PropertyChangedEventHandler PropertyChanged;
+#endif
 
         #endregion
 
@@ -92,7 +99,11 @@ namespace VaraniumSharp.Caching
         /// Func that will be used to retrieve data if it is not available in the cache
         /// <exception cref="InvalidOperationException">Thrown if the Func has already been set</exception>
         /// </summary>
+#if NETSTANDARD2_1_OR_GREATER
+        public Func<string, Task<T?>> DataRetrievalFunc
+#else
         public Func<string, Task<T>> DataRetrievalFunc
+#endif
         {
             get => _dataRetrievalFunc;
             set
@@ -114,9 +125,9 @@ namespace VaraniumSharp.Caching
         /// </summary>
         public long ItemsInCache { get; private set; }
 
-        #endregion
+#endregion
 
-        #region Public Methods
+#region Public Methods
 
         /// <inheritdoc />
         public async Task<int> BatchAddToCacheAsync(List<string> keys)
@@ -136,7 +147,7 @@ namespace VaraniumSharp.Caching
                 {
                     var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
                     lockedSemaphores.TryAdd(key, semaphore);
-                    semaphore.Wait();
+                    await semaphore.WaitAsync();
 
                     if (_memoryCache.Contains(key))
                     {
@@ -149,7 +160,9 @@ namespace VaraniumSharp.Caching
                     }
                 }
 
-                var batchResult = await _batchRetrievalFunc.Invoke(keysToRetrieve.ToList());
+                var batchResult = await _batchRetrievalFunc
+                    .Invoke(keysToRetrieve.ToList())
+                    .ConfigureAwait(false);
 
                 foreach(var entry in batchResult)
                 {
@@ -214,7 +227,11 @@ namespace VaraniumSharp.Caching
         /// <exception cref="InvalidOperationException">Thrown if CachePolicy or DataRetrievalFunc has not been set</exception>
         /// <param name="key">The key under which the item is stored</param>
         /// <returns>Cached copy of T</returns>
+#if NETSTANDARD2_1_OR_GREATER
+        public async Task<T?> GetAsync(string key)
+#else
         public async Task<T> GetAsync(string key)
+#endif
         {
             if (!_policyAlreadySet || !_funcAlreadySet)
             {
@@ -239,12 +256,32 @@ namespace VaraniumSharp.Caching
             }
 
             var result = await DataRetrievalFunc.Invoke(key);
-            _memoryCache.Add(key, result, CachePolicy);
-            ItemsInCache = _memoryCache.GetCount();
+            if (result != null)
+            {
+                _memoryCache.Add(key, result, CachePolicy);
+                ItemsInCache = _memoryCache.GetCount();
+            }
 
             semaphore.Release();
 
             return result;
+        }
+
+        /// <inheritdoc />
+        public async Task<Dictionary<string, T>> GetAsync(List<string> keys)
+        {
+            if (!_policyAlreadySet || !_funcAlreadySet)
+            {
+                var error = !_policyAlreadySet ? "Cache Policy" : "DataRetrievalFunc";
+                throw new InvalidOperationException($"{error} has not been set");
+            }
+
+            await BatchAddToCacheAsync(keys).ConfigureAwait(false);
+
+            var response = _memoryCache.GetValues(keys);
+            return response
+                .Select(x => new KeyValuePair<string, T>(x.Key, (T)x.Value))
+                .ToDictionary(pair => pair.Key, pair => pair.Value);
         }
 
         /// <summary>
@@ -269,9 +306,9 @@ namespace VaraniumSharp.Caching
             return removed;
         }
 
-        #endregion
+#endregion
 
-        #region Variables
+#region Variables
 
         /// <summary>
         /// Dictionary used to lock cache access per key
@@ -311,7 +348,11 @@ namespace VaraniumSharp.Caching
         /// <summary>
         /// Func used to retrieve entries that are not in the cache
         /// </summary>
+#if NETSTANDARD2_1_OR_GREATER
+        private Func<string, Task<T?>> _dataRetrievalFunc;
+#else
         private Func<string, Task<T>> _dataRetrievalFunc;
+#endif
 
         /// <summary>
         /// Indicates if the <see cref="DataRetrievalFunc"/> has already been set
@@ -323,6 +364,6 @@ namespace VaraniumSharp.Caching
         /// </summary>
         private bool _policyAlreadySet;
 
-        #endregion
+#endregion
     }
 }

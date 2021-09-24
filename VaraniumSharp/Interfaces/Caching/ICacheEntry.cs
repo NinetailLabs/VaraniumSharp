@@ -1,5 +1,4 @@
-﻿#if NETSTANDARD2_1_OR_GREATER
-namespace VaraniumSharp.Interfaces.Caching
+﻿namespace VaraniumSharp.Interfaces.Caching
 {
     /// <summary>
     /// Entry for use in ICacheManagerBase
@@ -25,4 +24,3 @@ namespace VaraniumSharp.Interfaces.Caching
         #endregion
     }
 }
-#endif

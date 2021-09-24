@@ -1,6 +1,6 @@
 ﻿#if NETSTANDARD2_1_OR_GREATER
 #nullable enable
-using System;
+#endif
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,15 +11,6 @@ namespace VaraniumSharp.Interfaces.Caching
     /// </summary>
     public interface ICacheBase<T> where T : class, ICacheEntry
     {
-        #region Events
-
-        /// <summary>
-        /// Notify listeners that an entry has changed
-        /// </summary>
-        event EventHandler<T>? EntryChanged;
-
-        #endregion
-
         #region Properties
 
         /// <summary>
@@ -27,9 +18,9 @@ namespace VaraniumSharp.Interfaces.Caching
         /// </summary>
         long ItemsInCache { get; }
 
-        #endregion
+#endregion
 
-        #region Public Methods
+#region Public Methods
 
         /// <summary>
         /// Check if the cache contains an entry for a specific keys
@@ -49,7 +40,11 @@ namespace VaraniumSharp.Interfaces.Caching
         /// </summary>
         /// <param name="key">Key of the entry to retrieve</param>
         /// <returns>The entry if it exists in the cache</returns>
+#if NETSTANDARD2_1_OR_GREATER
         Task<T?> RetrieveEntryItemAsync(int key);
+#else
+        Task<T> RetrieveEntryItemAsync(int key);
+#endif
 
         /// <summary>
         /// Retrieve a collection of entries from the cache
@@ -72,7 +67,6 @@ namespace VaraniumSharp.Interfaces.Caching
         /// <returns>Dictionary indicating which entries succeeded or failed to save</returns>
         Task<Dictionary<int, bool>> SaveReadmodelsAsync(List<IEntity> entries);
 
-        #endregion
+#endregion
     }
 }
-#endif

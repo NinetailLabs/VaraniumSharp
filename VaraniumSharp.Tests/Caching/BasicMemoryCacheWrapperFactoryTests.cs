@@ -3,24 +3,28 @@ using System.Runtime.Caching;
 using System.Threading.Tasks;
 using FluentAssertions;
 using VaraniumSharp.Caching;
+using VaraniumSharp.Tests.Fixtures;
 using Xunit;
 
 namespace VaraniumSharp.Tests.Caching
 {
     public class BasicMemoryCacheWrapperFactoryTests
     {
-        private static async Task<int> DataRetrievalFunc(string s)
+        private static async Task<CacheEntryFixture> DataRetrievalFunc(string s)
         {
             await Task.Delay(10);
-            return 0;
+            return new CacheEntryFixture
+            {
+                Id = int.Parse(s)
+            };
         }
 
         [Fact]
         public void CreateInstanceWithDefaultPolicy()
         {
             // arrange
-            var func = new Func<string, Task<int>>(DataRetrievalFunc);
-            var sut = new BasicMemoryCacheWrapperFactory();
+            var func = new Func<string, Task<CacheEntryFixture>>(DataRetrievalFunc);
+            var sut = new BasicMemoryCacheWrapperFactory<CacheEntryFixture>();
 
             // act
             var cache = sut.CreateWithDefaultSlidingPolicy(func);
@@ -35,9 +39,9 @@ namespace VaraniumSharp.Tests.Caching
         public void CreateInstanceWithPolicy()
         {
             // arrange
-            var func = new Func<string, Task<int>>(DataRetrievalFunc);
+            var func = new Func<string, Task<CacheEntryFixture>>(DataRetrievalFunc);
             var policy = new CacheItemPolicy();
-            var sut = new BasicMemoryCacheWrapperFactory();
+            var sut = new BasicMemoryCacheWrapperFactory<CacheEntryFixture>();
 
             // act
             var cache = sut.Create(policy, func);

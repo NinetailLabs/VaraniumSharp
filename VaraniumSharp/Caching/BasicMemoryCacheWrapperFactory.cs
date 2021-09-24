@@ -12,7 +12,7 @@ namespace VaraniumSharp.Caching
     /// For a DI compatible solution look for a factory implementation in a Ring 2 library like VaraniumSharp.Initiator
     /// </remarks>
     /// </summary>
-    public class BasicMemoryCacheWrapperFactory : IMemoryCacheWrapperFactory
+    public class BasicMemoryCacheWrapperFactory<T> : IMemoryCacheWrapperFactory<T> where T: class
     {
         #region Public Methods
 
@@ -23,7 +23,7 @@ namespace VaraniumSharp.Caching
         /// <param name="policy">Cache eviction policy</param>
         /// <param name="dataRetrievalFunc">Function used to retrieve items if they are not in the cache</param>
         /// <returns>Initialized instance of MemoryCacheWrapper</returns>
-        public virtual IMemoryCacheWrapper<T> Create<T>(CacheItemPolicy policy, Func<string, Task<T>> dataRetrievalFunc)
+        public virtual IMemoryCacheWrapper<T> Create(CacheItemPolicy policy, Func<string, Task<T>> dataRetrievalFunc)
         {
             return new MemoryCacheWrapper<T>
             {
@@ -39,7 +39,7 @@ namespace VaraniumSharp.Caching
         /// <typeparam name="T">Type of items that will be stored in the cache</typeparam>
         /// <param name="dataRetrievalFunc">Function used to retrieve items if they are not in the cache</param>
         /// <returns>Initialized instance of MemoryCacheWrapper</returns>
-        public virtual IMemoryCacheWrapper<T> CreateWithDefaultSlidingPolicy<T>(Func<string, Task<T>> dataRetrievalFunc)
+        public virtual IMemoryCacheWrapper<T> CreateWithDefaultSlidingPolicy(Func<string, Task<T>> dataRetrievalFunc)
         {
             var defaultPolicy = new CacheItemPolicy
             {

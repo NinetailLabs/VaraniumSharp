@@ -1,4 +1,7 @@
-﻿using System;
+﻿#if NETSTANDARD2_1_OR_GREATER
+#nullable enable
+#endif
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.Caching;
@@ -10,7 +13,7 @@ namespace VaraniumSharp.Interfaces.Caching
     /// Provides a wrapper around <see cref="MemoryCache"/> that provides an easy way to get and remove items from the cache
     /// </summary>
     /// <typeparam name="T">Type of items that will be stored in the cache</typeparam>
-    public interface IMemoryCacheWrapper<T> : INotifyPropertyChanged
+    public interface IMemoryCacheWrapper<T> : INotifyPropertyChanged where T : class
     {
         #region Properties
 
@@ -35,7 +38,11 @@ namespace VaraniumSharp.Interfaces.Caching
         /// Func that will be used to retrieve data if it is not available in the cache
         /// <exception cref="InvalidOperationException">Thrown if the Func has already been set</exception>
         /// </summary>
+#if NETSTANDARD2_1_OR_GREATER
+        Func<string, Task<T?>> DataRetrievalFunc { get; set; }
+#else
         Func<string, Task<T>> DataRetrievalFunc { get; set; }
+#endif
 
         #endregion
 
@@ -72,7 +79,18 @@ namespace VaraniumSharp.Interfaces.Caching
         /// <exception cref="InvalidOperationException">Thrown if CachePolicy or DataRetrievalFunc has not been set</exception>
         /// <param name="key">The key under which the item is stored</param>
         /// <returns>Cached copy of T</returns>
+#if NETSTANDARD2_1_OR_GREATER
+        Task<T?> GetAsync(string key);
+#else
         Task<T> GetAsync(string key);
+#endif
+
+        /// <summary>
+        /// Retrieve multiple entries from the cache
+        /// </summary>
+        /// <param name="keys">The keys under which the items are stored</param>
+        /// <returns>Cached copies of requested entries</returns>
+        Task<Dictionary<string, T>> GetAsync(List<string> keys);
 
         /// <summary>
         /// Remove an item from the Cache
