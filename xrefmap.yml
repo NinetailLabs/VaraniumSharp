@@ -197,44 +197,258 @@ references:
   commentId: N:VaraniumSharp.Caching
   fullName: VaraniumSharp.Caching
   nameWithType: VaraniumSharp.Caching
-- uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory
-  name: BasicMemoryCacheWrapperFactory
-  href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.html
-  commentId: T:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory
-  fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory
-  nameWithType: BasicMemoryCacheWrapperFactory
-- uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.Create*
+- uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory`1
+  name: BasicMemoryCacheWrapperFactory<T>
+  href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory-1.html
+  commentId: T:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory`1
+  name.vb: BasicMemoryCacheWrapperFactory(Of T)
+  fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory<T>
+  fullName.vb: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory(Of T)
+  nameWithType: BasicMemoryCacheWrapperFactory<T>
+  nameWithType.vb: BasicMemoryCacheWrapperFactory(Of T)
+- uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory`1.Create(System.Runtime.Caching.CacheItemPolicy,System.Func{System.String,System.Threading.Tasks.Task{`0}})
+  name: Create(CacheItemPolicy, Func<String, Task<T>>)
+  href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory-1.html#VaraniumSharp_Caching_BasicMemoryCacheWrapperFactory_1_Create_System_Runtime_Caching_CacheItemPolicy_System_Func_System_String_System_Threading_Tasks_Task__0___
+  commentId: M:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory`1.Create(System.Runtime.Caching.CacheItemPolicy,System.Func{System.String,System.Threading.Tasks.Task{`0}})
+  name.vb: Create(CacheItemPolicy, Func(Of String, Task(Of T)))
+  fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory<T>.Create(System.Runtime.Caching.CacheItemPolicy, System.Func<System.String, System.Threading.Tasks.Task<T>>)
+  fullName.vb: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory(Of T).Create(System.Runtime.Caching.CacheItemPolicy, System.Func(Of System.String, System.Threading.Tasks.Task(Of T)))
+  nameWithType: BasicMemoryCacheWrapperFactory<T>.Create(CacheItemPolicy, Func<String, Task<T>>)
+  nameWithType.vb: BasicMemoryCacheWrapperFactory(Of T).Create(CacheItemPolicy, Func(Of String, Task(Of T)))
+- uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory`1.Create*
   name: Create
-  href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.html#VaraniumSharp_Caching_BasicMemoryCacheWrapperFactory_Create_
-  commentId: Overload:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.Create
+  href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory-1.html#VaraniumSharp_Caching_BasicMemoryCacheWrapperFactory_1_Create_
+  commentId: Overload:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory`1.Create
   isSpec: "True"
-  fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.Create
-  nameWithType: BasicMemoryCacheWrapperFactory.Create
-- uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.Create``1(System.Runtime.Caching.CacheItemPolicy,System.Func{System.String,System.Threading.Tasks.Task{``0}})
-  name: Create<T>(CacheItemPolicy, Func<String, Task<T>>)
-  href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.html#VaraniumSharp_Caching_BasicMemoryCacheWrapperFactory_Create__1_System_Runtime_Caching_CacheItemPolicy_System_Func_System_String_System_Threading_Tasks_Task___0___
-  commentId: M:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.Create``1(System.Runtime.Caching.CacheItemPolicy,System.Func{System.String,System.Threading.Tasks.Task{``0}})
-  name.vb: Create(Of T)(CacheItemPolicy, Func(Of String, Task(Of T)))
-  fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.Create<T>(System.Runtime.Caching.CacheItemPolicy, System.Func<System.String, System.Threading.Tasks.Task<T>>)
-  fullName.vb: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.Create(Of T)(System.Runtime.Caching.CacheItemPolicy, System.Func(Of System.String, System.Threading.Tasks.Task(Of T)))
-  nameWithType: BasicMemoryCacheWrapperFactory.Create<T>(CacheItemPolicy, Func<String, Task<T>>)
-  nameWithType.vb: BasicMemoryCacheWrapperFactory.Create(Of T)(CacheItemPolicy, Func(Of String, Task(Of T)))
-- uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy*
+  fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory<T>.Create
+  fullName.vb: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory(Of T).Create
+  nameWithType: BasicMemoryCacheWrapperFactory<T>.Create
+  nameWithType.vb: BasicMemoryCacheWrapperFactory(Of T).Create
+- uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory`1.CreateWithDefaultSlidingPolicy(System.Func{System.String,System.Threading.Tasks.Task{`0}})
+  name: CreateWithDefaultSlidingPolicy(Func<String, Task<T>>)
+  href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory-1.html#VaraniumSharp_Caching_BasicMemoryCacheWrapperFactory_1_CreateWithDefaultSlidingPolicy_System_Func_System_String_System_Threading_Tasks_Task__0___
+  commentId: M:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory`1.CreateWithDefaultSlidingPolicy(System.Func{System.String,System.Threading.Tasks.Task{`0}})
+  name.vb: CreateWithDefaultSlidingPolicy(Func(Of String, Task(Of T)))
+  fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory<T>.CreateWithDefaultSlidingPolicy(System.Func<System.String, System.Threading.Tasks.Task<T>>)
+  fullName.vb: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory(Of T).CreateWithDefaultSlidingPolicy(System.Func(Of System.String, System.Threading.Tasks.Task(Of T)))
+  nameWithType: BasicMemoryCacheWrapperFactory<T>.CreateWithDefaultSlidingPolicy(Func<String, Task<T>>)
+  nameWithType.vb: BasicMemoryCacheWrapperFactory(Of T).CreateWithDefaultSlidingPolicy(Func(Of String, Task(Of T)))
+- uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory`1.CreateWithDefaultSlidingPolicy*
   name: CreateWithDefaultSlidingPolicy
-  href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.html#VaraniumSharp_Caching_BasicMemoryCacheWrapperFactory_CreateWithDefaultSlidingPolicy_
-  commentId: Overload:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
+  href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory-1.html#VaraniumSharp_Caching_BasicMemoryCacheWrapperFactory_1_CreateWithDefaultSlidingPolicy_
+  commentId: Overload:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory`1.CreateWithDefaultSlidingPolicy
   isSpec: "True"
-  fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
-  nameWithType: BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
-- uid: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy``1(System.Func{System.String,System.Threading.Tasks.Task{``0}})
-  name: CreateWithDefaultSlidingPolicy<T>(Func<String, Task<T>>)
-  href: api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.html#VaraniumSharp_Caching_BasicMemoryCacheWrapperFactory_CreateWithDefaultSlidingPolicy__1_System_Func_System_String_System_Threading_Tasks_Task___0___
-  commentId: M:VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy``1(System.Func{System.String,System.Threading.Tasks.Task{``0}})
-  name.vb: CreateWithDefaultSlidingPolicy(Of T)(Func(Of String, Task(Of T)))
-  fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy<T>(System.Func<System.String, System.Threading.Tasks.Task<T>>)
-  fullName.vb: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy(Of T)(System.Func(Of System.String, System.Threading.Tasks.Task(Of T)))
-  nameWithType: BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy<T>(Func<String, Task<T>>)
-  nameWithType.vb: BasicMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy(Of T)(Func(Of String, Task(Of T)))
+  fullName: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory<T>.CreateWithDefaultSlidingPolicy
+  fullName.vb: VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory(Of T).CreateWithDefaultSlidingPolicy
+  nameWithType: BasicMemoryCacheWrapperFactory<T>.CreateWithDefaultSlidingPolicy
+  nameWithType.vb: BasicMemoryCacheWrapperFactory(Of T).CreateWithDefaultSlidingPolicy
+- uid: VaraniumSharp.Caching.CacheBase`1
+  name: CacheBase<T>
+  href: api/VaraniumSharp.Caching.CacheBase-1.html
+  commentId: T:VaraniumSharp.Caching.CacheBase`1
+  name.vb: CacheBase(Of T)
+  fullName: VaraniumSharp.Caching.CacheBase<T>
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T)
+  nameWithType: CacheBase<T>
+  nameWithType.vb: CacheBase(Of T)
+- uid: VaraniumSharp.Caching.CacheBase`1.#ctor
+  name: CacheBase()
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1__ctor
+  commentId: M:VaraniumSharp.Caching.CacheBase`1.#ctor
+  fullName: VaraniumSharp.Caching.CacheBase<T>.CacheBase()
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).CacheBase()
+  nameWithType: CacheBase<T>.CacheBase()
+  nameWithType.vb: CacheBase(Of T).CacheBase()
+- uid: VaraniumSharp.Caching.CacheBase`1.#ctor*
+  name: CacheBase
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1__ctor_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.#ctor
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.CacheBase
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).CacheBase
+  nameWithType: CacheBase<T>.CacheBase
+  nameWithType.vb: CacheBase(Of T).CacheBase
+- uid: VaraniumSharp.Caching.CacheBase`1.CacheItemRemoved(System.Runtime.Caching.CacheEntryRemovedArguments)
+  name: CacheItemRemoved(CacheEntryRemovedArguments)
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_CacheItemRemoved_System_Runtime_Caching_CacheEntryRemovedArguments_
+  commentId: M:VaraniumSharp.Caching.CacheBase`1.CacheItemRemoved(System.Runtime.Caching.CacheEntryRemovedArguments)
+  fullName: VaraniumSharp.Caching.CacheBase<T>.CacheItemRemoved(System.Runtime.Caching.CacheEntryRemovedArguments)
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).CacheItemRemoved(System.Runtime.Caching.CacheEntryRemovedArguments)
+  nameWithType: CacheBase<T>.CacheItemRemoved(CacheEntryRemovedArguments)
+  nameWithType.vb: CacheBase(Of T).CacheItemRemoved(CacheEntryRemovedArguments)
+- uid: VaraniumSharp.Caching.CacheBase`1.CacheItemRemoved*
+  name: CacheItemRemoved
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_CacheItemRemoved_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.CacheItemRemoved
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.CacheItemRemoved
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).CacheItemRemoved
+  nameWithType: CacheBase<T>.CacheItemRemoved
+  nameWithType.vb: CacheBase(Of T).CacheItemRemoved
+- uid: VaraniumSharp.Caching.CacheBase`1.ContainsKeyAsync(System.Int32)
+  name: ContainsKeyAsync(Int32)
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_ContainsKeyAsync_System_Int32_
+  commentId: M:VaraniumSharp.Caching.CacheBase`1.ContainsKeyAsync(System.Int32)
+  fullName: VaraniumSharp.Caching.CacheBase<T>.ContainsKeyAsync(System.Int32)
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).ContainsKeyAsync(System.Int32)
+  nameWithType: CacheBase<T>.ContainsKeyAsync(Int32)
+  nameWithType.vb: CacheBase(Of T).ContainsKeyAsync(Int32)
+- uid: VaraniumSharp.Caching.CacheBase`1.ContainsKeyAsync*
+  name: ContainsKeyAsync
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_ContainsKeyAsync_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.ContainsKeyAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.ContainsKeyAsync
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).ContainsKeyAsync
+  nameWithType: CacheBase<T>.ContainsKeyAsync
+  nameWithType.vb: CacheBase(Of T).ContainsKeyAsync
+- uid: VaraniumSharp.Caching.CacheBase`1.EntryCache
+  name: EntryCache
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_EntryCache
+  commentId: F:VaraniumSharp.Caching.CacheBase`1.EntryCache
+  fullName: VaraniumSharp.Caching.CacheBase<T>.EntryCache
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).EntryCache
+  nameWithType: CacheBase<T>.EntryCache
+  nameWithType.vb: CacheBase(Of T).EntryCache
+- uid: VaraniumSharp.Caching.CacheBase`1.ItemsInCache
+  name: ItemsInCache
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_ItemsInCache
+  commentId: P:VaraniumSharp.Caching.CacheBase`1.ItemsInCache
+  fullName: VaraniumSharp.Caching.CacheBase<T>.ItemsInCache
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).ItemsInCache
+  nameWithType: CacheBase<T>.ItemsInCache
+  nameWithType.vb: CacheBase(Of T).ItemsInCache
+- uid: VaraniumSharp.Caching.CacheBase`1.ItemsInCache*
+  name: ItemsInCache
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_ItemsInCache_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.ItemsInCache
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.ItemsInCache
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).ItemsInCache
+  nameWithType: CacheBase<T>.ItemsInCache
+  nameWithType.vb: CacheBase(Of T).ItemsInCache
+- uid: VaraniumSharp.Caching.CacheBase`1.RemoveItemFromCacheAsync(System.Int32)
+  name: RemoveItemFromCacheAsync(Int32)
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_RemoveItemFromCacheAsync_System_Int32_
+  commentId: M:VaraniumSharp.Caching.CacheBase`1.RemoveItemFromCacheAsync(System.Int32)
+  fullName: VaraniumSharp.Caching.CacheBase<T>.RemoveItemFromCacheAsync(System.Int32)
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).RemoveItemFromCacheAsync(System.Int32)
+  nameWithType: CacheBase<T>.RemoveItemFromCacheAsync(Int32)
+  nameWithType.vb: CacheBase(Of T).RemoveItemFromCacheAsync(Int32)
+- uid: VaraniumSharp.Caching.CacheBase`1.RemoveItemFromCacheAsync*
+  name: RemoveItemFromCacheAsync
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_RemoveItemFromCacheAsync_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.RemoveItemFromCacheAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.RemoveItemFromCacheAsync
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).RemoveItemFromCacheAsync
+  nameWithType: CacheBase<T>.RemoveItemFromCacheAsync
+  nameWithType.vb: CacheBase(Of T).RemoveItemFromCacheAsync
+- uid: VaraniumSharp.Caching.CacheBase`1.RetrieveEntriesFromRepositoryAsync(System.Collections.Generic.List{System.String})
+  name: RetrieveEntriesFromRepositoryAsync(List<String>)
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_RetrieveEntriesFromRepositoryAsync_System_Collections_Generic_List_System_String__
+  commentId: M:VaraniumSharp.Caching.CacheBase`1.RetrieveEntriesFromRepositoryAsync(System.Collections.Generic.List{System.String})
+  name.vb: RetrieveEntriesFromRepositoryAsync(List(Of String))
+  fullName: VaraniumSharp.Caching.CacheBase<T>.RetrieveEntriesFromRepositoryAsync(System.Collections.Generic.List<System.String>)
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).RetrieveEntriesFromRepositoryAsync(System.Collections.Generic.List(Of System.String))
+  nameWithType: CacheBase<T>.RetrieveEntriesFromRepositoryAsync(List<String>)
+  nameWithType.vb: CacheBase(Of T).RetrieveEntriesFromRepositoryAsync(List(Of String))
+- uid: VaraniumSharp.Caching.CacheBase`1.RetrieveEntriesFromRepositoryAsync*
+  name: RetrieveEntriesFromRepositoryAsync
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_RetrieveEntriesFromRepositoryAsync_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.RetrieveEntriesFromRepositoryAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.RetrieveEntriesFromRepositoryAsync
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).RetrieveEntriesFromRepositoryAsync
+  nameWithType: CacheBase<T>.RetrieveEntriesFromRepositoryAsync
+  nameWithType.vb: CacheBase(Of T).RetrieveEntriesFromRepositoryAsync
+- uid: VaraniumSharp.Caching.CacheBase`1.RetrieveEntryFromRepositoryAsync(System.String)
+  name: RetrieveEntryFromRepositoryAsync(String)
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_RetrieveEntryFromRepositoryAsync_System_String_
+  commentId: M:VaraniumSharp.Caching.CacheBase`1.RetrieveEntryFromRepositoryAsync(System.String)
+  fullName: VaraniumSharp.Caching.CacheBase<T>.RetrieveEntryFromRepositoryAsync(System.String)
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).RetrieveEntryFromRepositoryAsync(System.String)
+  nameWithType: CacheBase<T>.RetrieveEntryFromRepositoryAsync(String)
+  nameWithType.vb: CacheBase(Of T).RetrieveEntryFromRepositoryAsync(String)
+- uid: VaraniumSharp.Caching.CacheBase`1.RetrieveEntryFromRepositoryAsync*
+  name: RetrieveEntryFromRepositoryAsync
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_RetrieveEntryFromRepositoryAsync_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.RetrieveEntryFromRepositoryAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.RetrieveEntryFromRepositoryAsync
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).RetrieveEntryFromRepositoryAsync
+  nameWithType: CacheBase<T>.RetrieveEntryFromRepositoryAsync
+  nameWithType.vb: CacheBase(Of T).RetrieveEntryFromRepositoryAsync
+- uid: VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemAsync(System.Int32)
+  name: RetrieveEntryItemAsync(Int32)
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_RetrieveEntryItemAsync_System_Int32_
+  commentId: M:VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemAsync(System.Int32)
+  fullName: VaraniumSharp.Caching.CacheBase<T>.RetrieveEntryItemAsync(System.Int32)
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).RetrieveEntryItemAsync(System.Int32)
+  nameWithType: CacheBase<T>.RetrieveEntryItemAsync(Int32)
+  nameWithType.vb: CacheBase(Of T).RetrieveEntryItemAsync(Int32)
+- uid: VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemAsync*
+  name: RetrieveEntryItemAsync
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_RetrieveEntryItemAsync_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.RetrieveEntryItemAsync
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).RetrieveEntryItemAsync
+  nameWithType: CacheBase<T>.RetrieveEntryItemAsync
+  nameWithType.vb: CacheBase(Of T).RetrieveEntryItemAsync
+- uid: VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemsAsync(System.Collections.Generic.List{System.Int32})
+  name: RetrieveEntryItemsAsync(List<Int32>)
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_RetrieveEntryItemsAsync_System_Collections_Generic_List_System_Int32__
+  commentId: M:VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemsAsync(System.Collections.Generic.List{System.Int32})
+  name.vb: RetrieveEntryItemsAsync(List(Of Int32))
+  fullName: VaraniumSharp.Caching.CacheBase<T>.RetrieveEntryItemsAsync(System.Collections.Generic.List<System.Int32>)
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).RetrieveEntryItemsAsync(System.Collections.Generic.List(Of System.Int32))
+  nameWithType: CacheBase<T>.RetrieveEntryItemsAsync(List<Int32>)
+  nameWithType.vb: CacheBase(Of T).RetrieveEntryItemsAsync(List(Of Int32))
+- uid: VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemsAsync*
+  name: RetrieveEntryItemsAsync
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_RetrieveEntryItemsAsync_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemsAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.RetrieveEntryItemsAsync
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).RetrieveEntryItemsAsync
+  nameWithType: CacheBase<T>.RetrieveEntryItemsAsync
+  nameWithType.vb: CacheBase(Of T).RetrieveEntryItemsAsync
+- uid: VaraniumSharp.Caching.CacheBase`1.SaveReadmodelAsync(VaraniumSharp.Interfaces.Caching.IEntity)
+  name: SaveReadmodelAsync(IEntity)
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_SaveReadmodelAsync_VaraniumSharp_Interfaces_Caching_IEntity_
+  commentId: M:VaraniumSharp.Caching.CacheBase`1.SaveReadmodelAsync(VaraniumSharp.Interfaces.Caching.IEntity)
+  fullName: VaraniumSharp.Caching.CacheBase<T>.SaveReadmodelAsync(VaraniumSharp.Interfaces.Caching.IEntity)
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).SaveReadmodelAsync(VaraniumSharp.Interfaces.Caching.IEntity)
+  nameWithType: CacheBase<T>.SaveReadmodelAsync(IEntity)
+  nameWithType.vb: CacheBase(Of T).SaveReadmodelAsync(IEntity)
+- uid: VaraniumSharp.Caching.CacheBase`1.SaveReadmodelAsync*
+  name: SaveReadmodelAsync
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_SaveReadmodelAsync_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.SaveReadmodelAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.SaveReadmodelAsync
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).SaveReadmodelAsync
+  nameWithType: CacheBase<T>.SaveReadmodelAsync
+  nameWithType.vb: CacheBase(Of T).SaveReadmodelAsync
+- uid: VaraniumSharp.Caching.CacheBase`1.SaveReadmodelsAsync(System.Collections.Generic.List{VaraniumSharp.Interfaces.Caching.IEntity})
+  name: SaveReadmodelsAsync(List<IEntity>)
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_SaveReadmodelsAsync_System_Collections_Generic_List_VaraniumSharp_Interfaces_Caching_IEntity__
+  commentId: M:VaraniumSharp.Caching.CacheBase`1.SaveReadmodelsAsync(System.Collections.Generic.List{VaraniumSharp.Interfaces.Caching.IEntity})
+  name.vb: SaveReadmodelsAsync(List(Of IEntity))
+  fullName: VaraniumSharp.Caching.CacheBase<T>.SaveReadmodelsAsync(System.Collections.Generic.List<VaraniumSharp.Interfaces.Caching.IEntity>)
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).SaveReadmodelsAsync(System.Collections.Generic.List(Of VaraniumSharp.Interfaces.Caching.IEntity))
+  nameWithType: CacheBase<T>.SaveReadmodelsAsync(List<IEntity>)
+  nameWithType.vb: CacheBase(Of T).SaveReadmodelsAsync(List(Of IEntity))
+- uid: VaraniumSharp.Caching.CacheBase`1.SaveReadmodelsAsync*
+  name: SaveReadmodelsAsync
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_SaveReadmodelsAsync_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.SaveReadmodelsAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.SaveReadmodelsAsync
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).SaveReadmodelsAsync
+  nameWithType: CacheBase<T>.SaveReadmodelsAsync
+  nameWithType.vb: CacheBase(Of T).SaveReadmodelsAsync
 - uid: VaraniumSharp.Caching.MemoryCacheWrapper`1
   name: MemoryCacheWrapper<T>
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html
@@ -355,6 +569,15 @@ references:
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).DataRetrievalFunc
   nameWithType: MemoryCacheWrapper<T>.DataRetrievalFunc
   nameWithType.vb: MemoryCacheWrapper(Of T).DataRetrievalFunc
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.GetAsync(System.Collections.Generic.List{System.String})
+  name: GetAsync(List<String>)
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_GetAsync_System_Collections_Generic_List_System_String__
+  commentId: M:VaraniumSharp.Caching.MemoryCacheWrapper`1.GetAsync(System.Collections.Generic.List{System.String})
+  name.vb: GetAsync(List(Of String))
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.GetAsync(System.Collections.Generic.List<System.String>)
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).GetAsync(System.Collections.Generic.List(Of System.String))
+  nameWithType: MemoryCacheWrapper<T>.GetAsync(List<String>)
+  nameWithType.vb: MemoryCacheWrapper(Of T).GetAsync(List(Of String))
 - uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.GetAsync(System.String)
   name: GetAsync(String)
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_GetAsync_System_String_
@@ -414,6 +637,159 @@ references:
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).RemoveFromCacheAsync
   nameWithType: MemoryCacheWrapper<T>.RemoveFromCacheAsync
   nameWithType.vb: MemoryCacheWrapper(Of T).RemoveFromCacheAsync
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1
+  name: ReferenceCountingCacheBase<T>
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html
+  commentId: T:VaraniumSharp.Caching.ReferenceCountingCacheBase`1
+  name.vb: ReferenceCountingCacheBase(Of T)
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T)
+  nameWithType: ReferenceCountingCacheBase<T>
+  nameWithType.vb: ReferenceCountingCacheBase(Of T)
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.#ctor(System.TimeSpan)
+  name: ReferenceCountingCacheBase(TimeSpan)
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1__ctor_System_TimeSpan_
+  commentId: M:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.#ctor(System.TimeSpan)
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.ReferenceCountingCacheBase(System.TimeSpan)
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).ReferenceCountingCacheBase(System.TimeSpan)
+  nameWithType: ReferenceCountingCacheBase<T>.ReferenceCountingCacheBase(TimeSpan)
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).ReferenceCountingCacheBase(TimeSpan)
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.#ctor*
+  name: ReferenceCountingCacheBase
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1__ctor_
+  commentId: Overload:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.#ctor
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.ReferenceCountingCacheBase
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).ReferenceCountingCacheBase
+  nameWithType: ReferenceCountingCacheBase<T>.ReferenceCountingCacheBase
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).ReferenceCountingCacheBase
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.CacheCleanupCallback(System.Object)
+  name: CacheCleanupCallback(Object)
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_CacheCleanupCallback_System_Object_
+  commentId: M:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.CacheCleanupCallback(System.Object)
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.CacheCleanupCallback(System.Object)
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).CacheCleanupCallback(System.Object)
+  nameWithType: ReferenceCountingCacheBase<T>.CacheCleanupCallback(Object)
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).CacheCleanupCallback(Object)
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.CacheCleanupCallback*
+  name: CacheCleanupCallback
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_CacheCleanupCallback_
+  commentId: Overload:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.CacheCleanupCallback
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.CacheCleanupCallback
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).CacheCleanupCallback
+  nameWithType: ReferenceCountingCacheBase<T>.CacheCleanupCallback
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).CacheCleanupCallback
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.Dispose
+  name: Dispose()
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_Dispose
+  commentId: M:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.Dispose
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.Dispose()
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).Dispose()
+  nameWithType: ReferenceCountingCacheBase<T>.Dispose()
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).Dispose()
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_Dispose_System_Boolean_
+  commentId: M:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.Dispose(System.Boolean)
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.Dispose(System.Boolean)
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).Dispose(System.Boolean)
+  nameWithType: ReferenceCountingCacheBase<T>.Dispose(Boolean)
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).Dispose(Boolean)
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.Dispose*
+  name: Dispose
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_Dispose_
+  commentId: Overload:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.Dispose
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.Dispose
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).Dispose
+  nameWithType: ReferenceCountingCacheBase<T>.Dispose
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).Dispose
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.EntryNoLongerUsed(System.Int32)
+  name: EntryNoLongerUsed(Int32)
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_EntryNoLongerUsed_System_Int32_
+  commentId: M:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.EntryNoLongerUsed(System.Int32)
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.EntryNoLongerUsed(System.Int32)
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).EntryNoLongerUsed(System.Int32)
+  nameWithType: ReferenceCountingCacheBase<T>.EntryNoLongerUsed(Int32)
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).EntryNoLongerUsed(Int32)
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.EntryNoLongerUsed*
+  name: EntryNoLongerUsed
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_EntryNoLongerUsed_
+  commentId: Overload:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.EntryNoLongerUsed
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.EntryNoLongerUsed
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).EntryNoLongerUsed
+  nameWithType: ReferenceCountingCacheBase<T>.EntryNoLongerUsed
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).EntryNoLongerUsed
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.IncreaseReferenceCount(System.Int32)
+  name: IncreaseReferenceCount(Int32)
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_IncreaseReferenceCount_System_Int32_
+  commentId: M:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.IncreaseReferenceCount(System.Int32)
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.IncreaseReferenceCount(System.Int32)
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).IncreaseReferenceCount(System.Int32)
+  nameWithType: ReferenceCountingCacheBase<T>.IncreaseReferenceCount(Int32)
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).IncreaseReferenceCount(Int32)
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.IncreaseReferenceCount*
+  name: IncreaseReferenceCount
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_IncreaseReferenceCount_
+  commentId: Overload:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.IncreaseReferenceCount
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.IncreaseReferenceCount
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).IncreaseReferenceCount
+  nameWithType: ReferenceCountingCacheBase<T>.IncreaseReferenceCount
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).IncreaseReferenceCount
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.ItemReferenceCount
+  name: ItemReferenceCount
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_ItemReferenceCount
+  commentId: F:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.ItemReferenceCount
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.ItemReferenceCount
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).ItemReferenceCount
+  nameWithType: ReferenceCountingCacheBase<T>.ItemReferenceCount
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).ItemReferenceCount
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.ReferenceCleanupSemaphore
+  name: ReferenceCleanupSemaphore
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_ReferenceCleanupSemaphore
+  commentId: F:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.ReferenceCleanupSemaphore
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.ReferenceCleanupSemaphore
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).ReferenceCleanupSemaphore
+  nameWithType: ReferenceCountingCacheBase<T>.ReferenceCleanupSemaphore
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).ReferenceCleanupSemaphore
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.RetrieveEntryItemAsync(System.Int32)
+  name: RetrieveEntryItemAsync(Int32)
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_RetrieveEntryItemAsync_System_Int32_
+  commentId: M:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.RetrieveEntryItemAsync(System.Int32)
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.RetrieveEntryItemAsync(System.Int32)
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).RetrieveEntryItemAsync(System.Int32)
+  nameWithType: ReferenceCountingCacheBase<T>.RetrieveEntryItemAsync(Int32)
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).RetrieveEntryItemAsync(Int32)
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.RetrieveEntryItemAsync*
+  name: RetrieveEntryItemAsync
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_RetrieveEntryItemAsync_
+  commentId: Overload:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.RetrieveEntryItemAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.RetrieveEntryItemAsync
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).RetrieveEntryItemAsync
+  nameWithType: ReferenceCountingCacheBase<T>.RetrieveEntryItemAsync
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).RetrieveEntryItemAsync
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.RetrieveEntryItemsAsync(System.Collections.Generic.List{System.Int32})
+  name: RetrieveEntryItemsAsync(List<Int32>)
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_RetrieveEntryItemsAsync_System_Collections_Generic_List_System_Int32__
+  commentId: M:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.RetrieveEntryItemsAsync(System.Collections.Generic.List{System.Int32})
+  name.vb: RetrieveEntryItemsAsync(List(Of Int32))
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.RetrieveEntryItemsAsync(System.Collections.Generic.List<System.Int32>)
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).RetrieveEntryItemsAsync(System.Collections.Generic.List(Of System.Int32))
+  nameWithType: ReferenceCountingCacheBase<T>.RetrieveEntryItemsAsync(List<Int32>)
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).RetrieveEntryItemsAsync(List(Of Int32))
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.RetrieveEntryItemsAsync*
+  name: RetrieveEntryItemsAsync
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_RetrieveEntryItemsAsync_
+  commentId: Overload:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.RetrieveEntryItemsAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.RetrieveEntryItemsAsync
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).RetrieveEntryItemsAsync
+  nameWithType: ReferenceCountingCacheBase<T>.RetrieveEntryItemsAsync
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).RetrieveEntryItemsAsync
 - uid: VaraniumSharp.Collections
   name: VaraniumSharp.Collections
   href: api/VaraniumSharp.Collections.html
@@ -1515,6 +1891,187 @@ references:
   commentId: N:VaraniumSharp.Interfaces.Caching
   fullName: VaraniumSharp.Interfaces.Caching
   nameWithType: VaraniumSharp.Interfaces.Caching
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1
+  name: ICacheBase<T>
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html
+  commentId: T:VaraniumSharp.Interfaces.Caching.ICacheBase`1
+  name.vb: ICacheBase(Of T)
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T)
+  nameWithType: ICacheBase<T>
+  nameWithType.vb: ICacheBase(Of T)
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.ContainsKeyAsync(System.Int32)
+  name: ContainsKeyAsync(Int32)
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_ContainsKeyAsync_System_Int32_
+  commentId: M:VaraniumSharp.Interfaces.Caching.ICacheBase`1.ContainsKeyAsync(System.Int32)
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.ContainsKeyAsync(System.Int32)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).ContainsKeyAsync(System.Int32)
+  nameWithType: ICacheBase<T>.ContainsKeyAsync(Int32)
+  nameWithType.vb: ICacheBase(Of T).ContainsKeyAsync(Int32)
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.ContainsKeyAsync*
+  name: ContainsKeyAsync
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_ContainsKeyAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.ContainsKeyAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.ContainsKeyAsync
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).ContainsKeyAsync
+  nameWithType: ICacheBase<T>.ContainsKeyAsync
+  nameWithType.vb: ICacheBase(Of T).ContainsKeyAsync
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.ItemsInCache
+  name: ItemsInCache
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_ItemsInCache
+  commentId: P:VaraniumSharp.Interfaces.Caching.ICacheBase`1.ItemsInCache
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.ItemsInCache
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).ItemsInCache
+  nameWithType: ICacheBase<T>.ItemsInCache
+  nameWithType.vb: ICacheBase(Of T).ItemsInCache
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.ItemsInCache*
+  name: ItemsInCache
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_ItemsInCache_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.ItemsInCache
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.ItemsInCache
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).ItemsInCache
+  nameWithType: ICacheBase<T>.ItemsInCache
+  nameWithType.vb: ICacheBase(Of T).ItemsInCache
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.RemoveItemFromCacheAsync(System.Int32)
+  name: RemoveItemFromCacheAsync(Int32)
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_RemoveItemFromCacheAsync_System_Int32_
+  commentId: M:VaraniumSharp.Interfaces.Caching.ICacheBase`1.RemoveItemFromCacheAsync(System.Int32)
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.RemoveItemFromCacheAsync(System.Int32)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).RemoveItemFromCacheAsync(System.Int32)
+  nameWithType: ICacheBase<T>.RemoveItemFromCacheAsync(Int32)
+  nameWithType.vb: ICacheBase(Of T).RemoveItemFromCacheAsync(Int32)
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.RemoveItemFromCacheAsync*
+  name: RemoveItemFromCacheAsync
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_RemoveItemFromCacheAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.RemoveItemFromCacheAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.RemoveItemFromCacheAsync
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).RemoveItemFromCacheAsync
+  nameWithType: ICacheBase<T>.RemoveItemFromCacheAsync
+  nameWithType.vb: ICacheBase(Of T).RemoveItemFromCacheAsync
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.RetrieveEntryItemAsync(System.Int32)
+  name: RetrieveEntryItemAsync(Int32)
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_RetrieveEntryItemAsync_System_Int32_
+  commentId: M:VaraniumSharp.Interfaces.Caching.ICacheBase`1.RetrieveEntryItemAsync(System.Int32)
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.RetrieveEntryItemAsync(System.Int32)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).RetrieveEntryItemAsync(System.Int32)
+  nameWithType: ICacheBase<T>.RetrieveEntryItemAsync(Int32)
+  nameWithType.vb: ICacheBase(Of T).RetrieveEntryItemAsync(Int32)
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.RetrieveEntryItemAsync*
+  name: RetrieveEntryItemAsync
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_RetrieveEntryItemAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.RetrieveEntryItemAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.RetrieveEntryItemAsync
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).RetrieveEntryItemAsync
+  nameWithType: ICacheBase<T>.RetrieveEntryItemAsync
+  nameWithType.vb: ICacheBase(Of T).RetrieveEntryItemAsync
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.RetrieveEntryItemsAsync(System.Collections.Generic.List{System.Int32})
+  name: RetrieveEntryItemsAsync(List<Int32>)
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_RetrieveEntryItemsAsync_System_Collections_Generic_List_System_Int32__
+  commentId: M:VaraniumSharp.Interfaces.Caching.ICacheBase`1.RetrieveEntryItemsAsync(System.Collections.Generic.List{System.Int32})
+  name.vb: RetrieveEntryItemsAsync(List(Of Int32))
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.RetrieveEntryItemsAsync(System.Collections.Generic.List<System.Int32>)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).RetrieveEntryItemsAsync(System.Collections.Generic.List(Of System.Int32))
+  nameWithType: ICacheBase<T>.RetrieveEntryItemsAsync(List<Int32>)
+  nameWithType.vb: ICacheBase(Of T).RetrieveEntryItemsAsync(List(Of Int32))
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.RetrieveEntryItemsAsync*
+  name: RetrieveEntryItemsAsync
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_RetrieveEntryItemsAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.RetrieveEntryItemsAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.RetrieveEntryItemsAsync
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).RetrieveEntryItemsAsync
+  nameWithType: ICacheBase<T>.RetrieveEntryItemsAsync
+  nameWithType.vb: ICacheBase(Of T).RetrieveEntryItemsAsync
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.SaveReadmodelAsync(VaraniumSharp.Interfaces.Caching.IEntity)
+  name: SaveReadmodelAsync(IEntity)
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_SaveReadmodelAsync_VaraniumSharp_Interfaces_Caching_IEntity_
+  commentId: M:VaraniumSharp.Interfaces.Caching.ICacheBase`1.SaveReadmodelAsync(VaraniumSharp.Interfaces.Caching.IEntity)
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.SaveReadmodelAsync(VaraniumSharp.Interfaces.Caching.IEntity)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).SaveReadmodelAsync(VaraniumSharp.Interfaces.Caching.IEntity)
+  nameWithType: ICacheBase<T>.SaveReadmodelAsync(IEntity)
+  nameWithType.vb: ICacheBase(Of T).SaveReadmodelAsync(IEntity)
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.SaveReadmodelAsync*
+  name: SaveReadmodelAsync
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_SaveReadmodelAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.SaveReadmodelAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.SaveReadmodelAsync
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).SaveReadmodelAsync
+  nameWithType: ICacheBase<T>.SaveReadmodelAsync
+  nameWithType.vb: ICacheBase(Of T).SaveReadmodelAsync
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.SaveReadmodelsAsync(System.Collections.Generic.List{VaraniumSharp.Interfaces.Caching.IEntity})
+  name: SaveReadmodelsAsync(List<IEntity>)
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_SaveReadmodelsAsync_System_Collections_Generic_List_VaraniumSharp_Interfaces_Caching_IEntity__
+  commentId: M:VaraniumSharp.Interfaces.Caching.ICacheBase`1.SaveReadmodelsAsync(System.Collections.Generic.List{VaraniumSharp.Interfaces.Caching.IEntity})
+  name.vb: SaveReadmodelsAsync(List(Of IEntity))
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.SaveReadmodelsAsync(System.Collections.Generic.List<VaraniumSharp.Interfaces.Caching.IEntity>)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).SaveReadmodelsAsync(System.Collections.Generic.List(Of VaraniumSharp.Interfaces.Caching.IEntity))
+  nameWithType: ICacheBase<T>.SaveReadmodelsAsync(List<IEntity>)
+  nameWithType.vb: ICacheBase(Of T).SaveReadmodelsAsync(List(Of IEntity))
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.SaveReadmodelsAsync*
+  name: SaveReadmodelsAsync
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_SaveReadmodelsAsync_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.SaveReadmodelsAsync
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.SaveReadmodelsAsync
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).SaveReadmodelsAsync
+  nameWithType: ICacheBase<T>.SaveReadmodelsAsync
+  nameWithType.vb: ICacheBase(Of T).SaveReadmodelsAsync
+- uid: VaraniumSharp.Interfaces.Caching.ICacheEntry
+  name: ICacheEntry
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheEntry.html
+  commentId: T:VaraniumSharp.Interfaces.Caching.ICacheEntry
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheEntry
+  nameWithType: ICacheEntry
+- uid: VaraniumSharp.Interfaces.Caching.ICacheEntry.CacheItemRemoved
+  name: CacheItemRemoved()
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheEntry.html#VaraniumSharp_Interfaces_Caching_ICacheEntry_CacheItemRemoved
+  commentId: M:VaraniumSharp.Interfaces.Caching.ICacheEntry.CacheItemRemoved
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheEntry.CacheItemRemoved()
+  nameWithType: ICacheEntry.CacheItemRemoved()
+- uid: VaraniumSharp.Interfaces.Caching.ICacheEntry.CacheItemRemoved*
+  name: CacheItemRemoved
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheEntry.html#VaraniumSharp_Interfaces_Caching_ICacheEntry_CacheItemRemoved_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheEntry.CacheItemRemoved
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheEntry.CacheItemRemoved
+  nameWithType: ICacheEntry.CacheItemRemoved
+- uid: VaraniumSharp.Interfaces.Caching.ICacheEntry.Id
+  name: Id
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheEntry.html#VaraniumSharp_Interfaces_Caching_ICacheEntry_Id
+  commentId: P:VaraniumSharp.Interfaces.Caching.ICacheEntry.Id
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheEntry.Id
+  nameWithType: ICacheEntry.Id
+- uid: VaraniumSharp.Interfaces.Caching.ICacheEntry.Id*
+  name: Id
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheEntry.html#VaraniumSharp_Interfaces_Caching_ICacheEntry_Id_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheEntry.Id
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheEntry.Id
+  nameWithType: ICacheEntry.Id
+- uid: VaraniumSharp.Interfaces.Caching.IEntity
+  name: IEntity
+  href: api/VaraniumSharp.Interfaces.Caching.IEntity.html
+  commentId: T:VaraniumSharp.Interfaces.Caching.IEntity
+  fullName: VaraniumSharp.Interfaces.Caching.IEntity
+  nameWithType: IEntity
+- uid: VaraniumSharp.Interfaces.Caching.IEntity.Id
+  name: Id
+  href: api/VaraniumSharp.Interfaces.Caching.IEntity.html#VaraniumSharp_Interfaces_Caching_IEntity_Id
+  commentId: P:VaraniumSharp.Interfaces.Caching.IEntity.Id
+  fullName: VaraniumSharp.Interfaces.Caching.IEntity.Id
+  nameWithType: IEntity.Id
+- uid: VaraniumSharp.Interfaces.Caching.IEntity.Id*
+  name: Id
+  href: api/VaraniumSharp.Interfaces.Caching.IEntity.html#VaraniumSharp_Interfaces_Caching_IEntity_Id_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IEntity.Id
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IEntity.Id
+  nameWithType: IEntity.Id
 - uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1
   name: IMemoryCacheWrapper<T>
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html
@@ -1618,6 +2175,15 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).DataRetrievalFunc
   nameWithType: IMemoryCacheWrapper<T>.DataRetrievalFunc
   nameWithType.vb: IMemoryCacheWrapper(Of T).DataRetrievalFunc
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.GetAsync(System.Collections.Generic.List{System.String})
+  name: GetAsync(List<String>)
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_GetAsync_System_Collections_Generic_List_System_String__
+  commentId: M:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.GetAsync(System.Collections.Generic.List{System.String})
+  name.vb: GetAsync(List(Of String))
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.GetAsync(System.Collections.Generic.List<System.String>)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).GetAsync(System.Collections.Generic.List(Of System.String))
+  nameWithType: IMemoryCacheWrapper<T>.GetAsync(List<String>)
+  nameWithType.vb: IMemoryCacheWrapper(Of T).GetAsync(List(Of String))
 - uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.GetAsync(System.String)
   name: GetAsync(String)
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_GetAsync_System_String_
@@ -1652,44 +2218,70 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).RemoveFromCacheAsync
   nameWithType: IMemoryCacheWrapper<T>.RemoveFromCacheAsync
   nameWithType.vb: IMemoryCacheWrapper(Of T).RemoveFromCacheAsync
-- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory
-  name: IMemoryCacheWrapperFactory
-  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.html
-  commentId: T:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory
-  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory
-  nameWithType: IMemoryCacheWrapperFactory
-- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.Create*
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory`1
+  name: IMemoryCacheWrapperFactory<T>
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory-1.html
+  commentId: T:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory`1
+  name.vb: IMemoryCacheWrapperFactory(Of T)
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory<T>
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory(Of T)
+  nameWithType: IMemoryCacheWrapperFactory<T>
+  nameWithType.vb: IMemoryCacheWrapperFactory(Of T)
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory`1.Create(System.Runtime.Caching.CacheItemPolicy,System.Func{System.String,System.Threading.Tasks.Task{`0}})
+  name: Create(CacheItemPolicy, Func<String, Task<T>>)
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapperFactory_1_Create_System_Runtime_Caching_CacheItemPolicy_System_Func_System_String_System_Threading_Tasks_Task__0___
+  commentId: M:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory`1.Create(System.Runtime.Caching.CacheItemPolicy,System.Func{System.String,System.Threading.Tasks.Task{`0}})
+  name.vb: Create(CacheItemPolicy, Func(Of String, Task(Of T)))
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory<T>.Create(System.Runtime.Caching.CacheItemPolicy, System.Func<System.String, System.Threading.Tasks.Task<T>>)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory(Of T).Create(System.Runtime.Caching.CacheItemPolicy, System.Func(Of System.String, System.Threading.Tasks.Task(Of T)))
+  nameWithType: IMemoryCacheWrapperFactory<T>.Create(CacheItemPolicy, Func<String, Task<T>>)
+  nameWithType.vb: IMemoryCacheWrapperFactory(Of T).Create(CacheItemPolicy, Func(Of String, Task(Of T)))
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory`1.Create*
   name: Create
-  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapperFactory_Create_
-  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.Create
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapperFactory_1_Create_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory`1.Create
   isSpec: "True"
-  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.Create
-  nameWithType: IMemoryCacheWrapperFactory.Create
-- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.Create``1(System.Runtime.Caching.CacheItemPolicy,System.Func{System.String,System.Threading.Tasks.Task{``0}})
-  name: Create<T>(CacheItemPolicy, Func<String, Task<T>>)
-  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapperFactory_Create__1_System_Runtime_Caching_CacheItemPolicy_System_Func_System_String_System_Threading_Tasks_Task___0___
-  commentId: M:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.Create``1(System.Runtime.Caching.CacheItemPolicy,System.Func{System.String,System.Threading.Tasks.Task{``0}})
-  name.vb: Create(Of T)(CacheItemPolicy, Func(Of String, Task(Of T)))
-  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.Create<T>(System.Runtime.Caching.CacheItemPolicy, System.Func<System.String, System.Threading.Tasks.Task<T>>)
-  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.Create(Of T)(System.Runtime.Caching.CacheItemPolicy, System.Func(Of System.String, System.Threading.Tasks.Task(Of T)))
-  nameWithType: IMemoryCacheWrapperFactory.Create<T>(CacheItemPolicy, Func<String, Task<T>>)
-  nameWithType.vb: IMemoryCacheWrapperFactory.Create(Of T)(CacheItemPolicy, Func(Of String, Task(Of T)))
-- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy*
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory<T>.Create
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory(Of T).Create
+  nameWithType: IMemoryCacheWrapperFactory<T>.Create
+  nameWithType.vb: IMemoryCacheWrapperFactory(Of T).Create
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory`1.CreateWithDefaultSlidingPolicy(System.Func{System.String,System.Threading.Tasks.Task{`0}})
+  name: CreateWithDefaultSlidingPolicy(Func<String, Task<T>>)
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapperFactory_1_CreateWithDefaultSlidingPolicy_System_Func_System_String_System_Threading_Tasks_Task__0___
+  commentId: M:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory`1.CreateWithDefaultSlidingPolicy(System.Func{System.String,System.Threading.Tasks.Task{`0}})
+  name.vb: CreateWithDefaultSlidingPolicy(Func(Of String, Task(Of T)))
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory<T>.CreateWithDefaultSlidingPolicy(System.Func<System.String, System.Threading.Tasks.Task<T>>)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory(Of T).CreateWithDefaultSlidingPolicy(System.Func(Of System.String, System.Threading.Tasks.Task(Of T)))
+  nameWithType: IMemoryCacheWrapperFactory<T>.CreateWithDefaultSlidingPolicy(Func<String, Task<T>>)
+  nameWithType.vb: IMemoryCacheWrapperFactory(Of T).CreateWithDefaultSlidingPolicy(Func(Of String, Task(Of T)))
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory`1.CreateWithDefaultSlidingPolicy*
   name: CreateWithDefaultSlidingPolicy
-  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapperFactory_CreateWithDefaultSlidingPolicy_
-  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapperFactory_1_CreateWithDefaultSlidingPolicy_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory`1.CreateWithDefaultSlidingPolicy
   isSpec: "True"
-  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
-  nameWithType: IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy
-- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy``1(System.Func{System.String,System.Threading.Tasks.Task{``0}})
-  name: CreateWithDefaultSlidingPolicy<T>(Func<String, Task<T>>)
-  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapperFactory_CreateWithDefaultSlidingPolicy__1_System_Func_System_String_System_Threading_Tasks_Task___0___
-  commentId: M:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy``1(System.Func{System.String,System.Threading.Tasks.Task{``0}})
-  name.vb: CreateWithDefaultSlidingPolicy(Of T)(Func(Of String, Task(Of T)))
-  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy<T>(System.Func<System.String, System.Threading.Tasks.Task<T>>)
-  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy(Of T)(System.Func(Of System.String, System.Threading.Tasks.Task(Of T)))
-  nameWithType: IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy<T>(Func<String, Task<T>>)
-  nameWithType.vb: IMemoryCacheWrapperFactory.CreateWithDefaultSlidingPolicy(Of T)(Func(Of String, Task(Of T)))
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory<T>.CreateWithDefaultSlidingPolicy
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory(Of T).CreateWithDefaultSlidingPolicy
+  nameWithType: IMemoryCacheWrapperFactory<T>.CreateWithDefaultSlidingPolicy
+  nameWithType.vb: IMemoryCacheWrapperFactory(Of T).CreateWithDefaultSlidingPolicy
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache
+  name: IReferenceCountingCache
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.html
+  commentId: T:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache
+  nameWithType: IReferenceCountingCache
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed(System.Int32)
+  name: EntryNoLongerUsed(Int32)
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_EntryNoLongerUsed_System_Int32_
+  commentId: M:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed(System.Int32)
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed(System.Int32)
+  nameWithType: IReferenceCountingCache.EntryNoLongerUsed(Int32)
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed*
+  name: EntryNoLongerUsed
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_EntryNoLongerUsed_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed
+  nameWithType: IReferenceCountingCache.EntryNoLongerUsed
 - uid: VaraniumSharp.Interfaces.Collections
   name: VaraniumSharp.Interfaces.Collections
   href: api/VaraniumSharp.Interfaces.Collections.html

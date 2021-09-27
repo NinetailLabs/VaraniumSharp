@@ -65,11 +65,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.yml",
+      "source_relative_path": "api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.html",
-          "hash": "EurQ2tvZhmNXWmvP0kshjEWW1cazHU+qPAAFWbXd9fs="
+          "relative_path": "api/VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory-1.html",
+          "hash": "9ZOkbr9FKRvBQv/AR+vrhrDk7fv9MHYiDQ8gBfntniQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Caching.CacheBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Caching.CacheBase-1.html",
+          "hash": "p0oReDSnvxsR71c0lB/Scy0eGJ/l8+Ioz46QUMCYydc="
         }
       },
       "is_incremental": false,
@@ -81,7 +93,19 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html",
-          "hash": "85P7P+dbfW+WcjZ0fFi2MG6P9Vd66tqCf7t9AhOz5Mk="
+          "hash": "OnrumLb+xpsSqxCNgs1p/i0u5ywWwkM2mTofRoi/kRI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html",
+          "hash": "sWbS+9nbqWB4I/qdPe4Z96NarUBwzzgQEB0qfB44qHg="
         }
       },
       "is_incremental": false,
@@ -93,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Caching.html",
-          "hash": "Oi2BNxysxUfx/KQWksGcHCxx3vT/QltP0OmjeMIXXok="
+          "hash": "5Cqx3a9zbnM2zwjtx4bg4KdNDPxonY7YIWyenpj1MK8="
         }
       },
       "is_incremental": false,
@@ -389,11 +413,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.yml",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html",
-          "hash": "AohIFEZPN+PFKiI7Vc1lzQEiUqghMP0VCVQaayMrxDs="
+          "relative_path": "api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html",
+          "hash": "hPJEGA6oPRzLRM+Ewmxtz4FrQvBQ21XFyri/TrchI2I="
         }
       },
       "is_incremental": false,
@@ -401,11 +425,59 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.yml",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.ICacheEntry.yml",
       "output": {
         ".html": {
-          "relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory.html",
-          "hash": "yMo20NiuOB971jJOWsRNe7jAUaHzYKfPIiS5at25Mwo="
+          "relative_path": "api/VaraniumSharp.Interfaces.Caching.ICacheEntry.html",
+          "hash": "U7mBexIaJsXFDJVEAryzQqyg+63jILyteF0CISgtJe8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Caching.IEntity.html",
+          "hash": "XBuzqodkOpieKYjlYZYtjX3GZwCeRu84dHIU1HtMcbQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html",
+          "hash": "dlWOVuoyHyL0NKZpDygmcXqLYxCeS5QNW10a69CmLzE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory-1.html",
+          "hash": "IrR6k3+VrQ7szUs+zs8+AkoRJh+bxrvUGbugfcvxV58="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.html",
+          "hash": "11MOeCtmAXekngX6kOsNwdieskdiJ1/ATyvGCz5Ct84="
         }
       },
       "is_incremental": false,
@@ -417,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Interfaces.Caching.html",
-          "hash": "0cZYWVAW4tT3/fcddWgQc7OY1g4Yb+HErI6s13I57S8="
+          "hash": "wI/5aGHHdkyMz4tjGes8HpZOgXiOeh9WFCmY4pvy4Dg="
         }
       },
       "is_incremental": false,
@@ -657,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "uUF21NrzzUsHpnwXUWE4Y2LwKRAMVAufXs7KFuwRbFo="
+          "hash": "RcnLd+6fU4yO2R6iLyzf8WW9MA8n8Kr7z6lWOxldAdE="
         }
       },
       "is_incremental": false,
@@ -743,7 +815,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 53,
+          "total_file_count": 59,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

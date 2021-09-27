@@ -1,0 +1,698 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CacheBase&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CacheBase&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VaraniumSharp.Caching.CacheBase`1">
+  
+  
+  <h1 id="VaraniumSharp_Caching_CacheBase_1" data-uid="VaraniumSharp.Caching.CacheBase`1" class="text-break">Class CacheBase&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for managing caching of IEntities</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+    <div class="level1"><span class="xref">CacheBase&lt;T&gt;</span></div>
+      <div class="level2"><a class="xref" href="VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html">ReferenceCountingCacheBase&lt;T&gt;</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="VaraniumSharp.Interfaces.Caching.ICacheBase-1.html">ICacheBase</a>&lt;T&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VaraniumSharp.Caching.html">VaraniumSharp.Caching</a></h6>
+  <h6><strong>Assembly</strong>: VaraniumSharp.dll</h6>
+  <h5 id="VaraniumSharp_Caching_CacheBase_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class CacheBase&lt;T&gt; : ICacheBase&lt;T&gt; where T : class, ICacheEntry</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1__ctor.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L21">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1__ctor_" data-uid="VaraniumSharp.Caching.CacheBase`1.#ctor*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1__ctor" data-uid="VaraniumSharp.Caching.CacheBase`1.#ctor">CacheBase()</h4>
+  <div class="markdown level1 summary"><p>Default Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CacheBase()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_EntryCache.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.EntryCache%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L137">View Source</a>
+  </span>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_EntryCache" data-uid="VaraniumSharp.Caching.CacheBase`1.EntryCache">EntryCache</h4>
+  <div class="markdown level1 summary"><p>Cache for storing entries</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MemoryCacheWrapper&lt;T&gt; EntryCache</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VaraniumSharp.Caching.MemoryCacheWrapper-1.html">MemoryCacheWrapper</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_ItemsInCache.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.ItemsInCache%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L31">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1_ItemsInCache_" data-uid="VaraniumSharp.Caching.CacheBase`1.ItemsInCache*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_ItemsInCache" data-uid="VaraniumSharp.Caching.CacheBase`1.ItemsInCache">ItemsInCache</h4>
+  <div class="markdown level1 summary"><p>The number of entries in the cache</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long ItemsInCache { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_CacheItemRemoved_System_Runtime_Caching_CacheEntryRemovedArguments_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.CacheItemRemoved(System.Runtime.Caching.CacheEntryRemovedArguments)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L91">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1_CacheItemRemoved_" data-uid="VaraniumSharp.Caching.CacheBase`1.CacheItemRemoved*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_CacheItemRemoved_System_Runtime_Caching_CacheEntryRemovedArguments_" data-uid="VaraniumSharp.Caching.CacheBase`1.CacheItemRemoved(System.Runtime.Caching.CacheEntryRemovedArguments)">CacheItemRemoved(CacheEntryRemovedArguments)</h4>
+  <div class="markdown level1 summary"><p>Fired when an item is removed from the cache</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void CacheItemRemoved(CacheEntryRemovedArguments removedEntryDetails)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.caching.cacheentryremovedarguments(v=vs.110).aspx">CacheEntryRemovedArguments</a></td>
+        <td><span class="parametername">removedEntryDetails</span></td>
+        <td><p>Details about the removed entry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_ContainsKeyAsync_System_Int32_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.ContainsKeyAsync(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L38">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1_ContainsKeyAsync_" data-uid="VaraniumSharp.Caching.CacheBase`1.ContainsKeyAsync*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_ContainsKeyAsync_System_Int32_" data-uid="VaraniumSharp.Caching.CacheBase`1.ContainsKeyAsync(System.Int32)">ContainsKeyAsync(Int32)</h4>
+  <div class="markdown level1 summary"><p>Check if the cache contains an entry for a specific keys</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;bool&gt; ContainsKeyAsync(int key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key to check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;</td>
+        <td><p>True if the cache has an entry for the keys, otherwise false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_RemoveItemFromCacheAsync_System_Int32_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.RemoveItemFromCacheAsync(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L46">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1_RemoveItemFromCacheAsync_" data-uid="VaraniumSharp.Caching.CacheBase`1.RemoveItemFromCacheAsync*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_RemoveItemFromCacheAsync_System_Int32_" data-uid="VaraniumSharp.Caching.CacheBase`1.RemoveItemFromCacheAsync(System.Int32)">RemoveItemFromCacheAsync(Int32)</h4>
+  <div class="markdown level1 summary"><p>Remove an entry from the cache</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task RemoveItemFromCacheAsync(int key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key for the entry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_RetrieveEntriesFromRepositoryAsync_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.RetrieveEntriesFromRepositoryAsync(System.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L98">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1_RetrieveEntriesFromRepositoryAsync_" data-uid="VaraniumSharp.Caching.CacheBase`1.RetrieveEntriesFromRepositoryAsync*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_RetrieveEntriesFromRepositoryAsync_System_Collections_Generic_List_System_String__" data-uid="VaraniumSharp.Caching.CacheBase`1.RetrieveEntriesFromRepositoryAsync(System.Collections.Generic.List{System.String})">RetrieveEntriesFromRepositoryAsync(List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieve multiple entries from the data store</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task&lt;Dictionary&lt;string, T&gt;&gt; RetrieveEntriesFromRepositoryAsync(List&lt;string&gt; keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys that should be retrieved from the data store</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, T&gt;&gt;</td>
+        <td><p>Collection of retrieved entries</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_RetrieveEntryFromRepositoryAsync_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.RetrieveEntryFromRepositoryAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L108">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1_RetrieveEntryFromRepositoryAsync_" data-uid="VaraniumSharp.Caching.CacheBase`1.RetrieveEntryFromRepositoryAsync*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_RetrieveEntryFromRepositoryAsync_System_String_" data-uid="VaraniumSharp.Caching.CacheBase`1.RetrieveEntryFromRepositoryAsync(System.String)">RetrieveEntryFromRepositoryAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve an entry from the data store</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task&lt;T&gt; RetrieveEntryFromRepositoryAsync(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key of the entry to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</td>
+        <td><p>Retrieved entry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_RetrieveEntryItemAsync_System_Int32_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.RetrieveEntryItemAsync(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L57">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1_RetrieveEntryItemAsync_" data-uid="VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemAsync*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_RetrieveEntryItemAsync_System_Int32_" data-uid="VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemAsync(System.Int32)">RetrieveEntryItemAsync(Int32)</h4>
+  <div class="markdown level1 summary"><p>Retrieve an entry from the cache</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;T&gt; RetrieveEntryItemAsync(int key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key of the entry to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</td>
+        <td><p>The entry if it exists in the cache</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_RetrieveEntryItemsAsync_System_Collections_Generic_List_System_Int32__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.RetrieveEntryItemsAsync(System.Collections.Generic.List%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L66">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1_RetrieveEntryItemsAsync_" data-uid="VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemsAsync*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_RetrieveEntryItemsAsync_System_Collections_Generic_List_System_Int32__" data-uid="VaraniumSharp.Caching.CacheBase`1.RetrieveEntryItemsAsync(System.Collections.Generic.List{System.Int32})">RetrieveEntryItemsAsync(List&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieve a collection of entries from the cache</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;List&lt;T&gt;&gt; RetrieveEntryItemsAsync(List&lt;int&gt; keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>Collection of keys to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;T&gt;&gt;</td>
+        <td><p>Items that were retrieved from the cache or data store</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_SaveReadmodelAsync_VaraniumSharp_Interfaces_Caching_IEntity_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.SaveReadmodelAsync(VaraniumSharp.Interfaces.Caching.IEntity)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L78">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1_SaveReadmodelAsync_" data-uid="VaraniumSharp.Caching.CacheBase`1.SaveReadmodelAsync*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_SaveReadmodelAsync_VaraniumSharp_Interfaces_Caching_IEntity_" data-uid="VaraniumSharp.Caching.CacheBase`1.SaveReadmodelAsync(VaraniumSharp.Interfaces.Caching.IEntity)">SaveReadmodelAsync(IEntity)</h4>
+  <div class="markdown level1 summary"><p>Method for saving an entry to the database</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;bool&gt; SaveReadmodelAsync(IEntity entry)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VaraniumSharp.Interfaces.Caching.IEntity.html">IEntity</a></td>
+        <td><span class="parametername">entry</span></td>
+        <td><p>The entry to save.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;</td>
+        <td><p>Indicate if save was successful or not</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1_SaveReadmodelsAsync_System_Collections_Generic_List_VaraniumSharp_Interfaces_Caching_IEntity__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601.SaveReadmodelsAsync(System.Collections.Generic.List%7BVaraniumSharp.Interfaces.Caching.IEntity%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L81">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_CacheBase_1_SaveReadmodelsAsync_" data-uid="VaraniumSharp.Caching.CacheBase`1.SaveReadmodelsAsync*"></a>
+  <h4 id="VaraniumSharp_Caching_CacheBase_1_SaveReadmodelsAsync_System_Collections_Generic_List_VaraniumSharp_Interfaces_Caching_IEntity__" data-uid="VaraniumSharp.Caching.CacheBase`1.SaveReadmodelsAsync(System.Collections.Generic.List{VaraniumSharp.Interfaces.Caching.IEntity})">SaveReadmodelsAsync(List&lt;IEntity&gt;)</h4>
+  <div class="markdown level1 summary"><p>Method for saving multiple entries to the database</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;Dictionary&lt;int, bool&gt;&gt; SaveReadmodelsAsync(List&lt;IEntity&gt; entries)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="VaraniumSharp.Interfaces.Caching.IEntity.html">IEntity</a>&gt;</td>
+        <td><span class="parametername">entries</span></td>
+        <td><p>The entries to save</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;&gt;</td>
+        <td><p>Dictionary indicating which entries succeeded or failed to save</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="VaraniumSharp.Interfaces.Caching.ICacheBase-1.html">ICacheBase&lt;T&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_CacheBase_1.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.CacheBase%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/CacheBase.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

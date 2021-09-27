@@ -77,15 +77,21 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory.html">BasicMemoryCacheWrapperFactory</a></h4>
+      <h4><a class="xref" href="VaraniumSharp.Caching.BasicMemoryCacheWrapperFactory-1.html">BasicMemoryCacheWrapperFactory&lt;T&gt;</a></h4>
       <section><p>Creates and initializes instances of <a class="xref" href="VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html">IMemoryCacheWrapper&lt;T&gt;</a>
 <remarks>
 This class should not be used when Dependency Injection is used as it directly new up instances of <a class="xref" href="VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html">IMemoryCacheWrapper&lt;T&gt;</a> rather than resolving them from the container.
 For a DI compatible solution look for a factory implementation in a Ring 2 library like VaraniumSharp.Initiator
 </remarks></p>
 </section>
+      <h4><a class="xref" href="VaraniumSharp.Caching.CacheBase-1.html">CacheBase&lt;T&gt;</a></h4>
+      <section><p>Base class for managing caching of IEntities</p>
+</section>
       <h4><a class="xref" href="VaraniumSharp.Caching.MemoryCacheWrapper-1.html">MemoryCacheWrapper&lt;T&gt;</a></h4>
       <section><p>Wrapper for <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.caching.memorycache(v=vs.110).aspx">MemoryCache</a> that provides an easy double-checked lock method for retrieving items from the cache</p>
+</section>
+      <h4><a class="xref" href="VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html">ReferenceCountingCacheBase&lt;T&gt;</a></h4>
+      <section><p>Cache that uses counts of items in use to decide when items should be evicted</p>
 </section>
 </article>
           </div>
