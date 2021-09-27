@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using VaraniumSharp.Caching;
 using VaraniumSharp.Interfaces.Caching;
+using VaraniumSharp.Tests.Fixtures;
 using Xunit;
 
 namespace VaraniumSharp.Tests.Caching
@@ -21,19 +22,14 @@ namespace VaraniumSharp.Tests.Caching
 
             #endregion
 
+            #region Properties
+
+            public int MultiEntryRepositoryRetrievalCalls { get; private set; }
+            public int SingleEntryRepositoryRetrievalCalls { get; private set; }
+
+            #endregion
+
             #region Public Methods
-
-            public override async Task<CacheEntityFixture> RetrieveEntryItemAsync(int key)
-            {
-                var stringKey = key.ToString();
-                IncreaseReferenceCount(key);
-                return await EntryCache.GetAsync(stringKey);
-            }
-
-            public override async Task<List<CacheEntityFixture>> RetrieveEntryItemsAsync(List<int> keys)
-            {
-                throw new NotImplementedException();
-            }
 
             public override async Task<bool> SaveReadmodelAsync(IEntity entry)
             {
@@ -61,11 +57,19 @@ namespace VaraniumSharp.Tests.Caching
 
             protected override async Task<Dictionary<string, CacheEntityFixture>> RetrieveEntriesFromRepositoryAsync(List<string> keys)
             {
-                throw new NotImplementedException();
+                MultiEntryRepositoryRetrievalCalls++;
+                var results = new Dictionary<string, CacheEntityFixture>();
+                foreach (var key in keys)
+                {
+                    results.Add(key, new CacheEntityFixture(int.Parse(key)));
+                }
+
+                return results;
             }
 
             protected override async Task<CacheEntityFixture> RetrieveEntryFromRepositoryAsync(string key)
             {
+                SingleEntryRepositoryRetrievalCalls++;
                 await Task.Delay(1);
                 if (int.TryParse(key, out var intKey))
                 {
@@ -174,6 +178,56 @@ namespace VaraniumSharp.Tests.Caching
 
             // assert
             entry.CacheItemRemovedCallCount.Should().Be(0);
+        }
+
+        [Fact]
+        public async Task RetrievingAnEntryAlreadyInTheCacheRetrievesItFromTheCache()
+        {
+            // arrange
+            const int key = 1;
+            var sut = new CacheBaseFixture();
+            await sut.RetrieveEntryItemAsync(key);
+
+            // act
+            var result = await sut.RetrieveEntryItemAsync(key);
+
+            // assert
+            result.Should().NotBeNull();
+            sut.ItemsInCache.Should().Be(1);
+        }
+
+        [Fact]
+        public async Task RetrievingCacheEntryRetrievesTheEntryFromTheRepository()
+        {
+            // arrange
+            const int key = 1;
+            var cacheCleanDuration = TimeSpan.FromMilliseconds(200);
+            var sut = new ReferenceCountingBaseFixture(cacheCleanDuration);
+
+            // act
+            var result = await sut.RetrieveEntryItemAsync(key);
+
+            // assert
+            result.Should().NotBeNull();
+            sut.SingleEntryRepositoryRetrievalCalls.Should().Be(1);
+            sut.ItemsInCache.Should().Be(1);
+        }
+
+        [Fact]
+        public async Task RetrievingMultipleEntriesWorksCorrectly()
+        {
+            // arrange
+            const int key = 1;
+            var cacheCleanDuration = TimeSpan.FromMilliseconds(200);
+            var sut = new ReferenceCountingBaseFixture(cacheCleanDuration);
+            await sut.RetrieveEntryItemAsync(key);
+
+            // act
+            var result = await sut.RetrieveEntryItemsAsync(new List<int> { key });
+
+            // assert
+            result.Count.Should().Be(1);
+            sut.MultiEntryRepositoryRetrievalCalls.Should().Be(1);
         }
     }
 }

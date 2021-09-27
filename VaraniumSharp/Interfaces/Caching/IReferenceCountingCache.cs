@@ -1,5 +1,4 @@
-﻿#if NETSTANDARD2_1_OR_GREATER
-namespace VaraniumSharp.Interfaces.Caching
+﻿namespace VaraniumSharp.Interfaces.Caching
 {
     /// <summary>
     /// Cache that uses counts of items in use to decide when items should be evicted
@@ -17,4 +16,3 @@ namespace VaraniumSharp.Interfaces.Caching
         #endregion
     }
 }
-#endif

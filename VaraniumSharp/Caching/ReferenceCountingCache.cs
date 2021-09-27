@@ -1,11 +1,13 @@
 ﻿#if NETSTANDARD2_1_OR_GREATER
 #nullable enable
+#endif
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using VaraniumSharp.Interfaces.Caching;
 
 namespace VaraniumSharp.Caching
@@ -47,6 +49,39 @@ namespace VaraniumSharp.Caching
             }
         }
 
+        /// <inheritdoc />
+#if NETSTANDARD2_1_OR_GREATER
+        public override async Task<T?> RetrieveEntryItemAsync(int key)
+#else
+        public override async Task<T> RetrieveEntryItemAsync(int key)
+#endif
+        {
+            var entry = await base
+                .RetrieveEntryItemAsync(key)
+                .ConfigureAwait(false);
+            if (entry != null)
+            {
+                IncreaseReferenceCount(key);
+            }
+
+            return entry;
+        }
+
+        /// <inheritdoc />
+        public override async Task<List<T>> RetrieveEntryItemsAsync(List<int> keys)
+        {
+            var entries = await base
+                .RetrieveEntryItemsAsync(keys)
+                .ConfigureAwait(false);
+            var idsToIncrease = entries.Select(x => x.Id);
+            foreach (var id in idsToIncrease)
+            {
+                IncreaseReferenceCount(id);
+            }
+
+            return entries;
+        }
+
         #endregion
 
         #region Private Methods
@@ -55,7 +90,12 @@ namespace VaraniumSharp.Caching
         /// Occurs when the <see cref="_cacheCleanupTimer"/> fires
         /// </summary>
         /// <param name="state">Always null</param>
+#if NETSTANDARD2_1_OR_GREATER
         protected virtual async void CacheCleanupCallback(object? state)
+#else
+        protected virtual async void CacheCleanupCallback(object state)
+#endif
+
         {
             try
             {
@@ -64,13 +104,23 @@ namespace VaraniumSharp.Caching
                     .ConfigureAwait(false);
 
                 var itemsToClean = ItemReferenceCount.Where(x => x.Value <= 0).ToList();
+#if NETSTANDARD2_1_OR_GREATER
                 foreach (var (id, _) in itemsToClean)
                 {
+#else
+                foreach (var item in itemsToClean)
+                {
+                    var id = item.Key;
+#endif
                     var key = id.ToString(CultureInfo.InvariantCulture);
                     await EntryCache
                         .RemoveFromCacheAsync(key)
                         .ConfigureAwait(false);
+#if NETSTANDARD2_1_OR_GREATER
                     ItemReferenceCount.Remove(id, out _);
+#else
+                    ItemReferenceCount.TryRemove(id, out _);
+#endif
                 }
             }
             finally
@@ -129,4 +179,3 @@ namespace VaraniumSharp.Caching
         #endregion
     }
 }
-#endif
