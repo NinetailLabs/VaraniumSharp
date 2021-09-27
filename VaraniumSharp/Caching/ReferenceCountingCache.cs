@@ -15,7 +15,7 @@ namespace VaraniumSharp.Caching
     /// <summary>
     /// Cache that uses counts of items in use to decide when items should be evicted
     /// </summary>
-    public abstract class ReferenceCountingCacheBase<T> : CacheBase<T>, IReferenceCountingCache, IDisposable where T : class, ICacheEntry
+    public abstract class ReferenceCountingCacheBase<T> : CacheBase<T>, IReferenceCountingCache<T>, IDisposable where T : class, ICacheEntry
     {
         #region Constructor
 
