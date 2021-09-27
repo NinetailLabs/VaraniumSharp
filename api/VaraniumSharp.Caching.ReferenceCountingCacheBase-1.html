@@ -84,8 +84,8 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html">IReferenceCountingCache</a>&lt;T&gt;</div>
     <div><a class="xref" href="VaraniumSharp.Interfaces.Caching.ICacheBase-1.html">ICacheBase</a>&lt;T&gt;</div>
-    <div><a class="xref" href="VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.html">IReferenceCountingCache</a></div>
     <div><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
@@ -143,7 +143,7 @@
   <h6><strong>Assembly</strong>: VaraniumSharp.dll</h6>
   <h5 id="VaraniumSharp_Caching_ReferenceCountingCacheBase_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ReferenceCountingCacheBase&lt;T&gt; : CacheBase&lt;T&gt;, ICacheBase&lt;T&gt;, IReferenceCountingCache, IDisposable where T : class, ICacheEntry</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ReferenceCountingCacheBase&lt;T&gt; : CacheBase&lt;T&gt;, IReferenceCountingCache&lt;T&gt;, ICacheBase&lt;T&gt;, IDisposable where T : class, ICacheEntry</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -517,10 +517,10 @@
   <div><span class="xref">VaraniumSharp.Caching.CacheBase&lt;T&gt;.RetrieveEntryItemsAsync(System.Collections.Generic.List&lt;System.Int32&gt;)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="VaraniumSharp.Interfaces.Caching.ICacheBase-1.html">ICacheBase&lt;T&gt;</a>
+      <a class="xref" href="VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html">IReferenceCountingCache&lt;T&gt;</a>
   </div>
   <div>
-      <a class="xref" href="VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.html">IReferenceCountingCache</a>
+      <a class="xref" href="VaraniumSharp.Interfaces.Caching.ICacheBase-1.html">ICacheBase&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx">IDisposable</a>

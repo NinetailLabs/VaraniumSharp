@@ -2263,25 +2263,32 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapperFactory(Of T).CreateWithDefaultSlidingPolicy
   nameWithType: IMemoryCacheWrapperFactory<T>.CreateWithDefaultSlidingPolicy
   nameWithType.vb: IMemoryCacheWrapperFactory(Of T).CreateWithDefaultSlidingPolicy
-- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache
-  name: IReferenceCountingCache
-  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.html
-  commentId: T:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache
-  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache
-  nameWithType: IReferenceCountingCache
-- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed(System.Int32)
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1
+  name: IReferenceCountingCache<T>
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html
+  commentId: T:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1
+  name.vb: IReferenceCountingCache(Of T)
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache<T>
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache(Of T)
+  nameWithType: IReferenceCountingCache<T>
+  nameWithType.vb: IReferenceCountingCache(Of T)
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.EntryNoLongerUsed(System.Int32)
   name: EntryNoLongerUsed(Int32)
-  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_EntryNoLongerUsed_System_Int32_
-  commentId: M:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed(System.Int32)
-  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed(System.Int32)
-  nameWithType: IReferenceCountingCache.EntryNoLongerUsed(Int32)
-- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed*
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_1_EntryNoLongerUsed_System_Int32_
+  commentId: M:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.EntryNoLongerUsed(System.Int32)
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache<T>.EntryNoLongerUsed(System.Int32)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache(Of T).EntryNoLongerUsed(System.Int32)
+  nameWithType: IReferenceCountingCache<T>.EntryNoLongerUsed(Int32)
+  nameWithType.vb: IReferenceCountingCache(Of T).EntryNoLongerUsed(Int32)
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.EntryNoLongerUsed*
   name: EntryNoLongerUsed
-  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_EntryNoLongerUsed_
-  commentId: Overload:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_1_EntryNoLongerUsed_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.EntryNoLongerUsed
   isSpec: "True"
-  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.EntryNoLongerUsed
-  nameWithType: IReferenceCountingCache.EntryNoLongerUsed
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache<T>.EntryNoLongerUsed
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache(Of T).EntryNoLongerUsed
+  nameWithType: IReferenceCountingCache<T>.EntryNoLongerUsed
+  nameWithType.vb: IReferenceCountingCache(Of T).EntryNoLongerUsed
 - uid: VaraniumSharp.Interfaces.Collections
   name: VaraniumSharp.Interfaces.Collections
   href: api/VaraniumSharp.Interfaces.Collections.html

@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html",
-          "hash": "sWbS+9nbqWB4I/qdPe4Z96NarUBwzzgQEB0qfB44qHg="
+          "hash": "kbB1OFq5AVa6m1qpNJ5rpSYgqKm+uP8XxFqctUIUZwo="
         }
       },
       "is_incremental": false,
@@ -473,11 +473,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.yml",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache.html",
-          "hash": "11MOeCtmAXekngX6kOsNwdieskdiJ1/ATyvGCz5Ct84="
+          "relative_path": "api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html",
+          "hash": "7QFrHhfqTYZMHM2MJTRstVa+HsPV1p/PM3A7MNUATiU="
         }
       },
       "is_incremental": false,
@@ -489,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Interfaces.Caching.html",
-          "hash": "wI/5aGHHdkyMz4tjGes8HpZOgXiOeh9WFCmY4pvy4Dg="
+          "hash": "PciOrdTh1OsMsIaGM7Lzb7OX/DdWmxgk6uexNbNSb/s="
         }
       },
       "is_incremental": false,
@@ -729,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "RcnLd+6fU4yO2R6iLyzf8WW9MA8n8Kr7z6lWOxldAdE="
+          "hash": "l+wD+pSioAgnwizgPgwpFaNQN4QwX1uqcyopxmtYYxQ="
         }
       },
       "is_incremental": false,
