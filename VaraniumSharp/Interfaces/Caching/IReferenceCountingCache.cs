@@ -3,7 +3,7 @@
     /// <summary>
     /// Cache that uses counts of items in use to decide when items should be evicted
     /// </summary>
-    public interface IReferenceCountingCache
+    public interface IReferenceCountingCache<T> : ICacheBase<T> where T : class, ICacheEntry
     {
         #region Public Methods
 
