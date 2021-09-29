@@ -218,7 +218,6 @@ namespace VaraniumSharp.Caching
             {
                 semaphore.Release();
             }
-
         }
 
         /// <summary>
@@ -282,6 +281,32 @@ namespace VaraniumSharp.Caching
             return response
                 .Select(x => new KeyValuePair<string, T>(x.Key, (T)x.Value))
                 .ToDictionary(pair => pair.Key, pair => pair.Value);
+        }
+
+        /// <inheritdoc />
+        public List<T> GetForKeysAlreadyInCache(IEnumerable<string> keys)
+        {
+            var resultBag = new ConcurrentBag<T>();
+            Parallel.ForEach(keys, key =>
+            {
+                var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
+
+                try
+                {
+                    semaphore.Wait();
+
+                    if (_memoryCache.Contains(key))
+                    {
+                        resultBag.Add((T)_memoryCache.Get(key));
+                    }
+                }
+                finally
+                {
+                    semaphore.Release();
+                }
+            });
+
+            return resultBag.ToList();
         }
 
         /// <summary>

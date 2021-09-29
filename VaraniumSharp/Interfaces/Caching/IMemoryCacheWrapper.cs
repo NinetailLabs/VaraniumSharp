@@ -93,6 +93,13 @@ namespace VaraniumSharp.Interfaces.Caching
         Task<Dictionary<string, T>> GetAsync(List<string> keys);
 
         /// <summary>
+        /// Check if the entry for each key is already in the cache and retrieve it only if it is.
+        /// </summary>
+        /// <param name="keys">Keys to check for</param>
+        /// <returns>Collection of entries that matches the keys and is already in the cache</returns>
+        List<T> GetForKeysAlreadyInCache(IEnumerable<string> keys);
+
+        /// <summary>
         /// Remove an item from the Cache
         /// </summary>
         /// <param name="key">The key under which the item is stored</param>
