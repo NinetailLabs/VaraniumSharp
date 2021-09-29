@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Caching;
 using System.Threading;
 using System.Threading.Tasks;
@@ -110,6 +111,33 @@ namespace VaraniumSharp.Tests.Caching
             private readonly T _returnValue;
 
             #endregion
+        }
+
+        [Fact]
+        public async Task RetrievingKeysAlreadyInCacheReturnsOnlyCachedEntries()
+        {
+            // arrange
+            const string key = "12";
+            const string key2 = "55";
+            var returnValue = new CacheEntryFixture
+            {
+                Id = int.Parse(key)
+            };
+            var retrievalFixture = new RetrievalFixture<CacheEntryFixture>(returnValue);
+            var sut = new MemoryCacheWrapper<CacheEntryFixture>
+            {
+                CachePolicy = new CacheItemPolicy(),
+                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc
+            };
+
+            await sut.GetAsync(key);
+
+            // act
+            var result = sut.GetForKeysAlreadyInCache(new[] { key, key2 });
+
+            // assert
+            result.Count.Should().Be(1);
+            result.First().Id.Should().Be(12);
         }
 
         [Fact]
