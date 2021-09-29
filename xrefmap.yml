@@ -595,6 +595,24 @@ references:
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).GetAsync
   nameWithType: MemoryCacheWrapper<T>.GetAsync
   nameWithType.vb: MemoryCacheWrapper(Of T).GetAsync
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.GetForKeysAlreadyInCache(System.Collections.Generic.IEnumerable{System.String})
+  name: GetForKeysAlreadyInCache(IEnumerable<String>)
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_GetForKeysAlreadyInCache_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:VaraniumSharp.Caching.MemoryCacheWrapper`1.GetForKeysAlreadyInCache(System.Collections.Generic.IEnumerable{System.String})
+  name.vb: GetForKeysAlreadyInCache(IEnumerable(Of String))
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.GetForKeysAlreadyInCache(System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).GetForKeysAlreadyInCache(System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: MemoryCacheWrapper<T>.GetForKeysAlreadyInCache(IEnumerable<String>)
+  nameWithType.vb: MemoryCacheWrapper(Of T).GetForKeysAlreadyInCache(IEnumerable(Of String))
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.GetForKeysAlreadyInCache*
+  name: GetForKeysAlreadyInCache
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_GetForKeysAlreadyInCache_
+  commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.GetForKeysAlreadyInCache
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.GetForKeysAlreadyInCache
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).GetForKeysAlreadyInCache
+  nameWithType: MemoryCacheWrapper<T>.GetForKeysAlreadyInCache
+  nameWithType.vb: MemoryCacheWrapper(Of T).GetForKeysAlreadyInCache
 - uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.ItemsInCache
   name: ItemsInCache
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_ItemsInCache
@@ -2201,6 +2219,24 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).GetAsync
   nameWithType: IMemoryCacheWrapper<T>.GetAsync
   nameWithType.vb: IMemoryCacheWrapper(Of T).GetAsync
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.GetForKeysAlreadyInCache(System.Collections.Generic.IEnumerable{System.String})
+  name: GetForKeysAlreadyInCache(IEnumerable<String>)
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_GetForKeysAlreadyInCache_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.GetForKeysAlreadyInCache(System.Collections.Generic.IEnumerable{System.String})
+  name.vb: GetForKeysAlreadyInCache(IEnumerable(Of String))
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.GetForKeysAlreadyInCache(System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).GetForKeysAlreadyInCache(System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: IMemoryCacheWrapper<T>.GetForKeysAlreadyInCache(IEnumerable<String>)
+  nameWithType.vb: IMemoryCacheWrapper(Of T).GetForKeysAlreadyInCache(IEnumerable(Of String))
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.GetForKeysAlreadyInCache*
+  name: GetForKeysAlreadyInCache
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_GetForKeysAlreadyInCache_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.GetForKeysAlreadyInCache
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.GetForKeysAlreadyInCache
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).GetForKeysAlreadyInCache
+  nameWithType: IMemoryCacheWrapper<T>.GetForKeysAlreadyInCache
+  nameWithType.vb: IMemoryCacheWrapper(Of T).GetForKeysAlreadyInCache
 - uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.RemoveFromCacheAsync(System.String)
   name: RemoveFromCacheAsync(String)
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_RemoveFromCacheAsync_System_String_
