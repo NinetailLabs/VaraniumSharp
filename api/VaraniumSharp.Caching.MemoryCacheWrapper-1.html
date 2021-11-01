@@ -140,7 +140,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1__ctor.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L31">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L32">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1__ctor_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.#ctor*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1__ctor" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.#ctor">MemoryCacheWrapper()</h4>
@@ -155,10 +155,103 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageBatchRetrievalTime.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.AverageBatchRetrievalTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L55">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageBatchRetrievalTime_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchRetrievalTime*"></a>
+  <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageBatchRetrievalTime" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchRetrievalTime">AverageBatchRetrievalTime</h4>
+  <div class="markdown level1 summary"><p>The average time it takes to retrieve a batch of entries from the cache</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan AverageBatchRetrievalTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageBatchSize.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.AverageBatchSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L58">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageBatchSize_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchSize*"></a>
+  <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageBatchSize" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchSize">AverageBatchSize</h4>
+  <div class="markdown level1 summary"><p>The average size of a batch request</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AverageBatchSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageSingleRetrievalTime.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.AverageSingleRetrievalTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L61">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageSingleRetrievalTime_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageSingleRetrievalTime*"></a>
+  <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageSingleRetrievalTime" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageSingleRetrievalTime">AverageSingleRetrievalTime</h4>
+  <div class="markdown level1 summary"><p>The average time it takes to retrieve a single entry from the cache</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan AverageSingleRetrievalTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchRetrievalFunc.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.BatchRetrievalFunc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L54">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L64">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchRetrievalFunc_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchRetrievalFunc*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchRetrievalFunc" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchRetrievalFunc">BatchRetrievalFunc</h4>
@@ -187,10 +280,41 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_CacheHits.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.CacheHits%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L380">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_CacheHits_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheHits*"></a>
+  <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_CacheHits" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheHits">CacheHits</h4>
+  <div class="markdown level1 summary"><p>Number of entries that were retrieved from the cache</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CacheHits { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_CachePolicy.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.CachePolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L81">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L91">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_CachePolicy_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.CachePolicy*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_CachePolicy" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.CachePolicy">CachePolicy</h4>
@@ -224,10 +348,41 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_CacheRequests.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.CacheRequests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L377">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_CacheRequests_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheRequests*"></a>
+  <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_CacheRequests" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheRequests">CacheRequests</h4>
+  <div class="markdown level1 summary"><p>Total number of requests for cache entries</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CacheRequests { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_DataRetrievalFunc.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.DataRetrievalFunc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L105">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L115">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_DataRetrievalFunc_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.DataRetrievalFunc*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_DataRetrievalFunc" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.DataRetrievalFunc">DataRetrievalFunc</h4>
@@ -259,7 +414,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_ItemsInCache.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.ItemsInCache%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L126">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L136">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_ItemsInCache_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.ItemsInCache*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_ItemsInCache" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.ItemsInCache">ItemsInCache</h4>
@@ -292,7 +447,7 @@ public class MemoryCacheWrapper&lt;T&gt; : IMemoryCacheWrapper&lt;T&gt;, INotify
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchAddToCacheAsync_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.BatchAddToCacheAsync(System.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L133">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L143">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchAddToCacheAsync_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchAddToCacheAsync*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchAddToCacheAsync_System_Collections_Generic_List_System_String__" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchAddToCacheAsync(System.Collections.Generic.List{System.String})">BatchAddToCacheAsync(List&lt;String&gt;)</h4>
@@ -344,7 +499,7 @@ This method will not retrieve entries that are already in the cache again.
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_ContainsKeyAsync_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.ContainsKeyAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L187">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L198">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_ContainsKeyAsync_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.ContainsKeyAsync*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_ContainsKeyAsync_System_String_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.ContainsKeyAsync(System.String)">ContainsKeyAsync(String)</h4>
@@ -394,7 +549,7 @@ This method will not retrieve entries that are already in the cache again.
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_ContainsKeyAsync_System_String_System_TimeSpan_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.ContainsKeyAsync(System.String%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L203">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L214">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_ContainsKeyAsync_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.ContainsKeyAsync*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_ContainsKeyAsync_System_String_System_TimeSpan_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.ContainsKeyAsync(System.String,System.TimeSpan)">ContainsKeyAsync(String, TimeSpan)</h4>
@@ -465,7 +620,7 @@ This method will not retrieve entries that are already in the cache again.
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_GetAsync_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.GetAsync(System.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L270">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L294">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_GetAsync_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.GetAsync*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_GetAsync_System_Collections_Generic_List_System_String__" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.GetAsync(System.Collections.Generic.List{System.String})">GetAsync(List&lt;String&gt;)</h4>
@@ -515,7 +670,7 @@ This method will not retrieve entries that are already in the cache again.
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_GetAsync_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.GetAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L232">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L243">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_GetAsync_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.GetAsync*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_GetAsync_System_String_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.GetAsync(System.String)">GetAsync(String)</h4>
@@ -581,7 +736,7 @@ This method will not retrieve entries that are already in the cache again.
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_GetForKeysAlreadyInCache_System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.GetForKeysAlreadyInCache(System.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L287">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L327">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_GetForKeysAlreadyInCache_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.GetForKeysAlreadyInCache*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_GetForKeysAlreadyInCache_System_Collections_Generic_IEnumerable_System_String__" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.GetForKeysAlreadyInCache(System.Collections.Generic.IEnumerable{System.String})">GetForKeysAlreadyInCache(IEnumerable&lt;String&gt;)</h4>
@@ -631,7 +786,7 @@ This method will not retrieve entries that are already in the cache again.
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_RemoveFromCacheAsync_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.RemoveFromCacheAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L317">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L359">View Source</a>
   </span>
   <a id="VaraniumSharp_Caching_MemoryCacheWrapper_1_RemoveFromCacheAsync_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.RemoveFromCacheAsync*"></a>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_RemoveFromCacheAsync_System_String_" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.RemoveFromCacheAsync(System.String)">RemoveFromCacheAsync(String)</h4>
@@ -683,7 +838,7 @@ This method will not retrieve entries that are already in the cache again.
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1_PropertyChanged.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601.PropertyChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L46">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L47">View Source</a>
   </span>
   <h4 id="VaraniumSharp_Caching_MemoryCacheWrapper_1_PropertyChanged" data-uid="VaraniumSharp.Caching.MemoryCacheWrapper`1.PropertyChanged">PropertyChanged</h4>
   <div class="markdown level1 summary"><p>Occurs when a property value changes.</p>
@@ -730,7 +885,7 @@ This method will not retrieve entries that are already in the cache again.
                     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Caching_MemoryCacheWrapper_1.md&amp;value=---%0Auid%3A%20VaraniumSharp.Caching.MemoryCacheWrapper%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Caching/MemoryCacheWrapper.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

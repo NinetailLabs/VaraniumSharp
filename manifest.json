@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Caching.CacheBase-1.html",
-          "hash": "p0oReDSnvxsR71c0lB/Scy0eGJ/l8+Ioz46QUMCYydc="
+          "hash": "FmCoPqc0vTAQcit+62nVESDygD2qnjrag+G2TaUs4d4="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html",
-          "hash": "TozHYNLv3eXL50xCllN7wtLNJb8ZFy100RseBHXDBnA="
+          "hash": "xijlMYhbgFeHwhg8J7fg+hsTKDLqH6N+7UOPMGr3URM="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html",
-          "hash": "kbB1OFq5AVa6m1qpNJ5rpSYgqKm+uP8XxFqctUIUZwo="
+          "hash": "KFOwBJWbJjzkWesx49QGPNLDLpiBKn10VaOSebL9FBQ="
         }
       },
       "is_incremental": false,
@@ -417,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html",
-          "hash": "hPJEGA6oPRzLRM+Ewmxtz4FrQvBQ21XFyri/TrchI2I="
+          "hash": "jujDGcKLhvX6OPBTTUXu4tYLXmRcowZfeON6riWdwiw="
         }
       },
       "is_incremental": false,
@@ -453,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html",
-          "hash": "vz4j89j154pNrI3mVrHe2JV7vAhXuxIP5auRJgQujTs="
+          "hash": "Wg1ycufxWu/CPeROL8k75NrIFm89/J0k+dyXjXPOIu8="
         }
       },
       "is_incremental": false,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html",
-          "hash": "7QFrHhfqTYZMHM2MJTRstVa+HsPV1p/PM3A7MNUATiU="
+          "hash": "bq4lxuyuhEJouIvDvM16+zGO9ptrdlZr3RNidEdamr0="
         }
       },
       "is_incremental": false,

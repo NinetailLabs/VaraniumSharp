@@ -268,6 +268,74 @@ references:
   fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).CacheBase
   nameWithType: CacheBase<T>.CacheBase
   nameWithType.vb: CacheBase(Of T).CacheBase
+- uid: VaraniumSharp.Caching.CacheBase`1.AverageBatchRetrievalTime
+  name: AverageBatchRetrievalTime
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_AverageBatchRetrievalTime
+  commentId: P:VaraniumSharp.Caching.CacheBase`1.AverageBatchRetrievalTime
+  fullName: VaraniumSharp.Caching.CacheBase<T>.AverageBatchRetrievalTime
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).AverageBatchRetrievalTime
+  nameWithType: CacheBase<T>.AverageBatchRetrievalTime
+  nameWithType.vb: CacheBase(Of T).AverageBatchRetrievalTime
+- uid: VaraniumSharp.Caching.CacheBase`1.AverageBatchRetrievalTime*
+  name: AverageBatchRetrievalTime
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_AverageBatchRetrievalTime_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.AverageBatchRetrievalTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.AverageBatchRetrievalTime
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).AverageBatchRetrievalTime
+  nameWithType: CacheBase<T>.AverageBatchRetrievalTime
+  nameWithType.vb: CacheBase(Of T).AverageBatchRetrievalTime
+- uid: VaraniumSharp.Caching.CacheBase`1.AverageBatchSize
+  name: AverageBatchSize
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_AverageBatchSize
+  commentId: P:VaraniumSharp.Caching.CacheBase`1.AverageBatchSize
+  fullName: VaraniumSharp.Caching.CacheBase<T>.AverageBatchSize
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).AverageBatchSize
+  nameWithType: CacheBase<T>.AverageBatchSize
+  nameWithType.vb: CacheBase(Of T).AverageBatchSize
+- uid: VaraniumSharp.Caching.CacheBase`1.AverageBatchSize*
+  name: AverageBatchSize
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_AverageBatchSize_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.AverageBatchSize
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.AverageBatchSize
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).AverageBatchSize
+  nameWithType: CacheBase<T>.AverageBatchSize
+  nameWithType.vb: CacheBase(Of T).AverageBatchSize
+- uid: VaraniumSharp.Caching.CacheBase`1.AverageSingleRetrievalTime
+  name: AverageSingleRetrievalTime
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_AverageSingleRetrievalTime
+  commentId: P:VaraniumSharp.Caching.CacheBase`1.AverageSingleRetrievalTime
+  fullName: VaraniumSharp.Caching.CacheBase<T>.AverageSingleRetrievalTime
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).AverageSingleRetrievalTime
+  nameWithType: CacheBase<T>.AverageSingleRetrievalTime
+  nameWithType.vb: CacheBase(Of T).AverageSingleRetrievalTime
+- uid: VaraniumSharp.Caching.CacheBase`1.AverageSingleRetrievalTime*
+  name: AverageSingleRetrievalTime
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_AverageSingleRetrievalTime_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.AverageSingleRetrievalTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.AverageSingleRetrievalTime
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).AverageSingleRetrievalTime
+  nameWithType: CacheBase<T>.AverageSingleRetrievalTime
+  nameWithType.vb: CacheBase(Of T).AverageSingleRetrievalTime
+- uid: VaraniumSharp.Caching.CacheBase`1.CacheHit
+  name: CacheHit
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_CacheHit
+  commentId: P:VaraniumSharp.Caching.CacheBase`1.CacheHit
+  fullName: VaraniumSharp.Caching.CacheBase<T>.CacheHit
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).CacheHit
+  nameWithType: CacheBase<T>.CacheHit
+  nameWithType.vb: CacheBase(Of T).CacheHit
+- uid: VaraniumSharp.Caching.CacheBase`1.CacheHit*
+  name: CacheHit
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_CacheHit_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.CacheHit
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.CacheHit
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).CacheHit
+  nameWithType: CacheBase<T>.CacheHit
+  nameWithType.vb: CacheBase(Of T).CacheHit
 - uid: VaraniumSharp.Caching.CacheBase`1.CacheItemRemoved(System.Runtime.Caching.CacheEntryRemovedArguments)
   name: CacheItemRemoved(CacheEntryRemovedArguments)
   href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_CacheItemRemoved_System_Runtime_Caching_CacheEntryRemovedArguments_
@@ -285,6 +353,23 @@ references:
   fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).CacheItemRemoved
   nameWithType: CacheBase<T>.CacheItemRemoved
   nameWithType.vb: CacheBase(Of T).CacheItemRemoved
+- uid: VaraniumSharp.Caching.CacheBase`1.CacheRequests
+  name: CacheRequests
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_CacheRequests
+  commentId: P:VaraniumSharp.Caching.CacheBase`1.CacheRequests
+  fullName: VaraniumSharp.Caching.CacheBase<T>.CacheRequests
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).CacheRequests
+  nameWithType: CacheBase<T>.CacheRequests
+  nameWithType.vb: CacheBase(Of T).CacheRequests
+- uid: VaraniumSharp.Caching.CacheBase`1.CacheRequests*
+  name: CacheRequests
+  href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_CacheRequests_
+  commentId: Overload:VaraniumSharp.Caching.CacheBase`1.CacheRequests
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.CacheBase<T>.CacheRequests
+  fullName.vb: VaraniumSharp.Caching.CacheBase(Of T).CacheRequests
+  nameWithType: CacheBase<T>.CacheRequests
+  nameWithType.vb: CacheBase(Of T).CacheRequests
 - uid: VaraniumSharp.Caching.CacheBase`1.ContainsKeyAsync(System.Int32)
   name: ContainsKeyAsync(Int32)
   href: api/VaraniumSharp.Caching.CacheBase-1.html#VaraniumSharp_Caching_CacheBase_1_ContainsKeyAsync_System_Int32_
@@ -475,6 +560,57 @@ references:
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).MemoryCacheWrapper
   nameWithType: MemoryCacheWrapper<T>.MemoryCacheWrapper
   nameWithType.vb: MemoryCacheWrapper(Of T).MemoryCacheWrapper
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchRetrievalTime
+  name: AverageBatchRetrievalTime
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageBatchRetrievalTime
+  commentId: P:VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchRetrievalTime
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.AverageBatchRetrievalTime
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).AverageBatchRetrievalTime
+  nameWithType: MemoryCacheWrapper<T>.AverageBatchRetrievalTime
+  nameWithType.vb: MemoryCacheWrapper(Of T).AverageBatchRetrievalTime
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchRetrievalTime*
+  name: AverageBatchRetrievalTime
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageBatchRetrievalTime_
+  commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchRetrievalTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.AverageBatchRetrievalTime
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).AverageBatchRetrievalTime
+  nameWithType: MemoryCacheWrapper<T>.AverageBatchRetrievalTime
+  nameWithType.vb: MemoryCacheWrapper(Of T).AverageBatchRetrievalTime
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchSize
+  name: AverageBatchSize
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageBatchSize
+  commentId: P:VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchSize
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.AverageBatchSize
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).AverageBatchSize
+  nameWithType: MemoryCacheWrapper<T>.AverageBatchSize
+  nameWithType.vb: MemoryCacheWrapper(Of T).AverageBatchSize
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchSize*
+  name: AverageBatchSize
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageBatchSize_
+  commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageBatchSize
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.AverageBatchSize
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).AverageBatchSize
+  nameWithType: MemoryCacheWrapper<T>.AverageBatchSize
+  nameWithType.vb: MemoryCacheWrapper(Of T).AverageBatchSize
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageSingleRetrievalTime
+  name: AverageSingleRetrievalTime
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageSingleRetrievalTime
+  commentId: P:VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageSingleRetrievalTime
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.AverageSingleRetrievalTime
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).AverageSingleRetrievalTime
+  nameWithType: MemoryCacheWrapper<T>.AverageSingleRetrievalTime
+  nameWithType.vb: MemoryCacheWrapper(Of T).AverageSingleRetrievalTime
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageSingleRetrievalTime*
+  name: AverageSingleRetrievalTime
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_AverageSingleRetrievalTime_
+  commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.AverageSingleRetrievalTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.AverageSingleRetrievalTime
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).AverageSingleRetrievalTime
+  nameWithType: MemoryCacheWrapper<T>.AverageSingleRetrievalTime
+  nameWithType.vb: MemoryCacheWrapper(Of T).AverageSingleRetrievalTime
 - uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.BatchAddToCacheAsync(System.Collections.Generic.List{System.String})
   name: BatchAddToCacheAsync(List<String>)
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_BatchAddToCacheAsync_System_Collections_Generic_List_System_String__
@@ -510,6 +646,23 @@ references:
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).BatchRetrievalFunc
   nameWithType: MemoryCacheWrapper<T>.BatchRetrievalFunc
   nameWithType.vb: MemoryCacheWrapper(Of T).BatchRetrievalFunc
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheHits
+  name: CacheHits
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_CacheHits
+  commentId: P:VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheHits
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.CacheHits
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).CacheHits
+  nameWithType: MemoryCacheWrapper<T>.CacheHits
+  nameWithType.vb: MemoryCacheWrapper(Of T).CacheHits
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheHits*
+  name: CacheHits
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_CacheHits_
+  commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheHits
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.CacheHits
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).CacheHits
+  nameWithType: MemoryCacheWrapper<T>.CacheHits
+  nameWithType.vb: MemoryCacheWrapper(Of T).CacheHits
 - uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.CachePolicy
   name: CachePolicy
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_CachePolicy
@@ -527,6 +680,23 @@ references:
   fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).CachePolicy
   nameWithType: MemoryCacheWrapper<T>.CachePolicy
   nameWithType.vb: MemoryCacheWrapper(Of T).CachePolicy
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheRequests
+  name: CacheRequests
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_CacheRequests
+  commentId: P:VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheRequests
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.CacheRequests
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).CacheRequests
+  nameWithType: MemoryCacheWrapper<T>.CacheRequests
+  nameWithType.vb: MemoryCacheWrapper(Of T).CacheRequests
+- uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheRequests*
+  name: CacheRequests
+  href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_CacheRequests_
+  commentId: Overload:VaraniumSharp.Caching.MemoryCacheWrapper`1.CacheRequests
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.MemoryCacheWrapper<T>.CacheRequests
+  fullName.vb: VaraniumSharp.Caching.MemoryCacheWrapper(Of T).CacheRequests
+  nameWithType: MemoryCacheWrapper<T>.CacheRequests
+  nameWithType.vb: MemoryCacheWrapper(Of T).CacheRequests
 - uid: VaraniumSharp.Caching.MemoryCacheWrapper`1.ContainsKeyAsync(System.String)
   name: ContainsKeyAsync(String)
   href: api/VaraniumSharp.Caching.MemoryCacheWrapper-1.html#VaraniumSharp_Caching_MemoryCacheWrapper_1_ContainsKeyAsync_System_String_
@@ -765,6 +935,57 @@ references:
   fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).ItemReferenceCount
   nameWithType: ReferenceCountingCacheBase<T>.ItemReferenceCount
   nameWithType.vb: ReferenceCountingCacheBase(Of T).ItemReferenceCount
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.LastEvictionSize
+  name: LastEvictionSize
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_LastEvictionSize
+  commentId: P:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.LastEvictionSize
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.LastEvictionSize
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).LastEvictionSize
+  nameWithType: ReferenceCountingCacheBase<T>.LastEvictionSize
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).LastEvictionSize
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.LastEvictionSize*
+  name: LastEvictionSize
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_LastEvictionSize_
+  commentId: Overload:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.LastEvictionSize
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.LastEvictionSize
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).LastEvictionSize
+  nameWithType: ReferenceCountingCacheBase<T>.LastEvictionSize
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).LastEvictionSize
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.LastEvictionTime
+  name: LastEvictionTime
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_LastEvictionTime
+  commentId: P:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.LastEvictionTime
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.LastEvictionTime
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).LastEvictionTime
+  nameWithType: ReferenceCountingCacheBase<T>.LastEvictionTime
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).LastEvictionTime
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.LastEvictionTime*
+  name: LastEvictionTime
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_LastEvictionTime_
+  commentId: Overload:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.LastEvictionTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.LastEvictionTime
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).LastEvictionTime
+  nameWithType: ReferenceCountingCacheBase<T>.LastEvictionTime
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).LastEvictionTime
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.NextCacheEvictionTime
+  name: NextCacheEvictionTime
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_NextCacheEvictionTime
+  commentId: P:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.NextCacheEvictionTime
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.NextCacheEvictionTime
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).NextCacheEvictionTime
+  nameWithType: ReferenceCountingCacheBase<T>.NextCacheEvictionTime
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).NextCacheEvictionTime
+- uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.NextCacheEvictionTime*
+  name: NextCacheEvictionTime
+  href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_NextCacheEvictionTime_
+  commentId: Overload:VaraniumSharp.Caching.ReferenceCountingCacheBase`1.NextCacheEvictionTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Caching.ReferenceCountingCacheBase<T>.NextCacheEvictionTime
+  fullName.vb: VaraniumSharp.Caching.ReferenceCountingCacheBase(Of T).NextCacheEvictionTime
+  nameWithType: ReferenceCountingCacheBase<T>.NextCacheEvictionTime
+  nameWithType.vb: ReferenceCountingCacheBase(Of T).NextCacheEvictionTime
 - uid: VaraniumSharp.Caching.ReferenceCountingCacheBase`1.ReferenceCleanupSemaphore
   name: ReferenceCleanupSemaphore
   href: api/VaraniumSharp.Caching.ReferenceCountingCacheBase-1.html#VaraniumSharp_Caching_ReferenceCountingCacheBase_1_ReferenceCleanupSemaphore
@@ -1918,6 +2139,91 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T)
   nameWithType: ICacheBase<T>
   nameWithType.vb: ICacheBase(Of T)
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageBatchRetrievalTime
+  name: AverageBatchRetrievalTime
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_AverageBatchRetrievalTime
+  commentId: P:VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageBatchRetrievalTime
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.AverageBatchRetrievalTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).AverageBatchRetrievalTime
+  nameWithType: ICacheBase<T>.AverageBatchRetrievalTime
+  nameWithType.vb: ICacheBase(Of T).AverageBatchRetrievalTime
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageBatchRetrievalTime*
+  name: AverageBatchRetrievalTime
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_AverageBatchRetrievalTime_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageBatchRetrievalTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.AverageBatchRetrievalTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).AverageBatchRetrievalTime
+  nameWithType: ICacheBase<T>.AverageBatchRetrievalTime
+  nameWithType.vb: ICacheBase(Of T).AverageBatchRetrievalTime
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageBatchSize
+  name: AverageBatchSize
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_AverageBatchSize
+  commentId: P:VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageBatchSize
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.AverageBatchSize
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).AverageBatchSize
+  nameWithType: ICacheBase<T>.AverageBatchSize
+  nameWithType.vb: ICacheBase(Of T).AverageBatchSize
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageBatchSize*
+  name: AverageBatchSize
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_AverageBatchSize_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageBatchSize
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.AverageBatchSize
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).AverageBatchSize
+  nameWithType: ICacheBase<T>.AverageBatchSize
+  nameWithType.vb: ICacheBase(Of T).AverageBatchSize
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageSingleRetrievalTime
+  name: AverageSingleRetrievalTime
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_AverageSingleRetrievalTime
+  commentId: P:VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageSingleRetrievalTime
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.AverageSingleRetrievalTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).AverageSingleRetrievalTime
+  nameWithType: ICacheBase<T>.AverageSingleRetrievalTime
+  nameWithType.vb: ICacheBase(Of T).AverageSingleRetrievalTime
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageSingleRetrievalTime*
+  name: AverageSingleRetrievalTime
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_AverageSingleRetrievalTime_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.AverageSingleRetrievalTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.AverageSingleRetrievalTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).AverageSingleRetrievalTime
+  nameWithType: ICacheBase<T>.AverageSingleRetrievalTime
+  nameWithType.vb: ICacheBase(Of T).AverageSingleRetrievalTime
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.CacheHit
+  name: CacheHit
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_CacheHit
+  commentId: P:VaraniumSharp.Interfaces.Caching.ICacheBase`1.CacheHit
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.CacheHit
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).CacheHit
+  nameWithType: ICacheBase<T>.CacheHit
+  nameWithType.vb: ICacheBase(Of T).CacheHit
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.CacheHit*
+  name: CacheHit
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_CacheHit_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.CacheHit
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.CacheHit
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).CacheHit
+  nameWithType: ICacheBase<T>.CacheHit
+  nameWithType.vb: ICacheBase(Of T).CacheHit
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.CacheRequests
+  name: CacheRequests
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_CacheRequests
+  commentId: P:VaraniumSharp.Interfaces.Caching.ICacheBase`1.CacheRequests
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.CacheRequests
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).CacheRequests
+  nameWithType: ICacheBase<T>.CacheRequests
+  nameWithType.vb: ICacheBase(Of T).CacheRequests
+- uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.CacheRequests*
+  name: CacheRequests
+  href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_CacheRequests_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.ICacheBase`1.CacheRequests
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.ICacheBase<T>.CacheRequests
+  fullName.vb: VaraniumSharp.Interfaces.Caching.ICacheBase(Of T).CacheRequests
+  nameWithType: ICacheBase<T>.CacheRequests
+  nameWithType.vb: ICacheBase(Of T).CacheRequests
 - uid: VaraniumSharp.Interfaces.Caching.ICacheBase`1.ContainsKeyAsync(System.Int32)
   name: ContainsKeyAsync(Int32)
   href: api/VaraniumSharp.Interfaces.Caching.ICacheBase-1.html#VaraniumSharp_Interfaces_Caching_ICacheBase_1_ContainsKeyAsync_System_Int32_
@@ -2099,6 +2405,57 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T)
   nameWithType: IMemoryCacheWrapper<T>
   nameWithType.vb: IMemoryCacheWrapper(Of T)
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageBatchRetrievalTime
+  name: AverageBatchRetrievalTime
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_AverageBatchRetrievalTime
+  commentId: P:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageBatchRetrievalTime
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.AverageBatchRetrievalTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).AverageBatchRetrievalTime
+  nameWithType: IMemoryCacheWrapper<T>.AverageBatchRetrievalTime
+  nameWithType.vb: IMemoryCacheWrapper(Of T).AverageBatchRetrievalTime
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageBatchRetrievalTime*
+  name: AverageBatchRetrievalTime
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_AverageBatchRetrievalTime_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageBatchRetrievalTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.AverageBatchRetrievalTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).AverageBatchRetrievalTime
+  nameWithType: IMemoryCacheWrapper<T>.AverageBatchRetrievalTime
+  nameWithType.vb: IMemoryCacheWrapper(Of T).AverageBatchRetrievalTime
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageBatchSize
+  name: AverageBatchSize
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_AverageBatchSize
+  commentId: P:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageBatchSize
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.AverageBatchSize
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).AverageBatchSize
+  nameWithType: IMemoryCacheWrapper<T>.AverageBatchSize
+  nameWithType.vb: IMemoryCacheWrapper(Of T).AverageBatchSize
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageBatchSize*
+  name: AverageBatchSize
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_AverageBatchSize_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageBatchSize
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.AverageBatchSize
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).AverageBatchSize
+  nameWithType: IMemoryCacheWrapper<T>.AverageBatchSize
+  nameWithType.vb: IMemoryCacheWrapper(Of T).AverageBatchSize
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageSingleRetrievalTime
+  name: AverageSingleRetrievalTime
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_AverageSingleRetrievalTime
+  commentId: P:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageSingleRetrievalTime
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.AverageSingleRetrievalTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).AverageSingleRetrievalTime
+  nameWithType: IMemoryCacheWrapper<T>.AverageSingleRetrievalTime
+  nameWithType.vb: IMemoryCacheWrapper(Of T).AverageSingleRetrievalTime
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageSingleRetrievalTime*
+  name: AverageSingleRetrievalTime
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_AverageSingleRetrievalTime_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.AverageSingleRetrievalTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.AverageSingleRetrievalTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).AverageSingleRetrievalTime
+  nameWithType: IMemoryCacheWrapper<T>.AverageSingleRetrievalTime
+  nameWithType.vb: IMemoryCacheWrapper(Of T).AverageSingleRetrievalTime
 - uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.BatchAddToCacheAsync(System.Collections.Generic.List{System.String})
   name: BatchAddToCacheAsync(List<String>)
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_BatchAddToCacheAsync_System_Collections_Generic_List_System_String__
@@ -2134,6 +2491,23 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).BatchRetrievalFunc
   nameWithType: IMemoryCacheWrapper<T>.BatchRetrievalFunc
   nameWithType.vb: IMemoryCacheWrapper(Of T).BatchRetrievalFunc
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CacheHits
+  name: CacheHits
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_CacheHits
+  commentId: P:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CacheHits
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.CacheHits
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).CacheHits
+  nameWithType: IMemoryCacheWrapper<T>.CacheHits
+  nameWithType.vb: IMemoryCacheWrapper(Of T).CacheHits
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CacheHits*
+  name: CacheHits
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_CacheHits_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CacheHits
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.CacheHits
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).CacheHits
+  nameWithType: IMemoryCacheWrapper<T>.CacheHits
+  nameWithType.vb: IMemoryCacheWrapper(Of T).CacheHits
 - uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CachePolicy
   name: CachePolicy
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_CachePolicy
@@ -2151,6 +2525,23 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).CachePolicy
   nameWithType: IMemoryCacheWrapper<T>.CachePolicy
   nameWithType.vb: IMemoryCacheWrapper(Of T).CachePolicy
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CacheRequests
+  name: CacheRequests
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_CacheRequests
+  commentId: P:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CacheRequests
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.CacheRequests
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).CacheRequests
+  nameWithType: IMemoryCacheWrapper<T>.CacheRequests
+  nameWithType.vb: IMemoryCacheWrapper(Of T).CacheRequests
+- uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CacheRequests*
+  name: CacheRequests
+  href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_CacheRequests_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.CacheRequests
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper<T>.CacheRequests
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper(Of T).CacheRequests
+  nameWithType: IMemoryCacheWrapper<T>.CacheRequests
+  nameWithType.vb: IMemoryCacheWrapper(Of T).CacheRequests
 - uid: VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper`1.ContainsKeyAsync(System.String)
   name: ContainsKeyAsync(String)
   href: api/VaraniumSharp.Interfaces.Caching.IMemoryCacheWrapper-1.html#VaraniumSharp_Interfaces_Caching_IMemoryCacheWrapper_1_ContainsKeyAsync_System_String_
@@ -2325,6 +2716,57 @@ references:
   fullName.vb: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache(Of T).EntryNoLongerUsed
   nameWithType: IReferenceCountingCache<T>.EntryNoLongerUsed
   nameWithType.vb: IReferenceCountingCache(Of T).EntryNoLongerUsed
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.LastEvictionSize
+  name: LastEvictionSize
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_1_LastEvictionSize
+  commentId: P:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.LastEvictionSize
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache<T>.LastEvictionSize
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache(Of T).LastEvictionSize
+  nameWithType: IReferenceCountingCache<T>.LastEvictionSize
+  nameWithType.vb: IReferenceCountingCache(Of T).LastEvictionSize
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.LastEvictionSize*
+  name: LastEvictionSize
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_1_LastEvictionSize_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.LastEvictionSize
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache<T>.LastEvictionSize
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache(Of T).LastEvictionSize
+  nameWithType: IReferenceCountingCache<T>.LastEvictionSize
+  nameWithType.vb: IReferenceCountingCache(Of T).LastEvictionSize
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.LastEvictionTime
+  name: LastEvictionTime
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_1_LastEvictionTime
+  commentId: P:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.LastEvictionTime
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache<T>.LastEvictionTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache(Of T).LastEvictionTime
+  nameWithType: IReferenceCountingCache<T>.LastEvictionTime
+  nameWithType.vb: IReferenceCountingCache(Of T).LastEvictionTime
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.LastEvictionTime*
+  name: LastEvictionTime
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_1_LastEvictionTime_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.LastEvictionTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache<T>.LastEvictionTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache(Of T).LastEvictionTime
+  nameWithType: IReferenceCountingCache<T>.LastEvictionTime
+  nameWithType.vb: IReferenceCountingCache(Of T).LastEvictionTime
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.NextCacheEvictionTime
+  name: NextCacheEvictionTime
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_1_NextCacheEvictionTime
+  commentId: P:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.NextCacheEvictionTime
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache<T>.NextCacheEvictionTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache(Of T).NextCacheEvictionTime
+  nameWithType: IReferenceCountingCache<T>.NextCacheEvictionTime
+  nameWithType.vb: IReferenceCountingCache(Of T).NextCacheEvictionTime
+- uid: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.NextCacheEvictionTime*
+  name: NextCacheEvictionTime
+  href: api/VaraniumSharp.Interfaces.Caching.IReferenceCountingCache-1.html#VaraniumSharp_Interfaces_Caching_IReferenceCountingCache_1_NextCacheEvictionTime_
+  commentId: Overload:VaraniumSharp.Interfaces.Caching.IReferenceCountingCache`1.NextCacheEvictionTime
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache<T>.NextCacheEvictionTime
+  fullName.vb: VaraniumSharp.Interfaces.Caching.IReferenceCountingCache(Of T).NextCacheEvictionTime
+  nameWithType: IReferenceCountingCache<T>.NextCacheEvictionTime
+  nameWithType.vb: IReferenceCountingCache(Of T).NextCacheEvictionTime
 - uid: VaraniumSharp.Interfaces.Collections
   name: VaraniumSharp.Interfaces.Collections
   href: api/VaraniumSharp.Interfaces.Collections.html
