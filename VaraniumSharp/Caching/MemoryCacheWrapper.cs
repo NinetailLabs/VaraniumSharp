@@ -5,6 +5,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Caching;
 using System.Threading;
@@ -49,6 +50,15 @@ namespace VaraniumSharp.Caching
         #endregion
 
         #region Properties
+
+        /// <inheritdoc />
+        public TimeSpan AverageBatchRetrievalTime { get; private set; }
+
+        /// <inheritdoc />
+        public int AverageBatchSize { get; private set; }
+
+        /// <inheritdoc />
+        public TimeSpan AverageSingleRetrievalTime { get; private set; }
 
         /// <inheritdoc />
         public Func<List<string>, Task<Dictionary<string, T>>> BatchRetrievalFunc
@@ -152,6 +162,7 @@ namespace VaraniumSharp.Caching
                     if (_memoryCache.Contains(key))
                     {
                         semaphore.Release();
+                        CacheHits++;
                         lockedSemaphores.TryRemove(key, out _);
                     }
                     else
@@ -238,32 +249,45 @@ namespace VaraniumSharp.Caching
                 throw new InvalidOperationException($"{error} has not been set");
             }
 
-            var response = _memoryCache.Get(key);
-            if (response != null)
+            CacheRequests++;
+            _singleRequests++;
+            var watch = Stopwatch.StartNew();
+            try
             {
-                return (T)response;
-            }
+                var response = _memoryCache.Get(key);
+                if (response != null)
+                {
+                    CacheHits++;
+                    return (T) response;
+                }
 
-            var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
-            await semaphore.WaitAsync();
+                var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
+                await semaphore.WaitAsync();
 
-            var lockedResponse = _memoryCache.Get(key);
-            if (lockedResponse != null)
-            {
+                var lockedResponse = _memoryCache.Get(key);
+                if (lockedResponse != null)
+                {
+                    semaphore.Release();
+                    CacheHits++;
+                    return (T) lockedResponse;
+                }
+
+                var result = await DataRetrievalFunc.Invoke(key);
+                if (result != null)
+                {
+                    _memoryCache.Add(key, result, CachePolicy);
+                    ItemsInCache = _memoryCache.GetCount();
+                }
+
                 semaphore.Release();
-                return (T)lockedResponse;
+                return result;
             }
-
-            var result = await DataRetrievalFunc.Invoke(key);
-            if (result != null)
+            finally
             {
-                _memoryCache.Add(key, result, CachePolicy);
-                ItemsInCache = _memoryCache.GetCount();
+                watch.Stop();
+                _totalSingleDuration = _totalSingleDuration.Add(watch.Elapsed);
+                AverageSingleRetrievalTime = TimeSpan.FromMilliseconds(_totalSingleDuration.TotalMilliseconds / _singleRequests);
             }
-
-            semaphore.Release();
-
-            return result;
         }
 
         /// <inheritdoc />
@@ -275,12 +299,28 @@ namespace VaraniumSharp.Caching
                 throw new InvalidOperationException($"{error} has not been set");
             }
 
-            await BatchAddToCacheAsync(keys).ConfigureAwait(false);
+            CacheRequests += keys.Count;
+            _totalBatchSize += keys.Count;
+            _batchRequests++;
+            var watch = Stopwatch.StartNew();
 
-            var response = _memoryCache.GetValues(keys);
-            return response
-                .Select(x => new KeyValuePair<string, T>(x.Key, (T)x.Value))
-                .ToDictionary(pair => pair.Key, pair => pair.Value);
+            try
+            {
+                await BatchAddToCacheAsync(keys).ConfigureAwait(false);
+                ItemsInCache = _memoryCache.GetCount();
+
+                var response = _memoryCache.GetValues(keys);
+                return response
+                    .Select(x => new KeyValuePair<string, T>(x.Key, (T) x.Value))
+                    .ToDictionary(pair => pair.Key, pair => pair.Value);
+            }
+            finally
+            {
+                watch.Stop();
+                _totalBatchDuration = _totalBatchDuration.Add(watch.Elapsed);
+                AverageBatchRetrievalTime = TimeSpan.FromMilliseconds(_totalBatchDuration.TotalMilliseconds / _batchRequests);
+                AverageBatchSize = _totalBatchSize / _batchRequests;
+            }
         }
 
         /// <inheritdoc />
@@ -298,6 +338,8 @@ namespace VaraniumSharp.Caching
                     if (_memoryCache.Contains(key))
                     {
                         resultBag.Add((T)_memoryCache.Get(key));
+                        CacheRequests++;
+                        CacheHits++;
                     }
                 }
                 finally
@@ -331,7 +373,38 @@ namespace VaraniumSharp.Caching
             return removed;
         }
 
-#endregion
+        /// <inheritdoc />
+        public int CacheRequests { get; private set; }
+
+        /// <inheritdoc />
+        public int CacheHits { get; private set; }
+
+        /// <summary>
+        /// Number of single request that has been handled
+        /// </summary>
+        private int _singleRequests;
+
+        /// <summary>
+        /// Total duration for all single requests
+        /// </summary>
+        private TimeSpan _totalSingleDuration;
+
+        /// <summary>
+        /// Total duration for all batch requests
+        /// </summary>
+        private TimeSpan _totalBatchDuration;
+
+        /// <summary>
+        /// Number of batch requests handled
+        /// </summary>
+        private int _batchRequests;
+
+        /// <summary>
+        /// Total number of batch entries requested
+        /// </summary>
+        private int _totalBatchSize;
+
+        #endregion
 
 #region Variables
 

@@ -1,6 +1,7 @@
 ﻿#if NETSTANDARD2_1_OR_GREATER
 #nullable enable
 #endif
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -14,13 +15,38 @@ namespace VaraniumSharp.Interfaces.Caching
         #region Properties
 
         /// <summary>
+        /// The average time it takes to retrieve a batch of entries from the cache
+        /// </summary>
+        TimeSpan AverageBatchRetrievalTime { get; }
+
+        /// <summary>
+        /// The average size of a batch request
+        /// </summary>
+        int AverageBatchSize { get; }
+
+        /// <summary>
+        /// The average time it takes to retrieve a single entry from the cache
+        /// </summary>
+        TimeSpan AverageSingleRetrievalTime { get; }
+
+        /// <summary>
+        /// Number of cache hits
+        /// </summary>
+        int CacheHit { get; }
+
+        /// <summary>
+        /// Total number of requests for cache items
+        /// </summary>
+        int CacheRequests { get; }
+
+        /// <summary>
         /// The number of entries in the cache
         /// </summary>
         long ItemsInCache { get; }
 
-#endregion
+        #endregion
 
-#region Public Methods
+        #region Public Methods
 
         /// <summary>
         /// Check if the cache contains an entry for a specific keys
@@ -67,6 +93,6 @@ namespace VaraniumSharp.Interfaces.Caching
         /// <returns>Dictionary indicating which entries succeeded or failed to save</returns>
         Task<Dictionary<int, bool>> SaveReadmodelsAsync(List<IEntity> entries);
 
-#endregion
+        #endregion
     }
 }

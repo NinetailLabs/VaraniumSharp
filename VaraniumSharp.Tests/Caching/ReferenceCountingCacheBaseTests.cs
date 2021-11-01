@@ -129,6 +129,25 @@ namespace VaraniumSharp.Tests.Caching
         }
 
         [Fact]
+        public async Task CacheEvictionStatisticsAreUpdatedDuringEntryRemoval()
+        {
+            // arrange
+            const int key = 12;
+            var cacheCleanDuration = TimeSpan.FromMilliseconds(200);
+            using var sut = new ReferenceCountingBaseFixture(cacheCleanDuration);
+            var entry = await sut.RetrieveEntryItemAsync(key);
+
+            // act
+            sut.EntryNoLongerUsed(key);
+            await Task.Delay(TimeSpan.FromMilliseconds(600));
+
+            // assert
+            sut.LastEvictionSize.Should().BeGreaterOrEqualTo(0);
+            sut.LastEvictionTime.Should().NotBeNull();
+            sut.NextCacheEvictionTime.Should().BeAfter(sut.LastEvictionTime.Value);
+        }
+
+        [Fact]
         public async Task IfAnEntryWasRemovedFromTheCacheItIsRetrievedFromTheDataStoreOnASubsequentRequest()
         {
             // arrange

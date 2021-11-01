@@ -18,10 +18,30 @@ namespace VaraniumSharp.Interfaces.Caching
         #region Properties
 
         /// <summary>
+        /// The average time it takes to retrieve a batch of entries from the cache
+        /// </summary>
+        TimeSpan AverageBatchRetrievalTime { get; }
+
+        /// <summary>
+        /// The average size of a batch request
+        /// </summary>
+        int AverageBatchSize { get; }
+
+        /// <summary>
+        /// The average time it takes to retrieve a single entry from the cache
+        /// </summary>
+        TimeSpan AverageSingleRetrievalTime { get; }
+
+        /// <summary>
         /// Func that will be used to batch retrieve data to warm up the cache
         /// <exception cref="InvalidOperationException">Thrown if the Func has already been set</exception>
         /// </summary>
         Func<List<string>, Task<Dictionary<string, T>>> BatchRetrievalFunc { get; set; }
+
+        /// <summary>
+        /// Number of entries that were retrieved from the cache
+        /// </summary>
+        int CacheHits { get; }
 
         /// <summary>
         /// Policy to use for cached items
@@ -33,6 +53,11 @@ namespace VaraniumSharp.Interfaces.Caching
         /// <exception cref="InvalidOperationException">Thrown if the policy has already been set</exception>
         /// </summary>
         CacheItemPolicy CachePolicy { get; set; }
+
+        /// <summary>
+        /// Total number of requests for cache entries
+        /// </summary>
+        int CacheRequests { get; }
 
         /// <summary>
         /// Func that will be used to retrieve data if it is not available in the cache

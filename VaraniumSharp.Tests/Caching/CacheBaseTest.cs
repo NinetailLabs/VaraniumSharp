@@ -22,6 +22,9 @@ namespace VaraniumSharp.Tests.Caching
             result.Should().NotBeNull();
             sut.SingleEntryRepositoryRetrievalCalls.Should().Be(1);
             sut.ItemsInCache.Should().Be(1);
+            sut.CacheRequests.Should().Be(1);
+            sut.CacheHit.Should().Be(0);
+            sut.AverageSingleRetrievalTime.TotalMilliseconds.Should().BeGreaterThan(0);
         }
 
         [Fact]
@@ -38,6 +41,9 @@ namespace VaraniumSharp.Tests.Caching
             // assert
             result.Should().NotBeNull();
             sut.ItemsInCache.Should().Be(1);
+            sut.CacheRequests.Should().Be(2);
+            sut.CacheHit.Should().Be(1);
+            sut.AverageSingleRetrievalTime.TotalMilliseconds.Should().BeGreaterThan(0);
         }
 
         [Theory]
@@ -90,6 +96,8 @@ namespace VaraniumSharp.Tests.Caching
             // assert
             result.Count.Should().Be(1);
             sut.MultiEntryRepositoryRetrievalCalls.Should().Be(1);
+            sut.AverageBatchSize.Should().Be(1);
+            sut.AverageBatchRetrievalTime.TotalMilliseconds.Should().BeGreaterThan(0);
         }
     }
 }

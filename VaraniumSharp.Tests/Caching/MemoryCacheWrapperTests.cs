@@ -160,7 +160,10 @@ namespace VaraniumSharp.Tests.Caching
             var result = sut.GetAsync(key).Result;
 
             // assert
+            sut.CacheRequests.Should().Be(1);
+            sut.CacheHits.Should().Be(0);
             sut.ItemsInCache.Should().Be(1);
+            sut.AverageSingleRetrievalTime.TotalMilliseconds.Should().BeGreaterThan(0);
             retrievalFixture.WasCalled.Should().BeTrue();
             result.Should().Be(returnValue);
         }
@@ -286,8 +289,13 @@ namespace VaraniumSharp.Tests.Caching
             var entriesAdded = await sut.GetAsync(new List<string> { key });
 
             // assert
+            sut.ItemsInCache.Should().Be(1);
             entriesAdded.Count.Should().Be(1);
             requestedKeys.Count.Should().Be(1);
+            sut.CacheHits.Should().Be(0);
+            sut.CacheRequests.Should().Be(1);
+            sut.AverageBatchSize.Should().Be(1);
+            sut.AverageBatchRetrievalTime.TotalMilliseconds.Should().BeGreaterThan(0);
         }
 
         [Fact]
@@ -565,13 +573,18 @@ namespace VaraniumSharp.Tests.Caching
             };
 
             // act
-            Parallel.For(0, 10, t =>
+            var tasks = new Task[10];
+            for (var r = 0; r < 10; r++)
             {
-                sut.GetAsync(key).Wait();
-            });
+                tasks[r] = (sut.GetAsync(key));
+            }
+
+            Task.WaitAll(tasks);
 
             // assert
             retrievalFixture.CallCount.Should().Be(1);
+            sut.CacheRequests.Should().Be(10);
+            sut.CacheHits.Should().Be(9);
         }
 
         [Fact]
