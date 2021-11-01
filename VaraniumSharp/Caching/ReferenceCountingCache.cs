@@ -17,6 +17,11 @@ namespace VaraniumSharp.Caching
     /// </summary>
     public abstract class ReferenceCountingCacheBase<T> : CacheBase<T>, IReferenceCountingCache<T>, IDisposable where T : class, ICacheEntry
     {
+        /// <summary>
+        /// Timespan the cache will wait before purging un-references entries
+        /// </summary>
+        private readonly TimeSpan _cacheRetentionPeriod;
+
         #region Constructor
 
         /// <summary>
@@ -25,8 +30,10 @@ namespace VaraniumSharp.Caching
         /// <param name="cacheRetentionPeriod">Timespan the cache will wait before purging un-referenced entries</param>
         protected ReferenceCountingCacheBase(TimeSpan cacheRetentionPeriod)
         {
+            _cacheRetentionPeriod = cacheRetentionPeriod;
             ItemReferenceCount = new ConcurrentDictionary<int, int>();
             _cacheCleanupTimer = new Timer(CacheCleanupCallback, null, cacheRetentionPeriod, cacheRetentionPeriod);
+            NextCacheEvictionTime = DateTime.Now.Add(_cacheRetentionPeriod);
         }
 
         #endregion
@@ -39,6 +46,15 @@ namespace VaraniumSharp.Caching
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        /// <inheritdoc />
+        public int LastEvictionSize { get; private set; }
+
+        /// <inheritdoc />
+        public DateTime? LastEvictionTime { get; private set; }
+
+        /// <inheritdoc />
+        public DateTime NextCacheEvictionTime { get; private set; }
 
         /// <inheritdoc />
         public void EntryNoLongerUsed(int entityId)
@@ -99,6 +115,9 @@ namespace VaraniumSharp.Caching
         {
             try
             {
+                LastEvictionTime = DateTime.Now;
+                NextCacheEvictionTime = LastEvictionTime.Value.Add(_cacheRetentionPeriod);
+                LastEvictionSize = 0;
                 await ReferenceCleanupSemaphore
                     .WaitAsync()
                     .ConfigureAwait(false);
@@ -116,6 +135,7 @@ namespace VaraniumSharp.Caching
                     await EntryCache
                         .RemoveFromCacheAsync(key)
                         .ConfigureAwait(false);
+                    LastEvictionSize++;
 #if NETSTANDARD2_1_OR_GREATER
                     ItemReferenceCount.Remove(id, out _);
 #else

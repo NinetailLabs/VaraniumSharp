@@ -1,6 +1,7 @@
 ﻿#if NETSTANDARD2_1_OR_GREATER
 #nullable enable
 #endif
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -26,6 +27,21 @@ namespace VaraniumSharp.Caching
         #endregion
 
         #region Properties
+
+        /// <inheritdoc />
+        public TimeSpan AverageBatchRetrievalTime => EntryCache.AverageBatchRetrievalTime;
+
+        /// <inheritdoc />
+        public int AverageBatchSize => EntryCache.AverageBatchSize;
+
+        /// <inheritdoc />
+        public TimeSpan AverageSingleRetrievalTime => EntryCache.AverageSingleRetrievalTime;
+
+        /// <inheritdoc />
+        public int CacheHit => EntryCache.CacheHits;
+
+        /// <inheritdoc />
+        public int CacheRequests => EntryCache.CacheRequests;
 
         /// <inheritdoc />
         public long ItemsInCache => EntryCache.ItemsInCache;
