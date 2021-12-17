@@ -262,25 +262,31 @@ namespace VaraniumSharp.Caching
                 }
 
                 var semaphore = _cacheLockDictionary.GetOrAdd(key, new SemaphoreSlim(1));
-                await semaphore.WaitAsync();
+                try
+                {
+                    await semaphore.WaitAsync();
 
-                var lockedResponse = _memoryCache.Get(key);
-                if (lockedResponse != null)
+                    var lockedResponse = _memoryCache.Get(key);
+                    if (lockedResponse != null)
+                    {
+                        semaphore.Release();
+                        CacheHits++;
+                        return (T)lockedResponse;
+                    }
+
+                    var result = await DataRetrievalFunc.Invoke(key);
+                    if (result != null)
+                    {
+                        _memoryCache.Add(key, result, CachePolicy);
+                        ItemsInCache = _memoryCache.GetCount();
+                    }
+
+                    return result;
+                }
+                finally
                 {
                     semaphore.Release();
-                    CacheHits++;
-                    return (T) lockedResponse;
                 }
-
-                var result = await DataRetrievalFunc.Invoke(key);
-                if (result != null)
-                {
-                    _memoryCache.Add(key, result, CachePolicy);
-                    ItemsInCache = _memoryCache.GetCount();
-                }
-
-                semaphore.Release();
-                return result;
             }
             finally
             {
