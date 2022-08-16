@@ -112,7 +112,7 @@ namespace VaraniumSharp.Tests.Collections
             var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
             var sut = new PackageManager();
 
-            var act = new Func<Task>(() => sut.GetPackageContentAsync(packagePath));
+            var act = new Func<Task>(() => sut.GetPackageContentAsync(packagePath, new List<string>()));
 
             // act
             // assert
