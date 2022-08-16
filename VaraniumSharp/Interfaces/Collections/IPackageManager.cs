@@ -45,8 +45,9 @@ namespace VaraniumSharp.Interfaces.Collections
         /// Get the paths and sizes of all the entries in the package
         /// </summary>
         /// <param name="packagePath">Path to the Package</param>
+        /// <param name="storagePaths">Paths of the top level folders in the Package</param>
         /// <returns>Collection containing all the entries and their sized that are in the Package</returns>
-        Task<List<PackageEntry>> GetPackageContentAsync(string packagePath);
+        Task<List<PackageEntry>> GetPackageContentAsync(string packagePath, List<string> storagePaths);
 
         /// <summary>
         /// Remove data from a Package
