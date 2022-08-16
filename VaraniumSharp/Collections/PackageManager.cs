@@ -100,6 +100,12 @@ namespace VaraniumSharp.Collections
             GC.SuppressFinalize(this);
         }
 
+        /// <inheritdoc />
+        public Task<List<PackageEntry>> GetPackageContentAsync(string packagePath)
+        {
+            throw new NotImplementedException("PackageManager is deprecated and this method will not be implemented");
+        }
+
         /// <summary>
         /// Remove data from a Package
         /// <remark>
@@ -202,6 +208,12 @@ namespace VaraniumSharp.Collections
             {
                 semaphore.Release();
             }
+        }
+
+        /// <inheritdoc />
+        public Task<List<PackageEntry>> ScrubStorageWithFeedbackAsync(string packagePath, List<string> storagePathsToKeep)
+        {
+            throw new NotImplementedException("PackageManager is deprecated and this method will not be implemented");
         }
 
         #endregion

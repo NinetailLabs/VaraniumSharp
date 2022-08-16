@@ -14,7 +14,42 @@ namespace VaraniumSharp.Tests.Collections
 {
     public class PackageManagerTests
     {
-        private const string ResouceDirectory = "Resources";
+        private const string ResourceDirectory = "Resources";
+
+        [Fact]
+        public async Task AddingDataWithTheSameInternalStoragePathAsExistingDataOverwritesTheExistingData()
+        {
+            // arrange
+            var appPath = AppDomain.CurrentDomain.BaseDirectory;
+            var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
+            var filePath = Path.Combine(appPath, ResourceDirectory, "File1.txt");
+            var filePath2 = Path.Combine(appPath, ResourceDirectory, "File2.txt");
+            const string storagePath = "docs/File1.txt";
+
+            File.Exists(packagePath).Should().BeFalse();
+
+            var sut = new PackageManager();
+            await using (var fileStream = File.Open(filePath, FileMode.Open))
+            {
+                await sut.AddItemToPackageAsync(packagePath, fileStream, storagePath);
+            }
+
+            // act
+            await using (var fileStream2 = File.Open(filePath2, FileMode.Open))
+            {
+                await sut.AddItemToPackageAsync(packagePath, fileStream2, storagePath);
+            }
+
+            // assert
+            var stream = await sut.RetrieveDataFromPackageAsync(packagePath, storagePath);
+            using (var reader = new StreamReader(stream))
+            {
+                (await reader.ReadLineAsync()).Should().Be("Overwriting data");
+            }
+
+            sut.Dispose();
+            File.Delete(packagePath);
+        }
 
         [Fact]
         public void AttemptingToCloseThePackageThrowsANotImplementedException()
@@ -32,47 +67,12 @@ namespace VaraniumSharp.Tests.Collections
         }
 
         [Fact]
-        public async Task AddingDataWithTheSameInteralStoragePathAsExistingDataOverwritesTheExistingData()
-        {
-            // arrange
-            var appPath = AppDomain.CurrentDomain.BaseDirectory;
-            var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
-            var filePath = Path.Combine(appPath, ResouceDirectory, "File1.txt");
-            var filePath2 = Path.Combine(appPath, ResouceDirectory, "File2.txt");
-            const string storagePath = "docs/File1.txt";
-
-            File.Exists(packagePath).Should().BeFalse();
-
-            var sut = new PackageManager();
-            using (var fileStream = File.Open(filePath, FileMode.Open))
-            {
-                await sut.AddItemToPackageAsync(packagePath, fileStream, storagePath);
-            }
-
-            // act
-            using (var fileStream2 = File.Open(filePath2, FileMode.Open))
-            {
-                await sut.AddItemToPackageAsync(packagePath, fileStream2, storagePath);
-            }
-
-            // assert
-            var stream = await sut.RetrieveDataFromPackageAsync(packagePath, storagePath);
-            using (var reader = new StreamReader(stream))
-            {
-                reader.ReadLine().Should().Be("Overwriting data");
-            }
-
-            sut.Dispose();
-            File.Delete(packagePath);
-        }
-
-        [Fact]
         public async Task AutomaticFlushingCorrectlyReattachesTheArchive()
         {
             // arrange
             var appPath = AppDomain.CurrentDomain.BaseDirectory;
             var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
-            var filePath = Path.Combine(appPath, ResouceDirectory, "File1.txt");
+            var filePath = Path.Combine(appPath, ResourceDirectory, "File1.txt");
             const string storagePath = "docs/File1.txt";
 
             File.Exists(packagePath).Should().BeFalse();
@@ -81,7 +81,7 @@ namespace VaraniumSharp.Tests.Collections
             {
                 AutoFlush = true
             };
-            using (var fileStream = File.Open(filePath, FileMode.Open))
+            await using (var fileStream = File.Open(filePath, FileMode.Open))
             {
                 await sut.AddItemToPackageAsync(packagePath, fileStream, storagePath);
             }
@@ -90,12 +90,12 @@ namespace VaraniumSharp.Tests.Collections
             var result = await sut.RetrieveDataFromPackageAsync(packagePath, storagePath);
 
             // assert
-            using (var fileData = File.OpenRead(filePath))
+            await using (var fileData = File.OpenRead(filePath))
             using (var streamReader = new StreamReader(fileData))
             using (var resultReader = new StreamReader(result))
             {
-                var expectedData = streamReader.ReadToEnd();
-                var resultData = resultReader.ReadToEnd();
+                var expectedData = await streamReader.ReadToEndAsync();
+                var resultData = await resultReader.ReadToEndAsync();
 
                 expectedData.Should().Be(resultData);
             }
@@ -105,12 +105,27 @@ namespace VaraniumSharp.Tests.Collections
         }
 
         [Fact]
+        public async Task GetPackageContentThrowNotImplementedException()
+        {
+            // arrange
+            var appPath = AppDomain.CurrentDomain.BaseDirectory;
+            var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
+            var sut = new PackageManager();
+
+            var act = new Func<Task>(() => sut.GetPackageContentAsync(packagePath));
+
+            // act
+            // assert
+            await act.Should().ThrowAsync<NotImplementedException>();
+        }
+
+        [Fact]
         public async Task ItemIsAddedToThePackageCorrectly()
         {
             // arrange
             var appPath = AppDomain.CurrentDomain.BaseDirectory;
             var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
-            var filePath = Path.Combine(appPath, ResouceDirectory, "File1.txt");
+            var filePath = Path.Combine(appPath, ResourceDirectory, "File1.txt");
             const string storagePath = "docs/File1.txt";
 
             File.Exists(packagePath).Should().BeFalse();
@@ -118,7 +133,7 @@ namespace VaraniumSharp.Tests.Collections
             var sut = new PackageManager();
 
             // act
-            using (var fileStream = File.Open(filePath, FileMode.Open))
+            await using (var fileStream = File.Open(filePath, FileMode.Open))
             {
                 await sut.AddItemToPackageAsync(packagePath, fileStream, storagePath);
             }
@@ -138,13 +153,13 @@ namespace VaraniumSharp.Tests.Collections
             // arrange
             var appPath = AppDomain.CurrentDomain.BaseDirectory;
             var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
-            var filePath = Path.Combine(appPath, ResouceDirectory, "File1.txt");
+            var filePath = Path.Combine(appPath, ResourceDirectory, "File1.txt");
             const string storagePath = "docs/File1.txt";
 
             File.Exists(packagePath).Should().BeFalse();
 
             var sut = new PackageManager();
-            using (var fileStream = File.Open(filePath, FileMode.Open))
+            await using (var fileStream = File.Open(filePath, FileMode.Open))
             {
                 await sut.AddItemToPackageAsync(packagePath, fileStream, storagePath);
             }
@@ -167,8 +182,8 @@ namespace VaraniumSharp.Tests.Collections
             // arrange
             var appPath = AppDomain.CurrentDomain.BaseDirectory;
             var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
-            var filePath = Path.Combine(appPath, ResouceDirectory, "File1.txt");
-            var filePath2 = Path.Combine(appPath, ResouceDirectory, "File2.txt");
+            var filePath = Path.Combine(appPath, ResourceDirectory, "File1.txt");
+            var filePath2 = Path.Combine(appPath, ResourceDirectory, "File2.txt");
             const string storagePath1 = "docs/File1.txt";
             const string storagePath2 = "docs/File2.txt";
             var listToKeep = new List<string> { storagePath1 };
@@ -176,8 +191,8 @@ namespace VaraniumSharp.Tests.Collections
             File.Exists(packagePath).Should().BeFalse();
 
             var sut = new PackageManager();
-            using (var fileStream1 = File.Open(filePath, FileMode.Open))
-            using (var fileStream2 = File.Open(filePath2, FileMode.Open))
+            await using (var fileStream1 = File.Open(filePath, FileMode.Open))
+            await using (var fileStream2 = File.Open(filePath2, FileMode.Open))
             {
                 await sut.AddItemToPackageAsync(packagePath, fileStream1, storagePath1);
                 await sut.AddItemToPackageAsync(packagePath, fileStream2, storagePath2);
@@ -201,8 +216,8 @@ namespace VaraniumSharp.Tests.Collections
             // arrange
             var appPath = AppDomain.CurrentDomain.BaseDirectory;
             var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
-            var filePath = Path.Combine(appPath, ResouceDirectory, "File1.txt");
-            var filePath2 = Path.Combine(appPath, ResouceDirectory, "File2.txt");
+            var filePath = Path.Combine(appPath, ResourceDirectory, "File1.txt");
+            var filePath2 = Path.Combine(appPath, ResourceDirectory, "File2.txt");
             const string storagePath1 = "docs/File1.txt";
             const string storagePath2 = "docs/File2.txt";
             var listToKeep = new List<string> { storagePath1 };
@@ -211,14 +226,14 @@ namespace VaraniumSharp.Tests.Collections
             File.Exists(packagePath).Should().BeFalse();
 
             var sut = new PackageManager();
-            using (var fileStream1 = File.Open(filePath, FileMode.Open))
-            using (var fileStream2 = File.Open(filePath2, FileMode.Open))
+            await using (var fileStream1 = File.Open(filePath, FileMode.Open))
+            await using (var fileStream2 = File.Open(filePath2, FileMode.Open))
             {
                 await sut.AddItemToPackageAsync(packagePath, fileStream1, storagePath1);
                 await sut.AddItemToPackageAsync(packagePath, fileStream2, storagePath2);
             }
 
-            sut.ScrubProgress += (sender, args) =>
+            sut.ScrubProgress += (_, args) =>
             {
                 scrubProgress.Add(args);
             };
@@ -239,8 +254,8 @@ namespace VaraniumSharp.Tests.Collections
             // arrange
             var appPath = AppDomain.CurrentDomain.BaseDirectory;
             var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
-            var filePath = Path.Combine(appPath, ResouceDirectory, "File1.txt");
-            var filePath2 = Path.Combine(appPath, ResouceDirectory, "File2.txt");
+            var filePath = Path.Combine(appPath, ResourceDirectory, "File1.txt");
+            var filePath2 = Path.Combine(appPath, ResourceDirectory, "File2.txt");
             const string storagePath1 = "docs/File1.txt";
             const string storagePath2 = "docs/File2.txt";
             var listToKeep = new List<string> { storagePath1 };
@@ -248,8 +263,8 @@ namespace VaraniumSharp.Tests.Collections
             File.Exists(packagePath).Should().BeFalse();
 
             var sut = new PackageManager();
-            using (var fileStream1 = File.Open(filePath, FileMode.Open))
-            using (var fileStream2 = File.Open(filePath2, FileMode.Open))
+            await using (var fileStream1 = File.Open(filePath, FileMode.Open))
+            await using (var fileStream2 = File.Open(filePath2, FileMode.Open))
             {
                 await sut.AddItemToPackageAsync(packagePath, fileStream1, storagePath1);
                 await sut.AddItemToPackageAsync(packagePath, fileStream2, storagePath2);
@@ -268,18 +283,35 @@ namespace VaraniumSharp.Tests.Collections
         }
 
         [Fact]
+        public async Task ScrubPackageWithFeedbackThrowNotImplementedException()
+        {
+            // arrange
+            var appPath = AppDomain.CurrentDomain.BaseDirectory;
+            var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
+            const string storagePath1 = "docs/File1.txt";
+            var listToKeep = new List<string> { storagePath1 };
+            var sut = new PackageManager();
+
+            var act = new Func<Task>(() => sut.ScrubStorageWithFeedbackAsync(packagePath, listToKeep));
+
+            // act
+            // assert
+            await act.Should().ThrowAsync<NotImplementedException>();
+        }
+
+        [Fact]
         public async Task StoredDataIsCorrectlyRetrievedFromThePackage()
         {
             // arrange
             var appPath = AppDomain.CurrentDomain.BaseDirectory;
             var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
-            var filePath = Path.Combine(appPath, ResouceDirectory, "File1.txt");
+            var filePath = Path.Combine(appPath, ResourceDirectory, "File1.txt");
             const string storagePath = "docs/File1.txt";
 
             File.Exists(packagePath).Should().BeFalse();
 
             var sut = new PackageManager();
-            using (var fileStream = File.Open(filePath, FileMode.Open))
+            await using (var fileStream = File.Open(filePath, FileMode.Open))
             {
                 await sut.AddItemToPackageAsync(packagePath, fileStream, storagePath);
             }
@@ -290,7 +322,7 @@ namespace VaraniumSharp.Tests.Collections
             // assert
             using (var reader = new StreamReader(stream))
             {
-                reader.ReadLine().Should().Be("Test File 1");
+                (await reader.ReadLineAsync()).Should().Be("Test File 1");
             }
 
             sut.Dispose();
@@ -303,7 +335,7 @@ namespace VaraniumSharp.Tests.Collections
             // arrange
             var appPath = AppDomain.CurrentDomain.BaseDirectory;
             var packagePath = Path.Combine(appPath, Guid.NewGuid().ToString());
-            var filePath = Path.Combine(appPath, ResouceDirectory, "File1.txt");
+            var filePath = Path.Combine(appPath, ResourceDirectory, "File1.txt");
             const string storagePath = "docs/File1.txt";
 
             File.Exists(packagePath).Should().BeFalse();
@@ -311,7 +343,7 @@ namespace VaraniumSharp.Tests.Collections
             var sut = new PackageManager();
 
             // act
-            using (var fileStream = File.Open(filePath, FileMode.Open))
+            await using (var fileStream = File.Open(filePath, FileMode.Open))
             {
                 await sut.AddItemToPackageAsync(packagePath, fileStream, storagePath);
             }
