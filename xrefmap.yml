@@ -1112,12 +1112,15 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.Collections.PackageManager.Dispose
   nameWithType: PackageManager.Dispose
-- uid: VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String)
-  name: GetPackageContentAsync(String)
-  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_GetPackageContentAsync_System_String_
-  commentId: M:VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String)
-  fullName: VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String)
-  nameWithType: PackageManager.GetPackageContentAsync(String)
+- uid: VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String,System.Collections.Generic.List{System.String})
+  name: GetPackageContentAsync(String, List<String>)
+  href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_GetPackageContentAsync_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String,System.Collections.Generic.List{System.String})
+  name.vb: GetPackageContentAsync(String, List(Of String))
+  fullName: VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String, System.Collections.Generic.List<System.String>)
+  fullName.vb: VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String, System.Collections.Generic.List(Of System.String))
+  nameWithType: PackageManager.GetPackageContentAsync(String, List<String>)
+  nameWithType.vb: PackageManager.GetPackageContentAsync(String, List(Of String))
 - uid: VaraniumSharp.Collections.PackageManager.GetPackageContentAsync*
   name: GetPackageContentAsync
   href: api/VaraniumSharp.Collections.PackageManager.html#VaraniumSharp_Collections_PackageManager_GetPackageContentAsync_
@@ -2847,12 +2850,15 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.ClosePackage
   nameWithType: IPackageManager.ClosePackage
-- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync(System.String)
-  name: GetPackageContentAsync(String)
-  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_GetPackageContentAsync_System_String_
-  commentId: M:VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync(System.String)
-  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync(System.String)
-  nameWithType: IPackageManager.GetPackageContentAsync(String)
+- uid: VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync(System.String,System.Collections.Generic.List{System.String})
+  name: GetPackageContentAsync(String, List<String>)
+  href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_GetPackageContentAsync_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync(System.String,System.Collections.Generic.List{System.String})
+  name.vb: GetPackageContentAsync(String, List(Of String))
+  fullName: VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync(System.String, System.Collections.Generic.List<System.String>)
+  fullName.vb: VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync(System.String, System.Collections.Generic.List(Of System.String))
+  nameWithType: IPackageManager.GetPackageContentAsync(String, List<String>)
+  nameWithType.vb: IPackageManager.GetPackageContentAsync(String, List(Of String))
 - uid: VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync*
   name: GetPackageContentAsync
   href: api/VaraniumSharp.Interfaces.Collections.IPackageManager.html#VaraniumSharp_Interfaces_Collections_IPackageManager_GetPackageContentAsync_

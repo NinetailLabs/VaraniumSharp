@@ -384,19 +384,19 @@ If the data already exists in the Package it will be overwritten.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_GetPackageContentAsync_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Collections_PackageManager_GetPackageContentAsync_System_String_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String%2CSystem.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Collections/PackageManager.cs/#L104">View Source</a>
   </span>
   <a id="VaraniumSharp_Collections_PackageManager_GetPackageContentAsync_" data-uid="VaraniumSharp.Collections.PackageManager.GetPackageContentAsync*"></a>
-  <h4 id="VaraniumSharp_Collections_PackageManager_GetPackageContentAsync_System_String_" data-uid="VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String)">GetPackageContentAsync(String)</h4>
+  <h4 id="VaraniumSharp_Collections_PackageManager_GetPackageContentAsync_System_String_System_Collections_Generic_List_System_String__" data-uid="VaraniumSharp.Collections.PackageManager.GetPackageContentAsync(System.String,System.Collections.Generic.List{System.String})">GetPackageContentAsync(String, List&lt;String&gt;)</h4>
   <div class="markdown level1 summary"><p>Get the paths and sizes of all the entries in the package</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;PackageEntry&gt;&gt; GetPackageContentAsync(string packagePath)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;PackageEntry&gt;&gt; GetPackageContentAsync(string packagePath, List&lt;string&gt; storagePaths)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -412,6 +412,12 @@ If the data already exists in the Package it will be overwritten.</p>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
         <td><span class="parametername">packagePath</span></td>
         <td><p>Path to the Package</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
+        <td><span class="parametername">storagePaths</span></td>
+        <td><p>Paths of the top level folders in the Package</p>
 </td>
       </tr>
     </tbody>
