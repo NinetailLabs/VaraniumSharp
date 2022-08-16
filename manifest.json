@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Collections.PackageManager.html",
-          "hash": "4YOle8rYDK282DNNXEtjTtFVaeYbHTWJN5s5Pn3F6L8="
+          "hash": "avBZThzwDi7fEr9iNCgbQ/hqBVpqb5+4DK9sbuJZvnA="
         }
       },
       "is_incremental": false,
@@ -501,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Interfaces.Collections.IPackageManager.html",
-          "hash": "Mdc9Kqt7mQSWNUDtmgl+6klzIQuxy2hnfTNw1FM20M4="
+          "hash": "IucDAt3kIjKBE5sj3Fd084tVG2z5LJHzwSbdkTFy55s="
         }
       },
       "is_incremental": false,
@@ -521,11 +521,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Collections.PackageEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Collections.PackageEntry.html",
+          "hash": "a9xZRXICOT6rQI3FJHw0S2UnI/Nh/NkVEGZFJ+PxJLo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/VaraniumSharp.Interfaces.Collections.yml",
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Interfaces.Collections.html",
-          "hash": "hseZi1Py5Klz3bD79nul5CCkmGFliGaGfJlpNGJM/G8="
+          "hash": "42mJEE8yRk/pGHBFmkCvukR7JtiqXuBuAWNyfrovSVo="
         }
       },
       "is_incremental": false,
@@ -729,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "l+wD+pSioAgnwizgPgwpFaNQN4QwX1uqcyopxmtYYxQ="
+          "hash": "HSk0N+PMv+N3Bq5f/kUP6nlM4TlDeQc6PZ2KirU0xiY="
         }
       },
       "is_incremental": false,
@@ -815,7 +827,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 59,
+          "total_file_count": 60,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

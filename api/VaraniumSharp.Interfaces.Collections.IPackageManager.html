@@ -136,7 +136,7 @@ to prevent data only being written to disk on Disposal</p>
   </span>
   <a id="VaraniumSharp_Interfaces_Collections_IPackageManager_AddItemToPackageAsync_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync*"></a>
   <h4 id="VaraniumSharp_Interfaces_Collections_IPackageManager_AddItemToPackageAsync_System_String_System_IO_Stream_System_String_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.AddItemToPackageAsync(System.String,System.IO.Stream,System.String)">AddItemToPackageAsync(String, Stream, String)</h4>
-  <div class="markdown level1 summary"><p>Store a data stream inside the Pacakge.
+  <div class="markdown level1 summary"><p>Store a data stream inside the Package.
 If the data already exists in the Package it will be overwritten.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -225,10 +225,60 @@ If the data already exists in the Package it will be overwritten.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Interfaces_Collections_IPackageManager_GetPackageContentAsync_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Interfaces/Collections/IPackageManager.cs/#L49">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Interfaces_Collections_IPackageManager_GetPackageContentAsync_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync*"></a>
+  <h4 id="VaraniumSharp_Interfaces_Collections_IPackageManager_GetPackageContentAsync_System_String_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.GetPackageContentAsync(System.String)">GetPackageContentAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Get the paths and sizes of all the entries in the package</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;List&lt;PackageEntry&gt;&gt; GetPackageContentAsync(string packagePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">packagePath</span></td>
+        <td><p>Path to the Package</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="VaraniumSharp.Interfaces.Collections.PackageEntry.html">PackageEntry</a>&gt;&gt;</td>
+        <td><p>Collection containing all the entries and their sized that are in the Package</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Interfaces_Collections_IPackageManager_RemoveDataFromPackageAsync_System_String_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Interfaces/Collections/IPackageManager.cs/#L52">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Interfaces/Collections/IPackageManager.cs/#L59">View Source</a>
   </span>
   <a id="VaraniumSharp_Interfaces_Collections_IPackageManager_RemoveDataFromPackageAsync_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync*"></a>
   <h4 id="VaraniumSharp_Interfaces_Collections_IPackageManager_RemoveDataFromPackageAsync_System_String_System_String_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.RemoveDataFromPackageAsync(System.String,System.String)">RemoveDataFromPackageAsync(String, String)</h4>
@@ -286,7 +336,7 @@ If the data does not exist in the package nothing will be done
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Interfaces_Collections_IPackageManager_RetrieveDataFromPackageAsync_System_String_System_String_.md&amp;value=---%0Auid%3A%20VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Interfaces/Collections/IPackageManager.cs/#L61">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Interfaces/Collections/IPackageManager.cs/#L68">View Source</a>
   </span>
   <a id="VaraniumSharp_Interfaces_Collections_IPackageManager_RetrieveDataFromPackageAsync_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync*"></a>
   <h4 id="VaraniumSharp_Interfaces_Collections_IPackageManager_RetrieveDataFromPackageAsync_System_String_System_String_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.RetrieveDataFromPackageAsync(System.String,System.String)">RetrieveDataFromPackageAsync(String, String)</h4>
@@ -358,7 +408,7 @@ If the data does not exist in the package nothing will be done
     <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Interfaces_Collections_IPackageManager_ScrubStorageAsync_System_String_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync(System.String%2CSystem.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Interfaces/Collections/IPackageManager.cs/#L68">View Source</a>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Interfaces/Collections/IPackageManager.cs/#L75">View Source</a>
   </span>
   <a id="VaraniumSharp_Interfaces_Collections_IPackageManager_ScrubStorageAsync_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync*"></a>
   <h4 id="VaraniumSharp_Interfaces_Collections_IPackageManager_ScrubStorageAsync_System_String_System_Collections_Generic_List_System_String__" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageAsync(System.String,System.Collections.Generic.List{System.String})">ScrubStorageAsync(String, List&lt;String&gt;)</h4>
@@ -405,6 +455,62 @@ If the data does not exist in the package nothing will be done
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/new/master/apiSpec/new?filename=VaraniumSharp_Interfaces_Collections_IPackageManager_ScrubStorageWithFeedbackAsync_System_String_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageWithFeedbackAsync(System.String%2CSystem.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/NinetailLabs/VaraniumSharp/blob/master/VaraniumSharp/Interfaces/Collections/IPackageManager.cs/#L83">View Source</a>
+  </span>
+  <a id="VaraniumSharp_Interfaces_Collections_IPackageManager_ScrubStorageWithFeedbackAsync_" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageWithFeedbackAsync*"></a>
+  <h4 id="VaraniumSharp_Interfaces_Collections_IPackageManager_ScrubStorageWithFeedbackAsync_System_String_System_Collections_Generic_List_System_String__" data-uid="VaraniumSharp.Interfaces.Collections.IPackageManager.ScrubStorageWithFeedbackAsync(System.String,System.Collections.Generic.List{System.String})">ScrubStorageWithFeedbackAsync(String, List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Delete all data from the Package that is not contained in the list of paths to keep.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;List&lt;PackageEntry&gt;&gt; ScrubStorageWithFeedbackAsync(string packagePath, List&lt;string&gt; storagePathsToKeep)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">packagePath</span></td>
+        <td><p>Path to the Package</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
+        <td><span class="parametername">storagePathsToKeep</span></td>
+        <td><p>List of relative paths of data in the package that should be kept</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="VaraniumSharp.Interfaces.Collections.PackageEntry.html">PackageEntry</a>&gt;&gt;</td>
+        <td><p>Collection containing the details of entries removed during the scrub</p>
+</td>
       </tr>
     </tbody>
   </table>
