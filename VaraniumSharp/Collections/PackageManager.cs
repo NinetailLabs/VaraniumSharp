@@ -101,7 +101,7 @@ namespace VaraniumSharp.Collections
         }
 
         /// <inheritdoc />
-        public Task<List<PackageEntry>> GetPackageContentAsync(string packagePath)
+        public Task<List<PackageEntry>> GetPackageContentAsync(string packagePath, List<string> storagePaths)
         {
             throw new NotImplementedException("PackageManager is deprecated and this method will not be implemented");
         }
