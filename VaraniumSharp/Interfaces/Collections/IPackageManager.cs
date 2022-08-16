@@ -27,7 +27,7 @@ namespace VaraniumSharp.Interfaces.Collections
         #region Public Methods
 
         /// <summary>
-        /// Store a data stream inside the Pacakge.
+        /// Store a data stream inside the Package.
         /// If the data already exists in the Package it will be overwritten.
         /// </summary>
         /// <param name="packagePath">Path to the Package</param>
@@ -40,6 +40,13 @@ namespace VaraniumSharp.Interfaces.Collections
         /// </summary>
         /// <param name="packagePath">Path to the Package</param>
         void ClosePackage(string packagePath);
+
+        /// <summary>
+        /// Get the paths and sizes of all the entries in the package
+        /// </summary>
+        /// <param name="packagePath">Path to the Package</param>
+        /// <returns>Collection containing all the entries and their sized that are in the Package</returns>
+        Task<List<PackageEntry>> GetPackageContentAsync(string packagePath);
 
         /// <summary>
         /// Remove data from a Package
@@ -66,6 +73,14 @@ namespace VaraniumSharp.Interfaces.Collections
         /// <param name="packagePath">Path to the Package</param>
         /// <param name="storagePathsToKeep">List of relative paths of data in the package that should be kept</param>
         Task ScrubStorageAsync(string packagePath, List<string> storagePathsToKeep);
+
+        /// <summary>
+        /// Delete all data from the Package that is not contained in the list of paths to keep.
+        /// </summary>
+        /// <param name="packagePath">Path to the Package</param>
+        /// <param name="storagePathsToKeep">List of relative paths of data in the package that should be kept</param>
+        /// <returns>Collection containing the details of entries removed during the scrub</returns>
+        Task<List<PackageEntry>> ScrubStorageWithFeedbackAsync(string packagePath, List<string> storagePathsToKeep);
 
         #endregion
     }
