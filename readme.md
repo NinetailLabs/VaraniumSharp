@@ -48,6 +48,24 @@ containerSetup.RetrieveClassesRequiringRegistration(true);
 containerSetup.RetrieveConcretionClassesRequiringRegistration(true);
 ```
 
+## Framework Libraries
+## Dependency Injection
+- [VaraniumSharp.DryIoC](https://www.nuget.org/packages/VaraniumSharp.DryIoc) Library that wraps the [DryIoc.dll](https://www.nuget.org/packages/DryIoc.dll/) IoC container for use with attribute based DI.
+- [VaraniumSharp.ServiceCollection](https://www.nuget.org/packages/VaraniumSharp.ServiceCollection) Library that wraps [Microsoft.Extensions.DependencyInjection.Abstraction](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection.Abstractions/). For easy DI with ASP.net projects.
+
+### Front End
+- [VaraniumSharp.WinUI](https://www.nuget.org/packages/VaraniumSharp.WinUI) Library that contains helpers and components for use with WinUI 3.
+
+### Wrappers
+- [VaraniumSharp.CompoundDocumentFormatStorage](https://www.nuget.org/packages/VaraniumSharp.CompoundDocumentFormatStorage) Library that wraps [OpenMcdf](https://www.nuget.org/packages/OpenMcdf/). It implements the `IPackageManager` interface.
+- [VaraniumSharp.Discord](https://www.nuget.org/packages/VaraniumSharp.Discord) Library that wraps [Discord.Net](https://www.nuget.org/packages/Discord.Net) for easy Discord bot setup.
+- [VaraniumSharp.Oidc](https://www.nuget.org/packages/VaraniumSharp.Oidc) Library that wraps the [IdentityModel.OidcClient](https://www.nuget.org/packages/IdentityModel.OidcClient/) for easy OIDC implementation.
+
+#### Deprecated
+- [VaraniumSharp.Initiator](https://www.nuget.org/packages/VaraniumSharp.Initiator) Library that wraps DryIoc, OIDC, ApplicationInsights and Serilog. Replaced by individual packages.
+- [VaraniumSharp.Monolith](https://github.com/NinetailLabs/VaraniumSharp.Monolith) Library that provides WebService functionality on top of VaraniumSharp.Initiator.
+- [VarniumSharp.Shenfield](https://www.nuget.org/packages/VaraniumSharp.Shenfield) Library that wraps WPF helpers.
+
 ## Documentation
 For a detailed overview of the library see our [documentation](https://ninetaillabs.github.io/VaraniumSharp/index.html)
 
