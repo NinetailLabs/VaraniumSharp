@@ -13,11 +13,16 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\Release\netstandard2.0\VaraniumSharp.xml</DocumentationFile>
-    <DebugType>portable</DebugType>
+	<EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
-  <ItemGroup>
+	<PropertyGroup Condition="'$(APPVEYOR)' == 'true'">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
     <Content Include="FodyWeavers.xml" />
     <Content Include="SemVer.MSBuild.props" />
   </ItemGroup>
