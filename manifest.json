@@ -125,6 +125,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Collections.ObservableKeyValuePair-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Collections.ObservableKeyValuePair-2.html",
+          "hash": "bq9uUXFf3LtyoDZnJewkAiu5sJAAAjBO1idPG5Mvfyk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/VaraniumSharp.Collections.PackageManager.yml",
       "output": {
         ".html": {
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/VaraniumSharp.Collections.html",
-          "hash": "qLf6ejGwpDazeccH4uPQpkfLKK93O9bRphx0EjmErnI="
+          "hash": "cM8OM0K/gblBdGR9IdD1Kt7nw2oBAkk0JYcTj/9IqUY="
         }
       },
       "is_incremental": false,
@@ -741,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "HSk0N+PMv+N3Bq5f/kUP6nlM4TlDeQc6PZ2KirU0xiY="
+          "hash": "jY48a24w/evYJE0FUDF96s8+nIRuGQiLzO0p0utQJAs="
         }
       },
       "is_incremental": false,
@@ -827,7 +839,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 60,
+          "total_file_count": 61,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

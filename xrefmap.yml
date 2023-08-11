@@ -1035,6 +1035,74 @@ references:
   commentId: N:VaraniumSharp.Collections
   fullName: VaraniumSharp.Collections
   nameWithType: VaraniumSharp.Collections
+- uid: VaraniumSharp.Collections.ObservableKeyValuePair`2
+  name: ObservableKeyValuePair<TKey, TValue>
+  href: api/VaraniumSharp.Collections.ObservableKeyValuePair-2.html
+  commentId: T:VaraniumSharp.Collections.ObservableKeyValuePair`2
+  name.vb: ObservableKeyValuePair(Of TKey, TValue)
+  fullName: VaraniumSharp.Collections.ObservableKeyValuePair<TKey, TValue>
+  fullName.vb: VaraniumSharp.Collections.ObservableKeyValuePair(Of TKey, TValue)
+  nameWithType: ObservableKeyValuePair<TKey, TValue>
+  nameWithType.vb: ObservableKeyValuePair(Of TKey, TValue)
+- uid: VaraniumSharp.Collections.ObservableKeyValuePair`2.#ctor(`0,`1)
+  name: ObservableKeyValuePair(TKey, TValue)
+  href: api/VaraniumSharp.Collections.ObservableKeyValuePair-2.html#VaraniumSharp_Collections_ObservableKeyValuePair_2__ctor__0__1_
+  commentId: M:VaraniumSharp.Collections.ObservableKeyValuePair`2.#ctor(`0,`1)
+  fullName: VaraniumSharp.Collections.ObservableKeyValuePair<TKey, TValue>.ObservableKeyValuePair(TKey, TValue)
+  fullName.vb: VaraniumSharp.Collections.ObservableKeyValuePair(Of TKey, TValue).ObservableKeyValuePair(TKey, TValue)
+  nameWithType: ObservableKeyValuePair<TKey, TValue>.ObservableKeyValuePair(TKey, TValue)
+  nameWithType.vb: ObservableKeyValuePair(Of TKey, TValue).ObservableKeyValuePair(TKey, TValue)
+- uid: VaraniumSharp.Collections.ObservableKeyValuePair`2.#ctor*
+  name: ObservableKeyValuePair
+  href: api/VaraniumSharp.Collections.ObservableKeyValuePair-2.html#VaraniumSharp_Collections_ObservableKeyValuePair_2__ctor_
+  commentId: Overload:VaraniumSharp.Collections.ObservableKeyValuePair`2.#ctor
+  isSpec: "True"
+  fullName: VaraniumSharp.Collections.ObservableKeyValuePair<TKey, TValue>.ObservableKeyValuePair
+  fullName.vb: VaraniumSharp.Collections.ObservableKeyValuePair(Of TKey, TValue).ObservableKeyValuePair
+  nameWithType: ObservableKeyValuePair<TKey, TValue>.ObservableKeyValuePair
+  nameWithType.vb: ObservableKeyValuePair(Of TKey, TValue).ObservableKeyValuePair
+- uid: VaraniumSharp.Collections.ObservableKeyValuePair`2.Key
+  name: Key
+  href: api/VaraniumSharp.Collections.ObservableKeyValuePair-2.html#VaraniumSharp_Collections_ObservableKeyValuePair_2_Key
+  commentId: P:VaraniumSharp.Collections.ObservableKeyValuePair`2.Key
+  fullName: VaraniumSharp.Collections.ObservableKeyValuePair<TKey, TValue>.Key
+  fullName.vb: VaraniumSharp.Collections.ObservableKeyValuePair(Of TKey, TValue).Key
+  nameWithType: ObservableKeyValuePair<TKey, TValue>.Key
+  nameWithType.vb: ObservableKeyValuePair(Of TKey, TValue).Key
+- uid: VaraniumSharp.Collections.ObservableKeyValuePair`2.Key*
+  name: Key
+  href: api/VaraniumSharp.Collections.ObservableKeyValuePair-2.html#VaraniumSharp_Collections_ObservableKeyValuePair_2_Key_
+  commentId: Overload:VaraniumSharp.Collections.ObservableKeyValuePair`2.Key
+  isSpec: "True"
+  fullName: VaraniumSharp.Collections.ObservableKeyValuePair<TKey, TValue>.Key
+  fullName.vb: VaraniumSharp.Collections.ObservableKeyValuePair(Of TKey, TValue).Key
+  nameWithType: ObservableKeyValuePair<TKey, TValue>.Key
+  nameWithType.vb: ObservableKeyValuePair(Of TKey, TValue).Key
+- uid: VaraniumSharp.Collections.ObservableKeyValuePair`2.PropertyChanged
+  name: PropertyChanged
+  href: api/VaraniumSharp.Collections.ObservableKeyValuePair-2.html#VaraniumSharp_Collections_ObservableKeyValuePair_2_PropertyChanged
+  commentId: E:VaraniumSharp.Collections.ObservableKeyValuePair`2.PropertyChanged
+  fullName: VaraniumSharp.Collections.ObservableKeyValuePair<TKey, TValue>.PropertyChanged
+  fullName.vb: VaraniumSharp.Collections.ObservableKeyValuePair(Of TKey, TValue).PropertyChanged
+  nameWithType: ObservableKeyValuePair<TKey, TValue>.PropertyChanged
+  nameWithType.vb: ObservableKeyValuePair(Of TKey, TValue).PropertyChanged
+- uid: VaraniumSharp.Collections.ObservableKeyValuePair`2.Value
+  name: Value
+  href: api/VaraniumSharp.Collections.ObservableKeyValuePair-2.html#VaraniumSharp_Collections_ObservableKeyValuePair_2_Value
+  commentId: P:VaraniumSharp.Collections.ObservableKeyValuePair`2.Value
+  fullName: VaraniumSharp.Collections.ObservableKeyValuePair<TKey, TValue>.Value
+  fullName.vb: VaraniumSharp.Collections.ObservableKeyValuePair(Of TKey, TValue).Value
+  nameWithType: ObservableKeyValuePair<TKey, TValue>.Value
+  nameWithType.vb: ObservableKeyValuePair(Of TKey, TValue).Value
+- uid: VaraniumSharp.Collections.ObservableKeyValuePair`2.Value*
+  name: Value
+  href: api/VaraniumSharp.Collections.ObservableKeyValuePair-2.html#VaraniumSharp_Collections_ObservableKeyValuePair_2_Value_
+  commentId: Overload:VaraniumSharp.Collections.ObservableKeyValuePair`2.Value
+  isSpec: "True"
+  fullName: VaraniumSharp.Collections.ObservableKeyValuePair<TKey, TValue>.Value
+  fullName.vb: VaraniumSharp.Collections.ObservableKeyValuePair(Of TKey, TValue).Value
+  nameWithType: ObservableKeyValuePair<TKey, TValue>.Value
+  nameWithType.vb: ObservableKeyValuePair(Of TKey, TValue).Value
 - uid: VaraniumSharp.Collections.PackageManager
   name: PackageManager
   href: api/VaraniumSharp.Collections.PackageManager.html
