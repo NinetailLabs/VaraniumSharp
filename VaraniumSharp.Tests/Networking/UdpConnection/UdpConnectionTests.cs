@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-// ReSharper disable AccessToDisposedClosure
+// ReSharper disable AccessToDisposedClosure - These won't be reused in the test so it's fine
 
 namespace VaraniumSharp.Tests.Networking.UdpConnection
 {
