@@ -605,6 +605,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Networking.IUdpConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Networking.IUdpConnection.html",
+          "hash": "my6zDYKJw5XdGDjbi+P/99NIvESAaAypqGS3CVMMJ+g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Networking.IUdpConnectionFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Networking.IUdpConnectionFactory.html",
+          "hash": "TB6haOiBSAcKLaF5m0uA9STZPI7U08HJj/QvCTzS1yM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Interfaces.Networking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Interfaces.Networking.html",
+          "hash": "hOg+LSpAlZViMpzgRfI/m7pnLIhAFxh94HUdFrmvE14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.yml",
       "output": {
         ".html": {
@@ -670,6 +706,42 @@
         ".html": {
           "relative_path": "api/VaraniumSharp.Logging.html",
           "hash": "+B8bRUip9xZwev8FutESx6P4xM5HaINNQZSCXJlwAV0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Networking.UdpConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Networking.UdpConnection.html",
+          "hash": "bjrnx9CmrsMxyLPaec1DWzIx4RdmU66O0y5AeHjtgMM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Networking.UdpConnectionFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Networking.UdpConnectionFactory.html",
+          "hash": "GiWhVFQeYd8h44u0U1QLFtDKa6PpTbk1lyGMLjhirXA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VaraniumSharp.Networking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VaraniumSharp.Networking.html",
+          "hash": "HEf39yDR+J/IQ8/E3QdjILGwHcZdPgSX4DbuXbtmV/w="
         }
       },
       "is_incremental": false,
@@ -753,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "jY48a24w/evYJE0FUDF96s8+nIRuGQiLzO0p0utQJAs="
+          "hash": "H2S48+xjbTb7qU5DdFUcAf1G6JOtV7osLDieM2D8bgs="
         }
       },
       "is_incremental": false,
@@ -839,7 +911,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 61,
+          "total_file_count": 67,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
