@@ -39,4 +39,8 @@
     <PackageReference Include="System.Runtime.Caching" Version="5.0.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Networking\UdpConnection\" />
+  </ItemGroup>
 </Project>
