@@ -37,6 +37,31 @@ namespace VaraniumSharp.Tests.Wrappers
         }
 
         [Fact]
+        public void AllEmptyLowerDirectoriesAreDeleted()
+        {
+            // arrange
+            var testPath = AppDomain.CurrentDomain.BaseDirectory;
+            Directory.CreateDirectory(Path.Combine(testPath, "TopDirectory2"));
+            Directory.CreateDirectory(Path.Combine(testPath, "TopDirectory2", "SubDir1"));
+            Directory.CreateDirectory(Path.Combine(testPath, "TopDirectory2", "SubDir1", "SubDir2", "SubDir3", "SubDir4"));
+            File.Create(Path.Combine(testPath, "TopDirectory2", "SubDir1", "TestFile1.txt"));
+
+            var fixture = new FolderHelperFixture();
+
+            var sut = fixture.GetInstance();
+
+            // act
+            sut.DeleteEmptySubDirectories(Path.Combine(testPath, "TopDirectory2"), false);
+
+            // assert
+            Directory.Exists(Path.Combine(testPath, "TopDirectory2")).Should().BeTrue();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory2", "SubDir1")).Should().BeTrue();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory2", "SubDir1", "SubDir2")).Should().BeFalse();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory2", "SubDir1", "SubDir2", "SubDir3")).Should().BeFalse();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory2", "SubDir1", "SubDir2", "SubDir3", "SubDir4")).Should().BeFalse();
+        }
+
+        [Fact]
         public void DirectoryIsCorrectlyCreated()
         {
             // arrange
@@ -78,6 +103,30 @@ namespace VaraniumSharp.Tests.Wrappers
         }
 
         [Fact]
+        public void IfAllSubDirectoriesAreEmptyAndTopDirectoryShouldAlsoBeDeletedAllDirectoriesAreDeleted()
+        {
+            // arrange
+            var testPath = AppDomain.CurrentDomain.BaseDirectory;
+            Directory.CreateDirectory(Path.Combine(testPath, "TopDirectory3"));
+            Directory.CreateDirectory(Path.Combine(testPath, "TopDirectory3", "SubDir1"));
+            Directory.CreateDirectory(Path.Combine(testPath, "TopDirectory3", "SubDir1", "SubDir2", "SubDir3", "SubDir4"));
+
+            var fixture = new FolderHelperFixture();
+
+            var sut = fixture.GetInstance();
+
+            // act
+            sut.DeleteEmptySubDirectories(Path.Combine(testPath, "TopDirectory3"), true);
+
+            // assert
+            Directory.Exists(Path.Combine(testPath, "TopDirectory3")).Should().BeFalse();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory3", "SubDir1")).Should().BeFalse();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory3", "SubDir1", "SubDir2")).Should().BeFalse();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory3", "SubDir1", "SubDir2", "SubDir3")).Should().BeFalse();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory3", "SubDir1", "SubDir2", "SubDir3", "SubDir4")).Should().BeFalse();
+        }
+
+        [Fact]
         public void IfFolderDoesNotExistFalseIsReturned()
         {
             // arrange
@@ -111,6 +160,30 @@ namespace VaraniumSharp.Tests.Wrappers
 
             // assert
             result.Should().BeTrue();
+        }
+
+        [Fact]
+        public void OnlyEmptySubDirectoriesAreDeleted()
+        {
+            // arrange
+            var testPath = AppDomain.CurrentDomain.BaseDirectory;
+            Directory.CreateDirectory(Path.Combine(testPath, "TopDirectory"));
+            Directory.CreateDirectory(Path.Combine(testPath, "TopDirectory", "SubDir1"));
+            Directory.CreateDirectory(Path.Combine(testPath, "TopDirectory", "SubDir1", "SubDir2", "SubDir3", "SubDir4"));
+            File.Create(Path.Combine(testPath, "TopDirectory", "SubDir1", "SubDir2", "SubDir3", "TestFile1.txt"));
+
+            var fixture = new FolderHelperFixture();
+
+            var sut = fixture.GetInstance();
+
+            // act
+            sut.DeleteEmptySubDirectories(Path.Combine(testPath, "TopDirectory"), false);
+
+            // assert
+            Directory.Exists(Path.Combine(testPath, "TopDirectory")).Should().BeTrue();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory", "SubDir1")).Should().BeTrue();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory", "SubDir1", "SubDir2", "SubDir3")).Should().BeTrue();
+            Directory.Exists(Path.Combine(testPath, "TopDirectory", "SubDir1", "SubDir2", "SubDir3", "SubDir4")).Should().BeFalse();
         }
     }
 }
