@@ -3267,6 +3267,25 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.CreateDirectory
   nameWithType: IDirectoryWrapper.CreateDirectory
+- uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.DeleteEmptySubDirectories(System.String)
+  name: DeleteEmptySubDirectories(String)
+  href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html#VaraniumSharp_Interfaces_Wrappers_IDirectoryWrapper_DeleteEmptySubDirectories_System_String_
+  commentId: M:VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.DeleteEmptySubDirectories(System.String)
+  fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.DeleteEmptySubDirectories(System.String)
+  nameWithType: IDirectoryWrapper.DeleteEmptySubDirectories(String)
+- uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.DeleteEmptySubDirectories(System.String,System.Boolean)
+  name: DeleteEmptySubDirectories(String, Boolean)
+  href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html#VaraniumSharp_Interfaces_Wrappers_IDirectoryWrapper_DeleteEmptySubDirectories_System_String_System_Boolean_
+  commentId: M:VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.DeleteEmptySubDirectories(System.String,System.Boolean)
+  fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.DeleteEmptySubDirectories(System.String, System.Boolean)
+  nameWithType: IDirectoryWrapper.DeleteEmptySubDirectories(String, Boolean)
+- uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.DeleteEmptySubDirectories*
+  name: DeleteEmptySubDirectories
+  href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html#VaraniumSharp_Interfaces_Wrappers_IDirectoryWrapper_DeleteEmptySubDirectories_
+  commentId: Overload:VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.DeleteEmptySubDirectories
+  isSpec: "True"
+  fullName: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.DeleteEmptySubDirectories
+  nameWithType: IDirectoryWrapper.DeleteEmptySubDirectories
 - uid: VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.EnumerateFiles(System.String)
   name: EnumerateFiles(String)
   href: api/VaraniumSharp.Interfaces.Wrappers.IDirectoryWrapper.html#VaraniumSharp_Interfaces_Wrappers_IDirectoryWrapper_EnumerateFiles_System_String_
@@ -3729,6 +3748,25 @@ references:
   isSpec: "True"
   fullName: VaraniumSharp.Wrappers.DirectoryWrapper.CreateDirectory
   nameWithType: DirectoryWrapper.CreateDirectory
+- uid: VaraniumSharp.Wrappers.DirectoryWrapper.DeleteEmptySubDirectories(System.String)
+  name: DeleteEmptySubDirectories(String)
+  href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html#VaraniumSharp_Wrappers_DirectoryWrapper_DeleteEmptySubDirectories_System_String_
+  commentId: M:VaraniumSharp.Wrappers.DirectoryWrapper.DeleteEmptySubDirectories(System.String)
+  fullName: VaraniumSharp.Wrappers.DirectoryWrapper.DeleteEmptySubDirectories(System.String)
+  nameWithType: DirectoryWrapper.DeleteEmptySubDirectories(String)
+- uid: VaraniumSharp.Wrappers.DirectoryWrapper.DeleteEmptySubDirectories(System.String,System.Boolean)
+  name: DeleteEmptySubDirectories(String, Boolean)
+  href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html#VaraniumSharp_Wrappers_DirectoryWrapper_DeleteEmptySubDirectories_System_String_System_Boolean_
+  commentId: M:VaraniumSharp.Wrappers.DirectoryWrapper.DeleteEmptySubDirectories(System.String,System.Boolean)
+  fullName: VaraniumSharp.Wrappers.DirectoryWrapper.DeleteEmptySubDirectories(System.String, System.Boolean)
+  nameWithType: DirectoryWrapper.DeleteEmptySubDirectories(String, Boolean)
+- uid: VaraniumSharp.Wrappers.DirectoryWrapper.DeleteEmptySubDirectories*
+  name: DeleteEmptySubDirectories
+  href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html#VaraniumSharp_Wrappers_DirectoryWrapper_DeleteEmptySubDirectories_
+  commentId: Overload:VaraniumSharp.Wrappers.DirectoryWrapper.DeleteEmptySubDirectories
+  isSpec: "True"
+  fullName: VaraniumSharp.Wrappers.DirectoryWrapper.DeleteEmptySubDirectories
+  nameWithType: DirectoryWrapper.DeleteEmptySubDirectories
 - uid: VaraniumSharp.Wrappers.DirectoryWrapper.EnumerateFiles(System.String)
   name: EnumerateFiles(String)
   href: api/VaraniumSharp.Wrappers.DirectoryWrapper.html#VaraniumSharp_Wrappers_DirectoryWrapper_EnumerateFiles_System_String_
