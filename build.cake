@@ -5,7 +5,7 @@
 #load "CakeScripts/base/base.variables.cake"
 #load "CakeScripts/base/base.setup.cake"
 #load "CakeScripts/base/base.nuget.restore.cake"
-#load "varaniumsharp.dotnet.build.cake"
+#load "CakeScripts/base/base.msbuild.cake"
 #load "CakeScripts/base/base.altcover.cake"
 #load "CakeScripts/base/base.altcover.cake"
 #load "CakeScripts/base/base.coveralls.upload.cake"
@@ -29,6 +29,7 @@ Task ("VariableSetup")
 		botEmail = "gitbot@ninetaillabs.com";
 		botToken = EnvironmentVariable("BotToken");
 		gitRepo = string.Format("https://github.com/{0}/{1}.git", repoOwner, projectName);
+		toolVersion = MSBuildToolVersion.VS2022;
 	});
 
 Task ("Default")
