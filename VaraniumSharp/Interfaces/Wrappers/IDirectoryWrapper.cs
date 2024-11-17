@@ -18,6 +18,19 @@ namespace VaraniumSharp.Interfaces.Wrappers
         DirectoryInfo CreateDirectory(string path);
 
         /// <summary>
+        /// Delete empty subdirectories from a directory
+        /// </summary>
+        /// <param name="directoryPath">Path to directory from which empty subdirectories should be deleted</param>
+        /// <param name="deleteBaseDirectory">Indicate if the top-directory provided should also be deleted</param>
+        void DeleteEmptySubDirectories(string directoryPath, bool deleteBaseDirectory);
+
+        /// <summary>
+        /// Delete the empty subdirectories in a directory
+        /// </summary>
+        /// <param name="directoryPath">Path to directory from which empty subdirectories should be deleted</param>
+        void DeleteEmptySubDirectories(string directoryPath);
+
+        /// <summary>
         /// Returns an enumerable collection of file names in a specified directory
         /// </summary>
         /// <param name="path">The directory to search</param>
