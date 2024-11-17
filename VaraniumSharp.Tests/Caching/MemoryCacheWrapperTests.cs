@@ -85,7 +85,7 @@ namespace VaraniumSharp.Tests.Caching
 
             #region Properties
 
-            public SemaphoreSlim SemaphoreToBlock { get; } = new SemaphoreSlim(1);
+            public SemaphoreSlim SemaphoreToBlock { get; } = new(1);
 
             #endregion
 
@@ -111,33 +111,6 @@ namespace VaraniumSharp.Tests.Caching
             private readonly T _returnValue;
 
             #endregion
-        }
-
-        [Fact]
-        public async Task RetrievingKeysAlreadyInCacheReturnsOnlyCachedEntries()
-        {
-            // arrange
-            const string key = "12";
-            const string key2 = "55";
-            var returnValue = new CacheEntryFixture
-            {
-                Id = int.Parse(key)
-            };
-            var retrievalFixture = new RetrievalFixture<CacheEntryFixture>(returnValue);
-            var sut = new MemoryCacheWrapper<CacheEntryFixture>
-            {
-                CachePolicy = new CacheItemPolicy(),
-                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc
-            };
-
-            await sut.GetAsync(key);
-
-            // act
-            var result = sut.GetForKeysAlreadyInCache(new[] { key, key2 });
-
-            // assert
-            result.Count.Should().Be(1);
-            result.First().Id.Should().Be(12);
         }
 
         [Fact]
@@ -172,12 +145,12 @@ namespace VaraniumSharp.Tests.Caching
         public void AttemptingToSetTheBatchRetrievalASecondTimeThrowsAnException()
         {
             // arrange
-            var dummyFunc = new Func<List<string>, Task<Dictionary<string, CacheEntryFixture>>>(async list =>
+            var dummyFunc = new Func<List<string>, Task<Dictionary<string, CacheEntryFixture>>>(async _ =>
             {
                 await Task.Delay(1);
                 return new Dictionary<string, CacheEntryFixture>();
             });
-            var newDummyFunc = new Func<List<string>, Task<Dictionary<string, CacheEntryFixture>>>(async list =>
+            var newDummyFunc = new Func<List<string>, Task<Dictionary<string, CacheEntryFixture>>>(async _ =>
             {
                 await Task.Delay(1);
                 return new Dictionary<string, CacheEntryFixture>();
@@ -213,45 +186,6 @@ namespace VaraniumSharp.Tests.Caching
 
             // assert
             removed.Should().BeFalse();
-        }
-
-        [Fact]
-        public async Task BatchRetrievalAddsAllBatchEntriesToTheCache()
-        {
-            // arrange
-            const string key = "12";
-            var returnValue = new CacheEntryFixture
-            {
-                Id = int.Parse(key)
-            };
-            var requestedKeys = new List<string>();
-            var dummyFunc = new Func<List<string>, Task<Dictionary<string, CacheEntryFixture>>>(async list =>
-            {
-                await Task.Delay(1);
-                requestedKeys = list;
-                return new Dictionary<string, CacheEntryFixture>
-                {
-                    { key, new CacheEntryFixture
-                        {
-                            Id = 1
-                        }
-                    }
-                };
-            });
-            var retrievalFixture = new RetrievalFixture<CacheEntryFixture>(returnValue);
-            var sut = new MemoryCacheWrapper<CacheEntryFixture>
-            {
-                CachePolicy = new CacheItemPolicy(),
-                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc,
-                BatchRetrievalFunc = dummyFunc
-            };
-
-            // act
-            var entriesAdded = await sut.BatchAddToCacheAsync(new List<string> { key });
-
-            // assert
-            entriesAdded.Should().Be(1);
-            requestedKeys.Count.Should().Be(1);
         }
 
         [Fact]
@@ -299,6 +233,45 @@ namespace VaraniumSharp.Tests.Caching
         }
 
         [Fact]
+        public async Task BatchRetrievalAddsAllBatchEntriesToTheCache()
+        {
+            // arrange
+            const string key = "12";
+            var returnValue = new CacheEntryFixture
+            {
+                Id = int.Parse(key)
+            };
+            var requestedKeys = new List<string>();
+            var dummyFunc = new Func<List<string>, Task<Dictionary<string, CacheEntryFixture>>>(async list =>
+            {
+                await Task.Delay(1);
+                requestedKeys = list;
+                return new Dictionary<string, CacheEntryFixture>
+                {
+                    { key, new CacheEntryFixture
+                        {
+                            Id = 1
+                        }
+                    }
+                };
+            });
+            var retrievalFixture = new RetrievalFixture<CacheEntryFixture>(returnValue);
+            var sut = new MemoryCacheWrapper<CacheEntryFixture>
+            {
+                CachePolicy = new CacheItemPolicy(),
+                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc,
+                BatchRetrievalFunc = dummyFunc
+            };
+
+            // act
+            var entriesAdded = await sut.BatchAddToCacheAsync(new List<string> { key });
+
+            // assert
+            entriesAdded.Should().Be(1);
+            requestedKeys.Count.Should().Be(1);
+        }
+
+        [Fact]
         public void CachePolicyCanOnlyBeSetOnce()
         {
             // arrange
@@ -315,20 +288,22 @@ namespace VaraniumSharp.Tests.Caching
         }
 
         [Fact]
-        public void CannotRetrieveCacheItemIfPolicyIsNotSet()
+        public async Task CannotBatchRetrieveCacheItemIfPolicyIsNotSet()
         {
             // arrange
             const string key = "12";
+            const string key2 = "22";
+            var keyList = new List<string> { key, key2 };
             var sut = new MemoryCacheWrapper<CacheEntryFixture>();
-            var act = new Action(() => sut.GetAsync(key).Wait());
+            var act = new Func<Task>(async () => await sut.GetAsync(keyList));
 
             // act
             // assert
-            act.Should().Throw<InvalidOperationException>("Cache Policy has not been set");
+            await act.Should().ThrowAsync<InvalidOperationException>("Cache Policy has not been set");
         }
 
         [Fact]
-        public void CannotBatchRetrieveCacheItemIfRetrievalFuncIsNotSet()
+        public async Task CannotBatchRetrieveCacheItemIfRetrievalFuncIsNotSet()
         {
             // arrange
             const string key = "12";
@@ -342,18 +317,16 @@ namespace VaraniumSharp.Tests.Caching
 
             // act
             // assert
-            act.Should().Throw<InvalidOperationException>("DataRetrievalFunc has not been set");
+            await act.Should().ThrowAsync<InvalidOperationException>("DataRetrievalFunc has not been set");
         }
 
         [Fact]
-        public void CannotBatchRetrieveCacheItemIfPolicyIsNotSet()
+        public void CannotRetrieveCacheItemIfPolicyIsNotSet()
         {
             // arrange
             const string key = "12";
-            const string key2 = "22";
-            var keyList = new List<string> { key, key2 };
             var sut = new MemoryCacheWrapper<CacheEntryFixture>();
-            var act = new Func<Task>(async () => await sut.GetAsync(keyList));
+            var act = new Action(() => sut.GetAsync(key).Wait());
 
             // act
             // assert
@@ -576,7 +549,7 @@ namespace VaraniumSharp.Tests.Caching
             var tasks = new Task[10];
             for (var r = 0; r < 10; r++)
             {
-                tasks[r] = (sut.GetAsync(key));
+                tasks[r] = sut.GetAsync(key);
             }
 
             Task.WaitAll(tasks);
@@ -631,6 +604,33 @@ namespace VaraniumSharp.Tests.Caching
 
             // assert
             firstRetrieval.Should().Be(secondRetrieval);
+        }
+
+        [Fact]
+        public async Task RetrievingKeysAlreadyInCacheReturnsOnlyCachedEntries()
+        {
+            // arrange
+            const string key = "12";
+            const string key2 = "55";
+            var returnValue = new CacheEntryFixture
+            {
+                Id = int.Parse(key)
+            };
+            var retrievalFixture = new RetrievalFixture<CacheEntryFixture>(returnValue);
+            var sut = new MemoryCacheWrapper<CacheEntryFixture>
+            {
+                CachePolicy = new CacheItemPolicy(),
+                DataRetrievalFunc = retrievalFixture.DataRetrievalFunc
+            };
+
+            await sut.GetAsync(key);
+
+            // act
+            var result = sut.GetForKeysAlreadyInCache(new[] { key, key2 });
+
+            // assert
+            result.Count.Should().Be(1);
+            result.First().Id.Should().Be(12);
         }
     }
 }

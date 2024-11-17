@@ -227,19 +227,19 @@ if (!(Test-Path $CAKE_EXE)) {
 
 # Build Cake arguments
 $cakeArguments = @("$Script");
-if ($Target) { $cakeArguments += "-target=$Target" }
-if ($Configuration) { $cakeArguments += "-configuration=$Configuration" }
-if ($Verbosity) { $cakeArguments += "-verbosity=$Verbosity" }
-if ($ShowDescription) { $cakeArguments += "-showdescription" }
-if ($DryRun) { $cakeArguments += "-dryrun" }
+if ($Target) { $cakeArguments += "--target=$Target" }
+if ($Configuration) { $cakeArguments += "--configuration=$Configuration" }
+if ($Verbosity) { $cakeArguments += "--verbosity=$Verbosity" }
+if ($ShowDescription) { $cakeArguments += "--showdescription" }
+if ($DryRun) { $cakeArguments += "--dryrun" }
 if ($Experimental) { $cakeArguments += "-experimental" }
 if ($Mono) { $cakeArguments += "-mono" }
 $cakeArguments += $ScriptArgs
-if ($Branch) { $cakeArguments += "-branch=$Branch"}
-if ($BuildCounter) { $cakeArguments += "-buildCounter=$BuildCounter" }
-if ($GitHash) { $cakeArguments += "-gitHash=$GitHash" }
-if ($BuildConfiguration) { $cakeArguments += "-buildConfiguration=$BuildConfiguration" }
-if ($CommitMessage) { $cakeArguments += "-commitMessage=$CommitMessage" }
+if ($Branch) { $cakeArguments += "--branch=$Branch"}
+if ($BuildCounter) { $cakeArguments += "--buildCounter=$BuildCounter" }
+if ($GitHash) { $cakeArguments += "--gitHash=$GitHash" }
+if ($BuildConfiguration) { $cakeArguments += "--buildConfiguration=$BuildConfiguration" }
+if ($CommitMessage) { $cakeArguments += "--commitMessage=$CommitMessage" }
 
 # Start Cake
 Write-Host "Running build script..."
