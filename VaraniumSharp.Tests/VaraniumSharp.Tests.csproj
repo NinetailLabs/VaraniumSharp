@@ -35,7 +35,7 @@
     <PackageReference Include="altcover" Version="9.0.1" />
     <PackageReference Include="Appveyor.TestLogger" Version="2.0.0" />
     <PackageReference Include="FluentAssertions" Version="6.12.2" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="Moq" Version="4.20.72" />
     <PackageReference Include="Viki.HttpMockSlim" Version="2.0.11" />
     <PackageReference Include="xunit" Version="2.9.2" />
